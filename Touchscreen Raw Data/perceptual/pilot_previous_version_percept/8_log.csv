@@ -1,0 +1,7 @@
+Date,Time,File,Subj,Cond,Block,Trial,Order,task,Resp,Name,Stim,RT,Correct,Started@,LoadTime,TotalInt,Stim 1,Time 1,Stim 2,Time 2,
+8/16/2014,11:18,C:\Documents and Settings\lab\Desktop\Tadpole\Perceptual Task\Tadpole_Perceptual_8.csv,8,1,1,1,1.01,retrieval,57,SPACE,"press spacebar to start perceptual task",30830,True,0,42,83,"press spacebar to start perceptual task",30834,
+8/16/2014,11:18,C:\Documents and Settings\lab\Desktop\Tadpole\Perceptual Task\Tadpole_Perceptual_8.csv,8,1,1,1,2.01,retrieval,57,SPACE,"MutedBallie.avi (174x144)",720,True,30917,669,696,"MutedBallie.avi (174x144)",736,"blacksquare.bmp",5102,
+8/16/2014,11:18,C:\Documents and Settings\lab\Desktop\Tadpole\Perceptual Task\Tadpole_Perceptual_8.csv,8,1,1,1,2.02,retrieval,57,SPACE,"blacksquare.bmp",5091,True,30917,669,696,"MutedBallie.avi (174x144)",736,"blacksquare.bmp",5102,
+8/16/2014,11:18,C:\Documents and Settings\lab\Desktop\Tadpole\Perceptual Task\Tadpole_Perceptual_8.csv,8,1,1,2,3.01,retrieval,57,SPACE,"chair_refrigerator_b.bmp",802,True,37451,52,80,"chair_refrigerator_b.bmp",816,"blacksquare.bmp",911,
+8/16/2014,11:18,C:\Documents and Settings\lab\Desktop\Tadpole\Perceptual Task\Tadpole_Perceptual_8.csv,8,1,1,2,3.02,retrieval,57,SPACE,"blacksquare.bmp",904,True,37451,52,80,"chair_refrigerator_b.bmp",816,"blacksquare.bmp",911,
+8/16/2014,11:18,C:\Documents and Settings\lab\Desktop\Tadpole\Perceptual Task\Tadpole_Perceptual_8.csv,8,1,1,3,4.01,retrieval,0,,"",0,False,39258,160,187,"grapes_balloons_b.bmp",-40948,"blacksquare.bmp",0,

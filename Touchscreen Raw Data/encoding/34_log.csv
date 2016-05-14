@@ -1,0 +1,3 @@
+Date,Time,File,Subj,Cond,Block,Trial,Order,task,Resp,Name,Stim,RT,Correct,Started@,LoadTime,TotalInt,Stim 1,Time 1,Stim 2,Time 2,Stim 3,Time 3,Stim 4,Time 4,Stim 5,Time 5,
+10/30/2014,11:47,C:\Documents and Settings\lab\Desktop\Tadpole\2yoENCODING\Encoding_5.csv,34,1,1,1,1.01,encode,57,SPACE,"blacksquare.bmp",23036,True,0,113,141,"blacksquare.bmp",23069,
+10/30/2014,11:47,C:\Documents and Settings\lab\Desktop\Tadpole\2yoENCODING\Encoding_5.csv,34,1,1,11,12.01,encode,57,SPACE,"tada.wav",4101,True,79322,348,374,"blacksquare.bmp",1004,"whiteborder.bmp",1004,"pants.bmp",3000,"congratulations.bmp",0,"tada.wav",4111,

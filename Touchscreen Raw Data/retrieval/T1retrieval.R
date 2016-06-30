@@ -1,12 +1,12 @@
 rm(list=ls(all=TRUE))
 
-setwd("S:/Users/Sarah/Data/Tadpole/T1/Touchscreen Raw Data/retrieval/")
+setwd("S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/retrieval/")
 
-pc <- "S:/Users/Sarah/Data/Tadpole/T1/Touchscreen Raw Data/retrieval/"
+pc <- "S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/retrieval/"
 
 subj=1
 
-for (subj in 1:118) {
+for (subj in 1:124) {
   if(subj==2) {next} #this is if need to skip some data
   if(subj==5) {next}
   if(subj==6) {next}
@@ -38,6 +38,8 @@ for (subj in 1:118) {
   if(subj==109) {next}
   if(subj==115) {next}
   if(subj==117) {next}
+  if(subj==119) {next}
+  if(subj==120) {next}
   
   #Read in data table
   memoryT1 <- read.csv(paste(pc,subj,"_log.csv",sep=""), header=T) 
@@ -196,7 +198,7 @@ for (i in 1:nrow(AllSubs)) {
 }
 #Write new data set to a txt file 
 write.table(AllSubs,paste(pc,'processed data/AllSubs.txt',sep=""),row.names=FALSE)
-write.table(AllSubjects,"S:/Users/Sarah/Data/Tadpole/T1/Touchscreen Raw Data/retrieval/processed data/AllSubjects.csv",sep=",", row.names=FALSE)
+write.table(AllSubjects,"S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/retrieval/processed data/AllSubjects.csv",sep=",", row.names=FALSE)
 
 
 

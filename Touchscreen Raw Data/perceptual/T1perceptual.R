@@ -1,12 +1,12 @@
 rm(list=ls(all=TRUE))
 
-setwd("S:/Users/Emily/Longitudinal Study/T1/DATA/Touchscreen Raw Data/perceptual/")
+setwd("S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/perceptual/")
 
-pc <- "S:/Users/Emily/Longitudinal Study/T1/DATA/Touchscreen Raw Data/perceptual/"
+pc <- "S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/perceptual/"
 
 subj=15
 
-for (subj in 15:103) {
+for (subj in 34:124) {
   if(subj==25) {next} #this is if need to skip some data
   if(subj==27) {next}
   if(subj==29) {next}
@@ -23,6 +23,12 @@ for (subj in 15:103) {
   if(subj==96) {next}
   if(subj==99) {next}
   if(subj==100) {next}
+  if(subj==104) {next}
+  if(subj==105) {next}
+  if(subj==115) {next}
+  if(subj==119) {next}
+  if(subj==120) {next}
+  if(subj==122) {next}
   
 #Read in data table
 perceptualT1 <- read.csv(paste(pc,subj,"_log.csv",sep=""), header=T) 

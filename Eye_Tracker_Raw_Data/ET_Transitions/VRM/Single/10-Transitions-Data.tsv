@@ -1,0 +1,116 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+310			Content	
+351	MovieStart	MutedBallie.avi		
+576			Content	
+1544	KeyPress	Space		
+1545	MovieEnd	MutedBallie.avi		
+1856	ImageStart	encode 3 blue.JPG		
+2108			Familiarization 1L	
+2508			Familiarization 1L	
+2775			Familiarization 1R	
+3291			Familiarization 1L	
+3507			Familiarization 1L	
+3907			Familiarization 1L	
+4323			Familiarization 1L	
+4556			Familiarization 1L	
+4823			Familiarization 1R	
+5189			Familiarization 1R	
+6039			Familiarization 1L	
+6355			Familiarization 1L	
+6843	ImageEnd	encode 3 blue.JPG		
+6853	ImageStart	blacksquare.bmp		
+7388			Content	
+7937			Content	
+8420			Content	
+8653			Content	
+8855	ImageEnd	blacksquare.bmp		
+8876	ImageStart	encode 3 pink.JPG		
+8903			Content	
+9170			Content	
+9486			Familiarization 2L	
+9569			Familiarization 2L	
+10119			Familiarization 2R	
+10835			Familiarization 2L	
+11202			Familiarization 2L	
+12034			Content	
+12201			Familiarization 2R	
+12817			Familiarization 2L	
+13783			Familiarization 2R	
+14049			Familiarization 2R	
+14682			Familiarization 2R	
+14782			Familiarization 2R	
+15349			Familiarization 2R	
+15565			Familiarization 2R	
+15915			Familiarization 2L	
+16248			Familiarization 2L	
+17031			Content	
+17464			Content	
+17714			Content	
+18163			Familiarization 2L	
+18280			Familiarization 2L	
+18763			Familiarization 2R	
+18869	ImageEnd	encode 3 pink.JPG		
+18880	ImageStart	blacksquare.bmp		
+19479			Content	
+20544			Content	
+20628			Content	
+20880	ImageEnd	blacksquare.bmp		
+20907	ImageStart	3b blue.JPG		
+21194			new	
+21827			old	
+22826			new	
+23359			new	
+24109			old	
+24658			old	
+25075			new	
+26357			old	
+26640			old	
+27173			Content	
+27273			Content	
+28106			Content	
+28406			Content	
+29105			Content	
+29388			Content	
+29655			Content	
+29738			new	
+29888			new	
+30054			new	
+30770			Content	
+30880	ImageEnd	3b blue.JPG		
+30890	ImageStart	blacksquare.bmp		
+31120			Content	
+31236			Content	
+31895	ImageEnd	blacksquare.bmp		
+31927	ImageStart	3a pink.JPG		
+32036			Content	
+32202			Content	
+32536			old	
+32852			new	
+33185			new	
+33535			old	
+33768			old	
+34251			new	
+34651			new	
+35683			old	
+37299			old	
+37548			new	
+38831			new	
+39081			new	
+39330			old	
+39980			old	
+40230			new	
+40563			new	
+40963			old	
+41893	ImageEnd	3a pink.JPG		
+41904	ImageStart	blacksquare.bmp		
+42462			Content	
+42695			Content	
+42908	ImageEnd	blacksquare.bmp		
+42944			Content	
+43311			Content	
+43371	MovieStart	congratulations.wmv		
+43611			Content	
+44094			Content	
+44943	KeyPress	Escape		
+44943	MovieEnd	congratulations.wmv		

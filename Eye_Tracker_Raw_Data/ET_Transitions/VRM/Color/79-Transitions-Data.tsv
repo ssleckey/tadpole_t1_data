@@ -1,0 +1,82 @@
+Timestamp	Event	Descriptor	AoiNames	
+1152	MovieStart	MutedBallie.avi		
+2368			Content	
+3462	KeyPress	Space		
+3462	MovieEnd	MutedBallie.avi		
+3783	ImageStart	fixation.png		
+4784	ImageEnd	fixation.png		
+4812	ImageStart	Slide1.JPG		
+5549			encode_1_left	
+6315			encode_1_right	
+7048			encode_1_right	
+7514			encode_1_right	
+8297			encode_1_left	
+8680			encode_1_left	
+9793	ImageEnd	Slide1.JPG		
+9803	ImageStart	fixation.png		
+10079			Content	
+10362			Content	
+10806	ImageEnd	fixation.png		
+10838	ImageStart	Slide5.JPG		
+11162			encode_2_left	
+12444			encode_2_left	
+12594			Content	
+13077			Content	
+13510			encode_2_right	
+13760			encode_2_right	
+14376			encode_2_right	
+15814	ImageEnd	Slide5.JPG		
+15829	ImageStart	fixation.png		
+16091			Content	
+16828	ImageEnd	fixation.png		
+16860	ImageStart	Slide9.JPG		
+17240			encode_3_left	
+17757			encode_3_right	
+18073			encode_3_right	
+19439			encode_3_left	
+19822			encode_3_left	
+20205			encode_3_right	
+20688			encode_3_right	
+20988			encode_3_right	
+21787			Content	
+21836	ImageEnd	Slide9.JPG		
+21846	ImageStart	fixation.png		
+22850	ImageEnd	fixation.png		
+22882	ImageStart	Slide1.JPG		
+25117			Content	
+25967			encode_1_right	
+26833			encode_1_left	
+27858	ImageEnd	Slide1.JPG		
+27867	ImageStart	fixation.png		
+28870	ImageEnd	fixation.png		
+28903	ImageStart	Slide5.JPG		
+33880	ImageEnd	Slide5.JPG		
+33890	ImageStart	fixation.png		
+34892	ImageEnd	fixation.png		
+34919	ImageStart	Slide9.JPG		
+37626			Content	
+37793			Content	
+37993			Content	
+38193			Content	
+38459			Content	
+39902	ImageEnd	Slide9.JPG		
+39912	ImageStart	fixation.png		
+40914	ImageEnd	fixation.png		
+40942	ImageStart	Slide10.JPG		
+45921	ImageEnd	Slide10.JPG		
+45931	ImageStart	fixation.png		
+46935	ImageEnd	fixation.png		
+46964	ImageStart	VRM_assoc_colors.jpg		
+51942	ImageEnd	VRM_assoc_colors.jpg		
+51953	ImageStart	fixation.png		
+52957	ImageEnd	fixation.png		
+52984	ImageStart	Slide12.JPG		
+53664			retrieve_3_target	
+53881			retrieve_3_distractor	
+56845			Content	
+57727			Content	
+57968	ImageEnd	Slide12.JPG		
+58597	MovieStart	congratulations.wmv		
+60709			Content	
+61061	KeyPress	Escape		
+61061	MovieEnd	congratulations.wmv		

@@ -1,0 +1,124 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 097
+Recording date:	 11/11/2015
+Recording time:	 1:56:11 PM
+Recording resolution:	 1280 x 1024
+
+Export date:	 11/18/2015
+Export time:	 9:15:35 AM
+
+Participant:	 097
+Timestamp	Event	Descriptor	AoiNames	
+390	MovieStart	MutedBallie.avi		
+1999	KeyPress	Space		
+1999	MovieEnd	MutedBallie.avi		
+2051			Content	
+2218			Content	
+2349	ImageStart	fixation.png		
+2951			Content	
+3350			Content	
+3359	ImageEnd	fixation.png		
+3388	ImageStart	encode 3 pink.JPG		
+4200			Familiarization 1R	
+4333			Familiarization 1L	
+4600			Familiarization 1L	
+6065			Familiarization 1L	
+6448			Familiarization 1L	
+6864			Familiarization 1L	
+7864			Familiarization 1L	
+8014			Familiarization 1R	
+8313			Familiarization 1R	
+8896			Familiarization 1L	
+9113			Familiarization 1L	
+12827			Familiarization 1L	
+13193			Familiarization 1L	
+13360	ImageEnd	encode 3 pink.JPG		
+13374	ImageStart	fixation.png		
+13476			Content	
+13693			Content	
+14374	ImageEnd	fixation.png		
+14403	ImageStart	encode 3 blue.JPG		
+14725			Familiarization 2L	
+14958			Familiarization 2L	
+15292			Familiarization 2R	
+15525			Familiarization 2R	
+15775			Familiarization 2R	
+15991			Familiarization 2L	
+16274			Familiarization 2L	
+16657			Familiarization 2L	
+16974			Familiarization 2L	
+17407			Familiarization 2R	
+17690			Familiarization 2R	
+17939			Familiarization 2L	
+18489			Content	
+18706			Content	
+19383	ImageEnd	encode 3 blue.JPG		
+19393	ImageStart	fixation.png		
+19721			Content	
+19821			Content	
+20271			Content	
+20394	ImageEnd	fixation.png		
+20423	ImageStart	3b pink.JPG		
+20621			new	
+20854			new	
+21204			old	
+21470			old	
+21670			new	
+21903			new	
+23219			new	
+23485			new	
+23802			old	
+24468			new	
+25034			old	
+27099			old	
+27183			old	
+27316			new	
+27732			new	
+27915			old	
+28515			new	
+28748			old	
+28981			new	
+29281			new	
+30396	ImageEnd	3b pink.JPG		
+30405	ImageStart	fixation.png		
+31346			Content	
+31408	ImageEnd	fixation.png		
+31435	ImageStart	3a blue.JPG		
+31546			Content	
+31696			new	
+32046			old	
+32279			old	
+32745			new	
+32978			new	
+33211			new	
+34144			Content	
+34344			new	
+34610			new	
+34893			new	
+35193			old	
+36892			Content	
+36975			Content	
+37275			old	
+37558			old	
+38141			old	
+38607			old	
+38941			new	
+39557			old	
+39790			old	
+41407	ImageEnd	3a blue.JPG		
+41417	ImageStart	fixation.png		
+42422	ImageEnd	fixation.png		
+43071			Content	
+43354			Content	
+43387	MovieStart	congratulations.wmv		
+43670			Content	
+44370			Content	
+44769			Content	
+45102	KeyPress	Escape		
+45102	MovieEnd	congratulations.wmv		

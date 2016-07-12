@@ -1,0 +1,93 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+332	MovieStart	MutedBallie.avi		
+1234	KeyPress	Space		
+1234	MovieEnd	MutedBallie.avi		
+2559	ImageStart	fixation.png		
+3549	ImageEnd	fixation.png		
+3580	ImageStart	encode 1 pink.JPG		
+3869			Familiarization 1L	
+4068			Familiarization 1L	
+5301			Content	
+5534			Familiarization 1R	
+6283			Content	
+6467			Content	
+8197			Content	
+8559	ImageEnd	encode 1 pink.JPG		
+8569	ImageStart	fixation.png		
+8580			Content	
+9570	ImageEnd	fixation.png		
+9598	ImageStart	encode 1 blue.JPG		
+9713			Familiarization 2L	
+10296			Content	
+11228			Familiarization 2L	
+11445			Content	
+12011			Content	
+12344			Content	
+12777			Content	
+12944			Content	
+13143			Content	
+13277			Content	
+14059			Content	
+14659			Content	
+14926			Content	
+17407			Content	
+18023			Content	
+18290			Content	
+18773			Content	
+19422			Content	
+19571	ImageEnd	encode 1 blue.JPG		
+19582	ImageStart	fixation.png		
+20584	ImageEnd	fixation.png		
+20616	ImageStart	1b pink.JPG		
+21154			Content	
+21504			Content	
+23586			Content	
+25101			Content	
+25451			Content	
+25734			Content	
+27116			Content	
+27250			Content	
+27383			Content	
+28116			Content	
+28682			Content	
+29598			Content	
+30585	ImageEnd	1b pink.JPG		
+30596	ImageStart	fixation.png		
+30747			Content	
+30830			Content	
+31598	ImageEnd	fixation.png		
+31631	ImageStart	1a blue.JPG		
+31863			Content	
+32179			Content	
+32496			Content	
+32879			Content	
+33379			Content	
+34180			Content	
+34829			old	
+35196			Content	
+35762			new	
+36961			Content	
+37661			Content	
+37894			Content	
+38410			Content	
+38627			Content	
+39692			old	
+40059			old	
+40658			Content	
+41391			Content	
+41540			new	
+41613	ImageEnd	1a blue.JPG		
+41625	ImageStart	fixation.png		
+41689			Content	
+42627	ImageEnd	fixation.png		
+43336	MovieStart	congratulations.wmv		
+43888			Content	
+43972			Content	
+44322			Content	
+44805			Content	
+45038			Content	
+45338			Content	
+45571			Content	
+45938	KeyPress	Escape		
+45939	MovieEnd	congratulations.wmv		

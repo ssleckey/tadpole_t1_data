@@ -1,0 +1,196 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 068
+Recording date:	 5/4/2015
+Recording time:	 11:12:38 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/14/2015
+Export time:	 2:23:43 PM
+
+Participant:	 068
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+375	MovieStart	MutedBallie.avi		
+391			Content	
+674			Content	
+1501	KeyPress	Space		
+1501	MovieEnd	MutedBallie.avi		
+1897	ImageStart	blacksquare.bmp		
+1957			Content	
+2573			Content	
+2973			Content	
+4005			Content	
+6071			Content	
+6469	KeyPress	Space		
+6469	ImageEnd	blacksquare.bmp		
+6473	ImageStart	fixation.png		
+6570			Content	
+6653			Content	
+6853			Content	
+7086			Content	
+7477	ImageEnd	fixation.png		
+7510	ImageStart	Slide1.JPG		
+7786			Content	
+7902			AOI_1	
+8102			AOI_1	
+9135			Content	
+9651			AOI_1	
+9901			AOI_1	
+10850			AOI_1	
+11799			AOI_1	
+13265			Content	
+13648			AOI_1	
+14198			AOI_1	
+14664			AOI_1	
+14669	KeyPress	Space		
+14669	ImageEnd	Slide1.JPG		
+14673	ImageStart	fixation.png		
+15014			Content	
+15347			Content	
+15680			Content	
+15682	ImageEnd	fixation.png		
+15710	ImageStart	Slide2.JPG		
+15964			AOI_1	
+16180			AOI_1	
+17196			AOI_1	
+17629			AOI_1	
+18345			AOI_1	
+19545			AOI_1	
+20544			AOI_1	
+21685	KeyPress	Space		
+21685	ImageEnd	Slide2.JPG		
+21689	ImageStart	fixation.png		
+21743			Content	
+22209			Content	
+22476			Content	
+22687	ImageEnd	fixation.png		
+22714	ImageStart	Slide3.JPG		
+22726			Content	
+22992			correct	
+23192			correct	
+23708			correct	
+23991			correct	
+24457			incorrect	
+25124			incorrect	
+25757			correct	
+25956			correct	
+26872			correct	
+27938			correct	
+28171			incorrect	
+28854			incorrect	
+29204			correct	
+29373	KeyPress	Space		
+29373	ImageEnd	Slide3.JPG		
+29377	ImageStart	fixation.png		
+29654			Content	
+30377	ImageEnd	fixation.png		
+30405	ImageStart	Slide4.JPG		
+31170			correct	
+31336			incorrect	
+31619			Content	
+32335			correct	
+32585			Content	
+33901			correct	
+34584			correct	
+35000			correct	
+35150			correct	
+36915			incorrect	
+37215			incorrect	
+37493	KeyPress	Space		
+37493	ImageEnd	Slide4.JPG		
+37496	ImageStart	fixation.png		
+37865			Content	
+38314			Content	
+38506	ImageEnd	fixation.png		
+38534	ImageStart	Slide5.JPG		
+38847			incorrect	
+39479			incorrect	
+39863			Content	
+42195			incorrect	
+42278			incorrect	
+44776			correct	
+44976			correct	
+45575			incorrect	
+45908			correct	
+46208			correct	
+46808			Content	
+47158			incorrect	
+48157			correct	
+48873			incorrect	
+49089			incorrect	
+49340	KeyPress	Space		
+49341	ImageEnd	Slide5.JPG		
+49344	ImageStart	fixation.png		
+49606			Content	
+49889			Content	
+50122			Content	
+50345	ImageEnd	fixation.png		
+50373	ImageStart	Slide6.JPG		
+50439			Content	
+50705			correct	
+51005			correct	
+51271			incorrect	
+51621			Content	
+51854			correct	
+52370			correct	
+54252			Content	
+54735			correct	
+55551			correct	
+57117			correct	
+57333			correct	
+57756	KeyPress	Space		
+57757	ImageEnd	Slide6.JPG		
+57760	ImageStart	fixation.png		
+58049			Content	
+58399			Content	
+58769	ImageEnd	fixation.png		
+58797	ImageStart	Slide7.JPG		
+58999			incorrect	
+59182			incorrect	
+59465			correct	
+59648			correct	
+60931			correct	
+61663			correct	
+62096			correct	
+64828			correct	
+66060			correct	
+67508	KeyPress	Space		
+67508	ImageEnd	Slide7.JPG		
+67512	ImageStart	fixation.png		
+67792			Content	
+68109			Content	
+68342			Content	
+68520	ImageEnd	fixation.png		
+68549	ImageStart	Slide8.JPG		
+68592			Content	
+68958			incorrect	
+69458			correct	
+69691			Content	
+69907			Content	
+70757			Content	
+71107			incorrect	
+71323			Content	
+71823			correct	
+72422			correct	
+73055			Content	
+73805			incorrect	
+74088			incorrect	
+74571			correct	
+75170			correct	
+75553			incorrect	
+76852			incorrect	
+77468			incorrect	
+78076	KeyPress	Space		
+78076	ImageEnd	Slide8.JPG		
+78113	InstructionStart	Instruction Element		
+80783			Content	
+80933			Content	
+81333			Content	
+81452	KeyPress	Space		
+81452	InstructionEnd	Instruction Element		

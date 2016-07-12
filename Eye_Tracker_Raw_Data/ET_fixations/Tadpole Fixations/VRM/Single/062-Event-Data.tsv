@@ -1,0 +1,101 @@
+Timestamp	Event	Descriptor	AoiNames	
+340	MovieStart	MutedBallie.avi		
+647			Content	
+880			Content	
+2850	KeyPress	Space		
+2851	MovieEnd	MutedBallie.avi		
+3664	ImageStart	fixation.png		
+3845			Content	
+3961			Content	
+4667	ImageEnd	fixation.png		
+4695	ImageStart	encode 1 blue.JPG		
+5011			Familiarization 1R	
+5893			Familiarization 1L	
+6160			Familiarization 1L	
+6409			Familiarization 1L	
+7159			Familiarization 1R	
+7709			Familiarization 1R	
+8058			Familiarization 1R	
+8758			Familiarization 1L	
+9058			Familiarization 1L	
+9607			Familiarization 1L	
+10223			Familiarization 1L	
+12039			Familiarization 1R	
+13421			Familiarization 1R	
+13904			Familiarization 1L	
+14137			Familiarization 1L	
+14587			Familiarization 1L	
+14668	ImageEnd	encode 1 blue.JPG		
+14678	ImageStart	fixation.png		
+15003			Content	
+15503			Content	
+15680	ImageEnd	fixation.png		
+15708	ImageStart	encode 1 pink.JPG		
+15986			Familiarization 2L	
+16585			Familiarization 2R	
+17252			Familiarization 2L	
+17901			Familiarization 2L	
+18434			Familiarization 2L	
+18651			Familiarization 2L	
+18934			Familiarization 2L	
+19217			Familiarization 2L	
+19517			Familiarization 2L	
+20649			Familiarization 2R	
+20690	ImageEnd	encode 1 pink.JPG		
+20700	ImageStart	fixation.png		
+21049			Content	
+21532			Content	
+21702	ImageEnd	fixation.png		
+21730	ImageStart	1b blue.JPG		
+22065			new	
+22814			old	
+23064			old	
+23314			old	
+23797			old	
+24080			old	
+24296			old	
+24713			new	
+24979			new	
+25512			new	
+27094			new	
+27511			new	
+27677			old	
+29526			new	
+29626			new	
+29826			new	
+30142			new	
+31674			new	
+31717	ImageEnd	1b blue.JPG		
+31728	ImageStart	fixation.png		
+32731	ImageEnd	fixation.png		
+32759	ImageStart	1a pink.JPG		
+33440			old	
+33823			old	
+34056			new	
+34422			new	
+34839			new	
+35105			new	
+35488			new	
+36122			new	
+37105			new	
+37354			old	
+37671			old	
+37921			old	
+39219			old	
+39369			old	
+39919			new	
+40185			new	
+40718			new	
+41884			old	
+42732	ImageEnd	1a pink.JPG		
+42743	ImageStart	fixation.png		
+43017			Content	
+43250			Content	
+43533			Content	
+43746	ImageEnd	fixation.png		
+44323	MovieStart	congratulations.wmv		
+44366			Content	
+45897			Content	
+46114			Content	
+46529	KeyPress	Escape		
+46530	MovieEnd	congratulations.wmv		

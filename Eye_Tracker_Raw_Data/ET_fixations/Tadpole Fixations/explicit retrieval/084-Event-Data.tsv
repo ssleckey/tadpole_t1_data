@@ -1,0 +1,202 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+31			Content	
+118	ImageStart	fixation.png		
+314			Content	
+1364			Content	
+2463	KeyPress	Space		
+2464	ImageEnd	fixation.png		
+3912	MovieStart	MutedBallie.avi		
+3928			Content	
+4195			Content	
+4479	KeyPress	Space		
+4480	MovieEnd	MutedBallie.avi		
+4495			Content	
+4894	ImageStart	blacksquare.bmp		
+5461			Content	
+6223	KeyPress	Space		
+6223	ImageEnd	blacksquare.bmp		
+6866	MovieStart	Julia_3.AVI		
+7707			Content	
+9157			Content	
+9624	MovieEnd	Julia_3.AVI		
+9893	ImageStart	fixation.png		
+11556			Content	
+12022			Content	
+12156			Content	
+12705			Content	
+12939			Content	
+13222			Content	
+13988			Content	
+14521			Content	
+14637			Content	
+15303			Content	
+15415	KeyPress	Space		
+15415	ImageEnd	fixation.png		
+15437	ImageStart	arrow_crown.BMP		
+15587			Content	
+15753			Content	
+15920			Content	
+16103			Content	
+16386			Content	
+16852			Content	
+17186			Content	
+17535			Content	
+17801			Content	
+18134			Content	
+18517			Content	
+18984			Content	
+19700			Content	
+20300			Content	
+20433			Content	
+20949			Content	
+21549			Content	
+21699			Content	
+21882			Content	
+22232			Content	
+22748			Content	
+23165			Content	
+24014			Content	
+24380			Content	
+24646			Content	
+24896			Content	
+25163			Content	
+26179			Content	
+26644			Content	
+26728			Content	
+27610			Content	
+28459			Content	
+28926			Content	
+29160			Content	
+29593			Content	
+29826			Content	
+31390			Content	
+31524			Content	
+32391			Content	
+32707			Content	
+32924			Content	
+33157			Content	
+33373			Content	
+33773			Content	
+34106			Content	
+34572			Content	
+34806			Content	
+35289			Content	
+35788			Content	
+36871	KeyPress	Space		
+36871	ImageEnd	arrow_crown.BMP		
+36875	ImageStart	fixation.png		
+39127	KeyPress	Space		
+39127	ImageEnd	fixation.png		
+39148	ImageStart	heart_moon.BMP		
+44896			Content	
+45680			Content	
+45762			Content	
+45963			Content	
+47362			Content	
+47446			Content	
+47762			Content	
+47995			Content	
+48112			Content	
+48378			Content	
+48744			Content	
+48977			Content	
+49094			Content	
+49310			Content	
+49410			Content	
+50510			Content	
+50743			Content	
+50927			Content	
+51757			Content	
+55588			Content	
+57821			Content	
+58187			Content	
+58404			Content	
+58570			Content	
+61534			Content	
+62034			Content	
+63285			Content	
+63418			Content	
+63734			Content	
+64001			Content	
+64101			Content	
+74425			Content	
+75008			Content	
+75258			Content	
+75491			Content	
+76158			Content	
+76624			Content	
+77041			Content	
+77357			Content	
+77990			Content	
+79223			Content	
+79572			Content	
+79822			Content	
+80238			Content	
+98925			Content	
+99191			Content	
+100091			Content	
+101057			Content	
+101273			Content	
+101507			Content	
+101723			Content	
+102073			Content	
+102223			Content	
+102506			Content	
+103855			Content	
+109133			Content	
+109333			Content	
+109601			Content	
+109834			Content	
+111516			Content	
+112166			Content	
+112532			Content	
+112832			Content	
+113065			Content	
+113298			Content	
+117360			Content	
+117460			Content	
+117594			Content	
+118227			Content	
+118360			Content	
+119342			Content	
+121701	KeyPress	Space		
+121701	ImageEnd	heart_moon.BMP		
+121705	ImageStart	fixation.png		
+121908			Content	
+122158			Content	
+124853	KeyPress	Space		
+124853	ImageEnd	fixation.png		
+125171	ImageStart	grapes_peach.BMP		
+125355			new	
+125522			old	
+126055			new	
+126338			new	
+126871			old	
+127070			new	
+127386			new	
+127936			new	
+128269			old	
+129002			new	
+129251			new	
+129600			old	
+129717			old	
+131332			Content	
+141252	KeyPress	Left		
+141253	ImageEnd	grapes_peach.BMP		
+141256	ImageStart	fixation.png		
+142953	KeyPress	Space		
+142953	ImageEnd	fixation.png		
+142975	ImageStart	cow_horse.BMP		
+164873			Content	
+169780	KeyPress	Space		
+169780	ImageEnd	cow_horse.BMP		
+170120	ImageStart	fixation.png		
+170354			Content	
+170521			Content	
+170687			Content	
+171004	KeyPress	Space		
+171004	ImageEnd	fixation.png		
+171595	ImageStart	tomato_carrot.BMP		
+181515	KeyPress	Escape		
+181516	ImageEnd	tomato_carrot.BMP		

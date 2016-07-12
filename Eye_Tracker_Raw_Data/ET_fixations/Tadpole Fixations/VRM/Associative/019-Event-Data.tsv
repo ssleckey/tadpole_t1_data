@@ -1,0 +1,88 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+61			Content	
+178			Content	
+335	MovieStart	MutedBallie.avi		
+477			Content	
+644			Content	
+1586	KeyPress	Space		
+1586	MovieEnd	MutedBallie.avi		
+1727			encoding 2	
+1878	ImageStart	slide1.jpg		
+2160			encoding 3	
+2343			encoding 3	
+2526			encoding 3	
+3808			encoding 3	
+3925			encoding 3	
+4308			encoding 1	
+4474			encoding 1	
+4924			encoding 1	
+5474			encoding 2	
+5823			encoding 3	
+7906			Content	
+8073			Content	
+8222			Content	
+9121			Content	
+11862	ImageEnd	slide1.jpg		
+11873	ImageStart	blacksquare.bmp		
+12877	ImageEnd	blacksquare.bmp		
+12915	ImageStart	slide2.jpg		
+14202			Content	
+14768			encoding 2	
+14851			encoding 3	
+15417			encoding 4	
+16050			Content	
+16549			encoding 1	
+16766			encoding 2	
+17016			encoding 2	
+17466			encoding 4	
+17782			encoding 4	
+18132			encoding 2	
+18748			encoding 4	
+19181			Content	
+19714			Content	
+19798			Content	
+22878	ImageEnd	slide2.jpg		
+22888	ImageStart	blacksquare.bmp		
+23890	ImageEnd	blacksquare.bmp		
+23923	ImageStart	slide3.jpg		
+24511			Content	
+25460			Content	
+33905	ImageEnd	slide3.jpg		
+33916	ImageStart	blacksquare.bmp		
+34138			Content	
+34919	ImageEnd	blacksquare.bmp		
+34951	ImageStart	slide4.jpg		
+37684			Content	
+38101			Content	
+38234			Content	
+41248			old_single	
+41764			new_single	
+42081			Content	
+44920	ImageEnd	slide4.jpg		
+44936	ImageStart	blacksquare.bmp		
+45545			Content	
+45861			Content	
+45933	ImageEnd	blacksquare.bmp		
+45968	ImageStart	slide5.jpg		
+48060			old_double	
+48276			old_double	
+48775			Content	
+50474			Content	
+50907			Content	
+51623			Content	
+51890			Content	
+53822			old_double	
+54421			old_double	
+54904			old_double	
+55947	ImageEnd	slide5.jpg		
+55957	ImageStart	blacksquare.bmp		
+56353			Content	
+56962	ImageEnd	blacksquare.bmp		
+57552	MovieStart	congratulations.wmv		
+58718			Content	
+58935			Content	
+60766			Content	
+61200			Content	
+64968	KeyPress	Escape		
+64968	MovieEnd	congratulations.wmv		

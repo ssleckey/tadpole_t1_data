@@ -1,0 +1,113 @@
+Timestamp	Event	Descriptor	AoiNames	
+99	ImageStart	fixation.png		
+1059	KeyPress	Space		
+1059	ImageEnd	fixation.png		
+1636			Content	
+2704	MovieStart	MutedBallie.avi		
+2892	KeyPress	Space		
+2892	MovieEnd	MutedBallie.avi		
+3218			Content	
+3326	ImageStart	blacksquare.bmp		
+3418			Content	
+5371	KeyPress	Space		
+5371	ImageEnd	blacksquare.bmp		
+6225	MovieStart	Julia_3.AVI		
+8962	MovieEnd	Julia_3.AVI		
+9345	ImageStart	fixation.png		
+16274	KeyPress	Space		
+16274	ImageEnd	fixation.png		
+16297	ImageStart	arrow_crown.BMP		
+17357			Content	
+17557			Content	
+18090			Content	
+18173			Content	
+18690			Content	
+19789			Content	
+20039			Content	
+20388			Content	
+20638			Content	
+21055			Content	
+21804			Content	
+22787			Content	
+23203			Content	
+24986			Content	
+25136			Content	
+26601			Content	
+26784			Content	
+27550			Content	
+28416			Content	
+29548			Content	
+40257			Content	
+40423			Content	
+40706			Content	
+41106			Content	
+41406			Content	
+41639			Content	
+41856			Content	
+42205			Content	
+42471			Content	
+42721			Content	
+42972			Content	
+43054			Content	
+43388			Content	
+43970			Content	
+44070			Content	
+46235			Content	
+46946	KeyPress	Space		
+46946	ImageEnd	arrow_crown.BMP		
+46950	ImageStart	fixation.png		
+47118			Content	
+47484			Content	
+49258	KeyPress	Space		
+49258	ImageEnd	fixation.png		
+49279	ImageStart	heart_moon.BMP		
+50016			Content	
+50382			Content	
+50832			Content	
+51298			Content	
+51615			Content	
+52681			Content	
+54246			Content	
+54380			Content	
+54562			Content	
+55179			Content	
+55378			Content	
+55528			Content	
+55695			Content	
+56028			Content	
+56261			Content	
+56394	KeyPress	Space		
+56394	ImageEnd	heart_moon.BMP		
+56398	ImageStart	fixation.png		
+56627			Content	
+59337	KeyPress	Space		
+59337	ImageEnd	fixation.png		
+59358	ImageStart	grapes_peach.BMP		
+60075			new	
+60508			new	
+61540			old	
+62090			new	
+68219			old	
+68552			old	
+68769			old	
+69418			Content	
+70700			old	
+71067			new	
+71383			Content	
+71783			new	
+72249			new	
+76257	KeyPress	Left		
+76257	ImageEnd	grapes_peach.BMP		
+76261	ImageStart	fixation.png		
+80169	KeyPress	Space		
+80169	ImageEnd	fixation.png		
+80191	ImageStart	cow_horse.BMP		
+86638			old	
+97430			new	
+98013			Content	
+113218			new	
+113302			new	
+116500			old	
+116817			old	
+119080	KeyPress	Escape		
+119080	ImageEnd	cow_horse.BMP		

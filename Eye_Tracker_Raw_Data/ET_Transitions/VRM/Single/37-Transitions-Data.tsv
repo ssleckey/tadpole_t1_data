@@ -1,0 +1,98 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+341	MovieStart	MutedBallie.avi		
+395			Content	
+695			Content	
+912			Content	
+1128			Content	
+1886	KeyPress	Space		
+1886	MovieEnd	MutedBallie.avi		
+2570	ImageStart	encode 1 blue.JPG		
+4009			Content	
+4410			Content	
+5542			Content	
+6092			Familiarization 1L	
+6309			Content	
+6641			Content	
+6925			Content	
+7575			Content	
+7924			Content	
+8290			Content	
+8490			Content	
+8773			Content	
+9173			Content	
+10022			Content	
+10506			Content	
+10739			Content	
+11722			Familiarization 1R	
+12138			Familiarization 1R	
+12271			Familiarization 1R	
+12388			Familiarization 1R	
+12530	ImageEnd	encode 1 blue.JPG		
+12540	ImageStart	blacksquare.bmp		
+12554			Content	
+13271			Content	
+13537			Content	
+13887			Content	
+14541	ImageEnd	blacksquare.bmp		
+14575	ImageStart	encode 1 pink.JPG		
+14670			Content	
+14903			Content	
+15069			Familiarization 2L	
+15319			Familiarization 2R	
+15718			Familiarization 2R	
+16002			Familiarization 2R	
+16435			Familiarization 2R	
+16618			Familiarization 2R	
+16801			Familiarization 2L	
+17251			Familiarization 2L	
+17551			Familiarization 2R	
+19316			Familiarization 2L	
+19552	ImageEnd	encode 1 pink.JPG		
+19562	ImageStart	blacksquare.bmp		
+20015			Content	
+21364			Content	
+21560	ImageEnd	blacksquare.bmp		
+21587	ImageStart	1a blue.JPG		
+21848			old	
+22030			old	
+22264			new	
+22747			new	
+23263			new	
+23579			old	
+23929			old	
+24329			new	
+25211			new	
+25411			new	
+25895			new	
+26677			Content	
+26911			new	
+27643			old	
+28160			Content	
+28359			Content	
+28742			Content	
+28959			Content	
+29125			Content	
+29276			new	
+31560	ImageEnd	1a blue.JPG		
+31570	ImageStart	blacksquare.bmp		
+32575	ImageEnd	blacksquare.bmp		
+32602	ImageStart	1b pink.JPG		
+36187			Content	
+36287			new	
+36986			new	
+37253			Content	
+37486			Content	
+37719			Content	
+38536			Content	
+38852			Content	
+42574	ImageEnd	1b pink.JPG		
+42584	ImageStart	blacksquare.bmp		
+43589	ImageEnd	blacksquare.bmp		
+44159	MovieStart	congratulations.wmv		
+44748			Content	
+44931			Content	
+45364			Content	
+45713			Content	
+46189	KeyPress	Escape		
+46189	MovieEnd	congratulations.wmv		

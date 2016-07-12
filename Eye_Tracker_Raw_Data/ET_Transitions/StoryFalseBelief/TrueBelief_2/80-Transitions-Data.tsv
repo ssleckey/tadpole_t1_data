@@ -1,0 +1,89 @@
+Timestamp	Event	Descriptor	AoiNames	
+321	MovieStart	MutedBallie.avi		
+915			Content	
+1032			Content	
+3603	KeyPress	Space		
+3603	MovieEnd	MutedBallie.avi		
+3713			Content	
+4288	ImageStart	blacksquare.bmp		
+11124			Content	
+11341			Content	
+11741			Content	
+12157			Content	
+12807			Content	
+13323			Content	
+13387	KeyPress	Space		
+13387	ImageEnd	blacksquare.bmp		
+13391	ImageStart	fixation.png		
+13806			Content	
+14073			Content	
+14395	ImageEnd	fixation.png		
+14422	ImageStart	Slide1.JPG		
+14672			AOI_1	
+14906			AOI_1	
+16638			AOI_1	
+17004			AOI_1	
+20002			Content	
+20342	KeyPress	Space		
+20342	ImageEnd	Slide1.JPG		
+20346	ImageStart	fixation.png		
+21353	ImageEnd	fixation.png		
+21379	ImageStart	Slide2.JPG		
+24115			Content	
+24198			Content	
+24448			AOI_1	
+25297			AOI_1	
+25681			AOI_1	
+26164			AOI_1	
+26563			AOI_1	
+28362	KeyPress	Space		
+28363	ImageEnd	Slide2.JPG		
+28367	ImageStart	fixation.png		
+29373	ImageEnd	fixation.png		
+29401	ImageStart	Slide3.JPG		
+32809			Content	
+32925			correct	
+33441			Content	
+34457			correct	
+35008			correct	
+35591			correct	
+36622			correct	
+37256			correct	
+37539			correct	
+38555			incorrect	
+38905			incorrect	
+39298	KeyPress	Space		
+39298	ImageEnd	Slide3.JPG		
+39302	ImageStart	fixation.png		
+39605			Content	
+40306	ImageEnd	fixation.png		
+40333	ImageStart	Slide4.JPG		
+41454			incorrect	
+41570			correct	
+48754	KeyPress	Space		
+48754	ImageEnd	Slide4.JPG		
+48759	ImageStart	fixation.png		
+49760	ImageEnd	fixation.png		
+49787	ImageStart	Slide5.JPG		
+50630			correct	
+50896			incorrect	
+51895			incorrect	
+52428			incorrect	
+52811			incorrect	
+53978			incorrect	
+54061			incorrect	
+54444			Content	
+60873			Content	
+60989			incorrect	
+61972			correct	
+62055			correct	
+75993			Content	
+76543			incorrect	
+76843			Content	
+85287			correct	
+85437			Content	
+85586			incorrect	
+86271			incorrect	
+86670			correct	
+90137	KeyPress	Escape		
+90138	ImageEnd	Slide5.JPG		

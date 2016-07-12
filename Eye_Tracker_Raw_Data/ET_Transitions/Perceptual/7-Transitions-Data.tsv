@@ -1,0 +1,46 @@
+Timestamp	Event	Descriptor	AoiNames	
+661			Content	
+1121	MovieStart	MutedBallie.avi		
+2009	KeyPress	Space		
+2010	MovieEnd	MutedBallie.avi		
+2405	ImageStart	fixation.png		
+7073			Content	
+14883			Content	
+15982			Content	
+16332			Content	
+17208	KeyPress	Space		
+17209	ImageEnd	fixation.png		
+17230	ImageStart	cookie_pizza_a.BMP		
+17331			correct	
+17848			correct	
+18314			correct	
+19130			incorrect	
+19580			incorrect	
+20662			incorrect	
+21012			Content	
+21329			incorrect	
+21811			incorrect	
+22828			correct	
+23178			correct	
+23693			correct	
+24626			incorrect	
+25026			incorrect	
+25776			incorrect	
+25975			correct	
+26242			correct	
+27058			correct	
+27375			correct	
+27741			incorrect	
+27841			incorrect	
+29806			correct	
+31388			incorrect	
+32636			Content	
+32919			Content	
+34885			Content	
+37467			incorrect	
+38017			incorrect	
+38916			Content	
+40497			incorrect	
+41297			correct	
+50440	KeyPress	Escape		
+50440	ImageEnd	cookie_pizza_a.BMP		

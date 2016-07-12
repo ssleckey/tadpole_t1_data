@@ -1,0 +1,103 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 103
+Recording date:	 11/6/2015
+Recording time:	 12:05:04 PM
+Recording resolution:	 1280 x 1024
+
+Export date:	 11/18/2015
+Export time:	 9:15:03 AM
+
+Participant:	 103
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+139			Content	
+1022	MovieStart	MutedBallie.avi		
+1405			Content	
+1510	KeyPress	Space		
+1511	MovieEnd	MutedBallie.avi		
+1837	ImageStart	fixation.png		
+2004			Content	
+2537			Content	
+2671			Content	
+2845	ImageEnd	fixation.png		
+2867	ImageStart	encode 2 blue.JPG		
+3237			Familiarization 1L	
+3620			Familiarization 1R	
+3986			Familiarization 1R	
+4236			Familiarization 1R	
+4452			Familiarization 1R	
+5269			Familiarization 1R	
+5468			Familiarization 1L	
+6318			Familiarization 1L	
+6817			Familiarization 1L	
+7854	ImageEnd	encode 2 blue.JPG		
+7865	ImageStart	fixation.png		
+8865	ImageEnd	fixation.png		
+8894	ImageStart	encode 2 pink.JPG		
+9349			Familiarization 2L	
+9532			Familiarization 2R	
+12030			Content	
+12130			Familiarization 2L	
+12630			Familiarization 2R	
+14978			Familiarization 2L	
+15844			Familiarization 2L	
+16911			Content	
+17876			Familiarization 2L	
+18342			Familiarization 2L	
+18475			Familiarization 2L	
+18809			Familiarization 2L	
+18868	ImageEnd	encode 2 pink.JPG		
+18877	ImageStart	fixation.png		
+19308			Content	
+19879	ImageEnd	fixation.png		
+19906	ImageStart	2b blue.JPG		
+20274			new	
+20841			old	
+21940			new	
+22373			new	
+22739			new	
+23839			old	
+24138			old	
+25304			new	
+25637			new	
+26836			new	
+29667			new	
+29879	ImageEnd	2b blue.JPG		
+29889	ImageStart	fixation.png		
+29967			Content	
+30267			Content	
+30584			Content	
+30892	ImageEnd	fixation.png		
+30919	ImageStart	2a pink.JPG		
+31216			old	
+31466			new	
+31833			new	
+32016			new	
+32499			old	
+32665			old	
+34547			old	
+34830			new	
+35463			new	
+40460			old	
+40908	ImageEnd	2a pink.JPG		
+40918	ImageStart	fixation.png		
+41225			Content	
+41692			Content	
+41922	ImageEnd	fixation.png		
+42108			Content	
+42508			Content	
+42581	MovieStart	congratulations.wmv		
+42891			Content	
+43407			Content	
+43640			Content	
+43757			Content	
+44123			Content	
+44307			Content	
+44806	KeyPress	Escape		
+44806	MovieEnd	congratulations.wmv		

@@ -1,0 +1,92 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+321	MovieStart	MutedBallie.avi		
+849			Content	
+872	KeyPress	Space		
+872	MovieEnd	MutedBallie.avi		
+1451	ImageStart	encode 2 blue.JPG		
+1832			familiarization 1R	
+2281			familiarization 1L	
+3081			familiarization 1R	
+5079			Content	
+5412			familiarization 1R	
+5995			familiarization 1L	
+6426	ImageEnd	encode 2 blue.JPG		
+6437	ImageStart	blacksquare.bmp		
+6894			Content	
+7244			Content	
+7360			Content	
+7493			Content	
+8226			Content	
+8343			Content	
+8435	ImageEnd	blacksquare.bmp		
+8461	ImageStart	encode 2 pink.JPG		
+8643			Content	
+8843			Content	
+9059			familiarization 2L	
+9559			familiarization 2R	
+11125			familiarization 2L	
+12173			familiarization 2L	
+12456			familiarization 2R	
+12706			familiarization 2R	
+13922			familiarization 2R	
+14122			familiarization 2R	
+14372			familiarization 2L	
+14722			Content	
+15822			familiarization 2L	
+16688			familiarization 2L	
+17088			familiarization 2L	
+17271			familiarization 2R	
+18437	ImageEnd	encode 2 pink.JPG		
+18447	ImageStart	blacksquare.bmp		
+18852			Content	
+19302			Content	
+19469			Content	
+20018			Content	
+20449	ImageEnd	blacksquare.bmp		
+20478	ImageStart	2a blue.JPG		
+20884			new	
+21334			old	
+22350			new	
+24731			Content	
+24848			new	
+25330			old	
+25747			new	
+25947			new	
+26263			old	
+26463			old	
+27562			old	
+27779			new	
+28945			old	
+29478			new	
+30044			old	
+30444			old	
+30448	ImageEnd	2a blue.JPG		
+30458	ImageStart	blacksquare.bmp		
+30943			Content	
+31462	ImageEnd	blacksquare.bmp		
+31489	ImageStart	2b pink.JPG		
+33791			new	
+33908			new	
+35256			old	
+35772			Content	
+35905			old	
+36655			new	
+36939			new	
+38355			old	
+38754			new	
+39587			new	
+39787			old	
+40103			old	
+40953			Content	
+41103			new	
+41462	ImageEnd	2b pink.JPG		
+41472	ImageStart	blacksquare.bmp		
+42252			Content	
+42475	ImageEnd	blacksquare.bmp		
+42902			Content	
+43043	MovieStart	congratulations.wmv		
+43351			Content	
+44134			Content	
+44567	KeyPress	Escape		
+44568	MovieEnd	congratulations.wmv		

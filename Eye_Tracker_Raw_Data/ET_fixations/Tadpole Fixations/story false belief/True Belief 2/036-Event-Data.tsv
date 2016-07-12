@@ -1,0 +1,184 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 036
+Recording date:	 10/22/2014
+Recording time:	 10:18:26 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/14/2015
+Export time:	 3:15:51 PM
+
+Participant:	 036
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+301	MovieStart	MutedBallie.avi		
+632			Content	
+715			Content	
+1032			Content	
+5305	KeyPress	Space		
+5305	MovieEnd	MutedBallie.avi		
+5501	ImageStart	blacksquare.bmp		
+5945			Content	
+7327			Content	
+8953	KeyPress	Space		
+8953	ImageEnd	blacksquare.bmp		
+8975	ImageStart	Slide1.JPG		
+9259			AOI_1	
+9409			AOI_1	
+10708			AOI_1	
+10874			AOI_1	
+11241			AOI_1	
+12057			AOI_1	
+12223			AOI_1	
+13406			AOI_1	
+15105			AOI_1	
+15593	KeyPress	Space		
+15593	ImageEnd	Slide1.JPG		
+15601	ImageStart	blacksquare.bmp		
+15788			Content	
+16145	KeyPress	Space		
+16146	ImageEnd	blacksquare.bmp		
+16167	ImageStart	Slide2.JPG		
+16454			AOI_1	
+18419			AOI_1	
+19218			AOI_1	
+21733			AOI_1	
+22216			AOI_1	
+22321	KeyPress	Space		
+22321	ImageEnd	Slide2.JPG		
+22331	ImageStart	blacksquare.bmp		
+22905	KeyPress	Space		
+22905	ImageEnd	blacksquare.bmp		
+22928	ImageStart	Slide3.JPG		
+23048			incorrect	
+23265			correct	
+23682			correct	
+24031			correct	
+24931			correct	
+25580			correct	
+26280			correct	
+26796			correct	
+27279			correct	
+27795			correct	
+28311			correct	
+29294			correct	
+29877			correct	
+30065	KeyPress	Space		
+30065	ImageEnd	Slide3.JPG		
+30072	ImageStart	blacksquare.bmp		
+30569	KeyPress	Space		
+30569	ImageEnd	blacksquare.bmp		
+30592	ImageStart	Slide4.JPG		
+30760			incorrect	
+31126			correct	
+31226			correct	
+31809			correct	
+32425			correct	
+33225			correct	
+33991			correct	
+34274			correct	
+35140			incorrect	
+35439			incorrect	
+35889			incorrect	
+37138			incorrect	
+37638			incorrect	
+37888			incorrect	
+38554			Content	
+38745	KeyPress	Space		
+38745	ImageEnd	Slide4.JPG		
+38752	ImageStart	blacksquare.bmp		
+39070			Content	
+39281	KeyPress	Space		
+39281	ImageEnd	blacksquare.bmp		
+39302	ImageStart	Slide5.JPG		
+39737			correct	
+39870			correct	
+40702			incorrect	
+41002			incorrect	
+41935			incorrect	
+42285			correct	
+42868			correct	
+43301			correct	
+43617			incorrect	
+43967			incorrect	
+44416			incorrect	
+44583			incorrect	
+44916			incorrect	
+46032			correct	
+47198			incorrect	
+47547			incorrect	
+48880			incorrect	
+49180			incorrect	
+49946			incorrect	
+49984	KeyPress	Space		
+49985	ImageEnd	Slide5.JPG		
+49992	ImageStart	blacksquare.bmp		
+50536	KeyPress	Space		
+50536	ImageEnd	blacksquare.bmp		
+50558	ImageStart	Slide6.JPG		
+50595			incorrect	
+50812			correct	
+51062			correct	
+51311			correct	
+51578			correct	
+55158			correct	
+56940			correct	
+57223			incorrect	
+57923			incorrect	
+58512	KeyPress	Space		
+58512	ImageEnd	Slide6.JPG		
+58520	ImageStart	blacksquare.bmp		
+59280	KeyPress	Space		
+59280	ImageEnd	blacksquare.bmp		
+59302	ImageStart	Slide7.JPG		
+59472			incorrect	
+59721			incorrect	
+60554			correct	
+61220			correct	
+61437			correct	
+61787			correct	
+62420			correct	
+62819			correct	
+63702			correct	
+64651			correct	
+65217			Content	
+65917			correct	
+66200			correct	
+67099			incorrect	
+67266			incorrect	
+68332			incorrect	
+68504	KeyPress	Space		
+68504	ImageEnd	Slide7.JPG		
+68511	ImageStart	blacksquare.bmp		
+68565			Content	
+69128	KeyPress	Space		
+69128	ImageEnd	blacksquare.bmp		
+69151	ImageStart	Slide8.JPG		
+69631			incorrect	
+70147			incorrect	
+70447			correct	
+70697			correct	
+70996			correct	
+71962			correct	
+73045			incorrect	
+73561			incorrect	
+74361			correct	
+75060			correct	
+75243			correct	
+77225			incorrect	
+77375			incorrect	
+77508			correct	
+78025			Content	
+78208			correct	
+78741			correct	
+78824	KeyPress	Space		
+78824	ImageEnd	Slide8.JPG		
+78847	InstructionStart	Instruction Element		
+79224			Content	
+81128	KeyPress	Escape		
+81128	InstructionEnd	Instruction Element		

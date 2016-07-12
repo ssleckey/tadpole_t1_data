@@ -1,0 +1,28 @@
+Data properties:
+
+Recording date: 5/2/2016
+Recording time: 13:29:46:159 (corresponds to time 0)
+Study: False Belief 1
+Subject: 122
+Recording: 122
+Screen resolution: 1280 x 1024
+Coordinate unit: Pixels
+
+
+Filter settings:
+
+Eye: Average
+Validity: Normal
+Fixation filter: Tobii fixation filter
+Velocity threshold: 35
+Distance threshold: 35
+
+FixationIndex	Timestamp	FixationDuration	MappedFixationPointX	MappedFixationPointY	
+0	13806	166	267	199	
+1	13973	133	-9	164	
+2	14106	100	107	68	
+3	14639	650	80	15	
+4	15988	350	497	328	
+5	16338	200	501	634	
+6	16538	200	238	243	
+7	16737	550	245	322	

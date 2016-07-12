@@ -1,0 +1,194 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+346	MovieStart	MutedBallie.avi		
+459			Content	
+659			Content	
+2795	KeyPress	Space		
+2796	MovieEnd	MutedBallie.avi		
+3207			Content	
+3673			Content	
+3989	ImageStart	blacksquare.bmp		
+4006			Content	
+4539			Content	
+6883	KeyPress	Space		
+6883	ImageEnd	blacksquare.bmp		
+6887	ImageStart	fixation.png		
+7737			Content	
+7887	ImageEnd	fixation.png		
+7914	ImageStart	Slide1.JPG		
+8136			AOI_1	
+8353			AOI_1	
+9419			AOI_1	
+9669			AOI_1	
+9902			AOI_1	
+10618			AOI_1	
+11134			AOI_1	
+12250			AOI_1	
+12700			AOI_1	
+13249			AOI_1	
+13566			AOI_1	
+13732			AOI_1	
+14765			AOI_1	
+14907	KeyPress	Space		
+14907	ImageEnd	Slide1.JPG		
+14911	ImageStart	fixation.png		
+15215			Content	
+15431			Content	
+15922	ImageEnd	fixation.png		
+15953	ImageStart	Slide2.JPG		
+16264			Content	
+16497			AOI_1	
+16647			AOI_1	
+17879			AOI_1	
+18246			AOI_1	
+18795			AOI_1	
+19278			AOI_1	
+21660			AOI_1	
+22326			AOI_1	
+22763	KeyPress	Space		
+22764	ImageEnd	Slide2.JPG		
+22767	ImageStart	fixation.png		
+22859			Content	
+23109			Content	
+23458			Content	
+23675			Content	
+23768	ImageEnd	fixation.png		
+23795	ImageStart	Slide3.JPG		
+24075			incorrect	
+24275			incorrect	
+24591			correct	
+25290			correct	
+25640			correct	
+26306			incorrect	
+26723			incorrect	
+27322			correct	
+28005			correct	
+28371			correct	
+28921			incorrect	
+29121			incorrect	
+29687			correct	
+30370			correct	
+30523	KeyPress	Space		
+30523	ImageEnd	Slide3.JPG		
+30527	ImageStart	fixation.png		
+30803			Content	
+31337			Content	
+31539	ImageEnd	fixation.png		
+31567	ImageStart	Slide4.JPG		
+31803			incorrect	
+32052			incorrect	
+32352			incorrect	
+33551			correct	
+33818			correct	
+34117			correct	
+34450			correct	
+34700			correct	
+35266			correct	
+36682			correct	
+37148			correct	
+37548			correct	
+37965			incorrect	
+38548			correct	
+38747			correct	
+39480			incorrect	
+40067	KeyPress	Space		
+40068	ImageEnd	Slide4.JPG		
+40071	ImageStart	fixation.png		
+40096			Content	
+40496			Content	
+41069	ImageEnd	fixation.png		
+41096	ImageStart	Slide5.JPG		
+41462			Content	
+41612			correct	
+41862			correct	
+42128			correct	
+42428			incorrect	
+43028			correct	
+44360			correct	
+44959			correct	
+45726			correct	
+46825			correct	
+47441			correct	
+47841			correct	
+49090			correct	
+49806			correct	
+51405			correct	
+51738			correct	
+51867	KeyPress	Space		
+51867	ImageEnd	Slide5.JPG		
+51871	ImageStart	fixation.png		
+52154			Content	
+52354			Content	
+52604			Content	
+52771			Content	
+52877	ImageEnd	fixation.png		
+52905	ImageStart	Slide6.JPG		
+53221			Content	
+53437			correct	
+53653			correct	
+54003			correct	
+54269			incorrect	
+54652			incorrect	
+54952			correct	
+55219			correct	
+60419	KeyPress	Space		
+60419	ImageEnd	Slide6.JPG		
+60422	ImageStart	fixation.png		
+60565			Content	
+60765			Content	
+61381			Content	
+61428	ImageEnd	fixation.png		
+61455	ImageStart	Slide7.JPG		
+61698			Content	
+61881			incorrect	
+62230			correct	
+62463			correct	
+62896			correct	
+63129			correct	
+64478			correct	
+65195			correct	
+65778			correct	
+65994			correct	
+66694			correct	
+67993			incorrect	
+68176			incorrect	
+68559			correct	
+68809			correct	
+69791			correct	
+70091			correct	
+70386	KeyPress	Space		
+70387	ImageEnd	Slide7.JPG		
+70390	ImageStart	fixation.png		
+70757			Content	
+71174			Content	
+71290			Content	
+71395	ImageEnd	fixation.png		
+71422	ImageStart	Slide8.JPG		
+71540			Content	
+71707			Content	
+71906			incorrect	
+72289			correct	
+72623			correct	
+73272			incorrect	
+73555			incorrect	
+77152			correct	
+77386			correct	
+77669			Content	
+78335			correct	
+79184			correct	
+79917			incorrect	
+80217			incorrect	
+80433			incorrect	
+80914	KeyPress	Space		
+80914	ImageEnd	Slide8.JPG		
+81083			Content	
+81449			Content	
+81895	InstructionStart	Instruction Element		
+82099			Content	
+82382			Content	
+83048			Content	
+83581			Content	
+83947			Content	
+84347			Content	
+84418	KeyPress	Space		
+84420	InstructionEnd	Instruction Element		

@@ -1,0 +1,191 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 092
+Recording date:	 9/22/2015
+Recording time:	 9:12:08 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/22/2015
+Export time:	 2:53:40 PM
+
+Participant:	 092
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+241			Content	
+360	MovieStart	MutedBallie.avi		
+574			Content	
+3961	KeyPress	Space		
+3962	MovieEnd	MutedBallie.avi		
+4427	ImageStart	blacksquare.bmp		
+4637			Content	
+4904			Content	
+6785	KeyPress	Space		
+6785	ImageEnd	blacksquare.bmp		
+6789	ImageStart	fixation.png		
+7619			Content	
+7791	ImageEnd	fixation.png		
+7818	ImageStart	Slide1.JPG		
+8035			AOI_1	
+10483			AOI_1	
+10900			AOI_1	
+11782			AOI_1	
+12215			AOI_1	
+12817	KeyPress	Space		
+12817	ImageEnd	Slide1.JPG		
+12822	ImageStart	fixation.png		
+12931			Content	
+13215			Content	
+13827	ImageEnd	fixation.png		
+13860	ImageStart	Slide2.JPG		
+14180			AOI_1	
+14380			AOI_1	
+15346			AOI_1	
+16395			AOI_1	
+18194			AOI_1	
+18827			AOI_1	
+19041	KeyPress	Space		
+19041	ImageEnd	Slide2.JPG		
+19045	ImageStart	fixation.png		
+19343			Content	
+20052	ImageEnd	fixation.png		
+20076			Content	
+20085	ImageStart	Slide3.JPG		
+20576			correct	
+21408			correct	
+21725			incorrect	
+22141			incorrect	
+23374			incorrect	
+23640			incorrect	
+23790			incorrect	
+24540			incorrect	
+25372			incorrect	
+25889			incorrect	
+25929	KeyPress	Space		
+25929	ImageEnd	Slide3.JPG		
+25935	ImageStart	fixation.png		
+26038			Content	
+26455			Content	
+26705			Content	
+26930	ImageEnd	fixation.png		
+26960	ImageStart	Slide4.JPG		
+27371			incorrect	
+28187			correct	
+28587			correct	
+30035			correct	
+30336			correct	
+30801			correct	
+31667			correct	
+32018			correct	
+32201			correct	
+32534			correct	
+32984			correct	
+33537	KeyPress	Space		
+33537	ImageEnd	Slide4.JPG		
+33542	ImageStart	fixation.png		
+33716			Content	
+33883			Content	
+34332			Content	
+34544	ImageEnd	fixation.png		
+34572	ImageStart	Slide5.JPG		
+34616			Content	
+34949			incorrect	
+35299			incorrect	
+35565			correct	
+36431			correct	
+36764			correct	
+37446			correct	
+37780			correct	
+38147			incorrect	
+38346			incorrect	
+38713			incorrect	
+39729			incorrect	
+39945			correct	
+40144			correct	
+40711			correct	
+41127			incorrect	
+42260			correct	
+42476			correct	
+43342			correct	
+43849	KeyPress	Space		
+43849	ImageEnd	Slide5.JPG		
+43852	ImageStart	fixation.png		
+43942			Content	
+44225			Content	
+44855	ImageEnd	fixation.png		
+44890	ImageStart	Slide6.JPG		
+44891			Content	
+45408			incorrect	
+45591			Content	
+45924			Content	
+46223			correct	
+46673			correct	
+47006			correct	
+47306			correct	
+47539			correct	
+48155			correct	
+48838			correct	
+49704			correct	
+50287			correct	
+50603			incorrect	
+51049	KeyPress	Space		
+51049	ImageEnd	Slide6.JPG		
+51053	ImageStart	fixation.png		
+51353			Content	
+51586			Content	
+52036			Content	
+52064	ImageEnd	fixation.png		
+52091	ImageStart	Slide7.JPG		
+52469			correct	
+52668			correct	
+53135			incorrect	
+53434			incorrect	
+53851			correct	
+54184			correct	
+55200			correct	
+55716			correct	
+56899			correct	
+57998			incorrect	
+58264			incorrect	
+58514			Content	
+59224	KeyPress	Space		
+59224	ImageEnd	Slide7.JPG		
+59228	ImageStart	fixation.png		
+59230			Content	
+59580			Content	
+60237	ImageEnd	fixation.png		
+60264	ImageStart	Slide8.JPG		
+60579			incorrect	
+60929			incorrect	
+61496			correct	
+61928			correct	
+62178			correct	
+62711			correct	
+63028			correct	
+64143			correct	
+64893			incorrect	
+65226			incorrect	
+65576			incorrect	
+66125			incorrect	
+66642			incorrect	
+67058			incorrect	
+67475			incorrect	
+68540			correct	
+68584	KeyPress	Space		
+68585	ImageEnd	Slide8.JPG		
+68973			Content	
+69136	InstructionStart	Instruction Element		
+69174			Content	
+69256			Content	
+69972			Content	
+70556			Content	
+70839			Content	
+71238			Content	
+71621			Content	
+71738			Content	
+72032	KeyPress	Escape		
+72033	InstructionEnd	Instruction Element		

@@ -1,0 +1,344 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 083
+Recording date:	 7/14/2015
+Recording time:	 9:42:57 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/14/2015
+Export time:	 2:04:04 PM
+
+Participant:	 083
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+126			Content	
+336	MovieStart	MutedBallie.avi		
+343			Content	
+559			Content	
+759			Content	
+5205			Content	
+5671			Content	
+7136	KeyPress	Space		
+7136	MovieEnd	MutedBallie.avi		
+7636			Content	
+8002			Content	
+8354	ImageStart	fixation.png		
+8435			Content	
+9668			Content	
+9760	KeyPress	Space		
+9760	ImageEnd	fixation.png		
+9768			Content	
+9781	ImageStart	cake_hat_a.BMP		
+10117			correct	
+10417			correct	
+10634			incorrect	
+10917			incorrect	
+11433			correct	
+11683			correct	
+12382			incorrect	
+12615			incorrect	
+13148			incorrect	
+13348			incorrect	
+13840	KeyPress	Right		
+13840	ImageEnd	cake_hat_a.BMP		
+13844	ImageStart	fixation.png		
+15746			Content	
+16080			Content	
+16263			Content	
+16463			Content	
+16624	KeyPress	Space		
+16624	ImageEnd	fixation.png		
+16645	ImageStart	jacket_leaf_a.BMP		
+16696			Content	
+17063			correct	
+17562			correct	
+17978			correct	
+20127			correct	
+20528	KeyPress	Left		
+20528	ImageEnd	jacket_leaf_a.BMP		
+20532	ImageStart	fixation.png		
+22874			Content	
+23536	KeyPress	Space		
+23536	ImageEnd	fixation.png		
+23557	ImageStart	apple_bear_a.BMP		
+23774			Content	
+23890			incorrect	
+24057			incorrect	
+24507			correct	
+24706			correct	
+24956			correct	
+26847	KeyPress	Right		
+26848	ImageEnd	apple_bear_a.BMP		
+26852	ImageStart	fixation.png		
+27987			Content	
+28137			Content	
+28270			Content	
+28720			Content	
+29037			Content	
+29869			Content	
+30019			Content	
+30039	KeyPress	Space		
+30039	ImageEnd	fixation.png		
+30060	ImageStart	elephant_broccoli_a.BMP		
+30436			correct	
+30585			correct	
+31568			correct	
+31868			correct	
+32117			correct	
+32639	KeyPress	Left		
+32640	ImageEnd	elephant_broccoli_a.BMP		
+32643	ImageStart	fixation.png		
+34466			Content	
+34699			Content	
+35391	KeyPress	Space		
+35391	ImageEnd	fixation.png		
+35412	ImageStart	clock_dog_a.BMP		
+35781			Content	
+35865			correct	
+36997			Content	
+37663	KeyPress	Right		
+37663	ImageEnd	clock_dog_a.BMP		
+37667	ImageStart	fixation.png		
+39895			Content	
+40504	KeyPress	Space		
+40504	ImageEnd	fixation.png		
+40525	ImageStart	bottle_crayon_a.BMP		
+41344			incorrect	
+41494			incorrect	
+41793			incorrect	
+41993			incorrect	
+42293			correct	
+42493			correct	
+43342			Content	
+43592			incorrect	
+44327	KeyPress	Right		
+44327	ImageEnd	bottle_crayon_a.BMP		
+44331	ImageStart	fixation.png		
+46223			Content	
+46606			Content	
+46706			Content	
+47439	KeyPress	Space		
+47439	ImageEnd	fixation.png		
+47460	ImageStart	egg_pillow_a.BMP		
+47805			incorrect	
+48022			incorrect	
+48305			correct	
+48705			correct	
+48954			correct	
+49321			correct	
+50575	KeyPress	Right		
+50575	ImageEnd	egg_pillow_a.BMP		
+50579	ImageStart	fixation.png		
+53343	KeyPress	Space		
+53343	ImageEnd	fixation.png		
+53367	ImageStart	teddybear_doll_a.BMP		
+54001			correct	
+54800			incorrect	
+56082			incorrect	
+56647	KeyPress	Left		
+56647	ImageEnd	teddybear_doll_a.BMP		
+56651	ImageStart	fixation.png		
+57698			Content	
+57864			Content	
+58414			Content	
+58530			Content	
+59014			Content	
+59759	KeyPress	Space		
+59759	ImageEnd	fixation.png		
+59780	ImageStart	bunny_strawberry_a.BMP		
+60496			incorrect	
+60995			incorrect	
+61661			incorrect	
+62295	KeyPress	Right		
+62295	ImageEnd	bunny_strawberry_a.BMP		
+62298	ImageStart	fixation.png		
+63511			Content	
+64277			Content	
+64860			Content	
+64976			Content	
+65414	KeyPress	Space		
+65415	ImageEnd	fixation.png		
+65436	ImageStart	icecream_bicycle_a.BMP		
+65626			Content	
+65709			correct	
+66225			correct	
+66442			correct	
+66892			correct	
+67125			incorrect	
+67891			correct	
+68057			correct	
+68358	KeyPress	Right		
+68359	ImageEnd	icecream_bicycle_a.BMP		
+68363	ImageStart	fixation.png		
+68757			Content	
+70123			Content	
+71214	KeyPress	Space		
+71214	ImageEnd	fixation.png		
+71235	ImageStart	orange_bread_a.BMP		
+71755			incorrect	
+72104			correct	
+72221			correct	
+73710	KeyPress	Right		
+73711	ImageEnd	orange_bread_a.BMP		
+73715	ImageStart	fixation.png		
+76614	KeyPress	Space		
+76614	ImageEnd	fixation.png		
+76635	ImageStart	pig_duck_a.BMP		
+77084			incorrect	
+77167			incorrect	
+77267			incorrect	
+77633			correct	
+78033			correct	
+78516			correct	
+78833			correct	
+79822	KeyPress	Left		
+79822	ImageEnd	pig_duck_a.BMP		
+79826	ImageStart	fixation.png		
+80365			Content	
+80615			Content	
+82366	KeyPress	Space		
+82366	ImageEnd	fixation.png		
+82387	ImageStart	tv_fork_a.BMP		
+82863			Content	
+82946			correct	
+84245			incorrect	
+84412			incorrect	
+84774	KeyPress	Left		
+84774	ImageEnd	tv_fork_a.BMP		
+84778	ImageStart	fixation.png		
+86660			Content	
+86960			Content	
+87043			Content	
+87470	KeyPress	Space		
+87470	ImageEnd	fixation.png		
+87491	ImageStart	flowers_butterfly_a.BMP		
+87709			correct	
+88409			correct	
+88942			Content	
+89075			correct	
+89208			correct	
+89614	KeyPress	Right		
+89614	ImageEnd	flowers_butterfly_a.BMP		
+89618	ImageStart	fixation.png		
+90074			Content	
+91207			Content	
+91590			Content	
+92078	KeyPress	Space		
+92078	ImageEnd	fixation.png		
+92090			Content	
+92100	ImageStart	mouse_cat_a.BMP		
+92239			Content	
+92423			incorrect	
+92706			incorrect	
+92939			incorrect	
+93239			incorrect	
+93788			incorrect	
+93888			incorrect	
+94534	KeyPress	Right		
+94534	ImageEnd	mouse_cat_a.BMP		
+94538	ImageStart	fixation.png		
+94621			Content	
+94904			Content	
+95703			Content	
+96103			Content	
+96253			Content	
+97662	KeyPress	Space		
+97662	ImageEnd	fixation.png		
+97683	ImageStart	balloons_grapes_a.BMP		
+97986			correct	
+98135			correct	
+98451			correct	
+98701			correct	
+98851			correct	
+99151			incorrect	
+100037	KeyPress	Left		
+100038	ImageEnd	balloons_grapes_a.BMP		
+100042	ImageStart	fixation.png		
+101333			Content	
+101583			Content	
+101782			Content	
+102982			Content	
+103005	KeyPress	Space		
+103005	ImageEnd	fixation.png		
+103028	ImageStart	spoon_ball_a.BMP		
+105733	KeyPress	Right		
+105734	ImageEnd	spoon_ball_a.BMP		
+105738	ImageStart	fixation.png		
+106296			Content	
+106446			Content	
+106895			Content	
+107628			Content	
+107828			Content	
+107829	KeyPress	Space		
+107829	ImageEnd	fixation.png		
+107852	ImageStart	cookie_sock_a.BMP		
+108028			Content	
+108228			Content	
+108611			Content	
+108694			correct	
+109060			correct	
+109210			correct	
+110190	KeyPress	Right		
+110190	ImageEnd	cookie_sock_a.BMP		
+110194	ImageStart	fixation.png		
+112765	KeyPress	Space		
+112765	ImageEnd	fixation.png		
+112787	ImageStart	chair_refrigerator_a.BMP		
+113507			incorrect	
+113673			correct	
+113907			correct	
+114206			correct	
+114906			Content	
+114989			incorrect	
+115372			incorrect	
+115589			correct	
+116605	KeyPress	Right		
+116605	ImageEnd	chair_refrigerator_a.BMP		
+116609	ImageStart	fixation.png		
+117071			Content	
+117421			Content	
+118837	KeyPress	Space		
+118837	ImageEnd	fixation.png		
+118858	ImageStart	shoe_pizza_a.BMP		
+119719			correct	
+120085			correct	
+120468			correct	
+120668			correct	
+120933	KeyPress	Left		
+120933	ImageEnd	shoe_pizza_a.BMP		
+120939	ImageStart	fixation.png		
+121821	KeyPress	Space		
+121821	ImageEnd	fixation.png		
+122557	MovieStart	congratulations.wmv		
+123649			Content	
+123982			Content	
+124232			Content	
+125065			Content	
+125781			Content	
+126098			Content	
+126497			Content	
+126930			Content	
+127213			Content	
+127446			Content	
+128062			Content	
+128512			Content	
+128829			Content	
+129461			Content	
+130177			Content	
+130744			Content	
+131294			Content	
+131693			Content	
+132176			Content	
+132726			Content	
+132809			Content	
+133492			Content	
+135241			Content	
+135624			Content	
+136240			Content	
+136440			Content	
+136727	MovieEnd	congratulations.wmv		

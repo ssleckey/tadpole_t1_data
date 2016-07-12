@@ -1,0 +1,127 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 040
+Recording date:	 10/29/2014
+Recording time:	 4:37:52 PM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/14/2015
+Export time:	 3:16:13 PM
+
+Participant:	 040
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+203			Content	
+317	MovieStart	MutedBallie.avi		
+486			Content	
+570			Content	
+670			Content	
+1436			Content	
+2033	KeyPress	Space		
+2033	MovieEnd	MutedBallie.avi		
+2273	ImageStart	blacksquare.bmp		
+2568			Content	
+3200			Content	
+5488	KeyPress	Space		
+5488	ImageEnd	blacksquare.bmp		
+5510	ImageStart	Slide1.JPG		
+7647			AOI_1	
+7946			Content	
+13784	KeyPress	Space		
+13784	ImageEnd	Slide1.JPG		
+13791	ImageStart	blacksquare.bmp		
+16408	KeyPress	Space		
+16408	ImageEnd	blacksquare.bmp		
+16428	ImageStart	Slide2.JPG		
+22504	KeyPress	Space		
+22504	ImageEnd	Slide2.JPG		
+22511	ImageStart	blacksquare.bmp		
+22968	KeyPress	Space		
+22968	ImageEnd	blacksquare.bmp		
+22988	ImageStart	Slide3.JPG		
+30296	KeyPress	Space		
+30296	ImageEnd	Slide3.JPG		
+30303	ImageStart	blacksquare.bmp		
+31095	KeyPress	Space		
+31096	ImageEnd	blacksquare.bmp		
+31117	ImageStart	Slide4.JPG		
+36026			Content	
+36243			Content	
+36775			Content	
+38842			Content	
+38929	KeyPress	Space		
+38930	ImageEnd	Slide4.JPG		
+38937	ImageStart	blacksquare.bmp		
+38959			Content	
+39767	KeyPress	Space		
+39767	ImageEnd	blacksquare.bmp		
+39788	ImageStart	Slide5.JPG		
+39841			Content	
+40141			Content	
+40839			correct	
+41073			incorrect	
+41306			incorrect	
+41773			incorrect	
+42106			correct	
+43538			incorrect	
+44271			incorrect	
+44671			incorrect	
+45070			incorrect	
+46285			Content	
+50450			incorrect	
+50463	KeyPress	Space		
+50463	ImageEnd	Slide5.JPG		
+50471	ImageStart	blacksquare.bmp		
+51049			Content	
+51591	KeyPress	Space		
+51591	ImageEnd	blacksquare.bmp		
+51613	ImageStart	Slide6.JPG		
+52332			incorrect	
+52732			correct	
+53015			Content	
+55030			correct	
+55546			correct	
+56429			incorrect	
+57935	KeyPress	Space		
+57935	ImageEnd	Slide6.JPG		
+57944	ImageStart	blacksquare.bmp		
+58391	KeyPress	Space		
+58391	ImageEnd	blacksquare.bmp		
+58412	ImageStart	Slide7.JPG		
+59093			correct	
+59510			correct	
+59810			incorrect	
+60110			incorrect	
+61026			correct	
+61492			correct	
+62391			Content	
+63008			correct	
+63573			correct	
+64240			Content	
+64822			correct	
+65538			correct	
+66355			Content	
+67279	KeyPress	Space		
+67279	ImageEnd	Slide7.JPG		
+67286	ImageStart	blacksquare.bmp		
+67727	KeyPress	Space		
+67727	ImageEnd	blacksquare.bmp		
+67750	ImageStart	Slide8.JPG		
+67754			Content	
+68004			correct	
+68470			Content	
+70502			Content	
+72716			correct	
+73065			Content	
+76199	KeyPress	Space		
+76199	ImageEnd	Slide8.JPG		
+76342	InstructionStart	Instruction Element		
+77429			Content	
+77729			Content	
+77943	KeyPress	Escape		
+77943	InstructionEnd	Instruction Element		

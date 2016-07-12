@@ -1,0 +1,379 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+312	MovieStart	MutedBallie.avi		
+399			Content	
+495	KeyPress	Space		
+495	MovieEnd	MutedBallie.avi		
+615			Content	
+786	ImageStart	blacksquare.bmp		
+2865			Content	
+3097			Content	
+4263			Content	
+14839			Content	
+15888			Content	
+17102	KeyPress	Space		
+17102	ImageEnd	blacksquare.bmp		
+17124	ImageStart	Slide1.JPG		
+17953			Content	
+18303			Content	
+22800			Content	
+23066			Content	
+23216			Content	
+24048			Content	
+25734	KeyPress	Space		
+25735	ImageEnd	Slide1.JPG		
+25740	ImageStart	blacksquare.bmp		
+35123			Content	
+35207			Content	
+35357			Content	
+39942	KeyPress	Space		
+39942	ImageEnd	blacksquare.bmp		
+39964	ImageStart	Slide2.JPG		
+40302			Content	
+40435			Content	
+40618			Content	
+40902			Content	
+41135			Content	
+41951			Content	
+45082			Content	
+45282			Content	
+45598			Content	
+45731			Content	
+46081			Content	
+46614			Content	
+46764			Content	
+50198	KeyPress	Space		
+50198	ImageEnd	Slide2.JPG		
+50203	ImageStart	blacksquare.bmp		
+51934	KeyPress	Space		
+51934	ImageEnd	blacksquare.bmp		
+52404	MovieStart	Julia_3.AVI		
+54126			Content	
+55125	MovieEnd	Julia_3.AVI		
+55374	ImageStart	blacksquare.bmp		
+55691			Content	
+58397	KeyPress	Space		
+58398	ImageEnd	blacksquare.bmp		
+59110	MovieStart	julia_4_ET2.wmv		
+59872			Content	
+60005			Content	
+61707	MovieEnd	julia_4_ET2.wmv		
+61973	ImageStart	sailboat_bicycle.BMP		
+62470			new	
+63319			old	
+63652			old	
+64151			old	
+64634			old	
+67757	KeyPress	Left		
+67757	ImageEnd	sailboat_bicycle.BMP		
+67763	ImageStart	blacksquare.bmp		
+67981			Content	
+68248			Content	
+68947			Content	
+69214			Content	
+69261	KeyPress	Space		
+69261	ImageEnd	blacksquare.bmp		
+70151	MovieStart	julia_4_ET2.wmv		
+70413			Content	
+70530			Content	
+72744	MovieEnd	julia_4_ET2.wmv		
+73040	ImageStart	wheel_window.BMP		
+73461			new	
+73744			old	
+74194			new	
+74477			old	
+74976			old	
+75360			new	
+76025			new	
+76437	KeyPress	Left		
+76437	ImageEnd	wheel_window.BMP		
+76443	ImageStart	blacksquare.bmp		
+79749	KeyPress	Space		
+79749	ImageEnd	blacksquare.bmp		
+80642	MovieStart	julia_4_ET2.wmv		
+81073			Content	
+81156			Content	
+81389			Content	
+83215	MovieEnd	julia_4_ET2.wmv		
+83426	ImageStart	fish_bee.BMP		
+83721			old	
+84037			old	
+84370			old	
+85652			Content	
+86381	KeyPress	Left		
+86381	ImageEnd	fish_bee.BMP		
+86387	ImageStart	blacksquare.bmp		
+88784			Content	
+88984			Content	
+89005	KeyPress	Space		
+89005	ImageEnd	blacksquare.bmp		
+89150			Content	
+89436	MovieStart	julia_4_ET2.wmv		
+89766			Content	
+89865			Content	
+89998			Content	
+92018	MovieEnd	julia_4_ET2.wmv		
+92234	ImageStart	pig_elephant.BMP		
+94541	KeyPress	Left		
+94541	ImageEnd	pig_elephant.BMP		
+94546	ImageStart	blacksquare.bmp		
+95061			Content	
+96162			Content	
+96545			Content	
+97120	KeyPress	Space		
+97120	ImageEnd	blacksquare.bmp		
+97553	MovieStart	julia_4_ET2.wmv		
+98927			Content	
+99092			Content	
+100128	MovieEnd	julia_4_ET2.wmv		
+100355	ImageStart	sheep_monkey.BMP		
+105221			new	
+105654			new	
+105787			new	
+106636	KeyPress	Right		
+106637	ImageEnd	sheep_monkey.BMP		
+106643	ImageStart	blacksquare.bmp		
+106869			Content	
+106953			Content	
+108364	KeyPress	Space		
+108365	ImageEnd	blacksquare.bmp		
+108824	MovieStart	julia_4_ET2.wmv		
+109651			Content	
+109801			Content	
+110134			Content	
+111398	MovieEnd	julia_4_ET2.wmv		
+111651	ImageStart	ostrich_fly.BMP		
+111766			new	
+112000			new	
+112200			new	
+113049			Content	
+113132			Content	
+113316			old	
+113598			old	
+115044	KeyPress	Left		
+115044	ImageEnd	ostrich_fly.BMP		
+115051	ImageStart	blacksquare.bmp		
+117924	KeyPress	Space		
+117924	ImageEnd	blacksquare.bmp		
+118411	MovieStart	julia_4_ET2.wmv		
+120988	MovieEnd	julia_4_ET2.wmv		
+121216	ImageStart	tiger_alligator.BMP		
+124756	KeyPress	Left		
+124756	ImageEnd	tiger_alligator.BMP		
+124762	ImageStart	blacksquare.bmp		
+126860	KeyPress	Space		
+126860	ImageEnd	blacksquare.bmp		
+127299	MovieStart	julia_4_ET2.wmv		
+129881	MovieEnd	julia_4_ET2.wmv		
+130126	ImageStart	doorknob_bell.BMP		
+135420	KeyPress	Left		
+135420	ImageEnd	doorknob_bell.BMP		
+135426	ImageStart	blacksquare.bmp		
+136740	KeyPress	Space		
+136740	ImageEnd	blacksquare.bmp		
+137173	MovieStart	julia_4_ET2.wmv		
+139747	MovieEnd	julia_4_ET2.wmv		
+140011	ImageStart	shoe_boot.BMP		
+142942			old	
+143392			Content	
+143775			Content	
+143925			Content	
+144058			Content	
+145107			Content	
+145541			Content	
+145824			Content	
+147723			old	
+148189			old	
+148289			old	
+148835	KeyPress	Left		
+148836	ImageEnd	shoe_boot.BMP		
+148841	ImageStart	blacksquare.bmp		
+150899	KeyPress	Space		
+150900	ImageEnd	blacksquare.bmp		
+151482	MovieStart	julia_4_ET2.wmv		
+154063	MovieEnd	julia_4_ET2.wmv		
+154315	ImageStart	table_chair.BMP		
+157635	KeyPress	Left		
+157635	ImageEnd	table_chair.BMP		
+157641	ImageStart	whiteborder.bmp		
+159187	KeyPress	Space		
+159187	ImageEnd	whiteborder.bmp		
+160021	MovieStart	Julia_3.AVI		
+162748	MovieEnd	Julia_3.AVI		
+163296	ImageStart	blacksquare.bmp		
+164187	KeyPress	Space		
+164187	ImageEnd	blacksquare.bmp		
+164668	MovieStart	julia_4_ET2.wmv		
+167244	MovieEnd	julia_4_ET2.wmv		
+167533	ImageStart	socks_pants.BMP		
+170515	KeyPress	Left		
+170515	ImageEnd	socks_pants.BMP		
+170523	ImageStart	blacksquare.bmp		
+176819	KeyPress	Space		
+176819	ImageEnd	blacksquare.bmp		
+177412	MovieStart	julia_4_ET2.wmv		
+180007	MovieEnd	julia_4_ET2.wmv		
+180281	ImageStart	dress_jacket.BMP		
+183499	KeyPress	Right		
+183499	ImageEnd	dress_jacket.BMP		
+183505	ImageStart	blacksquare.bmp		
+185227	KeyPress	Space		
+185227	ImageEnd	blacksquare.bmp		
+185775	MovieStart	julia_4_ET2.wmv		
+188348	MovieEnd	julia_4_ET2.wmv		
+188600	ImageStart	book_bottle.BMP		
+191650	KeyPress	Left		
+191651	ImageEnd	book_bottle.BMP		
+191656	ImageStart	blacksquare.bmp		
+193650	KeyPress	Space		
+193650	ImageEnd	blacksquare.bmp		
+194150	MovieStart	julia_4_ET2.wmv		
+196735	MovieEnd	julia_4_ET2.wmv		
+196994	ImageStart	stove_refrigerator.BMP		
+199466	KeyPress	Left		
+199466	ImageEnd	stove_refrigerator.BMP		
+199473	ImageStart	blacksquare.bmp		
+201186	KeyPress	Space		
+201186	ImageEnd	blacksquare.bmp		
+201747	MovieStart	julia_4_ET2.wmv		
+204319	MovieEnd	julia_4_ET2.wmv		
+204816	ImageStart	swing_door.BMP		
+206094			Content	
+206394			Content	
+207394	KeyPress	Left		
+207394	ImageEnd	swing_door.BMP		
+207400	ImageStart	blacksquare.bmp		
+209066	KeyPress	Space		
+209066	ImageEnd	blacksquare.bmp		
+209628	MovieStart	julia_4_ET2.wmv		
+211925			Content	
+212058			Content	
+212209	MovieEnd	julia_4_ET2.wmv		
+212224			Content	
+212479	ImageStart	spoon_fork.BMP		
+212590			Content	
+212823			Content	
+213323			old	
+213839			new	
+214039			new	
+215255			old	
+215355			old	
+215970	KeyPress	Left		
+215970	ImageEnd	spoon_fork.BMP		
+215976	ImageStart	blacksquare.bmp		
+217538	KeyPress	Space		
+217538	ImageEnd	blacksquare.bmp		
+217875	MovieStart	julia_4_ET2.wmv		
+218353			Content	
+218453			Content	
+218853			Content	
+220464	MovieEnd	julia_4_ET2.wmv		
+220757	ImageStart	toe_finger.BMP		
+221084			old	
+221617			old	
+222049			new	
+225647			Content	
+225830			new	
+226263			new	
+226413			new	
+227012			new	
+227262			new	
+227628			new	
+227928			old	
+228211			old	
+228478			old	
+228827			old	
+228994			old	
+229294			new	
+229493			new	
+229810			new	
+231142			old	
+231309			old	
+231758			old	
+232358			Content	
+232441			Content	
+233658			old	
+233841			old	
+234407			old	
+235440			Content	
+235907			Content	
+236540			Content	
+237140			Content	
+238122			Content	
+246633	KeyPress	Space		
+246634	ImageEnd	toe_finger.BMP		
+246639	ImageStart	blacksquare.bmp		
+246697			Content	
+246831			Content	
+247114			Content	
+247897	KeyPress	Space		
+247897	ImageEnd	blacksquare.bmp		
+248486	MovieStart	julia_4_ET2.wmv		
+248813			Content	
+249013			Content	
+250929			Content	
+251050	MovieEnd	julia_4_ET2.wmv		
+251311	ImageStart	snowman_clown.BMP		
+251762			new	
+252011			new	
+252394			new	
+252960			new	
+253360			new	
+253743			new	
+254160			new	
+254909			Content	
+254994			new	
+257525			new	
+257808			new	
+258358			new	
+258505	KeyPress	Right		
+258505	ImageEnd	snowman_clown.BMP		
+258516	ImageStart	blacksquare.bmp		
+259024			Content	
+259593	KeyPress	Space		
+259593	ImageEnd	blacksquare.bmp		
+259607			Content	
+260271	MovieStart	julia_4_ET2.wmv		
+260623			Content	
+260789			Content	
+261472			Content	
+262771			Content	
+262849	MovieEnd	julia_4_ET2.wmv		
+263120	ImageStart	truck_car.BMP		
+263571			old	
+264287			old	
+264470			new	
+264953			new	
+265009	KeyPress	Right		
+265009	ImageEnd	truck_car.BMP		
+265015	ImageStart	blacksquare.bmp		
+265486			Content	
+265703			Content	
+266033	KeyPress	Space		
+266033	ImageEnd	blacksquare.bmp		
+266036			Content	
+266534	MovieStart	julia_4_ET2.wmv		
+266752			Content	
+266835			Content	
+267002			Content	
+268051			Content	
+268933			Content	
+269125	MovieEnd	julia_4_ET2.wmv		
+269404	ImageStart	train_bus.BMP		
+269666			new	
+270149			old	
+270466			old	
+273081			old	
+273769	KeyPress	Right		
+273769	ImageEnd	train_bus.BMP		
+273775	ImageStart	whiteborder.bmp		
+274080			Content	
+274697	KeyPress	Space		
+274697	ImageEnd	whiteborder.bmp		
+274729			Content	
+275174	MovieStart	congratulations.wmv		
+275462			Content	
+275828			Content	
+276028			Content	
+277057	KeyPress	Escape		
+277057	MovieEnd	congratulations.wmv		

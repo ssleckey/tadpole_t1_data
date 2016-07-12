@@ -1,0 +1,98 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+21			Content	
+338			Content	
+344	MovieStart	MutedBallie.avi		
+771			Content	
+1165	KeyPress	Space		
+1165	MovieEnd	MutedBallie.avi		
+1719	ImageStart	fixation.png		
+2717	ImageEnd	fixation.png		
+2757	ImageStart	AB_AB.jpg		
+3020			Content	
+3470			Content	
+3886			Content	
+4303			Content	
+4985			Content	
+5668			Content	
+6068			Content	
+7567			Content	
+7726	ImageEnd	AB_AB.jpg		
+7736	ImageStart	fixation.png		
+8000			Content	
+8738	ImageEnd	fixation.png		
+9660	ImageStart	CD_CD.jpg		
+10032			Content	
+10315			Content	
+10981			Content	
+11214			Content	
+11464			Content	
+11681			Content	
+12430			Content	
+14620	ImageEnd	CD_CD.jpg		
+14632	ImageStart	fixation.png		
+15634	ImageEnd	fixation.png		
+15668	ImageStart	AB_AB.jpg		
+16076			Content	
+16243			Content	
+16426			Content	
+16676			Content	
+17627			Content	
+17827			Content	
+18210			Content	
+18709			Content	
+19026			Content	
+19475			Content	
+19842			Content	
+20391			Content	
+20642	ImageEnd	AB_AB.jpg		
+20657	ImageStart	fixation.png		
+21141			Content	
+21224			Content	
+21655	ImageEnd	fixation.png		
+21688	ImageStart	CD_CD.jpg		
+22024			Content	
+22323			Content	
+22956			Content	
+23289			Content	
+24437			Content	
+24720			Content	
+25303			Content	
+25802			Content	
+25952			Content	
+26663	ImageEnd	CD_CD.jpg		
+26674	ImageStart	fixation.png		
+27251			Content	
+27678	ImageEnd	fixation.png		
+27710	ImageStart	CD_CB.jpg		
+28550			Content	
+28933			Content	
+29400			Content	
+29633			Content	
+29850			Content	
+30083			Content	
+30566			Content	
+31298			Content	
+31681			retrieval_new_pair_1	
+32048			Content	
+33380			Content	
+34046			retrieval_new_pair_1	
+34179			Content	
+37680	ImageEnd	CD_CB.jpg		
+37690	ImageStart	fixation.png		
+38690	ImageEnd	fixation.png		
+38724	ImageStart	CD_AD.jpg		
+40225			Content	
+40358			Content	
+40708			Content	
+45204			retrieval_old_pair	
+48705	ImageEnd	CD_AD.jpg		
+48719	ImageStart	fixation.png		
+49720	ImageEnd	fixation.png		
+50100			Content	
+50267			Content	
+50395	MovieStart	congratulations.wmv		
+50650			Content	
+51150			Content	
+52101	KeyPress	Escape		
+52101	MovieEnd	congratulations.wmv		

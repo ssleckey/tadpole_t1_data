@@ -1,0 +1,395 @@
+Timestamp	Event	Descriptor	AoiNames	
+91	ImageStart	fixation.png		
+442			Content	
+526			Content	
+2208	KeyPress	Space		
+2208	ImageEnd	fixation.png		
+2524			Content	
+2834	MovieStart	Navjot_3_a.wmv		
+3324			Content	
+3674			Content	
+5003	MovieEnd	Navjot_3_a.wmv		
+5306			Content	
+5411	ImageStart	book_bottle.BMP		
+5739			new	
+5939			new	
+6455			old	
+6721			old	
+6938			new	
+7770			new	
+7987			new	
+9669			new	
+10002			new	
+10383	ImageEnd	book_bottle.BMP		
+10752			Content	
+10956	MovieStart	Navjot_3_a.wmv		
+11001			Content	
+11251			Content	
+12800			Content	
+13124	MovieEnd	Navjot_3_a.wmv		
+13450			Content	
+13541	ImageStart	stove_refrigerator.BMP		
+13866			old	
+14183			old	
+14416			new	
+15215			new	
+18013			new	
+18446			new	
+18528	ImageEnd	stove_refrigerator.BMP		
+18862			Content	
+19145			Content	
+19320	MovieStart	Navjot_3_a.wmv		
+19445			Content	
+19612			Content	
+21177			Content	
+21504	MovieEnd	Navjot_3_a.wmv		
+21827			Content	
+21907	ImageStart	sailboat_bicycle.BMP		
+22277			old	
+22526			old	
+22710			new	
+22926			new	
+24025			old	
+24375			old	
+24808			new	
+25074			new	
+25524			new	
+25990			new	
+26173			new	
+26607			new	
+26790			old	
+26887	ImageEnd	sailboat_bicycle.BMP		
+27239			Content	
+27422	MovieStart	Navjot_3_a.wmv		
+27606			Content	
+29599	MovieEnd	Navjot_3_a.wmv		
+30019	ImageStart	pig_elephant.BMP		
+30487			old	
+30720			new	
+31869			old	
+32568			old	
+32784			new	
+33684			old	
+33934			old	
+34268			new	
+34884			new	
+34999	ImageEnd	pig_elephant.BMP		
+35300			Content	
+35500			Content	
+35637	MovieStart	Navjot_3_a.wmv		
+35933			Content	
+37548			Content	
+37834	MovieEnd	Navjot_3_a.wmv		
+38165			Content	
+38226	ImageStart	fish_bee.BMP		
+38581			new	
+38731			new	
+38914			new	
+39364			old	
+39630			old	
+39913			new	
+40147			old	
+40446			old	
+41496			Content	
+41645			old	
+42062			old	
+42660			old	
+42910			new	
+43204	ImageEnd	fish_bee.BMP		
+43709			Content	
+43768	MovieStart	Navjot_3_a.wmv		
+43992			Content	
+44092			Content	
+45933	MovieEnd	Navjot_3_a.wmv		
+46274			Content	
+46306	ImageStart	ostrich_fly.BMP		
+46607			new	
+46874			new	
+47556			new	
+47956			old	
+48223			old	
+48622			new	
+48872			new	
+49055			old	
+49338			old	
+49472			old	
+49855			new	
+49971			new	
+50138			new	
+51286	ImageEnd	ostrich_fly.BMP		
+51804			Content	
+51839	MovieStart	Navjot_3_a.wmv		
+51954			Content	
+52170			Content	
+52437			Content	
+53502			Content	
+54026	MovieEnd	Navjot_3_a.wmv		
+54335			Content	
+54415	ImageStart	wheel_window.BMP		
+54752			new	
+55152			new	
+55484			new	
+56200			old	
+56800			old	
+57199			old	
+57799			new	
+58115			old	
+58415			old	
+58765			old	
+59397	ImageEnd	wheel_window.BMP		
+59698			Content	
+60045	MovieStart	Navjot_3_a.wmv		
+60265			Content	
+62047			Content	
+62215	MovieEnd	Navjot_3_a.wmv		
+62529			Content	
+62606	ImageStart	doorknob_bell.BMP		
+62929			new	
+63246			new	
+64128			old	
+64428			old	
+64961			old	
+65144			old	
+65377			new	
+65777			new	
+66210			old	
+66676			old	
+67076			old	
+67293			old	
+67459			old	
+67589	ImageEnd	doorknob_bell.BMP		
+68142	MovieStart	Navjot_3_a.wmv		
+69042			Content	
+69592			Content	
+70091			Content	
+70324	MovieEnd	Navjot_3_a.wmv		
+70541			Content	
+70706	ImageStart	swing_door.BMP		
+70774			Content	
+71190			old	
+71390			new	
+71640			new	
+72189			Content	
+72406			new	
+72855			new	
+73521			new	
+74088			new	
+74421			new	
+75470			new	
+75685	ImageEnd	swing_door.BMP		
+75770			Content	
+76003			Content	
+76336	MovieStart	Navjot_3_a.wmv		
+76386			Content	
+76636			Content	
+78508	MovieEnd	Navjot_3_a.wmv		
+78518			Content	
+78818			Content	
+78897	ImageStart	train_bus.BMP		
+79218			new	
+79601			new	
+79784			new	
+80317			old	
+80550			old	
+81665			new	
+82015			new	
+82631			old	
+82898			old	
+83813			new	
+83872	ImageEnd	train_bus.BMP		
+84147			Content	
+84330			Content	
+84570	MovieStart	Navjot_3_a.wmv		
+84830			Content	
+85280			Content	
+86279			Content	
+86768	MovieEnd	Navjot_3_a.wmv		
+87063	ImageStart	spoon_fork.BMP		
+87412			old	
+87628			old	
+87828			new	
+88710			old	
+88893			old	
+89110			new	
+89559			new	
+89759			new	
+89992			new	
+90259			new	
+90592			old	
+90842			old	
+92047	ImageEnd	spoon_fork.BMP		
+92341			Content	
+92541			Content	
+92633	MovieStart	Navjot_3_a.wmv		
+92840			Content	
+94798	MovieEnd	Navjot_3_a.wmv		
+95157	ImageStart	socks_pants.BMP		
+95472			Content	
+95638			old	
+95838			new	
+96954			old	
+97387			new	
+97670			new	
+98103			new	
+98286			old	
+98736			old	
+99702			old	
+100129	ImageEnd	socks_pants.BMP		
+100202			Content	
+100485			Content	
+100683	MovieStart	Navjot_3_a.wmv		
+100885			Content	
+101184			Content	
+102600			Content	
+102874	MovieEnd	Navjot_3_a.wmv		
+103233			Content	
+103766			Content	
+103970	ImageStart	toe_finger.BMP		
+104249			Content	
+104399			new	
+104665			new	
+104898			old	
+105165			old	
+105565			new	
+106198			new	
+106780			old	
+107047			old	
+107713			new	
+108479			new	
+108896			new	
+108942	ImageEnd	toe_finger.BMP		
+109279			Content	
+109614	MovieStart	Navjot_3_a.wmv		
+111211			Content	
+111785	MovieEnd	Navjot_3_a.wmv		
+112142	ImageStart	snowman_clown.BMP		
+112460			old	
+112659			old	
+113109			new	
+114458			old	
+114691			old	
+115058			new	
+115907			new	
+116257			old	
+116539			old	
+117106			old	
+117116	ImageEnd	snowman_clown.BMP		
+117472			Content	
+117771	MovieStart	Navjot_3_a.wmv		
+117855			Content	
+118072			Content	
+118422			Content	
+119754			Content	
+119938	MovieEnd	Navjot_3_a.wmv		
+120254			Content	
+120325	ImageStart	tiger_alligator.BMP		
+120620			new	
+120903			new	
+121386			new	
+121636			new	
+121886			old	
+122503			old	
+122719			new	
+122902			new	
+123052			new	
+123552			Content	
+123702			Content	
+125307	ImageEnd	tiger_alligator.BMP		
+126023	MovieStart	Navjot_3_a.wmv		
+127165			Content	
+127565			Content	
+128098			Content	
+128191	MovieEnd	Navjot_3_a.wmv		
+128298			Content	
+128543	ImageStart	table_chair.BMP		
+128565			Content	
+129214			old	
+129547			old	
+129764			new	
+130197			new	
+130546			Content	
+130763			Content	
+131495			Content	
+131578			old	
+131877			old	
+132160			new	
+132310			new	
+133529	ImageEnd	table_chair.BMP		
+133576			Content	
+133659			Content	
+133942			Content	
+134097	MovieStart	Navjot_3_a.wmv		
+134358			Content	
+134575			Content	
+135624			Content	
+135957			Content	
+136266	MovieEnd	Navjot_3_a.wmv		
+136590			old	
+136603	ImageStart	shoe_boot.BMP		
+137023			old	
+137323			new	
+138539			new	
+138755			new	
+138922			old	
+139322			old	
+139588			new	
+139821			new	
+140571			new	
+140770			new	
+141054			new	
+141570			new	
+141577	ImageEnd	shoe_boot.BMP		
+141920			Content	
+142168	MovieStart	Navjot_3_a.wmv		
+142203			Content	
+142452			Content	
+142969			Content	
+144302			Content	
+144344	MovieEnd	Navjot_3_a.wmv		
+144739	ImageStart	truck_car.BMP		
+145134			Content	
+145301			new	
+145950			old	
+146234			old	
+146700			new	
+146950			new	
+147349			new	
+147783			new	
+148799			new	
+148999			new	
+149498			old	
+149720	ImageEnd	truck_car.BMP		
+149748			Content	
+150048			Content	
+150298	MovieStart	Navjot_3_a.wmv		
+150513			Content	
+150897			Content	
+152478	MovieEnd	Navjot_3_a.wmv		
+152807	ImageStart	dress_jacket.BMP		
+154311			Content	
+154494			old	
+154993			new	
+155243			new	
+156493			new	
+156975			old	
+157675			new	
+157785	ImageEnd	dress_jacket.BMP		
+158125			Content	
+158621	MovieStart	Navjot_3_a.wmv		
+158692			Content	
+158909			Content	
+159292			Content	
+160791	MovieEnd	Navjot_3_a.wmv		
+161183	ImageStart	sheep_monkey.BMP		
+162805			new	
+163670			old	
+166161	ImageEnd	sheep_monkey.BMP		
+166819	MovieStart	congratulations.wmv		
+167617			Content	
+167900			Content	
+168416			Content	
+168816			Content	
+169366			Content	
+169616			Content	
+170868	KeyPress	Escape		
+170869	MovieEnd	congratulations.wmv		

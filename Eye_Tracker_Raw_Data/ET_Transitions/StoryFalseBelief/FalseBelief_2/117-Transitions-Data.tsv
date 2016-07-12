@@ -1,0 +1,193 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+428			Content	
+795			Content	
+852	MovieStart	MutedBallie.avi		
+1078			Content	
+1594			Content	
+3326	KeyPress	Space		
+3326	MovieEnd	MutedBallie.avi		
+3593			Content	
+3776			Content	
+4308	ImageStart	blacksquare.bmp		
+4992			Content	
+5358			Content	
+5373	KeyPress	Space		
+5373	ImageEnd	blacksquare.bmp		
+5377	ImageStart	fixation.png		
+5441			Content	
+5608			Content	
+6374	ImageEnd	fixation.png		
+6402	ImageStart	Slide1.JPG		
+6640			AOI_1	
+6907			AOI_1	
+7606			AOI_1	
+7773			AOI_1	
+8023			AOI_1	
+8522			Content	
+8756			Content	
+10371			AOI_1	
+11104			AOI_1	
+11620			AOI_1	
+11670	KeyPress	Space		
+11670	ImageEnd	Slide1.JPG		
+11674	ImageStart	fixation.png		
+11953			Content	
+12619			Content	
+12676	ImageEnd	fixation.png		
+12702			Content	
+12706	ImageStart	Slide2.JPG		
+12969			AOI_1	
+13235			AOI_1	
+14001			AOI_1	
+14235			AOI_1	
+14601			AOI_1	
+14768			AOI_1	
+17816			AOI_1	
+18015			AOI_1	
+18229	KeyPress	Space		
+18230	ImageEnd	Slide2.JPG		
+18234	ImageStart	fixation.png		
+18265			Content	
+18498			Content	
+18848			Content	
+19245	ImageEnd	fixation.png		
+19272	ImageStart	Slide3.JPG		
+19697			incorrect	
+20047			incorrect	
+20330			correct	
+20564			correct	
+20880			correct	
+21863			correct	
+22129			correct	
+22562			correct	
+23211			correct	
+23778			Content	
+24028			Content	
+24860			correct	
+25043			correct	
+25226			correct	
+25330	KeyPress	Space		
+25330	ImageEnd	Slide3.JPG		
+25334	ImageStart	fixation.png		
+25676			Content	
+26009			Content	
+26226			Content	
+26342	ImageEnd	fixation.png		
+26369	ImageStart	Slide4.JPG		
+26376			Content	
+26642			incorrect	
+27075			correct	
+27442			incorrect	
+28274			correct	
+28707			correct	
+30290			correct	
+30506			correct	
+32088			incorrect	
+32172			incorrect	
+32371			Content	
+33171			incorrect	
+33804			correct	
+34220			correct	
+34581	KeyPress	Space		
+34581	ImageEnd	Slide4.JPG		
+34585	ImageStart	fixation.png		
+34703			Content	
+34886			Content	
+35103			Content	
+35552			Content	
+35593	ImageEnd	fixation.png		
+35621	ImageStart	Slide5.JPG		
+35886			correct	
+36335			correct	
+37568			incorrect	
+38201			correct	
+38434			incorrect	
+39250			correct	
+39416			correct	
+40216			correct	
+40999			correct	
+41465			correct	
+41681			correct	
+46261			correct	
+46461	KeyPress	Space		
+46461	ImageEnd	Slide5.JPG		
+46465	ImageStart	fixation.png		
+46495			Content	
+46761			Content	
+46911			Content	
+47127			Content	
+47464	ImageEnd	fixation.png		
+47491	ImageStart	Slide6.JPG		
+47594			Content	
+47744			correct	
+48010			correct	
+48909			correct	
+49143			correct	
+50275			correct	
+50442			correct	
+51458			incorrect	
+52007			incorrect	
+52607			incorrect	
+53173			correct	
+53539			correct	
+54206			incorrect	
+54439			incorrect	
+54557	KeyPress	Space		
+54557	ImageEnd	Slide6.JPG		
+54561	ImageStart	fixation.png		
+54622			Content	
+54872			Content	
+55288			Content	
+55505			Content	
+55561	ImageEnd	fixation.png		
+55588	ImageStart	Slide7.JPG		
+55738			Content	
+55938			correct	
+56221			correct	
+56837			correct	
+57637			correct	
+57986			correct	
+58769			correct	
+58969			incorrect	
+59302			incorrect	
+60101			incorrect	
+61367			incorrect	
+61634			incorrect	
+61800			incorrect	
+62699			incorrect	
+63066			incorrect	
+63265			correct	
+63532			correct	
+64204	KeyPress	Space		
+64205	ImageEnd	Slide7.JPG		
+64208	ImageStart	fixation.png		
+64498			Content	
+65047			Content	
+65214			Content	
+65216	ImageEnd	fixation.png		
+65244	ImageStart	Slide8.JPG		
+65547			incorrect	
+65897			correct	
+66247			correct	
+66779			incorrect	
+66996			incorrect	
+67479			incorrect	
+67879			correct	
+68095			correct	
+69811			incorrect	
+69911			incorrect	
+70094			incorrect	
+71326			incorrect	
+71493			incorrect	
+72309			correct	
+72542			correct	
+73125			incorrect	
+73164	KeyPress	Space		
+73164	ImageEnd	Slide8.JPG		
+73760	InstructionStart	Instruction Element		
+73791			Content	
+73874			Content	
+74091			Content	
+76580	KeyPress	Escape		
+76581	InstructionEnd	Instruction Element		

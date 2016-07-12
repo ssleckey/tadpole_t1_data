@@ -1,0 +1,161 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 095
+Recording date:	 9/30/2015
+Recording time:	 9:26:01 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 10/5/2015
+Export time:	 11:13:54 AM
+
+Participant:	 095
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+40			Content	
+329	MovieStart	MutedBallie.avi		
+340			Content	
+540			Content	
+794	KeyPress	Space		
+794	MovieEnd	MutedBallie.avi		
+806			Content	
+1250	ImageStart	fixation.png		
+2254	ImageEnd	fixation.png		
+2282	ImageStart	Slide1.JPG		
+2488			encode_1_right	
+2688			encode_1_right	
+3121			encode_1_left	
+3337			encode_1_left	
+3854			encode_1_left	
+4387			encode_1_left	
+4736			encode_1_right	
+5752			encode_1_right	
+6269			encode_1_left	
+6735			encode_1_left	
+6918			Content	
+7168			encode_1_right	
+7263	ImageEnd	Slide1.JPG		
+7273	ImageStart	fixation.png		
+7368			Content	
+7584			Content	
+8275	ImageEnd	fixation.png		
+8304	ImageStart	Slide5.JPG		
+8600			encode_2_right	
+8767			encode_2_right	
+9549			encode_2_left	
+10382			encode_2_left	
+10798			encode_2_right	
+12248			encode_2_right	
+12830			encode_2_right	
+13214			encode_2_right	
+13284	ImageEnd	Slide5.JPG		
+13294	ImageStart	fixation.png		
+13564			Content	
+14297	ImageEnd	fixation.png		
+14450	ImageStart	Slide9.JPG		
+14696			encode_3_right	
+14879			encode_3_right	
+15395			encode_3_left	
+15662			encode_3_left	
+16045			encode_3_left	
+16311			encode_3_left	
+16827			encode_3_right	
+18243			Content	
+18343			encode_3_right	
+18959			encode_3_right	
+19426			encode_3_right	
+19429	ImageEnd	Slide9.JPG		
+19439	ImageStart	fixation.png		
+19543			Content	
+19693			Content	
+20443	ImageEnd	fixation.png		
+20472	ImageStart	Slide1.JPG		
+20742			encode_1_right	
+21375			encode_1_left	
+22390			encode_1_right	
+23190			Content	
+23407			encode_1_right	
+23523			encode_1_right	
+23790			encode_1_right	
+23990			Content	
+24306			Content	
+24523			encode_1_left	
+25453	ImageEnd	Slide1.JPG		
+25463	ImageStart	fixation.png		
+25804			Content	
+25888			Content	
+26465	ImageEnd	fixation.png		
+26493	ImageStart	Slide5.JPG		
+27004			encode_2_left	
+27187			Content	
+27403			encode_2_right	
+28186			encode_2_right	
+28419			encode_2_right	
+30801			encode_2_right	
+31476	ImageEnd	Slide5.JPG		
+31486	ImageStart	fixation.png		
+31567			Content	
+31750			Content	
+32486	ImageEnd	fixation.png		
+32513	ImageStart	Slide9.JPG		
+32749			encode_3_right	
+33116			encode_3_right	
+34131			encode_3_right	
+35197			encode_3_left	
+35447			encode_3_left	
+36446			encode_3_left	
+36696			encode_3_left	
+37495	ImageEnd	Slide9.JPG		
+37505	ImageStart	fixation.png		
+37746			Content	
+37929			Content	
+38509	ImageEnd	fixation.png		
+38536	ImageStart	Slide10.JPG		
+38762			retrieve_1_distractor	
+40028			retrieve_1_target	
+40377			retrieve_1_target	
+40727			retrieve_1_target	
+41160			retrieve_1_target	
+41626			retrieve_1_target	
+42109			retrieve_1_distractor	
+42492			retrieve_1_distractor	
+43042			retrieve_1_distractor	
+43515	ImageEnd	Slide10.JPG		
+43525	ImageStart	fixation.png		
+43591			Content	
+43774			Content	
+43974			Content	
+44529	ImageEnd	fixation.png		
+44557	ImageStart	VRM_assoc_colors.jpg		
+44824			retrieve_2_target	
+45390			retrieve_2_distractor	
+46755			Content	
+46938			retrieve_2_target	
+49544	ImageEnd	VRM_assoc_colors.jpg		
+49559	ImageStart	fixation.png		
+49820			Content	
+50567	ImageEnd	fixation.png		
+50594	ImageStart	Slide12.JPG		
+50852			retrieve_3_distractor	
+51818			retrieve_3_distractor	
+51968			retrieve_3_target	
+52318			retrieve_3_target	
+52684			retrieve_3_target	
+53350			retrieve_3_distractor	
+53600			retrieve_3_distractor	
+53950			retrieve_3_distractor	
+54699			retrieve_3_distractor	
+55399			retrieve_3_distractor	
+55577	ImageEnd	Slide12.JPG		
+56015			Content	
+56167	MovieStart	congratulations.wmv		
+56181			Content	
+56414			Content	
+56681			Content	
+57197			Content	
+58057	KeyPress	Escape		
+58058	MovieEnd	congratulations.wmv		

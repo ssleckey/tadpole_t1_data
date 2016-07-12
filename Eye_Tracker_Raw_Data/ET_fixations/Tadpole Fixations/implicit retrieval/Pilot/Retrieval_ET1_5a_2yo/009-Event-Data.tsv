@@ -1,0 +1,398 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+36			Content	
+126	ImageStart	blacksquare.bmp		
+469			Content	
+1102			Content	
+1371	KeyPress	Space		
+1372	ImageEnd	blacksquare.bmp		
+1685			Content	
+1902	MovieStart	Navjot_3_a.wmv		
+2085			Content	
+2301			Content	
+2618			Content	
+3101			Content	
+3801			Content	
+3934			Content	
+4066	MovieEnd	Navjot_3_a.wmv		
+4275	ImageStart	blacksquare.bmp		
+4700			Content	
+4983			Content	
+5233			Content	
+5899			Content	
+6115			Content	
+6268	ImageEnd	blacksquare.bmp		
+6297	ImageStart	star_cloud.BMP		
+6615			new	
+6898			new	
+7131			old	
+8064			new	
+8397			Content	
+8830			old	
+9180			new	
+9629			new	
+10745			old	
+11095			old	
+11280	ImageEnd	star_cloud.BMP		
+11293	ImageStart	blacksquare.bmp		
+11695			Content	
+12494			Content	
+13291	ImageEnd	blacksquare.bmp		
+13319	ImageStart	dress_jacket.BMP		
+13760			old	
+14376			new	
+14743			new	
+15442			new	
+15925			new	
+16141			new	
+17090			new	
+18023			new	
+18297	ImageEnd	dress_jacket.BMP		
+18308	ImageStart	blacksquare.bmp		
+18906			Content	
+19489			Content	
+19772			Content	
+20222			Content	
+20311	ImageEnd	blacksquare.bmp		
+20339	ImageStart	balloon_kite.BMP		
+20438			Content	
+20688			old	
+21121			old	
+22120			new	
+24052			Content	
+24285			Content	
+25319	ImageEnd	balloon_kite.BMP		
+25332	ImageStart	blacksquare.bmp		
+25618			Content	
+26151			Content	
+27233			Content	
+27328	ImageEnd	blacksquare.bmp		
+27355	ImageStart	socks_pants.BMP		
+28115			new	
+28298			old	
+28665			old	
+28865			new	
+29148			new	
+29381			new	
+30114			new	
+30414			new	
+30614			Content	
+31463			new	
+31696			new	
+32340	ImageEnd	socks_pants.BMP		
+32352	ImageStart	blacksquare.bmp		
+32412			Content	
+32812			Content	
+34128			Content	
+34348	ImageEnd	blacksquare.bmp		
+34370	ImageStart	shoe_boot.BMP		
+34378			Content	
+34528			Content	
+34711			old	
+35560			old	
+35860			old	
+36076			old	
+36993			old	
+37276			old	
+38192			old	
+39275			Content	
+39357	ImageEnd	shoe_boot.BMP		
+39374	ImageStart	blacksquare.bmp		
+39708			Content	
+40940			Content	
+41340			Content	
+41369	ImageEnd	blacksquare.bmp		
+41397	ImageStart	hair_hat.BMP		
+41889			new	
+42305			old	
+42621			Content	
+44470			old	
+44770			new	
+45003			new	
+45286			new	
+46185			new	
+46379	ImageEnd	hair_hat.BMP		
+46396	ImageStart	blacksquare.bmp		
+47334			Content	
+47534			Content	
+48117			Content	
+48390	ImageEnd	blacksquare.bmp		
+48417	ImageStart	couch_bed.BMP		
+48484			Content	
+48700			Content	
+49100			old	
+49383			new	
+49816			new	
+50282			old	
+50449			old	
+50849			old	
+50965			old	
+51182			new	
+51448			new	
+51781			new	
+52198			Content	
+52364			Content	
+52531			Content	
+53396	ImageEnd	couch_bed.BMP		
+53408	ImageStart	blacksquare.bmp		
+55046			Content	
+55410	ImageEnd	blacksquare.bmp		
+55437	ImageStart	mitten_glasses.BMP		
+55712			Content	
+55878			new	
+56345			new	
+56894			new	
+57294			new	
+57410			Content	
+57510			new	
+57893			Content	
+58060			new	
+58310			new	
+58626			new	
+58976			new	
+59359			new	
+59909			new	
+60025			new	
+60208			new	
+60341			new	
+60419	ImageEnd	mitten_glasses.BMP		
+60432	ImageStart	blacksquare.bmp		
+62430	ImageEnd	blacksquare.bmp		
+62457	ImageStart	clock_telephone.BMP		
+63106			Content	
+63289			old	
+63439			old	
+64588			old	
+64821			old	
+65371			new	
+65804			new	
+66370			new	
+67086			new	
+67437	ImageEnd	clock_telephone.BMP		
+67448	ImageStart	blacksquare.bmp		
+67853			Content	
+68186			Content	
+68569			Content	
+69035			Content	
+69451	ImageEnd	blacksquare.bmp		
+69483	ImageStart	train_bus.BMP		
+69585			Content	
+69701			Content	
+69951			new	
+70601			new	
+70967			new	
+71383			old	
+71600			old	
+71966			old	
+72116			old	
+72299			old	
+72632			new	
+73065			new	
+73698			Content	
+74098			new	
+74458	ImageEnd	train_bus.BMP		
+74470	ImageStart	blacksquare.bmp		
+74564			Content	
+74814			Content	
+75164			Content	
+75947			Content	
+76280			Content	
+76469	ImageEnd	blacksquare.bmp		
+77077	MovieStart	Navjot_3_a.wmv		
+77162			Content	
+77346			Content	
+78362			Content	
+79161			Content	
+79250	MovieEnd	Navjot_3_a.wmv		
+79453	ImageStart	blacksquare.bmp		
+79794			Content	
+80094			Content	
+80260			Content	
+80360			Content	
+80543			Content	
+80826			Content	
+81445	ImageEnd	blacksquare.bmp		
+81471	ImageStart	nail_pencil.BMP		
+81792			Content	
+81892			Content	
+82075			old	
+82592			Content	
+83125			new	
+83358			new	
+83724			old	
+83941			Content	
+84174			new	
+84357			new	
+85623			new	
+85790			new	
+86023			Content	
+86339			old	
+86455	ImageEnd	nail_pencil.BMP		
+86466	ImageStart	blacksquare.bmp		
+87222			Content	
+87372			Content	
+87905			Content	
+88354			Content	
+88466	ImageEnd	blacksquare.bmp		
+88494	ImageStart	stove_refrigerator.BMP		
+88754			Content	
+89237			old	
+89370			old	
+89853			new	
+90236			new	
+91669			new	
+91868			old	
+92285			old	
+92634			old	
+93367			old	
+93473	ImageEnd	stove_refrigerator.BMP		
+93485	ImageStart	blacksquare.bmp		
+93734			Content	
+93883			Content	
+94133			Content	
+94416			Content	
+94700			Content	
+95149			Content	
+95484	ImageEnd	blacksquare.bmp		
+95512	ImageStart	glass_bowl.BMP		
+95516			Content	
+95882			Content	
+96065			old	
+96148			old	
+96598			new	
+96948			new	
+97581			Content	
+97914			new	
+98147			old	
+98497			old	
+99180			old	
+99513			new	
+99796			new	
+100493	ImageEnd	glass_bowl.BMP		
+100504	ImageStart	blacksquare.bmp		
+100545			Content	
+100929			Content	
+101495			Content	
+101679			Content	
+102445			Content	
+102504	ImageEnd	blacksquare.bmp		
+102536	ImageStart	wheel_window.BMP		
+102811			old	
+103061			old	
+103427			new	
+104059			new	
+104626			Content	
+104742			Content	
+106075			old	
+106374			new	
+106724			new	
+107514	ImageEnd	wheel_window.BMP		
+107527	ImageStart	blacksquare.bmp		
+107574			Content	
+107857			Content	
+108040			Content	
+108489			Content	
+108789			Content	
+109056			Content	
+109422			Content	
+109527	ImageEnd	blacksquare.bmp		
+109554	ImageStart	lips_ear.BMP		
+109988			old	
+110288			old	
+110688			new	
+111021			new	
+111221			Content	
+111854			new	
+111937			new	
+112353			Content	
+113369			new	
+113602			new	
+114435			new	
+114535	ImageEnd	lips_ear.BMP		
+114547	ImageStart	blacksquare.bmp		
+116544	ImageEnd	blacksquare.bmp		
+116577	ImageStart	bread_potato.BMP		
+117866			old	
+118349			old	
+118515			old	
+119082			old	
+119232			old	
+119448			old	
+119914			new	
+120397			new	
+121546			old	
+121555	ImageEnd	bread_potato.BMP		
+121567	ImageStart	blacksquare.bmp		
+122013			Content	
+122413			Content	
+122746			Content	
+122946			Content	
+123462			Content	
+123566	ImageEnd	blacksquare.bmp		
+123599	ImageStart	ring_watch.BMP		
+123845			Content	
+124061			old	
+124378			old	
+124728			new	
+124961			new	
+125260			old	
+125560			old	
+126710			old	
+127143			old	
+127342			old	
+127676			old	
+127975			old	
+128325			old	
+128573	ImageEnd	ring_watch.BMP		
+128587	ImageStart	blacksquare.bmp		
+129024			Content	
+129257			Content	
+129557			Content	
+130373			Content	
+130585	ImageEnd	blacksquare.bmp		
+130617	ImageStart	eye_nose.BMP		
+130873			old	
+131839			old	
+132238			new	
+132621			new	
+133671			old	
+134220			old	
+134820			old	
+135592	ImageEnd	eye_nose.BMP		
+135603	ImageStart	blacksquare.bmp		
+135969			Content	
+136385			Content	
+136935			Content	
+137301			Content	
+137606	ImageEnd	blacksquare.bmp		
+137633	ImageStart	strawberry_banana.BMP		
+137734			new	
+137934			Content	
+138200			old	
+138717			old	
+139433			new	
+139916			Content	
+140599			new	
+142331			Content	
+142614	ImageEnd	strawberry_banana.BMP		
+142625	ImageStart	blacksquare.bmp		
+144626	ImageEnd	blacksquare.bmp		
+144653	ImageStart	airplane_helicopter.BMP		
+147577			old	
+147727			old	
+148077			new	
+149009			new	
+149109			new	
+149633	ImageEnd	airplane_helicopter.BMP		
+149644	ImageStart	blacksquare.bmp		
+150058			Content	
+150392			Content	
+150625			Content	
+151645	ImageEnd	blacksquare.bmp		
+152214	MovieStart	congratulations.wmv		
+153206			Content	
+153656			Content	
+154022			Content	
+154838			Content	
+155361	KeyPress	Escape		
+155362	MovieEnd	congratulations.wmv		

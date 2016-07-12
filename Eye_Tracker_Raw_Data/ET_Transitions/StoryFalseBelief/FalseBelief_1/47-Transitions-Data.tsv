@@ -1,0 +1,192 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+137			Content	
+330	MovieStart	MutedBallie.avi		
+536			Content	
+635	KeyPress	Space		
+635	MovieEnd	MutedBallie.avi		
+1131	ImageStart	blacksquare.bmp		
+1669			Content	
+1835			Content	
+3118			Content	
+3284			Content	
+3767			Content	
+3984			Content	
+4301			Content	
+4534			Content	
+4683	KeyPress	Space		
+4683	ImageEnd	blacksquare.bmp		
+4705	ImageStart	Slide1.JPG		
+4767			Content	
+5017			AOI_1	
+5316			AOI_1	
+6299			Content	
+10896			Content	
+11046			AOI_1	
+12711			AOI_1	
+12827			AOI_1	
+12858	KeyPress	Space		
+12858	ImageEnd	Slide1.JPG		
+12867	ImageStart	blacksquare.bmp		
+13376			Content	
+13418	KeyPress	Space		
+13419	ImageEnd	blacksquare.bmp		
+13439	ImageStart	Slide2.JPG		
+13643			AOI_1	
+13809			AOI_1	
+14392			AOI_1	
+15808			AOI_1	
+17673			AOI_1	
+17823			AOI_1	
+19638			Content	
+20362	KeyPress	Space		
+20362	ImageEnd	Slide2.JPG		
+20370	ImageStart	blacksquare.bmp		
+20970	KeyPress	Space		
+20970	ImageEnd	blacksquare.bmp		
+20992	ImageStart	Slide3.JPG		
+22286			correct	
+22819			incorrect	
+23052			incorrect	
+23885			correct	
+24085			correct	
+24918			correct	
+25784			correct	
+26817			correct	
+27217			correct	
+28000			incorrect	
+28250			incorrect	
+28483			incorrect	
+28530	KeyPress	Space		
+28530	ImageEnd	Slide3.JPG		
+28538	ImageStart	blacksquare.bmp		
+28916			Content	
+29218	KeyPress	Space		
+29218	ImageEnd	blacksquare.bmp		
+29239	ImageStart	Slide4.JPG		
+29332			Content	
+29515			Content	
+29765			correct	
+29965			correct	
+30431			incorrect	
+31131			incorrect	
+31331			correct	
+31514			correct	
+31964			correct	
+32563			correct	
+35378			incorrect	
+35611			incorrect	
+36677			incorrect	
+37193			incorrect	
+37843			incorrect	
+38009			incorrect	
+38342			incorrect	
+38618	KeyPress	Space		
+38618	ImageEnd	Slide4.JPG		
+38625	ImageStart	blacksquare.bmp		
+39008			Content	
+39234	KeyPress	Space		
+39234	ImageEnd	blacksquare.bmp		
+39255	ImageStart	Slide5.JPG		
+39724			correct	
+40307			correct	
+40740			correct	
+41273			incorrect	
+41456			incorrect	
+41606			incorrect	
+42406			correct	
+43522			correct	
+44338			correct	
+45420			incorrect	
+45653			incorrect	
+46020			incorrect	
+46303			incorrect	
+46586			incorrect	
+47036			correct	
+47286			correct	
+47819			incorrect	
+47985			incorrect	
+48168			incorrect	
+49251			incorrect	
+49750			correct	
+49967			correct	
+50314	KeyPress	Space		
+50314	ImageEnd	Slide5.JPG		
+50321	ImageStart	blacksquare.bmp		
+50367			Content	
+50716			Content	
+50834	KeyPress	Space		
+50834	ImageEnd	blacksquare.bmp		
+50855	ImageStart	Slide6.JPG		
+51099			incorrect	
+51399			correct	
+51599			correct	
+52215			Content	
+53531			correct	
+53664			correct	
+53881			correct	
+55313			correct	
+55730			correct	
+58128			correct	
+58394			correct	
+58521	KeyPress	Space		
+58521	ImageEnd	Slide6.JPG		
+58529	ImageStart	blacksquare.bmp		
+58977			Content	
+59065	KeyPress	Space		
+59066	ImageEnd	blacksquare.bmp		
+59086	ImageStart	Slide7.JPG		
+59194			Content	
+59360			correct	
+59527			correct	
+60609			correct	
+61209			incorrect	
+61392			incorrect	
+61892			correct	
+63390			correct	
+63890			correct	
+64106			correct	
+65572			incorrect	
+65755			incorrect	
+65855			incorrect	
+66371			correct	
+67204			correct	
+68470			incorrect	
+68553			incorrect	
+68686			incorrect	
+68873	KeyPress	Space		
+68873	ImageEnd	Slide7.JPG		
+68881	ImageStart	blacksquare.bmp		
+69336			Content	
+69441	KeyPress	Space		
+69441	ImageEnd	blacksquare.bmp		
+69462	ImageStart	Slide8.JPG		
+69768			incorrect	
+69952			incorrect	
+70318			incorrect	
+70601			correct	
+70851			correct	
+71368			incorrect	
+73133			incorrect	
+73349			incorrect	
+73799			incorrect	
+74315			incorrect	
+75248			incorrect	
+75981			correct	
+76231			correct	
+77513			correct	
+77713			correct	
+77879			correct	
+78029			correct	
+78512			incorrect	
+78745			incorrect	
+79162			incorrect	
+79241	KeyPress	Space		
+79241	ImageEnd	Slide8.JPG		
+79411			Content	
+79608	InstructionStart	Instruction Element		
+80744			Content	
+81044			Content	
+81494			Content	
+81849	KeyPress	Escape		
+81849	InstructionEnd	Instruction Element		

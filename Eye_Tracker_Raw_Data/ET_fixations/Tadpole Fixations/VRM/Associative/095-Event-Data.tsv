@@ -1,0 +1,154 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 095
+Recording date:	 9/30/2015
+Recording time:	 9:24:37 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 10/5/2015
+Export time:	 11:15:02 AM
+
+Participant:	 095
+Timestamp	Event	Descriptor	AoiNames	
+365	MovieStart	MutedBallie.avi		
+998	KeyPress	Space		
+998	MovieEnd	MutedBallie.avi		
+1687	ImageStart	fixation.png		
+2685	ImageEnd	fixation.png		
+2717	ImageStart	AB_AB.jpg		
+5208			encode_distractor_right	
+5291			encode_distractor_right	
+5591			encode_distractor_left	
+6374			encode_distractor_right	
+6607			encode_distractor_right	
+6940			encode_distractor_right	
+7140			encode_distractor_left	
+7693	ImageEnd	AB_AB.jpg		
+7704	ImageStart	fixation.png		
+7773			Content	
+8039			Content	
+8705	ImageEnd	fixation.png		
+8738	ImageStart	CD_CD.jpg		
+9005			encode_target_right	
+9371			encode_target_right	
+9854			encode_target_left	
+10087			encode_target_left	
+10254			encode_target_right	
+10554			encode_target_right	
+11020			encode_target_right	
+12103			encode_target_right	
+12586			encode_target_right	
+13085			encode_target_right	
+13435			encode_target_right	
+13618			encode_target_right	
+13713	ImageEnd	CD_CD.jpg		
+13724	ImageStart	fixation.png		
+14118			Content	
+14727	ImageEnd	fixation.png		
+14766	ImageStart	AB_AB.jpg		
+15251			encode_distractor_left	
+15451			encode_distractor_left	
+15734			encode_distractor_right	
+16383			encode_distractor_right	
+17583			encode_distractor_right	
+17799			encode_distractor_right	
+18199			encode_distractor_left	
+18282			encode_distractor_left	
+18532			encode_distractor_left	
+18898			encode_distractor_left	
+19214			encode_distractor_left	
+19431			encode_distractor_right	
+19736	ImageEnd	AB_AB.jpg		
+19753	ImageStart	fixation.png		
+20114			Content	
+20764	ImageEnd	fixation.png		
+20799	ImageStart	CD_CD.jpg		
+21080			encode_target_left	
+21596			encode_target_right	
+21996			encode_target_right	
+22179			encode_target_right	
+22462			encode_target_right	
+22612			encode_target_right	
+23045			encode_target_left	
+23378			encode_target_left	
+23628			encode_target_right	
+24778			encode_target_right	
+25078			encode_target_left	
+25510			encode_target_right	
+25775	ImageEnd	CD_CD.jpg		
+25779	ImageStart	fixation.png		
+26043			Content	
+26210			Content	
+26786	ImageEnd	fixation.png		
+26818	ImageStart	CD_CB.jpg		
+27176			retrieval_new_pair_1	
+27526			retrieval_new_pair_1	
+27975			retrieval_new_pair_1	
+28325			retrieval_old_pair	
+28641			retrieval_old_pair	
+28941			retrieval_old_pair	
+29291			retrieval_new_pair_1	
+30007			retrieval_old_pair	
+30257			retrieval_old_pair	
+30474			retrieval_new_pair_1	
+31073			retrieval_new_pair_1	
+31556			retrieval_new_pair_1	
+32088			retrieval_old_pair	
+32572			retrieval_new_pair_1	
+32838			retrieval_new_pair_1	
+33105			retrieval_new_pair_1	
+33704			retrieval_new_pair_1	
+34104			retrieval_new_pair_1	
+34370			retrieval_old_pair	
+34720			retrieval_old_pair	
+35236			retrieval_old_pair	
+36352			Content	
+36485			retrieval_new_pair_1	
+36786	ImageEnd	CD_CB.jpg		
+36797	ImageStart	fixation.png		
+37134			Content	
+37799	ImageEnd	fixation.png		
+37832	ImageStart	CD_AD.jpg		
+38200			retrieval_old_pair	
+38466			retrieval_old_pair	
+38633			retrieval_new_pair	
+38916			Content	
+39016			retrieval_new_pair	
+39216			retrieval_new_pair	
+39416			retrieval_old_pair	
+39582			retrieval_old_pair	
+40032			retrieval_old_pair	
+40515			retrieval_old_pair	
+40681			retrieval_new_pair	
+40965			retrieval_new_pair	
+41398			retrieval_new_pair	
+41947			retrieval_new_pair	
+42280			retrieval_new_pair	
+42547			retrieval_new_pair	
+42680			Content	
+43113			retrieval_old_pair	
+43396			retrieval_old_pair	
+43663			Content	
+44262			retrieval_new_pair	
+44762			retrieval_new_pair	
+45112			retrieval_old_pair	
+45411			retrieval_old_pair	
+45927			retrieval_old_pair	
+46427			Content	
+47177			retrieval_old_pair	
+47426			retrieval_old_pair	
+47814	ImageEnd	CD_AD.jpg		
+47824	ImageStart	fixation.png		
+48093			Content	
+48828	ImageEnd	fixation.png		
+49627	MovieStart	congratulations.wmv		
+50574			Content	
+50941			Content	
+51274			Content	
+51469	KeyPress	Escape		
+51469	MovieEnd	congratulations.wmv		

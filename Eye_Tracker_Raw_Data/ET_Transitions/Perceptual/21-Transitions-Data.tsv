@@ -1,0 +1,585 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+332	MovieStart	MutedBallie.avi		
+627			Content	
+1843			Content	
+7623			Content	
+8272			Content	
+9144	KeyPress	Space		
+9144	MovieEnd	MutedBallie.avi		
+9593	ImageStart	blacksquare.bmp		
+12423	KeyPress	Space		
+12424	ImageEnd	blacksquare.bmp		
+12447	ImageStart	elephant_bear_a.BMP		
+12935			Content	
+13352			incorrect	
+13635			incorrect	
+14234			Content	
+14684			incorrect	
+15450			correct	
+15900			correct	
+16749			correct	
+16965			correct	
+17582			correct	
+17815			incorrect	
+18831			incorrect	
+18980			incorrect	
+19230			correct	
+19613			correct	
+19763			correct	
+19997			correct	
+20663			correct	
+21223	KeyPress	Left		
+21223	ImageEnd	elephant_bear_a.BMP		
+21228	ImageStart	blacksquare.bmp		
+21862			Content	
+22295			Content	
+22811			Content	
+23078			Content	
+23327			Content	
+24593			Content	
+24935	KeyPress	Space		
+24935	ImageEnd	blacksquare.bmp		
+24958	ImageStart	clock_bicycle_a.BMP		
+25159			Content	
+25276			correct	
+25476			correct	
+25892			correct	
+26125			incorrect	
+26375			incorrect	
+26941			incorrect	
+27408			correct	
+27724			Content	
+27890			Content	
+28123			correct	
+28706			correct	
+29006			Content	
+29289			correct	
+30721			correct	
+31738			correct	
+32487			incorrect	
+32821			Content	
+33354			incorrect	
+33570			incorrect	
+34203			Content	
+34453			correct	
+35368			correct	
+35801			correct	
+35871	KeyPress	Left		
+35871	ImageEnd	clock_bicycle_a.BMP		
+35875	ImageStart	blacksquare.bmp		
+36284			Content	
+38232			Content	
+38316			Content	
+39198			Content	
+39351	KeyPress	Space		
+39351	ImageEnd	blacksquare.bmp		
+39373	ImageStart	cake_doll_a.BMP		
+39465			Content	
+39648			incorrect	
+39948			incorrect	
+40231			incorrect	
+40464			correct	
+40781			correct	
+41297			Content	
+41497			correct	
+41996			correct	
+42746			correct	
+43262			incorrect	
+43978			incorrect	
+44461			incorrect	
+45178			incorrect	
+45844			incorrect	
+46177			incorrect	
+47076			correct	
+47226			correct	
+47942			correct	
+48591			Content	
+48741			Content	
+49191			correct	
+49358	KeyPress	Right		
+49358	ImageEnd	cake_doll_a.BMP		
+49363	ImageStart	blacksquare.bmp		
+49724			Content	
+49974			Content	
+50090			Content	
+50240			Content	
+50439			Content	
+50739			Content	
+52654			Content	
+52839	KeyPress	Space		
+52839	ImageEnd	blacksquare.bmp		
+52860	ImageStart	egg_hat_a.BMP		
+52920			Content	
+53087			Content	
+53254			Content	
+53520			incorrect	
+54004			Content	
+54103			Content	
+54703			Content	
+54953			correct	
+55502			Content	
+55635			Content	
+56285			Content	
+56434			Content	
+58383			correct	
+58633			correct	
+59366			correct	
+59532			correct	
+59699			correct	
+59965			incorrect	
+60115			incorrect	
+60431			incorrect	
+60548			Content	
+60681			incorrect	
+61264			Content	
+61664			Content	
+62330			incorrect	
+63596			correct	
+64046			incorrect	
+64462			incorrect	
+65195			incorrect	
+65478			incorrect	
+65845			incorrect	
+65945			incorrect	
+66127			incorrect	
+66560			incorrect	
+66960			Content	
+67360			incorrect	
+68242			incorrect	
+68843			incorrect	
+69086	KeyPress	Right		
+69087	ImageEnd	egg_hat_a.BMP		
+69091	ImageStart	blacksquare.bmp		
+69609			Content	
+71258			Content	
+71490			Content	
+71673			Content	
+71923			Content	
+72406	KeyPress	Space		
+72406	ImageEnd	blacksquare.bmp		
+72428	ImageStart	bottle_leaf_a.BMP		
+73055			incorrect	
+73155			Content	
+73605			Content	
+73722			correct	
+73905			correct	
+74304			correct	
+74821			correct	
+74904			correct	
+75837			Content	
+76003			Content	
+76136			Content	
+76636			Content	
+76853			incorrect	
+77719			Content	
+78235			correct	
+79101			correct	
+79301			correct	
+79884			correct	
+80583			Content	
+80700			Content	
+80850			Content	
+82799			incorrect	
+82882			incorrect	
+83099			Content	
+83232			Content	
+83549			correct	
+83732			correct	
+84530			correct	
+85280			correct	
+85344	KeyPress	Right		
+85344	ImageEnd	bottle_leaf_a.BMP		
+85349	ImageStart	blacksquare.bmp		
+85979			Content	
+87095			Content	
+87245			Content	
+87462			Content	
+87662			Content	
+88178			Content	
+88461			Content	
+88525	KeyPress	Space		
+88526	ImageEnd	blacksquare.bmp		
+88548	ImageStart	bunny_dog_a.BMP		
+88761			correct	
+89177			incorrect	
+89360			incorrect	
+89809			correct	
+90009			correct	
+90592			Content	
+90842			correct	
+90992			correct	
+91309			correct	
+91991			correct	
+92674			correct	
+92857			correct	
+93540			Content	
+93723			correct	
+94190			Content	
+94489			correct	
+95222			correct	
+95237	KeyPress	Left		
+95237	ImageEnd	bunny_dog_a.BMP		
+95242	ImageStart	blacksquare.bmp		
+95372			Content	
+95689			Content	
+96704			Content	
+97022			Content	
+97238			Content	
+97738			Content	
+99213	KeyPress	Space		
+99213	ImageEnd	blacksquare.bmp		
+99235	ImageStart	apple_strawberry_a.BMP		
+99336			correct	
+99636			incorrect	
+99885			Content	
+100268			Content	
+100551			Content	
+101218			Content	
+101534			correct	
+102433			correct	
+102700			correct	
+103100			correct	
+103399			correct	
+103516			correct	
+103633			correct	
+105531			incorrect	
+106031			incorrect	
+106464			Content	
+106680			incorrect	
+106863			correct	
+107163			Content	
+107581	KeyPress	Right		
+107581	ImageEnd	apple_strawberry_a.BMP		
+107586	ImageStart	blacksquare.bmp		
+107646			Content	
+108096			Content	
+108296			Content	
+109278			Content	
+109729			Content	
+109862			Content	
+110795			Content	
+111245			Content	
+111328			Content	
+111761			Content	
+112045	KeyPress	Space		
+112045	ImageEnd	blacksquare.bmp		
+112066	ImageStart	icecream_broccoli_a.BMP		
+112111			Content	
+112427			correct	
+112610			correct	
+113160			incorrect	
+113326			incorrect	
+114059			Content	
+114258			incorrect	
+115041			correct	
+115274			correct	
+115591			incorrect	
+115791			incorrect	
+116357			correct	
+116624			correct	
+117057			Content	
+117190			correct	
+117323			correct	
+117756			correct	
+117872			correct	
+119973	KeyPress	Right		
+119973	ImageEnd	icecream_broccoli_a.BMP		
+119977	ImageStart	blacksquare.bmp		
+120603			Content	
+124037	KeyPress	Space		
+124037	ImageEnd	blacksquare.bmp		
+124058	ImageStart	teddybear_crayon_a.BMP		
+124400			Correct	
+124717			Incorrect	
+124900			Incorrect	
+125166			Correct	
+125500			Correct	
+126116			Correct	
+126333			Correct	
+127099			Correct	
+127316			Correct	
+128036	KeyPress	Left		
+128037	ImageEnd	teddybear_crayon_a.BMP		
+128041	ImageStart	blacksquare.bmp		
+128365			Content	
+128648			Content	
+130547			Content	
+130813			Content	
+131329			Content	
+131356	KeyPress	Space		
+131356	ImageEnd	blacksquare.bmp		
+131378	ImageStart	jacket_pillow_a.BMP		
+131712			Content	
+132028			incorrect	
+132212			incorrect	
+133094			Content	
+133177			incorrect	
+134095			Content	
+134261			correct	
+134760			correct	
+135509			incorrect	
+136475			incorrect	
+136508	KeyPress	Left		
+136509	ImageEnd	jacket_pillow_a.BMP		
+136513	ImageStart	blacksquare.bmp		
+136658			Content	
+136758			Content	
+137324			Content	
+140372	KeyPress	Space		
+140372	ImageEnd	blacksquare.bmp		
+140393	ImageStart	pig_butterfly_a.BMP		
+140605			Incorrect	
+140805			Correct	
+141054			Correct	
+141404			Correct	
+141554			Correct	
+142020			Correct	
+142503			Incorrect	
+143036			Incorrect	
+143419			Incorrect	
+143936			Content	
+144204	KeyPress	Left		
+144204	ImageEnd	pig_butterfly_a.BMP		
+144209	ImageStart	blacksquare.bmp		
+145601			Content	
+145751			Content	
+145951			Content	
+146584			Content	
+147250			Content	
+147700	KeyPress	Space		
+147700	ImageEnd	blacksquare.bmp		
+147721	ImageStart	spoon_fork_a.BMP		
+147933			Content	
+148216			Correct	
+148715			Correct	
+148832			Content	
+149148			Incorrect	
+149415			Incorrect	
+149781			Incorrect	
+150248			Correct	
+150497			Correct	
+150930			Correct	
+151863			Content	
+151996			Content	
+152279			Correct	
+152612	KeyPress	Left		
+152612	ImageEnd	spoon_fork_a.BMP		
+152616	ImageStart	blacksquare.bmp		
+153328			Content	
+156197	KeyPress	Space		
+156197	ImageEnd	blacksquare.bmp		
+156218	ImageStart	mouse_refrigerator_a.BMP		
+156743			Correct	
+157109			Correct	
+157392			Correct	
+157592			Correct	
+158441			Content	
+158658			Correct	
+158991			Content	
+159004	KeyPress	Left		
+159004	ImageEnd	mouse_refrigerator_a.BMP		
+159008	ImageStart	blacksquare.bmp		
+159091			Content	
+160657			Content	
+161090			Content	
+162788	KeyPress	Space		
+162788	ImageEnd	blacksquare.bmp		
+162809	ImageStart	tv_bread_a.BMP		
+163404			Content	
+163521			Incorrect	
+163754			Content	
+163987			Incorrect	
+164370			Correct	
+165003			Correct	
+165319			Content	
+165486			Content	
+165636			Incorrect	
+165969			Incorrect	
+166352			Incorrect	
+167268			Incorrect	
+167518			Incorrect	
+167684			Incorrect	
+168051			Correct	
+168417			Correct	
+169100			Correct	
+169233			Correct	
+169683			Incorrect	
+169983			Incorrect	
+170433			Incorrect	
+171233			Content	
+171483			Incorrect	
+171716			Incorrect	
+172082			Incorrect	
+172365			Incorrect	
+173598			Incorrect	
+174347			Incorrect	
+174813			Incorrect	
+175379			Incorrect	
+175435	KeyPress	Left		
+175435	ImageEnd	tv_bread_a.BMP		
+175440	ImageStart	blacksquare.bmp		
+175878			Content	
+178963	KeyPress	Space		
+178963	ImageEnd	blacksquare.bmp		
+178984	ImageStart	orange_ball_a.BMP		
+179542			Correct	
+179659			Correct	
+179842			Correct	
+180142			Content	
+180958			Content	
+181474			Content	
+181558			Content	
+181774			Content	
+182091			Content	
+184722			Correct	
+185155			Incorrect	
+185321			Correct	
+185571			Content	
+185987			Incorrect	
+186270			Incorrect	
+186553			Content	
+187067	KeyPress	Right		
+187067	ImageEnd	orange_ball_a.BMP		
+187072	ImageStart	blacksquare.bmp		
+187703			Content	
+187969			Content	
+190107	KeyPress	Space		
+190107	ImageEnd	blacksquare.bmp		
+190133	ImageStart	shoe_sock_a.BMP		
+190418			Correct	
+190733			Correct	
+191366			Correct	
+191716			Incorrect	
+192283			Incorrect	
+192815			Correct	
+193049			Correct	
+193865			Correct	
+194248			Content	
+194782			Content	
+195398			Content	
+195498			Content	
+195598			Content	
+195698			Content	
+195815			Content	
+196197			Content	
+196513			Content	
+196713			Incorrect	
+196962			Incorrect	
+197262			Correct	
+197595			Correct	
+198161			Correct	
+198644			Correct	
+198911			Correct	
+199893			Correct	
+200570	KeyPress	Left		
+200571	ImageEnd	shoe_sock_a.BMP		
+200575	ImageStart	blacksquare.bmp		
+201475			Content	
+202593			Content	
+202792			Content	
+203109			Content	
+203607			Content	
+203736	KeyPress	Space		
+203737	ImageEnd	blacksquare.bmp		
+203759	ImageStart	balloons_duck_a.BMP		
+204090			incorrect	
+204390			incorrect	
+204573			incorrect	
+204756			correct	
+205089			correct	
+205306			correct	
+205423			correct	
+205556			correct	
+205956			correct	
+206189			incorrect	
+206738			correct	
+206971			correct	
+207071			correct	
+207321			correct	
+207538			correct	
+208071			incorrect	
+208538			correct	
+208738			correct	
+209554			correct	
+209754			correct	
+210303			Content	
+210420			correct	
+211535			correct	
+211735			correct	
+211851			incorrect	
+212134			Content	
+212384			Content	
+212467			correct	
+213050			Content	
+213283			correct	
+213716			Content	
+213883			correct	
+214538	KeyPress	Right		
+214538	ImageEnd	balloons_duck_a.BMP		
+214543	ImageStart	blacksquare.bmp		
+217530	KeyPress	Space		
+217530	ImageEnd	blacksquare.bmp		
+217552	ImageStart	flowers_cat_a.BMP		
+218597			incorrect	
+218713			correct	
+218847			correct	
+219380			Content	
+219929			correct	
+220129			correct	
+220596			correct	
+220745			correct	
+221538	KeyPress	Right		
+221538	ImageEnd	flowers_cat_a.BMP		
+221543	ImageStart	blacksquare.bmp		
+221562			Content	
+224143			Content	
+224498	KeyPress	Space		
+224498	ImageEnd	blacksquare.bmp		
+224519	ImageStart	cookie_pizza_a.BMP		
+224909			correct	
+225076			correct	
+225492			Content	
+225609			Content	
+226041			incorrect	
+226291			incorrect	
+226907			correct	
+227174			correct	
+227440			Content	
+228186	KeyPress	Right		
+228186	ImageEnd	cookie_pizza_a.BMP		
+228192	ImageStart	blacksquare.bmp		
+228789			Content	
+230572			Content	
+230855			Content	
+231258	KeyPress	Space		
+231258	ImageEnd	blacksquare.bmp		
+231279	ImageStart	chair_grapes_a.BMP		
+231305			Content	
+231571			incorrect	
+231904			correct	
+232170			Content	
+232620			incorrect	
+232820			incorrect	
+233819			Content	
+233986			correct	
+234602			correct	
+234968			correct	
+235210	KeyPress	Left		
+235210	ImageEnd	chair_grapes_a.BMP		
+235214	ImageStart	blacksquare.bmp		
+235218			Content	
+235618			Content	
+236258	KeyPress	Space		
+236258	ImageEnd	blacksquare.bmp		
+236368			Content	
+236718			Content	
+236870	MovieStart	congratulations.wmv		
+237134			Content	
+237716			Content	
+238050			Content	
+243462			Content	
+243812			Content	
+244611			Content	
+248174			Content	
+251052	MovieEnd	congratulations.wmv		

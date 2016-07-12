@@ -1,0 +1,112 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+145			Content	
+333	MovieStart	MutedBallie.avi		
+1920	KeyPress	Space		
+1921	MovieEnd	MutedBallie.avi		
+2202	ImageStart	encode 1 blue.JPG		
+2594			Familiarization 1L	
+3543			Familiarization 1L	
+3909			Familiarization 1L	
+4425			Familiarization 1R	
+5624			Familiarization 1R	
+5974			Familiarization 1R	
+6174			Familiarization 1R	
+6490			Familiarization 1L	
+6724			Familiarization 1L	
+7107			Familiarization 1L	
+8039			Familiarization 1L	
+9438			Familiarization 1L	
+10021			Familiarization 1L	
+10454			Familiarization 1R	
+11320			Familiarization 1R	
+12173	ImageEnd	encode 1 blue.JPG		
+12183	ImageStart	blacksquare.bmp		
+12186			Content	
+12519			Content	
+12802			Content	
+13086			Content	
+13469			Content	
+14101			Content	
+14185			Content	
+14187	ImageEnd	blacksquare.bmp		
+14208	ImageStart	encode 1 pink.JPG		
+14335			Content	
+14851			Familiarization 2R	
+15750			Familiarization 2L	
+16799			Content	
+17199			Familiarization 2R	
+17415			Familiarization 2R	
+17749			Familiarization 2L	
+17998			Familiarization 2L	
+18581			Familiarization 2L	
+18798			Familiarization 2L	
+19014			Familiarization 2L	
+19194	ImageEnd	encode 1 pink.JPG		
+19205	ImageStart	blacksquare.bmp		
+19231			Content	
+19947			Content	
+20047			Content	
+21204	ImageEnd	blacksquare.bmp		
+21232	ImageStart	1a blue.JPG		
+21562			old	
+22678			old	
+22928			old	
+23361			new	
+23727			new	
+23844			new	
+24460			new	
+24860			old	
+25976			new	
+26325			new	
+26725			new	
+27141			new	
+27408			old	
+27758			old	
+28890			Content	
+29306			old	
+29889			new	
+30189			new	
+30789			old	
+31204	ImageEnd	1a blue.JPG		
+31219	ImageStart	blacksquare.bmp		
+31705			Content	
+32105			Content	
+32219	ImageEnd	blacksquare.bmp		
+32246	ImageStart	1b pink.JPG		
+32504			new	
+32754			new	
+33004			new	
+33287			old	
+33553			old	
+33786			new	
+34053			new	
+34269			old	
+34569			old	
+36084			new	
+36351			new	
+37084			new	
+37301			new	
+37684			new	
+38317			new	
+39116			new	
+40032			new	
+40732			old	
+41098			old	
+41715			new	
+42217	ImageEnd	1b pink.JPG		
+42227	ImageStart	blacksquare.bmp		
+42647			Content	
+42780			Content	
+43130			Content	
+43231	ImageEnd	blacksquare.bmp		
+43580			Content	
+43708	MovieStart	congratulations.wmv		
+43813			Content	
+43963			Content	
+44179			Content	
+44279			Content	
+45112			Content	
+46078			Content	
+46455	KeyPress	Escape		
+46455	MovieEnd	congratulations.wmv		

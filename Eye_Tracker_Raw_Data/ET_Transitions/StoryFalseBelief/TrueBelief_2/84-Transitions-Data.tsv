@@ -1,0 +1,88 @@
+Timestamp	Event	Descriptor	AoiNames	
+355	MovieStart	MutedBallie.avi		
+1267	KeyPress	Space		
+1267	MovieEnd	MutedBallie.avi		
+1734			Content	
+1809	ImageStart	blacksquare.bmp		
+5243	KeyPress	Space		
+5243	ImageEnd	blacksquare.bmp		
+5247	ImageStart	fixation.png		
+6248	ImageEnd	fixation.png		
+6276	ImageStart	Slide1.JPG		
+6930			AOI_1	
+8080			AOI_1	
+8313			AOI_1	
+13307	KeyPress	Space		
+13307	ImageEnd	Slide1.JPG		
+13310	ImageStart	fixation.png		
+14313	ImageEnd	fixation.png		
+14340	ImageStart	Slide2.JPG		
+20898	KeyPress	Space		
+20898	ImageEnd	Slide2.JPG		
+20902	ImageStart	fixation.png		
+21910	ImageEnd	fixation.png		
+21938	ImageStart	Slide3.JPG		
+24550			incorrect	
+24716			incorrect	
+24916			incorrect	
+29123	KeyPress	Space		
+29123	ImageEnd	Slide3.JPG		
+29132	ImageStart	fixation.png		
+29812			Content	
+30079			Content	
+30131	ImageEnd	fixation.png		
+30158	ImageStart	Slide4.JPG		
+30378			correct	
+30578			incorrect	
+30712			incorrect	
+30896			incorrect	
+31246			incorrect	
+31646			incorrect	
+31812			incorrect	
+35974			correct	
+37006			incorrect	
+37123			incorrect	
+37273			incorrect	
+38074	KeyPress	Space		
+38074	ImageEnd	Slide4.JPG		
+38078	ImageStart	fixation.png		
+39087	ImageEnd	fixation.png		
+39114	ImageStart	Slide5.JPG		
+41553			correct	
+44601			Content	
+45317			Content	
+46966			Content	
+50682	KeyPress	Space		
+50682	ImageEnd	Slide5.JPG		
+50686	ImageStart	fixation.png		
+51691	ImageEnd	fixation.png		
+51718	ImageStart	Slide6.JPG		
+52380			correct	
+52630			incorrect	
+52963			incorrect	
+53396			correct	
+53813			incorrect	
+54062			incorrect	
+54462			correct	
+59737	KeyPress	Space		
+59737	ImageEnd	Slide6.JPG		
+59741	ImageStart	fixation.png		
+60739	ImageEnd	fixation.png		
+60769	ImageStart	Slide7.JPG		
+61821			Content	
+61905			Content	
+62604			Content	
+63070			correct	
+67069			correct	
+67269			correct	
+69241	KeyPress	Space		
+69241	ImageEnd	Slide7.JPG		
+69245	ImageStart	fixation.png		
+70254	ImageEnd	fixation.png		
+70281	ImageStart	Slide8.JPG		
+71065			correct	
+79257	KeyPress	Space		
+79257	ImageEnd	Slide8.JPG		
+80053	InstructionStart	Instruction Element		
+82569	KeyPress	Space		
+82569	InstructionEnd	Instruction Element		

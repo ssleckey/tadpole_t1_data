@@ -1,0 +1,77 @@
+Timestamp	Event	Descriptor	AoiNames	
+330	MovieStart	MutedBallie.avi		
+1833	KeyPress	Space		
+1833	MovieEnd	MutedBallie.avi		
+2160	ImageStart	fixation.png		
+3155	ImageEnd	fixation.png		
+3183	ImageStart	encode 2 pink.JPG		
+3827			Familiarization 1R	
+3960			Familiarization 1R	
+4226			Familiarization 1L	
+4309			Familiarization 1L	
+4876			Familiarization 1L	
+5142			Familiarization 1R	
+5442			Familiarization 1R	
+6091			Familiarization 1L	
+7074			Familiarization 1L	
+7490			Familiarization 1R	
+13170	ImageEnd	encode 2 pink.JPG		
+13182	ImageStart	fixation.png		
+14184	ImageEnd	fixation.png		
+14212	ImageStart	encode 2 blue.JPG		
+16001			Familiarization 2L	
+16384			Content	
+16517			Familiarization 2R	
+17450			Familiarization 2L	
+17749			Familiarization 2L	
+18082			Familiarization 2L	
+18415			Familiarization 2L	
+19192	ImageEnd	encode 2 blue.JPG		
+19202	ImageStart	fixation.png		
+19497			Content	
+20207	ImageEnd	fixation.png		
+20234	ImageStart	2b pink.JPG		
+20480			Content	
+20613			old	
+21146			new	
+21429			new	
+21812			old	
+22179			old	
+24327			new	
+24577			new	
+25393			new	
+25777			new	
+25894			new	
+30220	ImageEnd	2b pink.JPG		
+30224	ImageStart	fixation.png		
+31006			Content	
+31173			Content	
+31234	ImageEnd	fixation.png		
+31261	ImageStart	2a blue.JPG		
+31473			Content	
+31722			old	
+31956			new	
+32222			new	
+33005			old	
+33255			old	
+33838			Content	
+36186			Content	
+36302			new	
+36469			old	
+36918			old	
+37202			new	
+37968			old	
+38468			old	
+38767			old	
+41236	ImageEnd	2a blue.JPG		
+41246	ImageStart	fixation.png		
+42131			Content	
+42248	ImageEnd	fixation.png		
+42347			Content	
+42597			Content	
+42899	MovieStart	congratulations.wmv		
+43297			Content	
+43896			Content	
+44113			Content	
+44599	KeyPress	Escape		
+44600	MovieEnd	congratulations.wmv		

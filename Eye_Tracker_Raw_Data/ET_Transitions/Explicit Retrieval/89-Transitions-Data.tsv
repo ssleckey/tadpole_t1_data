@@ -1,0 +1,119 @@
+Timestamp	Event	Descriptor	AoiNames	
+112	ImageStart	fixation.png		
+361			Content	
+444			Content	
+1260			Content	
+1377			Content	
+3712	KeyPress	Space		
+3712	ImageEnd	fixation.png		
+4275			Content	
+4304	MovieStart	MutedBallie.avi		
+4791			Content	
+5248	KeyPress	Space		
+5248	MovieEnd	MutedBallie.avi		
+5779	ImageStart	blacksquare.bmp		
+6939			Content	
+7206			Content	
+7489			Content	
+8139			Content	
+8432	KeyPress	Space		
+8432	ImageEnd	blacksquare.bmp		
+8505			Content	
+8983	MovieStart	Julia_3.AVI		
+10570			Content	
+11070			Content	
+11730	MovieEnd	Julia_3.AVI		
+12015	ImageStart	fixation.png		
+13684			Content	
+14051			Content	
+14201			Content	
+14917			Content	
+15268			Content	
+15887	KeyPress	Space		
+15888	ImageEnd	fixation.png		
+15909	ImageStart	arrow_crown.BMP		
+16200			Content	
+16683			Content	
+17033			Content	
+17449			Content	
+18115			Content	
+18548			Content	
+19081			Content	
+19398			Content	
+20047			Content	
+20979			Content	
+23494			Content	
+23760			Content	
+24626			Content	
+25559			Content	
+26009			Content	
+26823	KeyPress	Space		
+26823	ImageEnd	arrow_crown.BMP		
+26828	ImageStart	fixation.png		
+28408	KeyPress	Space		
+28408	ImageEnd	fixation.png		
+28428	ImageStart	heart_moon.BMP		
+28890			Content	
+29306			Content	
+29972			Content	
+50940			Content	
+51057			Content	
+51223			Content	
+51923			Content	
+52606			Content	
+53907			Content	
+54072			Content	
+55420			Content	
+55720			Content	
+56070			Content	
+56270			Content	
+57153			Content	
+61266			Content	
+61699			Content	
+66279	KeyPress	Space		
+66279	ImageEnd	heart_moon.BMP		
+66283	ImageStart	fixation.png		
+66862			Content	
+66945			Content	
+67567	KeyPress	Space		
+67567	ImageEnd	fixation.png		
+67588	ImageStart	watermelon_orange.BMP		
+68144			old	
+68411			old	
+68877			new	
+84799	KeyPress	Space		
+84799	ImageEnd	watermelon_orange.BMP		
+84803	ImageStart	fixation.png		
+85302	KeyPress	Space		
+85303	ImageEnd	fixation.png		
+85324	ImageStart	ring_watch.BMP		
+86848			new	
+86931			new	
+87381			new	
+88546			new	
+89129			new	
+89312			old	
+89729			old	
+90162			new	
+90645			new	
+91277			new	
+92127			Content	
+92993			Content	
+93076			Content	
+93609			Content	
+95008			new	
+95274			new	
+95541			old	
+96074			new	
+96956			new	
+97406			new	
+98239			old	
+98539			old	
+107526	KeyPress	Space		
+107526	ImageEnd	ring_watch.BMP		
+107530	ImageStart	fixation.png		
+108686	KeyPress	Space		
+108686	ImageEnd	fixation.png		
+108707	ImageStart	duck_frog.BMP		
+116862	KeyPress	Escape		
+116862	ImageEnd	duck_frog.BMP		

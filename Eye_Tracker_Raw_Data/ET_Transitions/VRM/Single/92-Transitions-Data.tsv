@@ -1,0 +1,109 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+350	MovieStart	MutedBallie.avi		
+531			Content	
+1266	KeyPress	Space		
+1266	MovieEnd	MutedBallie.avi		
+1647			Content	
+1930			Content	
+2246			Content	
+2388	ImageStart	fixation.png		
+2629			Content	
+3382	ImageEnd	fixation.png		
+3409	ImageStart	encode 2 pink.JPG		
+3845			Familiarization 1L	
+4112			Familiarization 1L	
+4312			Familiarization 1R	
+5444			Familiarization 1L	
+5894			Familiarization 1L	
+6727			Familiarization 1L	
+7226			Familiarization 1L	
+7876			Familiarization 1R	
+8459			Familiarization 1R	
+8975			Familiarization 1R	
+9191			Familiarization 1R	
+9574			Familiarization 1R	
+9691			Familiarization 1L	
+10141			Familiarization 1L	
+10873			Familiarization 1L	
+11190			Familiarization 1L	
+12456			Familiarization 1R	
+12872			Familiarization 1R	
+13397	ImageEnd	encode 2 pink.JPG		
+13407	ImageStart	fixation.png		
+13688			Content	
+14271			Content	
+14412	ImageEnd	fixation.png		
+14447	ImageStart	encode 2 blue.JPG		
+14787			Familiarization 2L	
+15004			Familiarization 2L	
+15553			Familiarization 2R	
+15903			Familiarization 2R	
+16303			Familiarization 2R	
+16603			Familiarization 2R	
+17885			Familiarization 2L	
+18135			Familiarization 2L	
+18684			Familiarization 2L	
+18934			Content	
+19017			Familiarization 2L	
+19400			Familiarization 2L	
+19419	ImageEnd	encode 2 blue.JPG		
+19429	ImageStart	fixation.png		
+19750			Content	
+20432	ImageEnd	fixation.png		
+20464	ImageStart	2b pink.JPG		
+20533			Content	
+20749			old	
+20833			old	
+21282			new	
+21665			new	
+21982			old	
+22265			old	
+23048			old	
+23314			new	
+23864			new	
+24796			new	
+24880			new	
+25313			new	
+25762			Content	
+25979			new	
+26312			old	
+26812			old	
+27111			old	
+27278			new	
+27961			Content	
+28227			old	
+28544			old	
+29176			old	
+29593			new	
+29926			new	
+30432	ImageEnd	2b pink.JPG		
+30443	ImageStart	fixation.png		
+30775			Content	
+31445	ImageEnd	fixation.png		
+31472	ImageStart	2a blue.JPG		
+31841			old	
+32208			new	
+33224			old	
+33806			new	
+35522			old	
+37221			old	
+37670			old	
+37887			new	
+39202			old	
+39502			old	
+40502			Content	
+40635			old	
+41434			old	
+41447	ImageEnd	2a blue.JPG		
+41456	ImageStart	fixation.png		
+41851			Content	
+42460	ImageEnd	fixation.png		
+43088	MovieStart	congratulations.wmv		
+43599			Content	
+43999			Content	
+44515			Content	
+44698			Content	
+45048			Content	
+45290	KeyPress	Escape		
+45290	MovieEnd	congratulations.wmv		

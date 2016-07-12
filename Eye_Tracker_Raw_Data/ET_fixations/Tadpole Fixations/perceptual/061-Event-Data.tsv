@@ -1,0 +1,97 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 061
+Recording date:	 1/16/2015
+Recording time:	 10:05:07 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/14/2015
+Export time:	 2:06:01 PM
+
+Participant:	 061
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+315	MovieStart	MutedBallie.avi		
+886			Content	
+2268			Content	
+2651			Content	
+5649			Content	
+7065			Content	
+11031	MovieEnd	MutedBallie.avi		
+11878			Content	
+11933	ImageStart	fixation.png		
+12394			Content	
+12511			Content	
+13060			Content	
+13577			Content	
+16237	KeyPress	Space		
+16237	ImageEnd	fixation.png		
+16258	ImageStart	elephant_bear_a.BMP		
+16391			incorrect	
+16891			incorrect	
+17041			incorrect	
+17424			incorrect	
+17640			incorrect	
+18073			incorrect	
+18556			correct	
+18873			correct	
+19805			correct	
+20405			correct	
+20688			correct	
+21504			correct	
+21821			incorrect	
+22637			correct	
+22737			incorrect	
+23020			incorrect	
+23336			correct	
+23902			correct	
+24036			correct	
+24302			incorrect	
+24868			correct	
+25218			correct	
+25501			correct	
+26134			correct	
+26534			incorrect	
+27150			incorrect	
+27550			Content	
+27716			correct	
+28033			correct	
+29315			incorrect	
+29698			incorrect	
+30398			Content	
+32146			correct	
+32379			incorrect	
+32613			incorrect	
+32763			incorrect	
+33062			incorrect	
+33978			incorrect	
+34645			incorrect	
+35311			incorrect	
+35561			incorrect	
+35777			incorrect	
+36127			incorrect	
+36593			incorrect	
+36943			correct	
+37076			correct	
+37343			correct	
+63540	KeyPress	Space		
+63541	ImageEnd	elephant_bear_a.BMP		
+63544	ImageStart	fixation.png		
+64284	KeyPress	Space		
+64284	ImageEnd	fixation.png		
+64305	ImageStart	clock_bicycle_a.BMP		
+79478			correct	
+92836	KeyPress	Space		
+92836	ImageEnd	clock_bicycle_a.BMP		
+92840	ImageStart	fixation.png		
+93364	KeyPress	Space		
+93364	ImageEnd	fixation.png		
+93385	ImageStart	cake_doll_a.BMP		
+95316			correct	
+109340	KeyPress	Escape		
+109340	ImageEnd	cake_doll_a.BMP		

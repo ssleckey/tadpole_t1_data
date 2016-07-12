@@ -1,0 +1,64 @@
+Timestamp	Event	Descriptor	AoiNames	
+106	ImageStart	blacksquare.bmp		
+5679	KeyPress	Space		
+5679	ImageEnd	blacksquare.bmp		
+6321	MovieStart	Navjot_3_a.wmv		
+8489	MovieEnd	Navjot_3_a.wmv		
+8754	ImageStart	blacksquare.bmp		
+10753	ImageEnd	blacksquare.bmp		
+10780	ImageStart	fish_bee.BMP		
+15761	ImageEnd	fish_bee.BMP		
+15780	ImageStart	blacksquare.bmp		
+17788	ImageEnd	blacksquare.bmp		
+17814	ImageStart	shirt_cap.BMP		
+22795	ImageEnd	shirt_cap.BMP		
+22806	ImageStart	blacksquare.bmp		
+23977			Content	
+24093			Content	
+24643			Content	
+24809	ImageEnd	blacksquare.bmp		
+24826			Content	
+24835	ImageStart	ostrich_fly.BMP		
+25126			old	
+25276			old	
+25360			old	
+25543			new	
+25792			new	
+26675			new	
+26875			old	
+27091			old	
+29815	ImageEnd	ostrich_fly.BMP		
+29827	ImageStart	blacksquare.bmp		
+31826	ImageEnd	blacksquare.bmp		
+31852	ImageStart	tomato_carrot.BMP		
+36837	ImageEnd	tomato_carrot.BMP		
+36849	ImageStart	blacksquare.bmp		
+38846	ImageEnd	blacksquare.bmp		
+38876	ImageStart	book_bottle.BMP		
+40865			new	
+41181			new	
+41414			old	
+41881			old	
+42131			old	
+42431			new	
+42664			new	
+43856	ImageEnd	book_bottle.BMP		
+43868	ImageStart	blacksquare.bmp		
+45867	ImageEnd	blacksquare.bmp		
+45893	ImageStart	knife_key.BMP		
+50877	ImageEnd	knife_key.BMP		
+50889	ImageStart	blacksquare.bmp		
+52889	ImageEnd	blacksquare.bmp		
+52918	ImageStart	grapes_peach.BMP		
+54155			old	
+54505			Content	
+55071			new	
+56153			new	
+56286			new	
+56487			old	
+57896	ImageEnd	grapes_peach.BMP		
+57908	ImageStart	blacksquare.bmp		
+59908	ImageEnd	blacksquare.bmp		
+59936	ImageStart	duck_frog.BMP		
+61637	KeyPress	Escape		
+61638	ImageEnd	duck_frog.BMP		

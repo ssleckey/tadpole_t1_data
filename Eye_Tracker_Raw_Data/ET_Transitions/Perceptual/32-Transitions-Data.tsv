@@ -1,0 +1,78 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+324	MovieStart	MutedBallie.avi		
+512			Content	
+662			Content	
+4326			Content	
+4509			Content	
+5158	KeyPress	Space		
+5158	MovieEnd	MutedBallie.avi		
+5715	ImageStart	blacksquare.bmp		
+7890			Content	
+7941	KeyPress	Space		
+7941	ImageEnd	blacksquare.bmp		
+7963	ImageStart	chair_refrigerator_a.BMP		
+7973			Content	
+9005			incorrect	
+9139			correct	
+9489			correct	
+9705			incorrect	
+10055			incorrect	
+10771			incorrect	
+11454			correct	
+11587			correct	
+11770			correct	
+11970			correct	
+12303			correct	
+12786			correct	
+14302			incorrect	
+18205	KeyPress	Space		
+18205	ImageEnd	chair_refrigerator_a.BMP		
+18210	ImageStart	blacksquare.bmp		
+18917	KeyPress	Space		
+18917	ImageEnd	blacksquare.bmp		
+18940	ImageStart	balloons_grapes_a.BMP		
+19398			correct	
+19481			correct	
+19764			correct	
+20297			incorrect	
+20597			incorrect	
+21397			incorrect	
+21580			incorrect	
+22229			incorrect	
+22412			incorrect	
+22795			incorrect	
+22995			incorrect	
+23661			Content	
+24077			Content	
+27724			correct	
+28008			correct	
+28291			incorrect	
+28457			incorrect	
+28717	KeyPress	Space		
+28717	ImageEnd	balloons_grapes_a.BMP		
+28723	ImageStart	blacksquare.bmp		
+29221	KeyPress	Space		
+29221	ImageEnd	blacksquare.bmp		
+29242	ImageStart	spoon_ball_a.BMP		
+31189			correct	
+31322			correct	
+31755			correct	
+31905			correct	
+32788			incorrect	
+33071			correct	
+33637			incorrect	
+33937			incorrect	
+34237			incorrect	
+34936			correct	
+35119			correct	
+36319			correct	
+36402			correct	
+36668			correct	
+37101			correct	
+37184			correct	
+37368			correct	
+37784			correct	
+38184			Content	
+38925	KeyPress	Escape		
+38925	ImageEnd	spoon_ball_a.BMP		

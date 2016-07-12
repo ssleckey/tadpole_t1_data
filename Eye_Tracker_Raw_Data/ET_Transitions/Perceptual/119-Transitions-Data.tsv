@@ -1,0 +1,19 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+340	MovieStart	MutedBallie.avi		
+615			Content	
+4748	KeyPress	Space		
+4748	MovieEnd	MutedBallie.avi		
+6590	ImageStart	fixation.png		
+6590	KeyPress	Space		
+6590	ImageEnd	fixation.png		
+7471	ImageStart	cake_hat_a.BMP		
+8542			incorrect	
+9225			incorrect	
+9725			correct	
+10691			Content	
+10991			Content	
+17868			Content	
+26762			Content	
+27779	KeyPress	Escape		
+27779	ImageEnd	cake_hat_a.BMP		

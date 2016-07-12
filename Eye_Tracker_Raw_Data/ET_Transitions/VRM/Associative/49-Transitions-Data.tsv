@@ -1,0 +1,126 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+271			Content	
+333	MovieStart	MutedBallie.avi		
+570			Content	
+786	KeyPress	Space		
+786	MovieEnd	MutedBallie.avi		
+1162	ImageStart	CD_CD.jpg		
+1270			encode2_distractor_right	
+1487			encode2_distractor_left	
+2119			encode2_distractor_left	
+2719			encode2_distractor_left	
+2919			encode2_distractor_left	
+3852			encode2_distractor_right	
+4201			encode2_distractor_right	
+5167			encode2_distractor_left	
+5584			encode2_distractor_left	
+5817			encode2_distractor_left	
+6183			encode2_distractor_left	
+6683			encode2_distractor_left	
+6949			encode2_distractor_left	
+7582			encode2_distractor_left	
+7882			encode2_distractor_left	
+9181			encode2_distractor_left	
+9681			encode2_distractor_left	
+10663			Content	
+11142	ImageEnd	CD_CD.jpg		
+11153	ImageStart	blacksquare.bmp		
+11613			Content	
+11929			Content	
+12156	ImageEnd	blacksquare.bmp		
+12162			Content	
+12188	ImageStart	AB_AB.jpg		
+12445			encode2_target_left	
+12529			encode2_target_left	
+12762			encode2_target_left	
+13478			encode2_target_left	
+13944			encode2_target_left	
+14244			encode2_target_right	
+14594			Content	
+14927			encode2_target_right	
+15543			encode2_target_left	
+16159			encode2_target_left	
+17175			encode2_target_left	
+17691			encode2_target_right	
+18091			encode2_target_right	
+18607			encode2_target_right	
+19956			encode2_target_left	
+20289			Content	
+20489			Content	
+20722			Content	
+21122			Content	
+21872			Content	
+22138			Content	
+22171	ImageEnd	AB_AB.jpg		
+22181	ImageStart	blacksquare.bmp		
+22321			Content	
+22538			Content	
+22854			Content	
+23186	ImageEnd	blacksquare.bmp		
+23218	ImageStart	AB_AD.jpg		
+23304			Content	
+23787			retrieval_new_pair	
+24037			retrieval_new_pair	
+24287			retrieval_new_pair	
+24819			retrieval_new_pair	
+25402			retrieve_old_pair	
+25736			Content	
+26235			retrieve_old_pair	
+26485			retrieve_old_pair	
+26668			retrieval_new_pair	
+27151			Content	
+27417			Content	
+28284			retrieve_old_pair	
+29050			retrieve_old_pair	
+29732			retrieval_new_pair	
+30232			retrieval_new_pair	
+31148			retrieval_new_pair	
+31781			retrieval_new_pair	
+32131			Content	
+32997			Content	
+33186	ImageEnd	AB_AD.jpg		
+33197	ImageStart	blacksquare.bmp		
+33730			Content	
+33929			Content	
+34179			Content	
+34200	ImageEnd	blacksquare.bmp		
+34232	ImageStart	AB_CB.jpg		
+34479			Content	
+34679			retrieval_old_pair	
+34962			retrieval_old_pair	
+35995			retrieval_old_pair	
+36994			retrieval_old_pair	
+37293			Content	
+37710			Content	
+38093			retrieval_new_pair	
+38926			retrieval_new_pair	
+39592			retrieval_new_pair	
+40075			retrieval_new_pair	
+40325			retrieval_new_pair	
+41108			retrieval_old_pair	
+41391			retrieval_old_pair	
+41741			Content	
+41891			Content	
+42257			retrieval_old_pair	
+42639			Content	
+42873			Content	
+43106			Content	
+43455			Content	
+43938			Content	
+44105			Content	
+44213	ImageEnd	AB_CB.jpg		
+44229	ImageStart	blacksquare.bmp		
+44622			Content	
+44755			Content	
+45227	ImageEnd	blacksquare.bmp		
+45856	MovieStart	congratulations.wmv		
+46254			Content	
+46370			Content	
+47069			Content	
+47386			Content	
+47393	KeyPress	Space		
+47702			Content	
+48035			Content	
+48257	KeyPress	Escape		
+48257	MovieEnd	congratulations.wmv		

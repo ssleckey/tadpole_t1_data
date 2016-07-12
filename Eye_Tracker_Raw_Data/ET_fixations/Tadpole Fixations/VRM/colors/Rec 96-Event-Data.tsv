@@ -1,0 +1,149 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 Rec 96
+Recording date:	 10/12/2015
+Recording time:	 12:25:02 PM
+Recording resolution:	 1280 x 1024
+
+Export date:	 11/2/2015
+Export time:	 11:30:35 AM
+
+Participant:	 P96
+Timestamp	Event	Descriptor	AoiNames	
+72			Content	
+326	MovieStart	MutedBallie.avi		
+771			Content	
+1411	KeyPress	Space		
+1411	MovieEnd	MutedBallie.avi		
+1791	ImageStart	fixation.png		
+1954			Content	
+2070			Content	
+2796	ImageEnd	fixation.png		
+2824	ImageStart	Slide1.JPG		
+2936			Content	
+3219			encode_1_right	
+3503			encode_1_right	
+3935			encode_1_left	
+4852			Content	
+5118			encode_1_right	
+6184			encode_1_left	
+6734			encode_1_left	
+7766			encode_1_left	
+7806	ImageEnd	Slide1.JPG		
+7817	ImageStart	fixation.png		
+8099			Content	
+8818	ImageEnd	fixation.png		
+8845	ImageStart	Slide5.JPG		
+9182			encode_2_right	
+10397			encode_2_right	
+10847			Content	
+11080			encode_2_left	
+11480			encode_2_left	
+12013			encode_2_right	
+12962			encode_2_left	
+13762			encode_2_right	
+13827	ImageEnd	Slide5.JPG		
+13837	ImageStart	fixation.png		
+14228			Content	
+14839	ImageEnd	fixation.png		
+14866	ImageStart	Slide9.JPG		
+15194			encode_3_right	
+15744			encode_3_left	
+16393			Content	
+16776			encode_3_right	
+17026			encode_3_right	
+17792			encode_3_right	
+18025			encode_3_left	
+18657			encode_3_right	
+19640			Content	
+19850	ImageEnd	Slide9.JPG		
+19861	ImageStart	fixation.png		
+19956			Content	
+20140			Content	
+20356			Content	
+20860	ImageEnd	fixation.png		
+20888	ImageStart	Slide1.JPG		
+21322			encode_1_right	
+22105			encode_1_left	
+23004			encode_1_right	
+23088			encode_1_right	
+23854			encode_1_right	
+24487			Content	
+24670			encode_1_left	
+25469			Content	
+25753			encode_1_right	
+25871	ImageEnd	Slide1.JPG		
+25881	ImageStart	fixation.png		
+26219			Content	
+26882	ImageEnd	fixation.png		
+26910	ImageStart	Slide5.JPG		
+27401			encode_2_left	
+27901			encode_2_left	
+28701			Content	
+30549			encode_2_left	
+31548			encode_2_right	
+31848			encode_2_right	
+31891	ImageEnd	Slide5.JPG		
+31901	ImageStart	fixation.png		
+32281			Content	
+32902	ImageEnd	fixation.png		
+32935	ImageStart	Slide9.JPG		
+33397			encode_3_right	
+34130			encode_3_right	
+34380			encode_3_left	
+35029			encode_3_right	
+36478			encode_3_left	
+36944			encode_3_left	
+37277			encode_3_right	
+37644			encode_3_right	
+37912	ImageEnd	Slide9.JPG		
+37927	ImageStart	fixation.png		
+38327			Content	
+38926	ImageEnd	fixation.png		
+38953	ImageStart	Slide10.JPG		
+39393			Content	
+39609			retrieve_1_target	
+39809			retrieve_1_distractor	
+40109			retrieve_1_distractor	
+40725			Content	
+40842			Content	
+41008			retrieve_1_distractor	
+41624			Content	
+42507			retrieve_1_target	
+43623			retrieve_1_distractor	
+43935	ImageEnd	Slide10.JPG		
+43941	ImageStart	fixation.png		
+44947	ImageEnd	fixation.png		
+44984	ImageStart	VRM_assoc_colors.jpg		
+45022			Content	
+45488			retrieve_2_distractor	
+45871			retrieve_2_target	
+46221			retrieve_2_target	
+46487			retrieve_2_distractor	
+47020			retrieve_2_target	
+49954	ImageEnd	VRM_assoc_colors.jpg		
+49967	ImageStart	fixation.png		
+50018			Content	
+50967	ImageEnd	fixation.png		
+50994	ImageStart	Slide12.JPG		
+51467			retrieve_3_distractor	
+52150			retrieve_3_target	
+52399			retrieve_3_target	
+52866			retrieve_3_distractor	
+55976	ImageEnd	Slide12.JPG		
+56113			Content	
+56530			Content	
+56763			Content	
+56879			Content	
+57213			Content	
+57244	MovieStart	congratulations.wmv		
+57662			Content	
+58329			Content	
+58779			Content	
+60353	KeyPress	Escape		
+60353	MovieEnd	congratulations.wmv		

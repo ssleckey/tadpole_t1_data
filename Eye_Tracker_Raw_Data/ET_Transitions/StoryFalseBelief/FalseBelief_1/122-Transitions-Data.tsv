@@ -1,0 +1,58 @@
+Timestamp	Event	Descriptor	AoiNames	
+356	MovieStart	MutedBallie.avi		
+7682	KeyPress	Space		
+7682	MovieEnd	MutedBallie.avi		
+9281	ImageStart	blacksquare.bmp		
+13806			Content	
+13905	KeyPress	Space		
+13905	ImageEnd	blacksquare.bmp		
+13910	ImageStart	fixation.png		
+13973			Content	
+14106			Content	
+14639			Content	
+14913	ImageEnd	fixation.png		
+15988			Content	
+16257	ImageStart	Slide1.JPG		
+16338			Content	
+16538			AOI_1	
+16737			AOI_1	
+23129	KeyPress	Space		
+23129	ImageEnd	Slide1.JPG		
+23133	ImageStart	fixation.png		
+24133	ImageEnd	fixation.png		
+24163	ImageStart	Slide2.JPG		
+30873	KeyPress	Space		
+30873	ImageEnd	Slide2.JPG		
+30877	ImageStart	fixation.png		
+31885	ImageEnd	fixation.png		
+31913	ImageStart	Slide3.JPG		
+39529	KeyPress	Space		
+39529	ImageEnd	Slide3.JPG		
+39533	ImageStart	fixation.png		
+40545	ImageEnd	fixation.png		
+40574	ImageStart	Slide4.JPG		
+49376	KeyPress	Space		
+49377	ImageEnd	Slide4.JPG		
+49382	ImageStart	fixation.png		
+50387	ImageEnd	fixation.png		
+50414	ImageStart	Slide5.JPG		
+61896	KeyPress	Space		
+61896	ImageEnd	Slide5.JPG		
+61900	ImageStart	fixation.png		
+62898	ImageEnd	fixation.png		
+63010	ImageStart	Slide6.JPG		
+71272	KeyPress	Space		
+71272	ImageEnd	Slide6.JPG		
+71276	ImageStart	fixation.png		
+72273	ImageEnd	fixation.png		
+72305	ImageStart	Slide7.JPG		
+83287	KeyPress	Space		
+83288	ImageEnd	Slide7.JPG		
+83292	ImageStart	fixation.png		
+84300	ImageEnd	fixation.png		
+85897	ImageStart	Slide8.JPG		
+95631	KeyPress	Space		
+95631	ImageEnd	Slide8.JPG		
+96319	InstructionStart	Instruction Element		
+99143	KeyPress	Escape		
+99144	InstructionEnd	Instruction Element		

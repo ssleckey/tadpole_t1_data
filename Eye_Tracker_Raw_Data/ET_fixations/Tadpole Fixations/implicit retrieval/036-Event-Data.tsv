@@ -1,0 +1,434 @@
+System Properties:
+Operating System:	 Microsoft Windows NT 6.1.7601 Service Pack 1
+System User Name:	 ehembach
+Machine Name:	 DSS03691-CMB-D
+
+Data properties:
+
+Recording name:	 036
+Recording date:	 10/22/2014
+Recording time:	 10:12:27 AM
+Recording resolution:	 1280 x 1024
+
+Export date:	 9/14/2015
+Export time:	 1:47:16 PM
+
+Participant:	 036
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+27			Content	
+104	ImageStart	blacksquare.bmp		
+876			Content	
+1194	KeyPress	Space		
+1194	ImageEnd	blacksquare.bmp		
+1442			Content	
+1775	MovieStart	Navjot_3_a.wmv		
+2025			Content	
+2591			Content	
+3944	MovieEnd	Navjot_3_a.wmv		
+4128	ImageStart	star_cloud.BMP		
+4523			new	
+4757			new	
+6272			old	
+6738			old	
+7371			old	
+7471			new	
+9104	ImageEnd	star_cloud.BMP		
+9119	ImageStart	blacksquare.bmp		
+9919			Content	
+10618			Content	
+10785			Content	
+10968			Content	
+11118	ImageEnd	blacksquare.bmp		
+11385			Content	
+11555	MovieStart	Navjot_3_a.wmv		
+12267			Content	
+12384			Content	
+13016			Content	
+13750	MovieEnd	Navjot_3_a.wmv		
+13994	ImageStart	glass_bowl.BMP		
+14382			new	
+14532			new	
+15198			old	
+15598			old	
+17297			new	
+17613			new	
+18313			old	
+18629			old	
+18963	ImageEnd	glass_bowl.BMP		
+18980	ImageStart	blacksquare.bmp		
+19611			Content	
+20377			Content	
+20661			Content	
+20990	ImageEnd	blacksquare.bmp		
+21261			Content	
+21387	MovieStart	Navjot_3_a.wmv		
+21644			Content	
+23555	MovieEnd	Navjot_3_a.wmv		
+23625			Content	
+23744	ImageStart	watermelon_orange.BMP		
+24175			new	
+24341			new	
+24924			old	
+25291			old	
+25807			new	
+26090			new	
+26657			new	
+27006			new	
+27822			new	
+28522			new	
+28730	ImageEnd	watermelon_orange.BMP		
+28742	ImageStart	blacksquare.bmp		
+28872			Content	
+30221			Content	
+30741	ImageEnd	blacksquare.bmp		
+31220			Content	
+31333	MovieStart	Navjot_3_a.wmv		
+31520			Content	
+33493	MovieEnd	Navjot_3_a.wmv		
+33681	ImageStart	ball_drum.BMP		
+34018			old	
+34734			new	
+35034			new	
+35750			old	
+36000			old	
+36799			new	
+37099			new	
+37365			new	
+38481			new	
+38666	ImageEnd	ball_drum.BMP		
+38677	ImageStart	blacksquare.bmp		
+40047			Content	
+40679	ImageEnd	blacksquare.bmp		
+41225	MovieStart	Navjot_3_a.wmv		
+41529			Content	
+41779			Content	
+43397	MovieEnd	Navjot_3_a.wmv		
+43647	ImageStart	duck_frog.BMP		
+44059			new	
+44160			new	
+44593			old	
+44793			old	
+45659			new	
+46974			old	
+47324			old	
+47890			old	
+48124			new	
+48390			new	
+48618	ImageEnd	duck_frog.BMP		
+48630	ImageStart	blacksquare.bmp		
+49506			Content	
+49589			Content	
+49839			Content	
+50123			Content	
+50632	ImageEnd	blacksquare.bmp		
+51059	MovieStart	Navjot_3_a.wmv		
+51138			Content	
+51355			Content	
+51638			Content	
+53238	MovieEnd	Navjot_3_a.wmv		
+53459	ImageStart	sun_tree.BMP		
+53820			old	
+54086			old	
+54852			new	
+55252			new	
+56102			new	
+56418			new	
+57800			old	
+58431	ImageEnd	sun_tree.BMP		
+58442	ImageStart	blacksquare.bmp		
+58933			Content	
+59283			Content	
+60443	ImageEnd	blacksquare.bmp		
+60515			Content	
+61431			Content	
+61547			Content	
+61587	MovieStart	Navjot_3_a.wmv		
+61830			Content	
+62197			Content	
+63463			Content	
+63756	MovieEnd	Navjot_3_a.wmv		
+64006	ImageStart	ring_watch.BMP		
+64345			Content	
+64529			old	
+65245			new	
+65595			new	
+66943			old	
+67726			old	
+67859			old	
+68592			new	
+68876			new	
+68993	ImageEnd	ring_watch.BMP		
+69004	ImageStart	blacksquare.bmp		
+69957			Content	
+71003	ImageEnd	blacksquare.bmp		
+71040			Content	
+71324			Content	
+72185	MovieStart	Navjot_3_a.wmv		
+72406			Content	
+72623			Content	
+74362	MovieEnd	Navjot_3_a.wmv		
+74586	ImageStart	hair_hat.BMP		
+75054			new	
+75387			new	
+76486			new	
+77419			new	
+78602			new	
+79101			new	
+79368			new	
+79569	ImageEnd	hair_hat.BMP		
+79580	ImageStart	blacksquare.bmp		
+81066			Content	
+81316			Content	
+81499			Content	
+81580	ImageEnd	blacksquare.bmp		
+82132			Content	
+82178	MovieStart	Navjot_3_a.wmv		
+82465			Content	
+82716			Content	
+84346	MovieEnd	Navjot_3_a.wmv		
+84576	ImageStart	hand_foot.BMP		
+84864			old	
+85130			new 	
+85430			new 	
+86263			old	
+87162			old	
+88045			old	
+88261			new 	
+88511			new 	
+89494			new 	
+89554	ImageEnd	hand_foot.BMP		
+89561	ImageStart	blacksquare.bmp		
+90326			Content	
+90926			Content	
+91563	ImageEnd	blacksquare.bmp		
+92021	MovieStart	Navjot_3_a.wmv		
+92358			Content	
+92641			Content	
+94123			Content	
+94187	MovieEnd	Navjot_3_a.wmv		
+94422	ImageStart	mouse_squirrel.BMP		
+94723			new	
+95289			old	
+95505			old	
+96655			new	
+96872			new	
+98753			new	
+99053			new	
+99396	ImageEnd	mouse_squirrel.BMP		
+99407	ImageStart	blacksquare.bmp		
+99420			Content	
+100319			Content	
+101235			Content	
+101407	ImageEnd	blacksquare.bmp		
+101668			Content	
+101901			Content	
+102058	MovieStart	Navjot_3_a.wmv		
+102084			Content	
+102417			Content	
+102533			Content	
+103882			Content	
+103999			Content	
+104227	MovieEnd	Navjot_3_a.wmv		
+104467	ImageStart	garbage can_box.BMP		
+104765			new	
+105364			Content	
+107247			old	
+107546			Content	
+108129			new	
+108412			new	
+108696			old	
+109195			old	
+109441	ImageEnd	garbage can_box.BMP		
+109453	ImageStart	blacksquare.bmp		
+109795			Content	
+110261			Content	
+110511			Content	
+111455	ImageEnd	blacksquare.bmp		
+111560			Content	
+111955	MovieStart	Navjot_3_a.wmv		
+112693			Content	
+112876			Content	
+114130	MovieEnd	Navjot_3_a.wmv		
+114941			Content	
+114996	ImageStart	lips_ear.BMP		
+115291			old	
+115974			old	
+116324			new	
+118772			old	
+119921			new	
+119973	ImageEnd	lips_ear.BMP		
+119984	ImageStart	blacksquare.bmp		
+120987			Content	
+121903			Content	
+121986	ImageEnd	blacksquare.bmp		
+122086			Content	
+122269			Content	
+122469			Content	
+122491	MovieStart	Navjot_3_a.wmv		
+122936			Content	
+124434			Content	
+124656	MovieEnd	Navjot_3_a.wmv		
+125250			Content	
+125729	ImageStart	lion_bear.BMP		
+125983			new	
+126566			old	
+126783			old	
+127465			old	
+127649			old	
+127865			new	
+128132			new	
+130697			old	
+130704	ImageEnd	lion_bear.BMP		
+130715	ImageStart	blacksquare.bmp		
+131712			Content	
+132029			Content	
+132112			Content	
+132212			Content	
+132694			Content	
+132718	ImageEnd	blacksquare.bmp		
+132961			Content	
+133163	MovieStart	Navjot_3_a.wmv		
+134410			Content	
+135353	MovieEnd	Navjot_3_a.wmv		
+136009			Content	
+136423	ImageStart	shirt_cap.BMP		
+136709			Content	
+136792			old	
+137292			old	
+138141			old	
+138691			old	
+141305			old	
+141390	ImageEnd	shirt_cap.BMP		
+141404	ImageStart	blacksquare.bmp		
+143403	ImageEnd	blacksquare.bmp		
+143913	MovieStart	Navjot_3_a.wmv		
+144803			Content	
+144969			Content	
+145852			Content	
+146081	MovieEnd	Navjot_3_a.wmv		
+146118			Content	
+146633	ImageStart	lettuce_corn.BMP		
+146885			new	
+147151			new	
+147567			old	
+148833			new	
+149316			new	
+150932			new	
+151265			new	
+151608	ImageEnd	lettuce_corn.BMP		
+151619	ImageStart	blacksquare.bmp		
+151781			Content	
+152297			Content	
+153329			Content	
+153621	ImageEnd	blacksquare.bmp		
+154107	MovieStart	Navjot_3_a.wmv		
+154312			Content	
+154512			Content	
+155811			Content	
+156289	MovieEnd	Navjot_3_a.wmv		
+156512	ImageStart	leg_arm.BMP		
+156844			new	
+157210			new	
+157743			old	
+157992			old	
+158825			new	
+159125			new	
+159692			new	
+160075			new	
+161140			new	
+161482	ImageEnd	leg_arm.BMP		
+161494	ImageStart	blacksquare.bmp		
+162156			Content	
+163006			Content	
+163496	ImageEnd	blacksquare.bmp		
+163738			Content	
+163822			Content	
+163984	MovieStart	Navjot_3_a.wmv		
+164038			Content	
+164271			Content	
+164571			Content	
+166151	MovieEnd	Navjot_3_a.wmv		
+166270			Content	
+166678	ImageStart	flower_leaf.BMP		
+166985			Content	
+167102			old	
+167519			old	
+169001			new	
+169467			new	
+170133			new	
+170433			new	
+170916			new	
+171282			old	
+171632			old	
+171654	ImageEnd	flower_leaf.BMP		
+171665	ImageStart	blacksquare.bmp		
+172598			Content	
+173667	ImageEnd	blacksquare.bmp		
+174100	MovieStart	Navjot_3_a.wmv		
+176275	MovieEnd	Navjot_3_a.wmv		
+176511	ImageStart	nail_pencil.BMP		
+177061			Content	
+177145			new	
+177511			new	
+178027			new	
+178510			new	
+178876			old	
+179143			old	
+179743			new	
+179976			new	
+181108			new	
+181484	ImageEnd	nail_pencil.BMP		
+181495	ImageStart	blacksquare.bmp		
+181575			Content	
+182158			Content	
+182674			Content	
+182907			Content	
+183040			Content	
+183493	ImageEnd	blacksquare.bmp		
+183920	MovieStart	Navjot_3_a.wmv		
+183939			Content	
+184056			Content	
+184239			Content	
+186097	MovieEnd	Navjot_3_a.wmv		
+186307	ImageStart	scissors_brush.BMP		
+186604			old	
+187203			new	
+188353			new	
+188853			new	
+189985			new	
+190185			new	
+190601			new	
+191278	ImageEnd	scissors_brush.BMP		
+191290	ImageStart	blacksquare.bmp		
+192017			Content	
+192150			Content	
+192317			Content	
+192500			Content	
+192600			Content	
+193099			Content	
+193290	ImageEnd	blacksquare.bmp		
+193743	MovieStart	Navjot_3_a.wmv		
+194598			Content	
+194798			Content	
+195928	MovieEnd	Navjot_3_a.wmv		
+195980			Content	
+196114			Content	
+196152	ImageStart	knife_key.BMP		
+196297			Content	
+196430			new	
+196813			new	
+197496			new	
+197813			new	
+198629			new	
+199844			old	
+200011			old	
+201122	ImageEnd	knife_key.BMP		
+201133	ImageStart	blacksquare.bmp		
+203135	ImageEnd	blacksquare.bmp		
+203625	MovieStart	congratulations.wmv		
+204608			Content	
+205174			Content	
+205557			Content	
+205757	KeyPress	Escape		
+205757	MovieEnd	congratulations.wmv		

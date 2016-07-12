@@ -1,0 +1,188 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+340	MovieStart	MutedBallie.avi		
+608			Content	
+2107			Content	
+3507			Content	
+4855			Content	
+7786	KeyPress	Space		
+7788	MovieEnd	MutedBallie.avi		
+8303			Content	
+8436			Content	
+8553			Content	
+8673	ImageStart	blacksquare.bmp		
+8923	KeyPress	Space		
+8923	ImageEnd	blacksquare.bmp		
+8946	ImageStart	Slide1.JPG		
+10002			AOI_1	
+10418			AOI_1	
+10668			AOI_1	
+11418			AOI_1	
+12000			Content	
+12784			Content	
+12900			AOI_1	
+13200			AOI_1	
+13300			AOI_1	
+13816			AOI_1	
+14016			AOI_1	
+15065			AOI_1	
+15554	KeyPress	Space		
+15554	ImageEnd	Slide1.JPG		
+15562	ImageStart	blacksquare.bmp		
+16064			Content	
+16122	KeyPress	Space		
+16122	ImageEnd	blacksquare.bmp		
+16143	ImageStart	Slide2.JPG		
+16364			Content	
+16780			AOI_1	
+17197			AOI_1	
+17730			AOI_1	
+18196			AOI_1	
+18529			AOI_1	
+18979			AOI_1	
+20444			Content	
+21327			AOI_1	
+22492			Content	
+22522	KeyPress	Space		
+22522	ImageEnd	Slide2.JPG		
+22530	ImageStart	blacksquare.bmp		
+22826			Content	
+22992			Content	
+23098	KeyPress	Space		
+23098	ImageEnd	blacksquare.bmp		
+23120	ImageStart	Slide3.JPG		
+23342			correct	
+24042			incorrect	
+24508			correct	
+24824			correct	
+24991			correct	
+25740			correct	
+25907			incorrect	
+26123			incorrect	
+26456			incorrect	
+27073			incorrect	
+27572			incorrect	
+28105			correct	
+28338			correct	
+29004			correct	
+29454			correct	
+29635	KeyPress	Space		
+29635	ImageEnd	Slide3.JPG		
+29643	ImageStart	blacksquare.bmp		
+30054			Content	
+30314	KeyPress	Space		
+30314	ImageEnd	blacksquare.bmp		
+30335	ImageStart	Slide4.JPG		
+30420			incorrect	
+30653			incorrect	
+30886			incorrect	
+31103			Content	
+33135			correct	
+33668			correct	
+33917			correct	
+34284			Content	
+34634			correct	
+35250			Content	
+36332			Content	
+36566			incorrect	
+36732			Content	
+37132			incorrect	
+37448			incorrect	
+38348			incorrect	
+38954	KeyPress	Space		
+38954	ImageEnd	Slide4.JPG		
+38964	ImageStart	blacksquare.bmp		
+39413			Content	
+39546	KeyPress	Space		
+39546	ImageEnd	blacksquare.bmp		
+39567	ImageStart	Slide5.JPG		
+39880			correct	
+40113			correct	
+41162			correct	
+41395			correct	
+42978			correct	
+43311			correct	
+43710			correct	
+44260			Content	
+44527			incorrect	
+44943			incorrect	
+45159			incorrect	
+45526			correct	
+45892			correct	
+46292			correct	
+46408			incorrect	
+47091			Content	
+47374			incorrect	
+48057			Content	
+48756			correct	
+49106			correct	
+49273			incorrect	
+49650	KeyPress	Space		
+49650	ImageEnd	Slide5.JPG		
+49657	ImageStart	blacksquare.bmp		
+49939			Content	
+50274	KeyPress	Space		
+50274	ImageEnd	blacksquare.bmp		
+50295	ImageStart	Slide6.JPG		
+50306			correct	
+50539			correct	
+50955			correct	
+54486			correct	
+54719			correct	
+55119			correct	
+55785			incorrect	
+55951			incorrect	
+56251			incorrect	
+57767			correct	
+57850			correct	
+58105	KeyPress	Space		
+58106	ImageEnd	Slide6.JPG		
+58113	ImageStart	blacksquare.bmp		
+58166			Content	
+58516			Content	
+58689	KeyPress	Space		
+58690	ImageEnd	blacksquare.bmp		
+58710	ImageStart	Slide7.JPG		
+58966			incorrect	
+59299			correct	
+59565			correct	
+60082			correct	
+60914			correct	
+61514			incorrect	
+61814			incorrect	
+62713			correct	
+63013			correct	
+63862			correct	
+64245			incorrect	
+64545			incorrect	
+65628			incorrect	
+66460			incorrect	
+67443			incorrect	
+67545	KeyPress	Space		
+67546	ImageEnd	Slide7.JPG		
+67555	ImageStart	blacksquare.bmp		
+67892			Content	
+68169	KeyPress	Space		
+68169	ImageEnd	blacksquare.bmp		
+68191	ImageStart	Slide8.JPG		
+68609			correct	
+69075			incorrect	
+69408			incorrect	
+72073			incorrect	
+72572			correct	
+72822			Content	
+73638			correct	
+73954			incorrect	
+74121			correct	
+74521			correct	
+75603			correct	
+75770			incorrect	
+75970			incorrect	
+76705	KeyPress	Space		
+76705	ImageEnd	Slide8.JPG		
+76902			Content	
+77013	InstructionStart	Instruction Element		
+77485			Content	
+77735			Content	
+78777	KeyPress	Escape		
+78778	InstructionEnd	Instruction Element		

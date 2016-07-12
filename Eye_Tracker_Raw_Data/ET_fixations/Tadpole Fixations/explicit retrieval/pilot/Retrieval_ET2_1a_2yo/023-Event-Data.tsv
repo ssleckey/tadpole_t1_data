@@ -1,0 +1,266 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+326	MovieStart	MutedBallie.avi		
+390			Content	
+889			Content	
+3519	KeyPress	Space		
+3520	MovieEnd	MutedBallie.avi		
+3704			Content	
+3794	ImageStart	blacksquare.bmp		
+4087			Content	
+4437			Content	
+4803			Content	
+4953			Content	
+18975	KeyPress	Space		
+18975	ImageEnd	blacksquare.bmp		
+18996	ImageStart	Slide1.JPG		
+19659			Content	
+20025			Content	
+20375			Content	
+21274			Content	
+21790			Content	
+21974			Content	
+23490			Content	
+23695	KeyPress	Space		
+23695	ImageEnd	Slide1.JPG		
+23701	ImageStart	blacksquare.bmp		
+23772			Content	
+24239			Content	
+24705			Content	
+25088			Content	
+29852			Content	
+30118			Content	
+30751			Content	
+34295	KeyPress	Space		
+34295	ImageEnd	blacksquare.bmp		
+34316	ImageStart	Slide2.JPG		
+35231			Content	
+35530			Content	
+36496			Content	
+38661			Content	
+38828			Content	
+39071	KeyPress	Space		
+39071	ImageEnd	Slide2.JPG		
+39076	ImageStart	blacksquare.bmp		
+39510			Content	
+39993			Content	
+47655	KeyPress	Space		
+47655	ImageEnd	blacksquare.bmp		
+48303	MovieStart	Julia_3.AVI		
+48721			Content	
+48887			Content	
+49054			Content	
+50369			Content	
+50869			Content	
+51049	MovieEnd	Julia_3.AVI		
+51247	ImageStart	blacksquare.bmp		
+51418			Content	
+52251			Content	
+52684			Content	
+53584			Content	
+54200			Content	
+54517			Content	
+55450			Content	
+55966			Content	
+56710	KeyPress	Space		
+56710	ImageEnd	blacksquare.bmp		
+56732	ImageStart	spoon_fork.BMP		
+56915			Content	
+57015			Content	
+57331			Content	
+57648			Content	
+58147			Content	
+58880			Content	
+59330			Content	
+59446			Content	
+59680			Content	
+59946			Content	
+60529			Content	
+60879			Content	
+61661			Content	
+62358	KeyPress	Left		
+62359	ImageEnd	spoon_fork.BMP		
+62364	ImageStart	blacksquare.bmp		
+63593			Content	
+63793			Content	
+65950	KeyPress	Space		
+65951	ImageEnd	blacksquare.bmp		
+65972	ImageStart	socks_pants.BMP		
+68190	KeyPress	Left		
+68190	ImageEnd	socks_pants.BMP		
+68196	ImageStart	blacksquare.bmp		
+71950	KeyPress	Space		
+71951	ImageEnd	blacksquare.bmp		
+71972	ImageStart	stove_refrigerator.BMP		
+72636			old	
+73036			old	
+74030	KeyPress	Right		
+74031	ImageEnd	stove_refrigerator.BMP		
+74037	ImageStart	blacksquare.bmp		
+77790	KeyPress	Space		
+77790	ImageEnd	blacksquare.bmp		
+77811	ImageStart	snowman_clown.BMP		
+79782	KeyPress	Right		
+79782	ImageEnd	snowman_clown.BMP		
+79788	ImageStart	blacksquare.bmp		
+83030	KeyPress	Space		
+83030	ImageEnd	blacksquare.bmp		
+83051	ImageStart	swing_door.BMP		
+83394			old	
+83744			old	
+83877			Content	
+85190	KeyPress	Right		
+85190	ImageEnd	swing_door.BMP		
+85196	ImageStart	blacksquare.bmp		
+88507			Content	
+88598	KeyPress	Space		
+88598	ImageEnd	blacksquare.bmp		
+88619	ImageStart	dress_jacket.BMP		
+88657			Content	
+88757			Content	
+89023			old	
+89323			old	
+90230	KeyPress	Right		
+90230	ImageEnd	dress_jacket.BMP		
+90236	ImageStart	blacksquare.bmp		
+93422	KeyPress	Space		
+93422	ImageEnd	blacksquare.bmp		
+93443	ImageStart	fish_bee.BMP		
+95062	KeyPress	Right		
+95062	ImageEnd	fish_bee.BMP		
+95067	ImageStart	blacksquare.bmp		
+98318	KeyPress	Space		
+98318	ImageEnd	blacksquare.bmp		
+98339	ImageStart	shoe_boot.BMP		
+98999			old	
+99116			old	
+99232			new	
+100342	KeyPress	Right		
+100342	ImageEnd	shoe_boot.BMP		
+100349	ImageStart	blacksquare.bmp		
+103670	KeyPress	Space		
+103670	ImageEnd	blacksquare.bmp		
+103692	ImageStart	table_chair.BMP		
+105944			old	
+107350	KeyPress	Right		
+107350	ImageEnd	table_chair.BMP		
+107356	ImageStart	blacksquare.bmp		
+110685	KeyPress	Space		
+110686	ImageEnd	blacksquare.bmp		
+110707	ImageStart	doorknob_bell.BMP		
+112773	KeyPress	Right		
+112774	ImageEnd	doorknob_bell.BMP		
+112780	ImageStart	whiteborder.bmp		
+114213	KeyPress	Space		
+114214	ImageEnd	whiteborder.bmp		
+114554			Content	
+114671	MovieStart	Julia_3.AVI		
+114787			Content	
+115303			Content	
+115570			Content	
+116086			Content	
+116502			Content	
+116869			Content	
+117412	MovieEnd	Julia_3.AVI		
+117735			Content	
+117939	ImageStart	blacksquare.bmp		
+118118			Content	
+118268			Content	
+118584			Content	
+118817			Content	
+118934			Content	
+119150			Content	
+121397	KeyPress	Space		
+121398	ImageEnd	blacksquare.bmp		
+121419	ImageStart	train_bus.BMP		
+123501	KeyPress	Left		
+123502	ImageEnd	train_bus.BMP		
+123507	ImageStart	blacksquare.bmp		
+125995			Content	
+126629			Content	
+126869	KeyPress	Space		
+126869	ImageEnd	blacksquare.bmp		
+126891	ImageStart	wheel_window.BMP		
+129037	KeyPress	Right		
+129037	ImageEnd	wheel_window.BMP		
+129043	ImageStart	blacksquare.bmp		
+129694			Content	
+130060			Content	
+132365	KeyPress	Space		
+132365	ImageEnd	blacksquare.bmp		
+132386	ImageStart	toe_finger.BMP		
+135557	KeyPress	Right		
+135557	ImageEnd	toe_finger.BMP		
+135563	ImageStart	blacksquare.bmp		
+138621	KeyPress	Space		
+138621	ImageEnd	blacksquare.bmp		
+138642	ImageStart	book_bottle.BMP		
+143221	KeyPress	Right		
+143221	ImageEnd	book_bottle.BMP		
+143227	ImageStart	blacksquare.bmp		
+146037	KeyPress	Space		
+146037	ImageEnd	blacksquare.bmp		
+146058	ImageStart	ostrich_fly.BMP		
+148021	KeyPress	Right		
+148021	ImageEnd	ostrich_fly.BMP		
+148027	ImageStart	blacksquare.bmp		
+149929			Content	
+150162			Content	
+151109	KeyPress	Space		
+151109	ImageEnd	blacksquare.bmp		
+151130	ImageStart	pig_elephant.BMP		
+153653	KeyPress	Right		
+153653	ImageEnd	pig_elephant.BMP		
+153659	ImageStart	blacksquare.bmp		
+156773	KeyPress	Space		
+156773	ImageEnd	blacksquare.bmp		
+156794	ImageStart	sailboat_bicycle.BMP		
+157790			Content	
+157940			old	
+158373			new	
+167216			Content	
+167700			Content	
+167850			new	
+168845	KeyPress	Right		
+168845	ImageEnd	sailboat_bicycle.BMP		
+168851	ImageStart	blacksquare.bmp		
+170364			Content	
+170564			Content	
+172349	KeyPress	Space		
+172349	ImageEnd	blacksquare.bmp		
+172370	ImageStart	truck_car.BMP		
+173445			new	
+177676	KeyPress	Right		
+177676	ImageEnd	truck_car.BMP		
+177682	ImageStart	blacksquare.bmp		
+178225			Content	
+178391			Content	
+179390			Content	
+179707			Content	
+180524	KeyPress	Space		
+180524	ImageEnd	blacksquare.bmp		
+180545	ImageStart	tiger_alligator.BMP		
+180939			old	
+181056			Content	
+181839			old	
+182740	KeyPress	Left		
+182740	ImageEnd	tiger_alligator.BMP		
+182746	ImageStart	blacksquare.bmp		
+183138			Content	
+183354			Content	
+183637			Content	
+183804			Content	
+184004			Content	
+184420			Content	
+185772	KeyPress	Space		
+185772	ImageEnd	blacksquare.bmp		
+185793	ImageStart	sheep_monkey.BMP		
+188869	KeyPress	Right		
+188869	ImageEnd	sheep_monkey.BMP		
+188875	ImageStart	whiteborder.bmp		
+190180	KeyPress	Space		
+190180	ImageEnd	whiteborder.bmp		
+190735	MovieStart	congratulations.wmv		
+191165			Content	
+192972	KeyPress	Escape		
+192972	MovieEnd	congratulations.wmv		

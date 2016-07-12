@@ -1,0 +1,27 @@
+Data properties:
+
+Recording date: 5/10/2016
+Recording time: 09:31:06:064 (corresponds to time 0)
+Study: perceptual_3
+Subject: 123
+Recording: 123
+Screen resolution: 1280 x 1024
+Coordinate unit: Pixels
+
+
+Filter settings:
+
+Eye: Average
+Validity: Normal
+Fixation filter: Tobii fixation filter
+Velocity threshold: 35
+Distance threshold: 35
+
+FixationIndex	Timestamp	FixationDuration	MappedFixationPointX	MappedFixationPointY	
+0	9000	166	668	356	
+1	9999	17	194	371	
+2	10582	17	85	154	
+3	11498	483	739	407	
+4	11981	200	734	342	
+5	13363	17	276	300	
+6	51252	383	723	248	

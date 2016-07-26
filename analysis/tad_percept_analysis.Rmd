@@ -1,0 +1,120 @@
+---
+title: "Toddler Uncertainty Monitoring"
+author: "Emily"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+---
+
+<style type="text/css">
+body, td {
+   font-size: 14px;
+}
+code {
+  font-size: 11px;
+}
+pre {
+  font-size: 11px;
+}
+</style>
+
+Data analysis of toddler uncertainty monitoring study.
+
+# Data preprocessing
+
+Preliminaries.
+
+```{r echo=FALSE}
+setwd("~/Desktop/tadpole_t1_data/analysis")
+rm(list=ls())
+knitr::opts_chunk$set(fig.width=8, fig.height=5, 
+                      echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
+suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
+library(langcog)
+library(dplyr)
+library(ggplot2)
+library(rjson)
+library(stringr)
+library(tidyr)
+library(lme4)
+library(xtable)
+library(knitr)
+library(markdown)
+theme_set(theme_bw())
+```
+
+Read in data file.
+
+```{r}
+d.raw <- read.table("AllSubs.txt", header = TRUE)
+```
+
+Read in trial info and demographics. 
+
+```{r}
+demo <- read.csv("demographics") 
+trial_info <- read.csv("trial_info")
+```
+
+
+Make data tidy.
+
+```{r}
+d_acc<- d.raw %>%
+  select(Subject_ID, acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9, acc10, acc11, acc12, acc13, acc14, acc15, acc16, acc17, acc18, acc19, acc20)%>%
+  gather(trial, acc, acc1:acc20) 
+
+d_rt <- d.raw %>%
+  select(Subject_ID, RT1, RT2, RT3, RT4, RT5, RT6, RT7, RT8, RT9, RT10, RT11, RT12, RT13, RT14, RT15, RT16, RT17, RT18, RT19, RT20) %>%
+  gather(trial, RT, RT1:RT20) 
+
+d_acc$trial <-str_replace(d_acc$trial, "acc","")
+d_rt$trial <- str_replace(d_rt$trial, "RT","")
+
+d <- d_acc %>%
+  left_join(d_rt) %>%
+
+d$acc[d$acc==999] <- NA
+```
+
+Join trial info and demographics with raw data.
+
+```{r}
+d <- left_join(d.raw, demo) %>%
+  select(SID, phase, num_looks, exclude, age_years, age_months, gender, line, Condition, phase_onset, phase_offset) %>%
+  mutate(phase_length = phase_offset - phase_onset) %>%
+  left_join(trial_info, by = c("condition","trial")) 
+```
+
+Descriptives.
+
+```{r}
+ms <- d %>%
+  filter(!is.na(diff))%>%
+  group_by(diff)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(diff), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Difficulty") + 
+  ylab("Mean Accuracy")
+
+d$acc <- as.factor(d$acc)
+ms <- d %>%
+  filter(!is.na(acc))%>%
+  group_by(acc)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Mean Reaction Time (ms)")
+```
+
+
+
+

@@ -51,14 +51,6 @@ Read in data file.
 d.raw <- read.table("AllSubs.txt", header = TRUE)
 ```
 
-Read in trial info and demographics. 
-
-```{r}
-demo <- read.csv("demographics") 
-trial_info <- read.csv("trial_info")
-```
-
-
 Make data tidy.
 
 ```{r}
@@ -74,45 +66,62 @@ d_acc$trial <-str_replace(d_acc$trial, "acc","")
 d_rt$trial <- str_replace(d_rt$trial, "RT","")
 
 d <- d_acc %>%
-  left_join(d_rt) %>%
+  left_join(d_rt) 
 
 d$acc[d$acc==999] <- NA
+```
+
+Read in trial info and demographics. 
+
+```{r}
+# demo <- read.csv("demographics.csv") 
+trial_info <- read.csv("conditions.csv", header = TRUE)
+trial_info$trial <- as.character(trial_info$trial)
 ```
 
 Join trial info and demographics with raw data.
 
 ```{r}
-d <- left_join(d.raw, demo) %>%
-  select(SID, phase, num_looks, exclude, age_years, age_months, gender, line, Condition, phase_onset, phase_offset) %>%
-  mutate(phase_length = phase_offset - phase_onset) %>%
-  left_join(trial_info, by = c("condition","trial")) 
+d <- left_join(d, trial_info) 
 ```
 
 Descriptives.
 
 ```{r}
 ms <- d %>%
-  filter(!is.na(diff))%>%
-  group_by(diff)%>%
+  filter(!is.na(similarity))%>%
+  group_by(similarity)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(diff), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Difficulty") + 
   ylab("Mean Accuracy")
 
+ms <- d %>%
+  filter(!is.na(similarity))%>%
+  group_by(similarity)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Difficulty") + 
+  ylab("Mean Reaction Time (ms)") 
+
 d$acc <- as.factor(d$acc)
 ms <- d %>%
   filter(!is.na(acc))%>%
-  group_by(acc)%>%
+  group_by(acc, similarity)%>%
   multi_boot_standard(col = "RT", na.rm = TRUE)
 
 ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
-  ylab("Mean Reaction Time (ms)")
+  ylab("Mean Reaction Time (ms)") + 
+  facet_wrap(~similarity)
 ```
 
 

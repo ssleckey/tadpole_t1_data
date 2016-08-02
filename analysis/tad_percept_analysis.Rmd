@@ -33,7 +33,9 @@ knitr::opts_chunk$set(fig.width=8, fig.height=5,
                       echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
 suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
 library(langcog)
+library(plyr)
 library(dplyr)
+library(RWiener)
 library(ggplot2)
 library(rjson)
 library(stringr)
@@ -48,7 +50,7 @@ theme_set(theme_bw())
 Read in data file.
 
 ```{r}
-d.raw <- read.table("AllSubs.txt", header = TRUE)
+d.raw <- read.table("AllSubs.txt", header = TRUE) %>% 
 ```
 
 Make data tidy.
@@ -82,7 +84,11 @@ trial_info$trial <- as.character(trial_info$trial)
 Join trial info and demographics with raw data.
 
 ```{r}
-d <- left_join(d, trial_info) 
+d <- left_join(d, trial_info)
+
+d <- d %>% 
+  mutate(similarity_condition = ifelse(similarity == 1, "high-similarity",
+                                       "low-similarity"))
 ```
 
 Descriptives.
@@ -110,20 +116,162 @@ ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") 
   xlab("Difficulty") + 
   ylab("Mean Reaction Time (ms)") 
 
+
+levels(d$similarity)[0] <- "low"
+levels(d$similarity)[1] <- "high"
+
 d$acc <- as.factor(d$acc)
 ms <- d %>%
   filter(!is.na(acc))%>%
   group_by(acc, similarity)%>%
   multi_boot_standard(col = "RT", na.rm = TRUE)
 
+
+levels(ms$similarity)[0] <- "low"
+levels(ms$similarity)[1] <- "high"
+
 ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
   ylab("Mean Reaction Time (ms)") + 
-  facet_wrap(~similarity)
+  facet_wrap(~similarity, labeller = label_both)
 ```
 
+Filter fast and slow RTs
 
+```{r}
+d_filt <- d %>% 
+  filter(RT < mean(RT) + 3 * sd(RT), 
+         RT > mean(RT) - 3 * sd(RT),
+         RT >= 200,
+         !is.na(acc))
+```
+
+Plot correct and incorrect RT distributions
+
+```{r}
+ggplot(aes(x = RT, fill = acc), 
+       data = filter(d_filt, !is.na(acc))) +
+  geom_density(alpha = 0.7, adjust = 1.5) + 
+  facet_grid(.~similarity) 
+```
+
+# Drift Diffusion Analysis
+
+Workflow taken from Nordmeyer et al. (2016). The goal is to estimate parameters separately for each participant and then we aggregate across participants to get means & confidence intervals on the parameters.
+
+The parameters of the drift drift diffusion model are: 
+
+* $\alpha$ = boundary separation: speed-accuracy tradeoff (higher values mean higher accuracy)
+* $\beta$ = initial bias
+* $\delta$ = drift rate: speed of information processing (close to zero means ambiguous information)
+* $\tau$ = nondecision time: motor response time
+
+## Estimating parameters
+
+```{r setuppars}
+# get the data we care about and format for Rwiener functions
+# columns need to be named "q" for RT and "resp" for response
+d_ddm <- d_filt %>% 
+  filter(RT <= 6000, RT >= 600) %>% 
+  mutate(RT_sec = RT / 1000) %>% 
+  select(Subject_ID, similarity_condition, RT_sec, acc) %>% 
+  dplyr::rename(q = RT_sec)
+
+levels(d_ddm$acc) <- list(lower="0", upper="1")
+
+d_ddm <- d_ddm %>% mutate(resp = acc)
+```
+
+```{r}
+sub.pars <- data.frame(Separation = numeric(),
+                       Non.Decision = numeric(),
+                       Bias = numeric(),
+                       Drift = numeric(),
+                       Similarity = character(),
+                       Sub.Num = character(),
+                       stringsAsFactors = F)
+
+#because RWiener is finicky:
+d_ddm$resp <- as.character(d_ddm$resp)
+```
+
+```{r estpars}
+conditions <- unique(as.character(d_ddm$similarity_condition))
+subs <- unique(as.character(d_ddm$Subject_ID)) 
+sub.pars.final <- data.frame()
+
+for (j in 1:length(subs)) {
+  sid <- as.character(subs[j]) 
+  print(sid)
+  dat <- as.data.frame(filter(d_ddm, Subject_ID == sid))
+    # fit ddm for each participant
+    # and for each condition run
+  for (cond in 1:length(conditions)) {
+    dat_cond <- filter(dat, similarity_condition == conditions[cond])
+    condition_type <- conditions[cond]
+    print(condition_type)
+    opt <- optim(c(1, .1, .1, 1), wiener_deviance, 
+              dat=select(dat_cond, c(q, resp)), method="Nelder-Mead")
+    pars <- c(opt$par, condition_type, sid)
+    sub.pars[cond,] <- pars
+  }
+  sub.pars.final <- rbind(sub.pars.final, sub.pars)  
+} 
+```
+
+### Plot Parameters
+
+This plot shows the mean parameter values & 95% C.I.s for each stimuli type
+
+```{r plotpars, fig.width=8, fig.height=6}
+sub.pars.final$Separation <- as.numeric(sub.pars.final$Separation)
+sub.pars.final$Non.Decision <- as.numeric(sub.pars.final$Non.Decision)
+sub.pars.final$Bias <- as.numeric(sub.pars.final$Bias)
+sub.pars.final$Drift <- as.numeric(sub.pars.final$Drift)
+
+sub.pars.final <- sub.pars.final %>% 
+  group_by(Similarity) %>%
+  filter(Separation < mean(Separation) + 3 * sd(Separation), 
+         Separation > mean(Separation) - 3 * sd(Separation)) %>%
+  filter(Non.Decision < mean(Non.Decision) + 3 * sd(Non.Decision), 
+         Non.Decision > mean(Non.Decision) - 3 * sd(Non.Decision)) %>%
+  filter(Bias < mean(Bias) + 3 * sd(Bias), 
+         Bias > mean(Bias) - 3 * sd(Bias)) %>%
+  filter(Drift < mean(Drift) + 3 * sd(Drift), 
+         Drift > mean(Drift) - 3 * sd(Drift)) %>%
+  ungroup() %>%
+  na.omit()
+
+sub.pars.final <- sub.pars.final %>%  gather(Param, Value, Separation:Drift)
+```
+
+Plot distributions of parameters across conditions
+
+```{r}
+ggplot(aes(x = Value, fill = Similarity), 
+       data = filter(sub.pars.final, Param %in% c("Drift", "Separation"))) +
+  geom_density(alpha = 0.7, adjust = 1.5) + 
+  facet_grid(.~Param, scales = "free") +
+  scale_fill_solarized()
+```
+
+Get means and CIs for parameter values and plot
+
+```{r}
+sub.pars.ms <- sub.pars.final %>%
+  group_by(Similarity, Param) %>%
+  multi_boot_standard(column = "Value", empirical_function = "mean")
+
+ggplot(aes(x = Similarity, y = mean), 
+       data = filter(sub.pars.ms)) +
+  geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper)) +
+  facet_wrap(~Param, scales = "free") +
+  scale_fill_solarized() + 
+  ylab("Mean Param Value") +
+  guides(fill = F) 
+```
 
 

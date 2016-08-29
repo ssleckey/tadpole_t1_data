@@ -101,35 +101,39 @@ d <- d %>%
 Descriptives.
 
 ```{r}
+
 ms <- d %>%
-  filter(!is.na(similarity))%>%
-  group_by(similarity)%>%
+  filter(!is.na(similarity_condition))%>%
+  group_by(similarity_condition)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similarity_condition), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
-  xlab("Difficulty") + 
-  ylab("Mean Accuracy")
-
+  xlab("Similarity") + 
+  ylab("Proportion Accurate")
 
 d$acc <- as.factor(d$acc)
 ms <- d %>%
-  filter(!is.na(acc))%>%
-  group_by(acc, similarity)%>%
+  group_by(acc, similarity_condition)%>%
   multi_boot_standard(col = "trans", na.rm = TRUE)
 
 ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
-  ylab("Mean transitions") + 
-  facet_wrap(~similarity, labeller = label_both)
+  ylab("Number of switches") + 
+  facet_wrap(~similarity_condition)
 ```
 
 ```{r}
 glm_maximal_mod <- lmer(trans ~ acc * similarity +
-                           (1 | ID), 
+                           (acc * similarity | ID), 
                          data = filter(d))
+
+coefs <- data.frame(coef(summary(glm_maximal_mod)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
 ```
 

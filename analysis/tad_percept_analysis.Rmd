@@ -50,7 +50,7 @@ theme_set(theme_bw())
 Read in data file.
 
 ```{r}
-d.raw <- read.table("AllSubs.txt", header = TRUE) %>% 
+d.raw <- read.table("AllSubs.txt", header = TRUE) 
 ```
 
 Make data tidy.

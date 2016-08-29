@@ -1,0 +1,119 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+49			Content	
+540			Content	
+990			Content	
+1061	MovieStart	MutedBallie.avi		
+1564			Content	
+1781			Content	
+3182	KeyPress	Space		
+3183	MovieEnd	MutedBallie.avi		
+3738			Content	
+4529	ImageStart	fixation.png		
+11470	KeyPress	Space		
+11470	ImageEnd	fixation.png		
+11491	ImageStart	chair_refrigerator_a.BMP		
+12516			incorrect	
+12774			incorrect	
+13374			correct	
+13757			correct	
+13957			incorrect	
+14307			Content	
+15456			correct	
+16138			correct	
+16530			correct	
+17538			Content	
+17796			Content	
+18437			Content	
+18786			Content	
+19228			incorrect	
+19353			incorrect	
+19928			incorrect	
+20627			incorrect	
+20835			incorrect	
+21177			incorrect	
+21335			incorrect	
+22218			incorrect	
+23683			Content	
+23925			correct	
+24316			correct	
+25041			correct	
+25390			Content	
+25632			Content	
+26456			Content	
+27189			Content	
+27506			correct	
+27964			correct	
+28188			correct	
+28313			Content	
+28521			Content	
+28829			Content	
+29179			Content	
+29587			Content	
+30961			incorrect	
+31053			incorrect	
+31328			incorrect	
+31528			incorrect	
+31661			incorrect	
+35383			correct	
+36250			correct	
+36624			correct	
+37949			incorrect	
+38215			Content	
+41064			Content	
+41588			Content	
+42021			Content	
+42787			Content	
+42962			correct	
+43279			correct	
+43545			correct	
+44011			correct	
+45202			incorrect	
+45435			incorrect	
+45810			incorrect	
+46168			correct	
+46635			correct	
+46952			correct	
+47301			Content	
+49649			incorrect	
+50082			incorrect	
+51040			incorrect	
+51232			incorrect	
+54604			correct	
+54938			correct	
+55187			correct	
+55945			correct	
+56495			correct	
+56805	KeyPress	Space		
+56806	ImageEnd	chair_refrigerator_a.BMP		
+56810	ImageStart	fixation.png		
+57717	KeyPress	Space		
+57717	ImageEnd	fixation.png		
+57738	ImageStart	balloons_grapes_a.BMP		
+57994			incorrect	
+58476			correct	
+58651			correct	
+58860			correct	
+59068			correct	
+59668			correct	
+60009			correct	
+60559			correct	
+60717			correct	
+61108			correct	
+62682			Content	
+63074			correct	
+63340			correct	
+63557			correct	
+64140			correct	
+65039			correct	
+65322			Content	
+73126			Content	
+73509			Content	
+73800			correct	
+74009			correct	
+74875			correct	
+75799			incorrect	
+75966			incorrect	
+76890			incorrect	
+82836	KeyPress	Escape		
+82837	ImageEnd	balloons_grapes_a.BMP		

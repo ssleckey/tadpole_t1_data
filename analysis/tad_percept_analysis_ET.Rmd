@@ -91,7 +91,7 @@ d <- d_acc %>%
 d$acc[d$acc==999] <- NA
 ```
 
-Read in trial info and demographics. 
+Read in trial info, demographics, and word familiarity.
 
 ```{r}
 # demo <- read.csv("demographics.csv") 

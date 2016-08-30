@@ -6,7 +6,7 @@ pc <- "S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/perce
 
 subj=15
 
-for (subj in 34:124) {
+for (subj in 15:131) {
   if(subj==25) {next} #this is if need to skip some data
   if(subj==27) {next}
   if(subj==29) {next}
@@ -29,6 +29,10 @@ for (subj in 34:124) {
   if(subj==119) {next}
   if(subj==120) {next}
   if(subj==122) {next}
+  if(subj==125) {next}
+  if(subj==126) {next}
+  if(subj==128) {next}
+  
   
 #Read in data table
 perceptualT1 <- read.csv(paste(pc,subj,"_log.csv",sep=""), header=T) 

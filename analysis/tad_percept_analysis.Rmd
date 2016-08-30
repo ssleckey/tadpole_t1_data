@@ -47,7 +47,7 @@ library(markdown)
 theme_set(theme_bw())
 ```
 
-Read in data file.
+Read in RT data file.
 
 ```{r}
 d.raw <- read.table("AllSubs_TS.txt", header = TRUE) 
@@ -68,27 +68,44 @@ d_acc$trial <-str_replace(d_acc$trial, "acc","")
 d_rt$trial <- str_replace(d_rt$trial, "RT","")
 
 d <- d_acc %>%
-  left_join(d_rt) 
+  left_join(d_rt) %>%
+  mutate(ID = Subject_ID) %>%
+  select(ID, RT, acc, trial)
 
 d$acc[d$acc==999] <- NA
 ```
 
-Read in trial info and demographics. 
+Read in trial info, demographics, and word familiarity.
 
 ```{r}
-# demo <- read.csv("demographics.csv") 
+demo <- read.csv("demographics.csv") 
 trial_info <- read.csv("conditions.csv", header = TRUE)
 trial_info$trial <- as.character(trial_info$trial)
+
+word_fam_key <- read.csv("word_fam_key.csv")
+word_fam_key$trial <- as.character(word_fam_key$trial)
+
+word_fam <- read.csv("word_familiarity.csv") %>%
+  gather("target", "familiarity", 2:41 )
+
+response_key <- read.csv("response_key.csv")
+response_key$trial <- as.character(response_key$trial)
 ```
 
 Join trial info and demographics with raw data.
 
 ```{r}
-d <- left_join(d, trial_info)
+d <- left_join(d, trial_info) %>%
+  left_join(demo) %>%
+  select(-participation_date, -birthdate) %>%
+  left_join(word_fam_key) %>%
+  left_join(word_fam) %>%
+  left_join(response_key)
 
 d <- d %>% 
-  mutate(similarity_condition = ifelse(similarity == 1, "high-similarity",
-                                       "low-similarity"))
+  mutate(similar = ifelse(similarity == 1, "high-similarity",
+                                       "low-similarity")) %>%
+  select(-similarity)
 ```
 
 Descriptives.
@@ -100,7 +117,10 @@ d_filt <- d %>%
   filter(RT < mean(RT) + 3 * sd(RT), 
          RT > mean(RT) - 3 * sd(RT),
          RT >= 200,
-         !is.na(acc))
+         !is.na(acc), 
+         familiarity != 0)
+
+d_filt$acc <- as.character(d_filt$acc)
 ```
 
 Plot correct and incorrect RT distributions
@@ -109,41 +129,38 @@ Plot correct and incorrect RT distributions
 ggplot(aes(x = RT, fill = acc), 
        data = filter(d_filt, !is.na(acc))) +
   geom_density(alpha = 0.7, adjust = 1.5) + 
-  facet_grid(.~similarity) 
+  facet_grid(.~similar) 
 ```
 
 
 ```{r}
+d_filt$acc <- as.integer(d_filt$acc)
 ms <- d_filt %>%
-  filter(!is.na(similarity))%>%
-  group_by(similarity)%>%
+  filter(!is.na(similar))%>%
+  group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Difficulty") + 
   ylab("Mean Accuracy")
 
 ms <- d_filt %>%
-  filter(!is.na(similarity))%>%
-  group_by(similarity)%>%
+  filter(!is.na(similar))%>%
+  group_by(similar)%>%
   multi_boot_standard(col = "RT", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Difficulty") + 
   ylab("Mean Reaction Time (ms)") 
 
-
-levels(d$similarity)[0] <- "low"
-levels(d$similarity)[1] <- "high"
-
 d$acc <- as.factor(d$acc)
 ms <- d_filt %>%
   filter(!is.na(acc))%>%
-  group_by(acc, similarity)%>%
+  group_by(acc, similar)%>%
   multi_boot_standard(col = "RT", na.rm = TRUE)
 
 ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
@@ -151,22 +168,20 @@ ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") +
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
   ylab("Mean Reaction Time (ms)") + 
-  facet_wrap(~similarity, labeller = label_both)
+  facet_wrap(~similar, labeller = label_both)
 ```
 
 
 ```{r}
-glm_maximal_mod <- lmer(RT ~ acc * similarity +
-                           (acc * similarity | Subject_ID), 
-                         data = filter(d_filt))
+glm_maximal_mod <- lmer(RT ~ acc * similar +
+                           (acc * similar | ID), 
+                         data = d_filt)
 
 coefs <- data.frame(coef(summary(glm_maximal_mod)))
 # use normal distribution to approximate p-value
 coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs
 ```
-
-
 
 # Drift Diffusion Analysis
 
@@ -187,9 +202,10 @@ The parameters of the drift drift diffusion model are:
 d_ddm <- d_filt %>% 
   filter(RT <= 6000, RT >= 600) %>% 
   mutate(RT_sec = RT / 1000) %>% 
-  select(Subject_ID, similarity_condition, RT_sec, acc) %>% 
+  select(ID, similar, RT_sec, acc, response) %>% 
   dplyr::rename(q = RT_sec)
 
+d_ddm$acc <- as.factor(d_ddm$acc)
 levels(d_ddm$acc) <- list(lower="0", upper="1")
 
 d_ddm <- d_ddm %>% mutate(resp = acc)
@@ -200,7 +216,7 @@ sub.pars <- data.frame(Separation = numeric(),
                        Non.Decision = numeric(),
                        Bias = numeric(),
                        Drift = numeric(),
-                       Similarity = character(),
+                       Similar = character(),
                        Sub.Num = character(),
                        stringsAsFactors = F)
 
@@ -209,18 +225,18 @@ d_ddm$resp <- as.character(d_ddm$resp)
 ```
 
 ```{r estpars}
-conditions <- unique(as.character(d_ddm$similarity_condition))
-subs <- unique(as.character(d_ddm$Subject_ID)) 
+conditions <- unique(as.character(d_ddm$similar))
+subs <- unique(as.character(d_ddm$ID)) 
 sub.pars.final <- data.frame()
 
 for (j in 1:length(subs)) {
   sid <- as.character(subs[j]) 
   print(sid)
-  dat <- as.data.frame(filter(d_ddm, Subject_ID == sid))
+  dat <- as.data.frame(filter(d_ddm, ID == sid))
     # fit ddm for each participant
     # and for each condition run
   for (cond in 1:length(conditions)) {
-    dat_cond <- filter(dat, similarity_condition == conditions[cond])
+    dat_cond <- filter(dat, similar == conditions[cond])
     condition_type <- conditions[cond]
     print(condition_type)
     opt <- optim(c(1, .1, .1, 1), wiener_deviance, 
@@ -243,7 +259,7 @@ sub.pars.final$Bias <- as.numeric(sub.pars.final$Bias)
 sub.pars.final$Drift <- as.numeric(sub.pars.final$Drift)
 
 sub.pars.final <- sub.pars.final %>% 
-  group_by(Similarity) %>%
+  group_by(Similar) %>%
   filter(Separation < mean(Separation) + 3 * sd(Separation), 
          Separation > mean(Separation) - 3 * sd(Separation)) %>%
   filter(Non.Decision < mean(Non.Decision) + 3 * sd(Non.Decision), 
@@ -261,7 +277,7 @@ sub.pars.final <- sub.pars.final %>%  gather(Param, Value, Separation:Drift)
 Plot distributions of parameters across conditions
 
 ```{r}
-ggplot(aes(x = Value, fill = Similarity), 
+ggplot(aes(x = Value, fill = Similar), 
        data = filter(sub.pars.final, Param %in% c("Drift", "Separation"))) +
   geom_density(alpha = 0.7, adjust = 1.5) + 
   facet_grid(.~Param, scales = "free") +
@@ -272,10 +288,10 @@ Get means and CIs for parameter values and plot
 
 ```{r}
 sub.pars.ms <- sub.pars.final %>%
-  group_by(Similarity, Param) %>%
+  group_by(Similar, Param) %>%
   multi_boot_standard(column = "Value", empirical_function = "mean")
 
-ggplot(aes(x = Similarity, y = mean), 
+ggplot(aes(x = Similar, y = mean), 
        data = filter(sub.pars.ms)) +
   geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper)) +

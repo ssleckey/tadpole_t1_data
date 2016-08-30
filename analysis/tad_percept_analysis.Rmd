@@ -50,7 +50,7 @@ theme_set(theme_bw())
 Read in data file.
 
 ```{r}
-d.raw <- read.table("AllSubs.txt", header = TRUE) 
+d.raw <- read.table("AllSubs_TS.txt", header = TRUE) 
 ```
 
 Make data tidy.
@@ -93,51 +93,6 @@ d <- d %>%
 
 Descriptives.
 
-```{r}
-ms <- d %>%
-  filter(!is.na(similarity))%>%
-  group_by(similarity)%>%
-  multi_boot_standard(col = "acc", na.rm = TRUE)
-
-ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
-             position = position_dodge(width = .9)) +
-  xlab("Difficulty") + 
-  ylab("Mean Accuracy")
-
-ms <- d %>%
-  filter(!is.na(similarity))%>%
-  group_by(similarity)%>%
-  multi_boot_standard(col = "RT", na.rm = TRUE)
-
-ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
-             position = position_dodge(width = .9)) +
-  xlab("Difficulty") + 
-  ylab("Mean Reaction Time (ms)") 
-
-
-levels(d$similarity)[0] <- "low"
-levels(d$similarity)[1] <- "high"
-
-d$acc <- as.factor(d$acc)
-ms <- d %>%
-  filter(!is.na(acc))%>%
-  group_by(acc, similarity)%>%
-  multi_boot_standard(col = "RT", na.rm = TRUE)
-
-
-levels(ms$similarity)[0] <- "low"
-levels(ms$similarity)[1] <- "high"
-
-ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
-             position = position_dodge(width = .9)) +
-  xlab("Accuracy") + 
-  ylab("Mean Reaction Time (ms)") + 
-  facet_wrap(~similarity, labeller = label_both)
-```
-
 Filter fast and slow RTs
 
 ```{r}
@@ -156,6 +111,62 @@ ggplot(aes(x = RT, fill = acc),
   geom_density(alpha = 0.7, adjust = 1.5) + 
   facet_grid(.~similarity) 
 ```
+
+
+```{r}
+ms <- d_filt %>%
+  filter(!is.na(similarity))%>%
+  group_by(similarity)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Difficulty") + 
+  ylab("Mean Accuracy")
+
+ms <- d_filt %>%
+  filter(!is.na(similarity))%>%
+  group_by(similarity)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similarity), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Difficulty") + 
+  ylab("Mean Reaction Time (ms)") 
+
+
+levels(d$similarity)[0] <- "low"
+levels(d$similarity)[1] <- "high"
+
+d$acc <- as.factor(d$acc)
+ms <- d_filt %>%
+  filter(!is.na(acc))%>%
+  group_by(acc, similarity)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Mean Reaction Time (ms)") + 
+  facet_wrap(~similarity, labeller = label_both)
+```
+
+
+```{r}
+glm_maximal_mod <- lmer(RT ~ acc * similarity +
+                           (acc * similarity | Subject_ID), 
+                         data = filter(d_filt))
+
+coefs <- data.frame(coef(summary(glm_maximal_mod)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+```
+
+
 
 # Drift Diffusion Analysis
 

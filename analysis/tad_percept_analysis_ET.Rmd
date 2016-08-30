@@ -52,6 +52,17 @@ Read in data file.
 ```{r}
 d.raw <- read.csv("AllSubs_ET.csv", header = TRUE) 
 d.raw$ID <- d.raw$Subject_ID
+
+# d.raw_switch <- data.frame()
+# files <- dir("switches")
+
+# for (f in files) {
+#   jf <- paste("switches/",f,sep="")
+#   jd <- read.table(jf)
+#   id <- data.frame(ID = jd$)
+#   d.raw_switch <- bind_rows(d.raw_switch, id)
+# }
+
 d.raw_trans <- read.csv("Fixations_Perceptual.csv", header = TRUE)
 d.raw_trans$ID <- str_replace_all(d.raw_trans$ID, "_", "")
 d.raw_trans$ID <- as.numeric(d.raw_trans$ID)
@@ -86,6 +97,10 @@ Read in trial info and demographics.
 # demo <- read.csv("demographics.csv") 
 trial_info <- read.csv("conditions.csv", header = TRUE)
 trial_info$trial <- as.character(trial_info$trial)
+word_fam <- read.csv("word_familiarity.csv")
+
+
+
 ```
 
 Join trial info and demographics with raw data.

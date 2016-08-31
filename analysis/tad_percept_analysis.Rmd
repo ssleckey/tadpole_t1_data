@@ -44,6 +44,7 @@ library(lme4)
 library(xtable)
 library(knitr)
 library(markdown)
+library(psych)
 theme_set(theme_bw())
 ```
 
@@ -92,6 +93,7 @@ response_key <- read.csv("response_key.csv")
 response_key$trial <- as.character(response_key$trial)
 ```
 
+
 Join trial info and demographics with raw data.
 
 ```{r}
@@ -108,16 +110,113 @@ d <- d %>%
   select(-similarity)
 ```
 
+Read in eyetracker data files.
+
+```{r}
+d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) 
+d.raw_et$ID <- d.raw_et$Subject_ID 
+
+d.raw_sw <- read.csv("perceptual_transitions.csv", header = TRUE)
+d.raw_sw$ID <- d.raw_sw$Subject
+```
+
+Make data tidy.
+
+```{r}
+d.raw_et <- d.raw_et %>%
+  gather(trial, acc_et, acc1:acc20) %>%
+  select(-Subject_ID) 
+
+d.raw_et$trial <-str_replace(d.raw_et$trial, "acc","")
+
+d.raw_sw <- d.raw_sw %>%
+  gather(trial, trans, Trial1:Trial20) %>%
+  select(-Subject) 
+  
+d.raw_sw$trial <- str_replace(d.raw_sw$trial, "Trial","")
+
+d_et <- d.raw_et %>%
+  left_join(d.raw_sw) 
+
+d_et$acc_et[d_et$acc_et==999] <- NA
+```
+
+Merge TS and ET data.
+
+```{r}
+d <- d %>%
+  left_join(d_et) 
+```
+
+Demographics.
+
+```{r}
+table(d$income)
+table(d$ethnicity)
+table(d$race)
+table(d$gender)
+
+describe(d$age_months)
+```
+
+
 Descriptives.
 
-Filter fast and slow RTs
+```{r}
+d_et_filt <- d %>% 
+  filter(!is.na(trans),
+         !is.na(acc_et),
+         familiarity != 0)
+```
+
+
+```{r}
+d_et_filt$acc <- as.numeric(d_et_filt$acc)
+
+ms <- d_et_filt %>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc_et", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate ET")
+
+
+ms <- d_et_filt %>%
+  group_by(acc_et, similar)%>%
+  multi_boot_standard(col = "trans", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Number of switches") + 
+  facet_wrap(~similar)
+```
+
+```{r}
+glm_maximal_mod <- lmer(trans ~ acc_et * similar + age_months +
+                           (acc_et +  similar | ID), 
+                         data = d_et_filt)
+
+coefs <- data.frame(coef(summary(glm_maximal_mod)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+```
+
+Now the TS data.
+
+Filter fast and slow RTs, missing data, unfamiliar trials.
 
 ```{r}
 d_filt <- d %>% 
   filter(RT < mean(RT) + 3 * sd(RT), 
          RT > mean(RT) - 3 * sd(RT),
          RT >= 200,
-         !is.na(acc), 
+         !is.na(acc),
          familiarity != 0)
 
 d_filt$acc <- as.character(d_filt$acc)
@@ -127,11 +226,10 @@ Plot correct and incorrect RT distributions
 
 ```{r}
 ggplot(aes(x = RT, fill = acc), 
-       data = filter(d_filt, !is.na(acc))) +
+       data = d_filt) +
   geom_density(alpha = 0.7, adjust = 1.5) + 
   facet_grid(.~similar) 
 ```
-
 
 ```{r}
 d_filt$acc <- as.integer(d_filt$acc)
@@ -144,7 +242,7 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Difficulty") + 
-  ylab("Mean Accuracy")
+  ylab("Proportion Accurate TS")
 
 ms <- d_filt %>%
   filter(!is.na(similar))%>%
@@ -173,8 +271,8 @@ ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") +
 
 
 ```{r}
-glm_maximal_mod <- lmer(RT ~ acc * similar +
-                           (acc * similar | ID), 
+glm_maximal_mod <- lmer(RT ~ acc * similar + age_months +
+                           (acc + similar | ID), 
                          data = d_filt)
 
 coefs <- data.frame(coef(summary(glm_maximal_mod)))
@@ -182,6 +280,44 @@ coefs <- data.frame(coef(summary(glm_maximal_mod)))
 coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs
 ```
+
+
+Compare accuracy across tasks.
+
+```{r}
+d_compare <- d %>%
+  select(ID, trial, similar, acc, acc_et, familiarity, age_months) %>%
+  filter(familiarity != 0) %>%
+  gather(task, acc, acc:acc_et) 
+
+levels(d_compare$task) <- list(touchscreen="acc", eyetracker="acc_et")
+
+d_compare$acc <- as.numeric(d_compare$acc)
+
+ms <- d_compare %>%
+  group_by(similar, task)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate ET") + 
+  facet_wrap(~task, labeller = label_both)
+
+```
+
+```{r}
+glm_maximal_mod <- lmer(acc ~ task * similar + age_months +
+                           (task + similar | ID), 
+                         data = d_compare)
+
+coefs <- data.frame(coef(summary(glm_maximal_mod)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+```
+
 
 # Drift Diffusion Analysis
 

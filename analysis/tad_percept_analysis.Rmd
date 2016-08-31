@@ -110,7 +110,6 @@ d <- d %>%
   select(-similarity)
 ```
 
-Read in eyetracker data files.
 
 ```{r}
 d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) 
@@ -145,7 +144,8 @@ Merge TS and ET data.
 
 ```{r}
 d <- d %>%
-  left_join(d_et) 
+  left_join(d_et) %>%
+  filter(drop != 1)
 ```
 
 Demographics.

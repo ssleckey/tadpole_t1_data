@@ -1,0 +1,149 @@
+---
+title: "et_percept_prep"
+author: "Emily"
+date: "August 30, 2016"
+output: html_document
+---
+
+```{r}
+rm(list=ls())
+setwd("~/Desktop/tadpole_t1_data/analysis")
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(knitr)
+library(markdown)
+```
+
+
+```{r}
+demo <- read.csv("demographics.csv") %>%
+  select(ID, condition)
+
+target_1 <- c(1:4)
+target_2 <- c(5:8)
+
+group_1 <- demo %>%
+  filter(condition %in% target_1)
+
+group_2 <- demo %>%
+  filter(condition %in% target_2)
+
+group_1_4 <- group_1$ID
+group_5_8 <- group_2$ID
+```
+
+
+```{r}
+# Folder name
+read_in_folder <- 'perceptual_et/'
+subject <-'34-Event-Data.tsv'
+
+read_out_folder <-'perceptual_et_processed/'
+
+subnum <- 34
+for (subnum in 34:124) {
+  if(subnum==19) {next}
+  if(subnum==25) {next}
+  if(subnum==26) {next}
+  if(subnum==29) {next}
+  if(subnum==32) {next} #Stopped early because they were not answering
+  if(subnum==40) {next}
+  if(subnum==47) {next}
+  if(subnum==58) {next} #Started having spaces instead of answers. Enter in later
+  if(subnum==60) {next}
+  if(subnum==61) {next} #Wasnt answering
+  if(subnum==72) {next} #There are two?
+  if(subnum==77) {next}
+  if(subnum==82) {next}
+  if(subnum==84) {next}
+  if(subnum==85) {next}
+  if(subnum==97) {next} #Needs to be re-exported
+  if(subnum==99) {next}
+  if(subnum==100) {next}
+  if(subnum==102) {next}
+  if(subnum==104) {next}
+  if(subnum==105) {next}
+  if(subnum==113) {next}
+  if(subnum==119) {next} #Did not do task
+  if(subnum==120) {next}
+  if(subnum==121) {next}
+  if(subnum==122) {next} #Experimenter was not pressing left and right
+  if(subnum==124) {next} #Experimenter was not pressing left and right
+  
+
+  subject <-paste(subnum,'-Event-Data.tsv',sep="")
+  ntrials <- 38
+  
+  condition_1_4 <- c("Left","Left","Right","Left","Right","Left","Right","Right","Left","Right", "Right","Left","Left","Right","Left","Left","Right","Right","Right","Left")
+  
+  condition_5_8 <- c("Right","Right","Left","Right","Left","Right","Left","Left","Right","Left","Left","Right","Right","Left","Right","Right","Left","Left","Left","Right")
+  
+  if (subnum %in% group_1_4) {condition <- condition_1_4}
+  if (subnum %in% group_5_8) {condition <- condition_5_8}
+  
+  #Creates dataset after first removing any spaces in the file
+  d1 <- readLines(paste(read_in_folder,subject,sep=""))
+  d2 <- sub("^(.*) +(\\S+) +(\\S+)$", "\\1,\\2,\\3", d1)
+  data <- read.table(text=d2, sep='\t', header=T)
+  data <- data[,1:3]
+  
+  #Creates subset of data with Descriptors referring to accuracy (Left, Right or Space if skipped)
+  data_trials <- subset(data, Descriptor == "Space" | Descriptor == "Left" | Descriptor == "Right")
+  
+  xblah <- nrow(data_trials)
+  
+  y <- as.character(data_trials[xblah,3])
+  
+  while (y=="Space") {y <- data_trials[xblah-1,3]; xblah <- xblah-1;}
+  goodrows <- xblah
+  
+  #Creates an array of length 40 that alternates between subject response ("resp") and space for next trial ("nexttrial")
+  TrialType <- rep(c("resp","nexttrial"),20)
+  TrialType <- TrialType[-c(40)]
+  
+  #Determines number of additional rows in beginning referring to practice trials
+  additional_rows <- goodrows - 38
+  
+  #Removes rows in the beginning
+  data_trials <- data_trials[additional_rows:goodrows,]
+  
+  #add column Trial Type that distinguishes between response and next trial
+  data_trials <- cbind(data_trials, TrialType)
+  
+  #subset only those trials that are subject response trials
+  data_trials <- subset(data_trials, TrialType=="resp")
+  
+  #Change Descriptor to a character variable and then create a matrix with the Descriptor (subject responses) and accurate responses (condition)
+  data_trials$Descriptor <- as.character(data_trials$Descriptor)
+  data_comparison <- matrix(c(data_trials$Descriptor,condition),ncol=2)
+  
+  #create a variable accuracy that compares subject responses to accurate responses
+  #it outputs boolean variables (True or False) and then is converted to numeric variable (1 and 0)
+  accuracy <- data_comparison[,1] == data_comparison[,2]
+  accuracy <- as.numeric(accuracy)
+  accuracy1 <- c(subnum, accuracy)
+  
+  #Transposes the variable from a column to a row variable and then writes it to a csv file
+  accuracy2 <- t(accuracy1)
+  write.table(accuracy2,paste(read_out_folder,subnum,'_accuracy.csv',sep=''),sep=',',
+              col.names = FALSE, row.names = FALSE)
+}
+
+files <- list.files(read_out_folder) #lists all the names of the files within the directory
+
+AllSubs <- read.csv(paste(read_out_folder,files[1],sep=""),header=T) #Set new data table to first file in directory
+names(AllSubs)=c("Subject_ID","acc1","acc2","acc3","acc4","acc5","acc6","acc7","acc8","acc9","acc10","acc11","acc12","acc13","acc14","acc15","acc16","acc17","acc18","acc19","acc20")
+
+
+#Loop through all other files and add them to new data table
+for(i in 1:length(files)){
+  temp <- read.csv(paste(read_out_folder,files[i],sep=""), sep=",", header = FALSE)
+  AllSubs <- rbind(AllSubs,temp)
+}
+
+#Write new data set to a txt file 
+names(AllSubs)=c("Subject_ID","acc1","acc2","acc3","acc4","acc5","acc6","acc7","acc8","acc9","acc10","acc11","acc12","acc13","acc14","acc15","acc16","acc17","acc18","acc19","acc20")
+write.table(AllSubs,paste(read_out_folder,'AllSubs.csv',sep=""), sep=",", row.names=FALSE)
+```
+

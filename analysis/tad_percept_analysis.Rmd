@@ -155,8 +155,6 @@ table(d$income)
 table(d$ethnicity)
 table(d$race)
 table(d$gender)
-
-describe(d$age_months)
 ```
 
 
@@ -183,7 +181,6 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
   xlab("Similarity") + 
   ylab("Proportion Accurate ET")
 
-
 ms <- d_et_filt %>%
   group_by(acc_et, similar)%>%
   multi_boot_standard(col = "trans", na.rm = TRUE)
@@ -197,11 +194,12 @@ ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") +
 ```
 
 ```{r}
-glm_maximal_mod <- lmer(trans ~ acc_et * similar + age_months +
-                           (acc_et +  similar | ID), 
+glm_maximal_mod_trans <- lmer(trans ~ acc_et * similar + age_months +
+                           (acc_et * similar | target) +
+                           (acc_et *  similar | ID), 
                          data = d_et_filt)
 
-coefs <- data.frame(coef(summary(glm_maximal_mod)))
+coefs <- data.frame(coef(summary(glm_maximal_mod_trans)))
 # use normal distribution to approximate p-value
 coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs
@@ -218,21 +216,23 @@ d_filt <- d %>%
          RT >= 200,
          !is.na(acc),
          familiarity != 0)
-
-d_filt$acc <- as.character(d_filt$acc)
 ```
 
 Plot correct and incorrect RT distributions
 
 ```{r}
+d_filt_rt <- d_filt
+d_filt_rt$acc <- as.factor(d_filt_rt$acc)
+
 ggplot(aes(x = RT, fill = acc), 
-       data = d_filt) +
+       data = d_filt_rt) +
   geom_density(alpha = 0.7, adjust = 1.5) + 
   facet_grid(.~similar) 
 ```
 
 ```{r}
-d_filt$acc <- as.integer(d_filt$acc)
+d_filt$acc <- as.numeric(as.character(d_filt$acc))
+
 ms <- d_filt %>%
   filter(!is.na(similar))%>%
   group_by(similar)%>%
@@ -245,18 +245,6 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
   ylab("Proportion Accurate TS")
 
 ms <- d_filt %>%
-  filter(!is.na(similar))%>%
-  group_by(similar)%>%
-  multi_boot_standard(col = "RT", na.rm = TRUE)
-
-ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
-             position = position_dodge(width = .9)) +
-  xlab("Difficulty") + 
-  ylab("Mean Reaction Time (ms)") 
-
-d$acc <- as.factor(d$acc)
-ms <- d_filt %>%
   filter(!is.na(acc))%>%
   group_by(acc, similar)%>%
   multi_boot_standard(col = "RT", na.rm = TRUE)
@@ -267,15 +255,18 @@ ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") +
   xlab("Accuracy") + 
   ylab("Mean Reaction Time (ms)") + 
   facet_wrap(~similar, labeller = label_both)
+
+describeBy(d_filt$RT, d_filt$acc)
 ```
 
 
 ```{r}
-glm_maximal_mod <- lmer(RT ~ acc * similar + age_months +
-                           (acc + similar | ID), 
+glm_maximal_mod_RT <- lmer(RT ~ acc * similar + age_months +
+                           (acc * similar | target) +
+                           (acc * similar | ID), 
                          data = d_filt)
 
-coefs <- data.frame(coef(summary(glm_maximal_mod)))
+coefs <- data.frame(coef(summary(glm_maximal_mod_RT)))
 # use normal distribution to approximate p-value
 coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs
@@ -286,7 +277,7 @@ Compare accuracy across tasks.
 
 ```{r}
 d_compare <- d %>%
-  select(ID, trial, similar, acc, acc_et, familiarity, age_months) %>%
+  select(ID, trial, similar, acc, acc_et, familiarity, age_months, target) %>%
   filter(familiarity != 0) %>%
   gather(task, acc, acc:acc_et) 
 
@@ -298,21 +289,32 @@ ms <- d_compare %>%
   group_by(similar, task)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
 
+ms
+
 ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
-  ylab("Proportion Accurate ET") + 
+  ylab("Proportion Accurate") + 
   facet_wrap(~task, labeller = label_both)
+
+ms <- d_compare %>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+describeBy(d_compare$acc, d_compare$similar)
 
 ```
 
 ```{r}
-glm_maximal_mod <- lmer(acc ~ task * similar + age_months +
-                           (task + similar | ID), 
+d_compare$acc <- as.numeric(d_compare$acc)
+
+glm_maximal_mod_acc <- lmer(acc ~ task * similar + age_months +
+                           (task * similar|target) +
+                           (task * similar|ID), 
                          data = d_compare)
 
-coefs <- data.frame(coef(summary(glm_maximal_mod)))
+coefs <- data.frame(coef(summary(glm_maximal_mod_acc)))
 # use normal distribution to approximate p-value
 coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
 coefs

@@ -113,8 +113,6 @@ d <- d %>%
 
 ```{r}
 d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) 
-d.raw_et$ID <- d.raw_et$Subject_ID 
-
 d.raw_sw <- read.csv("perceptual_transitions.csv", header = TRUE)
 d.raw_sw$ID <- d.raw_sw$Subject
 ```
@@ -122,22 +120,21 @@ d.raw_sw$ID <- d.raw_sw$Subject
 Make data tidy.
 
 ```{r}
-d.raw_et <- d.raw_et %>%
-  gather(trial, acc_et, acc1:acc20) %>%
-  select(-Subject_ID) 
-
-d.raw_et$trial <-str_replace(d.raw_et$trial, "acc","")
-
 d.raw_sw <- d.raw_sw %>%
   gather(trial, trans, Trial1:Trial20) %>%
   select(-Subject) 
   
 d.raw_sw$trial <- str_replace(d.raw_sw$trial, "Trial","")
 
-d_et <- d.raw_et %>%
-  left_join(d.raw_sw) 
+d.raw_et$trial <- as.character(d.raw_et$trial)
 
-d_et$acc_et[d_et$acc_et==999] <- NA
+d.raw_et <- d.raw_et %>%
+  select(ID, trial, acc)
+
+d_et <- d.raw_et %>%
+  left_join(d.raw_sw) %>%
+  mutate(acc_et = acc) %>%
+  select(-acc)
 ```
 
 Merge TS and ET data.
@@ -195,7 +192,6 @@ ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") +
 
 ```{r}
 glm_maximal_mod_trans <- lmer(trans ~ acc_et * similar + age_months +
-                           (acc_et * similar | target) +
                            (acc_et *  similar | ID), 
                          data = d_et_filt)
 
@@ -262,7 +258,6 @@ describeBy(d_filt$RT, d_filt$acc)
 
 ```{r}
 glm_maximal_mod_RT <- lmer(RT ~ acc * similar + age_months +
-                           (acc * similar | target) +
                            (acc * similar | ID), 
                          data = d_filt)
 
@@ -310,7 +305,6 @@ describeBy(d_compare$acc, d_compare$similar)
 d_compare$acc <- as.numeric(d_compare$acc)
 
 glm_maximal_mod_acc <- lmer(acc ~ task * similar + age_months +
-                           (task * similar|target) +
                            (task * similar|ID), 
                          data = d_compare)
 

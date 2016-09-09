@@ -104,7 +104,7 @@ d.raw <- d.raw %>%
 
 d.raw$acc[d.raw$response== d.raw$correct_response] <- 1
 d.raw$acc[d.raw$response!= d.raw$correct_response] <- 0
-d.raw$acc[d.raw$response== "Space"] <- NA
+d.raw$acc[d.raw$response== "Space"] <- ""
 d.raw$acc <- as.factor(d.raw$acc)
 
 read_out_folder <-'perceptual_et_processed/'

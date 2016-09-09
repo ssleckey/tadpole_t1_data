@@ -1,0 +1,512 @@
+---
+title: "Toddler Uncertainty Monitoring"
+author: "Emily"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+---
+
+<style type="text/css">
+body, td {
+   font-size: 14px;
+}
+code {
+  font-size: 11px;
+}
+pre {
+  font-size: 11px;
+}
+</style>
+
+Data analysis of toddler uncertainty monitoring study.
+
+# Data preprocessing
+
+Preliminaries.
+
+```{r echo=FALSE}
+setwd("~/Desktop/tadpole_t1_data/analysis")
+rm(list=ls())
+knitr::opts_chunk$set(fig.width=8, fig.height=5, 
+                      echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
+suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
+library(langcog)
+library(plyr)
+library(dplyr)
+library(RWiener)
+library(ggplot2)
+library(rjson)
+library(stringr)
+library(tidyr)
+library(lme4)
+library(xtable)
+library(knitr)
+library(markdown)
+library(psych)
+theme_set(theme_bw())
+```
+
+Read in RT data file.
+
+```{r}
+d.raw_ts <- read.table("AllSubs_TS.txt", header = TRUE) 
+```
+
+Make data tidy.
+
+```{r}
+d_acc_ts<- d.raw_ts %>%
+  select(Subject_ID, acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9, acc10, acc11, acc12, acc13, acc14, acc15, acc16, acc17, acc18, acc19, acc20)%>%
+  gather(trial, acc, acc1:acc20) 
+
+d_rt <- d.raw_ts %>%
+  select(Subject_ID, RT1, RT2, RT3, RT4, RT5, RT6, RT7, RT8, RT9, RT10, RT11, RT12, RT13, RT14, RT15, RT16, RT17, RT18, RT19, RT20) %>%
+  gather(trial, RT, RT1:RT20) 
+
+d_acc_ts$trial <-str_replace(d_acc_ts$trial, "acc","")
+d_rt$trial <- str_replace(d_rt$trial, "RT","")
+
+d_ts <- d_acc_ts %>%
+  left_join(d_rt) %>%
+  mutate(ID = Subject_ID) %>%
+  select(ID, RT, acc, trial)
+
+d_ts$acc[d_ts$acc==999] <- NA
+```
+
+Read in trial info, demographics, and word familiarity.
+
+```{r}
+demo <- read.csv("demographics.csv") 
+trial_info <- read.csv("conditions.csv", header = TRUE)
+trial_info$trial <- as.character(trial_info$trial)
+
+word_fam_key <- read.csv("word_fam_key.csv")
+word_fam_key$trial <- as.character(word_fam_key$trial)
+
+word_fam <- read.csv("word_familiarity.csv") %>%
+  gather("target", "familiarity", 2:41 )
+
+response_key <- read.csv("response_key.csv")
+response_key$trial <- as.character(response_key$trial)
+```
+
+Join trial info and demographics with raw data.
+
+```{r}
+d_ts <- left_join(d_ts, trial_info) %>%
+  left_join(demo) %>%
+  select(-participation_date, -birthdate) %>%
+  left_join(word_fam_key) %>%
+  left_join(word_fam) %>%
+  left_join(response_key) %>%
+  filter(drop != 1)
+
+d_ts <- d_ts %>% 
+  mutate(similar = ifelse(similarity == 1, "similar",
+                                       "dissimilar")) %>%
+  select(-similarity)
+
+#how many touchscreen participants?
+d_ts$ID <- as.factor(as.character(d_ts$ID))
+length(levels(d_ts$ID))
+```
+
+
+```{r}
+d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) 
+d.raw_sw <- read.csv("perceptual_transitions.csv", header = TRUE)
+d.raw_sw$ID <- d.raw_sw$Subject
+```
+
+Make data tidy.
+
+```{r}
+d.raw_sw <- d.raw_sw %>%
+  gather(trial, trans, Trial1:Trial20) %>%
+  select(-Subject) 
+
+#how many ET participants with transitions data?
+d.raw_sw$ID <- as.factor(as.character(d.raw_sw$ID))
+length(levels(d.raw_sw$ID))
+
+#how many ET participants with accuracy data?
+d.raw_et$ID <- as.factor(as.character(d.raw_et$ID))
+length(levels(d.raw_et$ID))
+  
+d.raw_sw$trial <- str_replace(d.raw_sw$trial, "Trial","")
+d.raw_et$trial <- as.character(d.raw_et$trial)
+
+d.raw_et <- d.raw_et %>%
+  select(ID, trial, acc)
+
+d.raw_sw$ID <- as.character(d.raw_sw$ID)
+d.raw_et$ID <- as.character(d.raw_et$ID)
+demo$ID <- as.character(demo$ID)
+word_fam$ID <- as.character(word_fam$ID)
+
+d_et <- d.raw_et %>%
+  inner_join(d.raw_sw) %>%
+  mutate(acc_et = acc) %>%
+  left_join(demo) %>%
+  left_join(trial_info)%>%
+  select(-participation_date, -birthdate) %>%
+  left_join(word_fam_key) %>%
+  left_join(word_fam) %>%
+  left_join(response_key) %>%
+  filter(drop != 1) %>%
+  select(-acc)
+
+d_et <- d_et %>% 
+  mutate(similar = ifelse(similarity == 1, "similar",
+                                       "dissimilar")) %>%
+  select(-similarity)
+
+#how many total ET participants with both transitions and accuracy data?
+d_et$ID <- as.factor(as.character(d_et$ID))
+length(levels(d_et$ID))
+```
+
+Merge TS and ET data.
+
+```{r}
+d <- d_ts %>%
+  full_join(d_et) %>%
+  filter(drop != 1)
+#how many with either TS OR ET data?
+# d$ID <- as.factor(as.character(d$ID))
+# length(levels(d$ID))
+```
+
+Demographics.
+
+```{r}
+demo_drop <- demo %>%
+  filter(drop != 1)
+
+table(demo_drop$income)
+table(demo_drop$age_months)
+table(demo_drop$race)
+```
+
+
+Descriptives.
+
+```{r}
+d_et_filt <- d_et %>% 
+  filter(!is.na(trans),
+         !is.na(acc_et),
+         familiarity != 0)
+
+#how many participants in full filtered ET file?
+d_et_filt$ID <- as.factor(d_et_filt$ID)
+length(levels(d_et_filt$ID))
+```
+
+Plot correct and incorrect trans distributions
+
+```{r}
+d_et_filt$acc <- as.factor(d_et_filt$acc)
+
+ggplot(aes(x = trans, fill = acc), 
+       data = d_et_filt) +
+  geom_density(alpha = 0.7, adjust = 1.5) + 
+  facet_grid(.~similar) 
+```
+
+```{r}
+d_et_filt$acc <- as.numeric(d_et_filt$acc)
+
+ms <- d_et_filt %>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc_et", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate ET")
+
+ms <- d_et_filt %>%
+  group_by(acc_et, similar)%>%
+  multi_boot_standard(col = "trans", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Number of switches") + 
+  facet_wrap(~similar)
+
+d_et_filt <- d_et_filt %>%
+  mutate(stim_pair = paste(condition, trial))
+
+ms
+```
+
+```{r}
+glm_maximal_mod_trans <- lmer(trans ~ acc_et * similar +
+                           (1 | ID), 
+                         data = d_et_filt)
+
+coefs <- data.frame(coef(summary(glm_maximal_mod_trans)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+
+describeBy(d_et_filt$trans, d_et_filt$similar)
+describeBy(d_et_filt$trans, d_et_filt$acc_et)
+
+# d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
+# d_et_filt$trial <- as.factor(d_et_filt$trial)
+# 
+# d_et_filt <- d_et_filt %>%
+#   select(ID, trial, similar, acc_et) %>%
+#   spread(similar, acc_et)
+# 
+# d_et_filt$dissimilar <- as.numeric(d_et_filt$dissimilar)
+# d_et_filt$similar <- as.numeric(d_et_filt$similar)
+# 
+# write.table(d_et_filt,paste('for_ttest.csv',sep=""), sep=",",row.names=FALSE)
+```
+
+Now the TS data.
+
+Filter fast and slow RTs, missing data, unfamiliar trials.
+
+```{r}
+top_bound <- mean(log(d_ts$RT)) + 3*sd(log(d_ts$RT))
+bottom_bound <- mean(log(d_ts$RT)) - 3*sd(log(d_ts$RT))
+
+d_filt_rt <- d_ts %>%
+  filter(log(RT) < top_bound, 
+         log(RT) > bottom_bound,
+         !is.na(acc),
+         familiarity != 0)
+
+d_filt_rt_log <- d_filt_rt
+d_filt_rt_log$RT <- log(d_filt_rt_log$RT)
+
+```
+
+Plot correct and incorrect RT distributions
+
+```{r}
+d_filt_rt$acc <- as.factor(d_filt_rt$acc)
+
+ggplot(aes(x = log(RT), fill = acc), 
+       data = d_filt_rt) +
+  geom_density(alpha = 0.7, adjust = 1.5) + 
+  facet_grid(.~similar) 
+```
+
+```{r}
+d_filt_rt$acc <- as.numeric(as.character(d_filt_rt$acc))
+
+ms <- d_filt_rt %>%
+  filter(!is.na(similar))%>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Difficulty") + 
+  ylab("Proportion Accurate TS")
+
+ms <- d_filt_rt %>%
+  filter(!is.na(acc))%>%
+  group_by(acc, similar)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Mean Reaction Time (ms)") + 
+  facet_wrap(~similar, labeller = label_both)
+```
+
+
+```{r}
+glm_maximal_mod_RT <- lmer(RT ~ acc * similar +
+                           (1 | ID), 
+                         data = d_filt_rt)
+
+coefs <- data.frame(coef(summary(glm_maximal_mod_RT)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+
+describeBy(d_filt_rt$RT,d_filt_rt$acc)
+```
+
+
+Compare accuracy across tasks.
+
+```{r}
+d_compare <- d %>%
+  select(ID, trial, similar, acc, acc_et, familiarity, age_months, target) %>%
+  filter(familiarity != 0) %>%
+  gather(task, acc, acc:acc_et) 
+
+levels(d_compare$task) <- list(touchscreen="acc", eyetracker="acc_et")
+
+d_compare$acc <- as.numeric(d_compare$acc)
+
+ms <- d_compare %>%
+  group_by(similar, task)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ms
+
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate") + 
+  facet_wrap(~task, labeller = label_both)
+
+ms <- d_compare %>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+describeBy(d_compare$acc, d_compare$similar)
+
+```
+
+```{r}
+d_compare$acc <- as.numeric(d_compare$acc)
+
+glm_maximal_mod_acc <- lmer(acc ~ task * similar + age_months +
+                           (1 |ID), 
+                         data = d_compare)
+
+coefs <- data.frame(coef(summary(glm_maximal_mod_acc)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+```
+
+
+# Drift Diffusion Analysis
+
+Workflow taken from Nordmeyer et al. (2016). The goal is to estimate parameters separately for each participant and then we aggregate across participants to get means & confidence intervals on the parameters.
+
+The parameters of the drift drift diffusion model are: 
+
+* $\alpha$ = boundary separation: speed-accuracy tradeoff (higher values mean higher accuracy)
+* $\beta$ = initial bias
+* $\delta$ = drift rate: speed of information processing (close to zero means ambiguous information)
+* $\tau$ = nondecision time: motor response time
+
+## Estimating parameters
+
+```{r setuppars}
+# get the data we care about and format for Rwiener functions
+# columns need to be named "q" for RT and "resp" for response
+d_ddm <- d_filt_rt %>% 
+  filter(RT <= 6000, RT >= 600) %>% 
+  mutate(RT_sec = RT / 1000) %>% 
+  select(ID, similar, RT_sec, acc, response) %>% 
+  dplyr::rename(q = RT_sec)
+
+d_ddm$acc <- as.factor(d_ddm$acc)
+levels(d_ddm$acc) <- list(lower="0", upper="1")
+
+d_ddm <- d_ddm %>% mutate(resp = acc)
+```
+
+```{r}
+sub.pars <- data.frame(Separation = numeric(),
+                       Non.Decision = numeric(),
+                       Bias = numeric(),
+                       Drift = numeric(),
+                       Similar = character(),
+                       Sub.Num = character(),
+                       stringsAsFactors = F)
+
+#because RWiener is finicky:
+d_ddm$resp <- as.character(d_ddm$resp)
+```
+
+```{r estpars}
+conditions <- unique(as.character(d_ddm$similar))
+subs <- unique(as.character(d_ddm$ID)) 
+sub.pars.final <- data.frame()
+
+for (j in 1:length(subs)) {
+  sid <- as.character(subs[j]) 
+  print(sid)
+  dat <- as.data.frame(filter(d_ddm, ID == sid))
+    # fit ddm for each participant
+    # and for each condition run
+  for (cond in 1:length(conditions)) {
+    dat_cond <- filter(dat, similar == conditions[cond])
+    condition_type <- conditions[cond]
+    print(condition_type)
+    opt <- optim(c(1, .1, .1, 1), wiener_deviance, 
+              dat=select(dat_cond, c(q, resp)), method="Nelder-Mead")
+    pars <- c(opt$par, condition_type, sid)
+    sub.pars[cond,] <- pars
+  }
+  sub.pars.final <- rbind(sub.pars.final, sub.pars)  
+} 
+```
+
+### Plot Parameters
+
+This plot shows the mean parameter values & 95% C.I.s for each stimuli type
+
+```{r plotpars, fig.width=8, fig.height=6}
+sub.pars.final$Separation <- as.numeric(sub.pars.final$Separation)
+sub.pars.final$Non.Decision <- as.numeric(sub.pars.final$Non.Decision)
+sub.pars.final$Bias <- as.numeric(sub.pars.final$Bias)
+sub.pars.final$Drift <- as.numeric(sub.pars.final$Drift)
+
+sub.pars.final <- sub.pars.final %>% 
+  group_by(Similar) %>%
+  filter(Separation < mean(Separation) + 3 * sd(Separation), 
+         Separation > mean(Separation) - 3 * sd(Separation)) %>%
+  filter(Non.Decision < mean(Non.Decision) + 3 * sd(Non.Decision), 
+         Non.Decision > mean(Non.Decision) - 3 * sd(Non.Decision)) %>%
+  filter(Bias < mean(Bias) + 3 * sd(Bias), 
+         Bias > mean(Bias) - 3 * sd(Bias)) %>%
+  filter(Drift < mean(Drift) + 3 * sd(Drift), 
+         Drift > mean(Drift) - 3 * sd(Drift)) %>%
+  ungroup() %>%
+  na.omit()
+
+sub.pars.final <- sub.pars.final %>%  gather(Param, Value, Separation:Drift)
+```
+
+Plot distributions of parameters across conditions
+
+```{r}
+ggplot(aes(x = Value, fill = Similar), 
+       data = filter(sub.pars.final, Param %in% c("Drift", "Separation"))) +
+  geom_density(alpha = 0.7, adjust = 1.5) + 
+  facet_grid(.~Param, scales = "free") +
+  scale_fill_solarized()
+```
+
+Get means and CIs for parameter values and plot
+
+```{r}
+sub.pars.ms <- sub.pars.final %>%
+  group_by(Similar, Param) %>%
+  multi_boot_standard(column = "Value", empirical_function = "mean")
+
+ggplot(aes(x = Similar, y = mean), 
+       data = filter(sub.pars.ms)) +
+  geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper)) +
+  facet_wrap(~Param, scales = "free") +
+  scale_fill_solarized() + 
+  ylab("Mean Param Value") +
+  guides(fill = F) 
+```
+
+

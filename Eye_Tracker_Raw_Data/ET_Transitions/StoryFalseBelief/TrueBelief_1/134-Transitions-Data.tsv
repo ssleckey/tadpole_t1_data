@@ -1,0 +1,232 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+131			Content	
+389	MovieStart	MutedBallie.avi		
+481			Content	
+664			Content	
+3404	KeyPress	Space		
+3404	MovieEnd	MutedBallie.avi		
+3862			Content	
+4003			Content	
+4123	ImageStart	blacksquare.bmp		
+4220			Content	
+4503			Content	
+4728			Content	
+5028			Content	
+5261			Content	
+5686			Content	
+5986			Content	
+6244			Content	
+6860			Content	
+6968			Content	
+7588	KeyPress	Space		
+7588	ImageEnd	blacksquare.bmp		
+7592	ImageStart	fixation.png		
+7809			Content	
+8001			Content	
+8598	ImageEnd	fixation.png		
+8692			Content	
+8966	ImageStart	Slide1.JPG		
+9025			AOI_1	
+9100			Content	
+9258			AOI_1	
+10199			AOI_1	
+10715			AOI_1	
+10882			AOI_1	
+11140			AOI_1	
+11890			AOI_1	
+12514			AOI_1	
+13006			AOI_1	
+13072			AOI_1	
+13414			AOI_1	
+13689			AOI_1	
+13922			AOI_1	
+14892	KeyPress	Space		
+14892	ImageEnd	Slide1.JPG		
+14896	ImageStart	fixation.png		
+15196			Content	
+15579			Content	
+15846			Content	
+15899	ImageEnd	fixation.png		
+15927	ImageStart	Slide2.JPG		
+15929			Content	
+16396			Content	
+16454			Content	
+16579			AOI_1	
+16820			AOI_1	
+17836			AOI_1	
+18494			AOI_1	
+19160			AOI_1	
+19393			Content	
+19510			Content	
+19718			Content	
+19801			Content	
+20135			Content	
+20576			Content	
+20834			Content	
+21392			AOI_1	
+21609			AOI_1	
+22150			AOI_1	
+22699			AOI_1	
+22908			AOI_1	
+23532			AOI_1	
+23799			AOI_1	
+24051	KeyPress	Space		
+24052	ImageEnd	Slide2.JPG		
+24055	ImageStart	fixation.png		
+24331			Content	
+24914			Content	
+25031			Content	
+25057	ImageEnd	fixation.png		
+25084	ImageStart	Slide3.JPG		
+25297			incorrect	
+25564			incorrect	
+25756			incorrect	
+26322			correct	
+26913			correct	
+28171			correct	
+30153			correct	
+30511			correct	
+31735			correct	
+32126			correct	
+33715	KeyPress	Space		
+33715	ImageEnd	Slide3.JPG		
+33719	ImageStart	fixation.png		
+34009			Content	
+34300			Content	
+34729	ImageEnd	fixation.png		
+34753	ImageStart	Slide4.JPG		
+35116			Content	
+35474			incorrect	
+35691			incorrect	
+36549			Content	
+36790			incorrect	
+36973			incorrect	
+37798			incorrect	
+38572			incorrect	
+39105			incorrect	
+39930			correct	
+40163			correct	
+40354			correct	
+41087			correct	
+41320			correct	
+42203			correct	
+42370			correct	
+42645			correct	
+42811			correct	
+43261			correct	
+43486			correct	
+43694			correct	
+43910			correct	
+44739	KeyPress	Space		
+44739	ImageEnd	Slide4.JPG		
+44743	ImageStart	fixation.png		
+45010			Content	
+45443			Content	
+45734			Content	
+45742	ImageEnd	fixation.png		
+45770	ImageStart	Slide5.JPG		
+46092			correct	
+46242			Content	
+46517			correct	
+47450			correct	
+47550			incorrect	
+48641			correct	
+49082			incorrect	
+49307			incorrect	
+49640			incorrect	
+49940			incorrect	
+50031			incorrect	
+50698			incorrect	
+51056			incorrect	
+51289			incorrect	
+51822			incorrect	
+52188			correct	
+52388			correct	
+52846			correct	
+53113			correct	
+53954			incorrect	
+54245			incorrect	
+54895			correct	
+55170			correct	
+55436			correct	
+56787	KeyPress	Space		
+56787	ImageEnd	Slide5.JPG		
+56790	ImageStart	fixation.png		
+56810			Content	
+57102			Content	
+57518			Content	
+57800	ImageEnd	fixation.png		
+57827	ImageStart	Slide6.JPG		
+57876			Content	
+57993			Content	
+58234			incorrect	
+58351			incorrect	
+58809			incorrect	
+58967			correct	
+59250			correct	
+62790			correct	
+63406			correct	
+64089			correct	
+64313			correct	
+64705			correct	
+65421			correct	
+65871			correct	
+66275	KeyPress	Space		
+66275	ImageEnd	Slide6.JPG		
+66279	ImageStart	fixation.png		
+66529			Content	
+66712			Content	
+67284	ImageEnd	fixation.png		
+67311	ImageStart	Slide7.JPG		
+67611			correct	
+67844			correct	
+69993			correct	
+70851			correct	
+73782			correct	
+73974			correct	
+74157			correct	
+75797			incorrect	
+76047			incorrect	
+76480			correct	
+77246			correct	
+77896			correct	
+78229			correct	
+78450	KeyPress	Space		
+78450	ImageEnd	Slide7.JPG		
+78454	ImageStart	fixation.png		
+78795			Content	
+79220			Content	
+79454	ImageEnd	fixation.png		
+79480	ImageStart	Slide8.JPG		
+80128			incorrect	
+80569			correct	
+80844			correct	
+81086			correct	
+81769			correct	
+82068			correct	
+82110			correct	
+82668			correct	
+82784			correct	
+83484			correct	
+83725			correct	
+84109			correct	
+85033			incorrect	
+85291			incorrect	
+85449			incorrect	
+86066			incorrect	
+86307			incorrect	
+87132			incorrect	
+87465			incorrect	
+87823			incorrect	
+88222			incorrect	
+88514			incorrect	
+89490	KeyPress	Space		
+89490	ImageEnd	Slide8.JPG		
+89558	InstructionStart	Instruction Element		
+90046			Content	
+90171			Content	
+90629			Content	
+90954			Content	
+91858	KeyPress	Escape		
+91858	InstructionEnd	Instruction Element		

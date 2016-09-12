@@ -1,0 +1,83 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+61			Content	
+352	MovieStart	MutedBallie.avi		
+378			Content	
+594			Content	
+2493			Content	
+2668			Content	
+2774	KeyPress	Space		
+2774	MovieEnd	MutedBallie.avi		
+3828	ImageStart	blacksquare.bmp		
+3984			Content	
+5666			Content	
+5949			Content	
+6605	KeyPress	Space		
+6605	ImageEnd	blacksquare.bmp		
+6609	ImageStart	fixation.png		
+6699			Content	
+6915			Content	
+7607	ImageEnd	fixation.png		
+9061	ImageStart	Slide1.JPG		
+9322			AOI_1	
+9513			AOI_1	
+11704			AOI_1	
+12045			AOI_1	
+12212			AOI_1	
+14493			AOI_1	
+15293	KeyPress	Space		
+15293	ImageEnd	Slide1.JPG		
+15297	ImageStart	fixation.png		
+15601			Content	
+16296	ImageEnd	fixation.png		
+16323	ImageStart	Slide2.JPG		
+22445	KeyPress	Space		
+22445	ImageEnd	Slide2.JPG		
+22449	ImageStart	fixation.png		
+23457	ImageEnd	fixation.png		
+23484	ImageStart	Slide3.JPG		
+26869			correct	
+29400			incorrect	
+29850			incorrect	
+30283			incorrect	
+30508			incorrect	
+30816			correct	
+31066			correct	
+31166			correct	
+31274			correct	
+31416			correct	
+31641			correct	
+32357	KeyPress	Space		
+32357	ImageEnd	Slide3.JPG		
+32362	ImageStart	fixation.png		
+33363	ImageEnd	fixation.png		
+33390	ImageStart	Slide4.JPG		
+42861	KeyPress	Space		
+42861	ImageEnd	Slide4.JPG		
+42864	ImageStart	fixation.png		
+43862	ImageEnd	fixation.png		
+43889	ImageStart	Slide5.JPG		
+46664			correct	
+56140	KeyPress	Space		
+56141	ImageEnd	Slide5.JPG		
+56146	ImageStart	fixation.png		
+57152	ImageEnd	fixation.png		
+57157			Content	
+57180	ImageStart	Slide6.JPG		
+57324			Content	
+57474			correct	
+64708	KeyPress	Space		
+64708	ImageEnd	Slide6.JPG		
+64712	ImageStart	fixation.png		
+65718	ImageEnd	fixation.png		
+65744	ImageStart	Slide7.JPG		
+76596	KeyPress	Space		
+76596	ImageEnd	Slide7.JPG		
+76600	ImageStart	fixation.png		
+77604	ImageEnd	fixation.png		
+77624	ImageStart	Slide8.JPG		
+85420	KeyPress	Space		
+85420	ImageEnd	Slide8.JPG		
+86208	InstructionStart	Instruction Element		
+88644	KeyPress	Escape		
+88644	InstructionEnd	Instruction Element		

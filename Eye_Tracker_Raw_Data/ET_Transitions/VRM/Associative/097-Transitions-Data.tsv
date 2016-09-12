@@ -1,0 +1,131 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+312	MovieStart	MutedBallie.avi		
+478			Content	
+718	KeyPress	Space		
+718	MovieEnd	MutedBallie.avi		
+728			Content	
+1214	ImageStart	fixation.png		
+2218	ImageEnd	fixation.png		
+2252	ImageStart	AB_AB.jpg		
+2593			encode_distractor_right_left	
+2809			encode_distractor_right_left	
+3192			encode_distractor_left_right	
+3459			encode_distractor_left_left	
+3692			encode_distractor_left_left	
+3959			encode_distractor_left_right	
+4175			encode_distractor_right_left	
+4541			encode_distractor_right_right	
+6690			encode_distractor_left_left	
+6890			encode_distractor_left_left	
+7227	ImageEnd	AB_AB.jpg		
+7237	ImageStart	fixation.png		
+8238	ImageEnd	fixation.png		
+8271	ImageStart	CD_CD.jpg		
+9438			encode2_target_left_right	
+9771			encode2_target_right_left	
+10304			encode2_target_left_left	
+10520			encode2_target_left_left	
+10970			encode2_target_right_right	
+13248	ImageEnd	CD_CD.jpg		
+13258	ImageStart	fixation.png		
+13685			Content	
+13968			Content	
+14259	ImageEnd	fixation.png		
+14293	ImageStart	AB_AB.jpg		
+14551			encode_distractor_right_left	
+14851			encode_distractor_right_left	
+15134			encode_distractor_left_right	
+15417			encode_distractor_left_left	
+15633			encode_distractor_left_right	
+15967			encode_distractor_left_right	
+17598			encode_distractor_left_right	
+17682			encode_distractor_left_right	
+18015			encode_distractor_right_left	
+18281			encode_distractor_right_left	
+19268	ImageEnd	AB_AB.jpg		
+19278	ImageStart	fixation.png		
+19314			Content	
+19614			Content	
+20281	ImageEnd	fixation.png		
+20313	ImageStart	CD_CD.jpg		
+20596			encode2_target_left_right	
+20929			encode2_target_left_right	
+21346			encode2_target_right_left	
+21579			encode2_target_right_right	
+21928			encode2_target_right_left	
+22328			encode2_target_right_left	
+22628			encode2_target_left_left	
+23111			encode2_target_left_right	
+23461			encode2_target_left_right	
+24044			encode2_target_right_right	
+25076			encode2_target_right_left	
+25292	ImageEnd	CD_CD.jpg		
+25301	ImageStart	fixation.png		
+25343			Content	
+25709			Content	
+26303	ImageEnd	fixation.png		
+26336	ImageStart	CD_CB.jpg		
+26608			retrieval_old_pair_left	
+26991			retrieval_old_pair_right	
+27474			retrieval_new_pair_incorrect	
+27741			retrieval_new_pair_incorrect	
+28157			retrieval_old_pair_left	
+28690			retrieval_old_pair_left	
+28923			retrieval_new_pair_correct	
+30172			Content	
+30572			Content	
+31671			retrieval_old_pair_left	
+31921			retrieval_old_pair_right	
+32521			retrieval_new_pair_incorrect	
+32820			retrieval_new_pair_incorrect	
+33170			retrieval_new_pair_incorrect	
+33520			retrieval_new_pair_incorrect	
+34019			Content	
+34303			Content	
+34519			Content	
+35152			Content	
+36234			Content	
+36302	ImageEnd	CD_CB.jpg		
+36317	ImageStart	fixation.png		
+36434			Content	
+36651			Content	
+37316	ImageEnd	fixation.png		
+37351	ImageStart	CD_AD.jpg		
+37717			retrieval_new_pair_incorrect	
+38250			retrieval_old_pair_right	
+38599			retrieval_old_pair_right	
+38849			retrieval_old_pair_left	
+39282			retrieval_old_pair_right	
+39615			retrieval_old_pair_left	
+40481			retrieval_old_pair_right	
+40714			retrieval_new_pair_incorrect	
+41664			retrieval_old_pair_right	
+42580			retrieval_new_pair_incorrect	
+42946			retrieval_old_pair_left	
+43262			retrieval_old_pair_left	
+43662			retrieval_old_pair_left	
+43745			retrieval_old_pair_left	
+44178			retrieval_new_pair_incorrect	
+44795			retrieval_old_pair_right	
+45078			retrieval_old_pair_right	
+45444			retrieval_old_pair_right	
+46060			retrieval_old_pair_right	
+46377			retrieval_old_pair_right	
+46577			retrieval_new_pair_incorrect	
+46960			retrieval_new_pair_incorrect	
+47260			retrieval_new_pair_incorrect	
+47315	ImageEnd	CD_AD.jpg		
+47325	ImageStart	fixation.png		
+47443			Content	
+47626			Content	
+48142			Content	
+48330	ImageEnd	fixation.png		
+49308	MovieStart	congratulations.wmv		
+49941			Content	
+50024			Content	
+50607			Content	
+51223			Content	
+52089			Content	
+52276	KeyPress	Escape		
+52276	MovieEnd	congratulations.wmv		

@@ -12,44 +12,44 @@ Timestamp	Event	Descriptor	AoiNames
 6479			Content	
 6931	ImageEnd	fixation.png		
 6972	ImageStart	AB_AB.jpg		
-7361			encode_distractor_left	
-7878			encode_distractor_left	
-8311			encode_distractor_left	
-8827			encode_distractor_right	
-10392			encode_distractor_right	
-10475			encode_distractor_right	
-10792			encode_distractor_left	
-11908			encode_distractor_left	
+7361			encode_distractor_left_right	
+7878			encode_distractor_left_left	
+8311			encode_distractor_left_right	
+8827			encode_distractor_right_left	
+10392			encode_distractor_right_left	
+10475			encode_distractor_right_left	
+10792			encode_distractor_left_right	
+11908			encode_distractor_left_left	
 11956	ImageEnd	AB_AB.jpg		
 11966	ImageStart	fixation.png		
 12308			Content	
 12968	ImageEnd	fixation.png		
 13000	ImageStart	CD_CD.jpg		
 13407			Content	
-13590			encode2_target_left	
-14106			encode2_target_left	
-14739			encode2_target_right	
-15139			encode2_target_right	
-15456			encode2_target_right	
-16155			encode2_target_left	
-16905			encode2_target_right	
-17171			encode2_target_right	
-17404			encode2_target_right	
-17954			encode2_target_left	
+13590			encode2_target_left_right	
+14106			encode2_target_left_left	
+14739			encode2_target_right_right	
+15139			encode2_target_right_left	
+15456			encode2_target_right_left	
+16155			encode2_target_left_right	
+16905			encode2_target_right_left	
+17171			encode2_target_right_right	
+17404			encode2_target_right_left	
+17954			encode2_target_left_right	
 17978	ImageEnd	CD_CD.jpg		
 17987	ImageStart	fixation.png		
 18403			Content	
 18989	ImageEnd	fixation.png		
 19021	ImageStart	AB_AB.jpg		
-19519			encode_distractor_left	
-19652			encode_distractor_left	
-20552			encode_distractor_left	
-20885			encode_distractor_left	
-21334			encode_distractor_left	
-21634			encode_distractor_right	
-22750			encode_distractor_right	
-23533			encode_distractor_left	
-23833			encode_distractor_left	
+19519			encode_distractor_left_right	
+19652			encode_distractor_left_right	
+20552			encode_distractor_left_right	
+20885			encode_distractor_left_left	
+21334			encode_distractor_left_left	
+21634			encode_distractor_right_right	
+22750			encode_distractor_right_left	
+23533			encode_distractor_left_right	
+23833			encode_distractor_left_left	
 24000	ImageEnd	AB_AB.jpg		
 24012	ImageStart	fixation.png		
 24049			Content	
@@ -58,11 +58,11 @@ Timestamp	Event	Descriptor	AoiNames
 25044	ImageStart	CD_CD.jpg		
 25115			Content	
 25348			Content	
-25465			encode2_target_left	
-26347			encode2_target_left	
-28279			encode2_target_left	
-28462			encode2_target_left	
-28746			encode2_target_left	
+25465			encode2_target_left_right	
+26347			encode2_target_left_left	
+28279			encode2_target_left_left	
+28462			encode2_target_left_left	
+28746			encode2_target_left_right	
 29861			Content	
 30022	ImageEnd	CD_CD.jpg		
 30028			Content	
@@ -70,16 +70,16 @@ Timestamp	Event	Descriptor	AoiNames
 30378			Content	
 31033	ImageEnd	fixation.png		
 31065	ImageStart	CD_CB.jpg		
-32260			retrieval_new_pair_1	
-32660			retrieval_old_pair	
-33092			retrieval_old_pair	
-34308			retrieval_new_pair_1	
-34441			retrieval_new_pair_1	
-34574			retrieval_new_pair_1	
+32260			retrieval_new_pair_incorrect	
+32660			retrieval_old_pair_left	
+33092			retrieval_old_pair_left	
+34308			retrieval_new_pair_incorrect	
+34441			retrieval_new_pair_incorrect	
+34574			retrieval_new_pair_incorrect	
 37790			Content	
-38039			retrieval_new_pair_1	
-38455			retrieval_new_pair_1	
-38705			retrieval_new_pair_1	
+38039			retrieval_new_pair_incorrect	
+38455			retrieval_new_pair_incorrect	
+38705			retrieval_new_pair_correct	
 39738			Content	
 40287			Content	
 40804			Content	
@@ -90,10 +90,10 @@ Timestamp	Event	Descriptor	AoiNames
 41836			Content	
 42062	ImageEnd	fixation.png		
 42099	ImageStart	CD_AD.jpg		
-42985			retrieval_new_pair	
-43518			retrieval_old_pair	
-44117			retrieval_old_pair	
-45167			retrieval_old_pair	
+42985			retrieval_new_pair_incorrect	
+43518			retrieval_old_pair_right	
+44117			retrieval_old_pair_left	
+45167			retrieval_old_pair_right	
 52076	ImageEnd	CD_AD.jpg		
 52086	ImageStart	fixation.png		
 52310			Content	

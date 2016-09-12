@@ -7,47 +7,47 @@ Timestamp	Event	Descriptor	AoiNames
 2006	ImageStart	fixation.png		
 3009	ImageEnd	fixation.png		
 3040	ImageStart	CD_CD.jpg		
-3734			encode2_distractor_left	
-3851			encode2_distractor_left	
-4250			encode2_distractor_right	
-4466			encode2_distractor_right	
-4782			encode2_distractor_right	
-5065			encode2_distractor_right	
-5232			encode2_distractor_right	
-5332			encode2_distractor_right	
-5532			encode2_distractor_left	
-5798			encode2_distractor_left	
-6315			encode2_distractor_left	
-7131			encode2_distractor_right	
+3734			encode2_distractor_left_right	
+3851			encode2_distractor_left_right	
+4250			encode2_distractor_right_left	
+4466			encode2_distractor_right_left	
+4782			encode2_distractor_right_right	
+5065			encode2_distractor_right_right	
+5232			encode2_distractor_right_right	
+5332			encode2_distractor_right_right	
+5532			encode2_distractor_left_right	
+5798			encode2_distractor_left_right	
+6315			encode2_distractor_left_left	
+7131			encode2_distractor_right_left	
 8019	ImageEnd	CD_CD.jpg		
 8029	ImageStart	fixation.png		
 8930			Content	
 9031	ImageEnd	fixation.png		
 9065	ImageStart	AB_AB.jpg		
-10861			encode2_target_right	
-11061			encode2_target_left	
-11577			encode2_target_left	
-11894			encode2_target_right	
-12311			encode2_target_right	
-13126			encode2_target_right	
-13360			encode2_target_right	
-13759			encode2_target_left	
+10861			encode2_target_right_left	
+11061			encode2_target_left_right	
+11577			encode2_target_left_left	
+11894			encode2_target_right_left	
+12311			encode2_target_right_left	
+13126			encode2_target_right_left	
+13360			encode2_target_right_left	
+13759			encode2_target_left_right	
 14040	ImageEnd	AB_AB.jpg		
 14050	ImageStart	fixation.png		
 14392			Content	
 15053	ImageEnd	fixation.png		
 15090	ImageStart	CD_CD.jpg		
 15091			Content	
-15425			encode2_distractor_left	
-15575			encode2_distractor_left	
-15958			encode2_distractor_right	
-16157			encode2_distractor_right	
-17140			encode2_distractor_right	
-17473			encode2_distractor_left	
-18039			encode2_distractor_left	
-18139			encode2_distractor_right	
-18406			encode2_distractor_right	
-19288			encode2_distractor_right	
+15425			encode2_distractor_left_left	
+15575			encode2_distractor_left_right	
+15958			encode2_distractor_right_left	
+16157			encode2_distractor_right_left	
+17140			encode2_distractor_right_right	
+17473			encode2_distractor_left_left	
+18039			encode2_distractor_left_left	
+18139			encode2_distractor_right_right	
+18406			encode2_distractor_right_right	
+19288			encode2_distractor_right_right	
 20061	ImageEnd	CD_CD.jpg		
 20072	ImageStart	fixation.png		
 20321			Content	
@@ -55,37 +55,37 @@ Timestamp	Event	Descriptor	AoiNames
 20870			Content	
 21074	ImageEnd	fixation.png		
 21292	ImageStart	AB_AB.jpg		
-21620			encode2_target_left	
-21703			encode2_target_left	
-22053			encode2_target_left	
-25251			encode2_target_left	
-25434			encode2_target_right	
-25667			encode2_target_right	
-26200			encode2_target_right	
+21620			encode2_target_left_right	
+21703			encode2_target_left_right	
+22053			encode2_target_left_right	
+25251			encode2_target_left_right	
+25434			encode2_target_right_left	
+25667			encode2_target_right_left	
+26200			encode2_target_right_right	
 26270	ImageEnd	AB_AB.jpg		
 26280	ImageStart	fixation.png		
 26383			Content	
 26633			Content	
 29281	ImageEnd	fixation.png		
 29312	ImageStart	AB_AD.jpg		
-30047			retrieval_new_pair	
-30263			retrieval_new_pair	
-30680			retrieve_old_pair	
-31096			retrieve_old_pair	
+30047			retrieval_new_pair_incorrect	
+30263			retrieval_new_pair_incorrect	
+30680			retrieve_old_pair_left	
+31096			retrieve_old_pair_right	
 31429			Content	
-31546			retrieve_old_pair	
-31729			retrieval_new_pair	
-32046			retrieval_new_pair	
-32212			retrieval_new_pair	
-32579			retrieve_old_pair	
-32978			retrieve_old_pair	
-33328			retrieve_old_pair	
-33611			retrieve_old_pair	
-36026			retrieval_new_pair	
+31546			retrieve_old_pair_right	
+31729			retrieval_new_pair_correct	
+32046			retrieval_new_pair_incorrect	
+32212			retrieval_new_pair_correct	
+32579			retrieve_old_pair_left	
+32978			retrieve_old_pair_right	
+33328			retrieve_old_pair_right	
+33611			retrieve_old_pair_left	
+36026			retrieval_new_pair_incorrect	
 36109			Content	
-36825			retrieve_old_pair	
-37142			retrieve_old_pair	
-37591			retrieve_old_pair	
+36825			retrieve_old_pair_right	
+37142			retrieve_old_pair_right	
+37591			retrieve_old_pair_right	
 38558			Content	
 39092			Content	
 39280	ImageEnd	AB_AD.jpg		

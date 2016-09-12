@@ -73,10 +73,10 @@ Timestamp	Event	Descriptor	AoiNames
 30083			Content	
 30566			Content	
 31298			Content	
-31681			retrieval_new_pair_1	
+31681			retrieval_new_pair_incorrect	
 32048			Content	
 33380			Content	
-34046			retrieval_new_pair_1	
+34046			retrieval_new_pair_incorrect	
 34179			Content	
 37680	ImageEnd	CD_CB.jpg		
 37690	ImageStart	fixation.png		
@@ -85,7 +85,7 @@ Timestamp	Event	Descriptor	AoiNames
 40225			Content	
 40358			Content	
 40708			Content	
-45204			retrieval_old_pair	
+45204			retrieval_old_pair_right	
 48705	ImageEnd	CD_AD.jpg		
 48719	ImageStart	fixation.png		
 49720	ImageEnd	fixation.png		

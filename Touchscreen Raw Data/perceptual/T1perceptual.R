@@ -6,7 +6,7 @@ pc <- "S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/perce
 
 subj=15
 
-for (subj in 15:131) {
+for (subj in 15:134) {
   if(subj==25) {next} #this is if need to skip some data
   if(subj==27) {next}
   if(subj==29) {next}
@@ -32,6 +32,7 @@ for (subj in 15:131) {
   if(subj==125) {next}
   if(subj==126) {next}
   if(subj==128) {next}
+  if(subj==132) {next}
   
   
 #Read in data table

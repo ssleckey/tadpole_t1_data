@@ -1,0 +1,331 @@
+Timestamp	Event	Descriptor	AoiNames	
+106	ImageStart	fixation.png		
+4168			Content	
+4401			Content	
+5783			Content	
+5842			Content	
+6033			Content	
+6775			Content	
+7590			Content	
+7815			Content	
+8667	KeyPress	Space		
+8667	ImageEnd	fixation.png		
+8980	MovieStart	MutedBallie.avi		
+9631			Content	
+9922			Content	
+11563	KeyPress	Space		
+11564	MovieEnd	MutedBallie.avi		
+12060	ImageStart	blacksquare.bmp		
+12554			Content	
+12745			Content	
+13128			Content	
+13803			Content	
+14411			Content	
+15910			Content	
+17283	KeyPress	Space		
+17283	ImageEnd	blacksquare.bmp		
+18036	MovieStart	Julia_3.AVI		
+18883			Content	
+19624			Content	
+20754	MovieEnd	Julia_3.AVI		
+21114	ImageStart	fixation.png		
+21173			Content	
+21348			Content	
+21523			Content	
+21715			Content	
+21923			Content	
+23267	KeyPress	Space		
+23267	ImageEnd	fixation.png		
+23289	ImageStart	arrow_crown.BMP		
+23805			Content	
+23938			Content	
+24329			Content	
+25237			Content	
+25329			Content	
+25612			Content	
+26386			Content	
+26828			Content	
+27352			Content	
+27419	KeyPress	Right		
+27419	ImageEnd	arrow_crown.BMP		
+27423	ImageStart	fixation.png		
+27710			Content	
+27902			Content	
+28683	KeyPress	Space		
+28683	ImageEnd	fixation.png		
+28704	ImageStart	heart_moon.BMP		
+29251			Content	
+29709			Content	
+29867			Content	
+29917			Content	
+30200			Content	
+30600			Content	
+30983			Content	
+31241			Content	
+32051	KeyPress	Right		
+32051	ImageEnd	heart_moon.BMP		
+32054	ImageStart	fixation.png		
+32308			Content	
+34164			Content	
+37695			Content	
+38378			Content	
+39128			Content	
+39453			Content	
+40169			Content	
+40290	KeyPress	Space		
+40291	ImageEnd	fixation.png		
+40312	ImageStart	sailboat_bicycle.BMP		
+40785			Content	
+40893			old	
+41268			old	
+43442	KeyPress	Right		
+43443	ImageEnd	sailboat_bicycle.BMP		
+43447	ImageStart	fixation.png		
+43641			Content	
+43707	KeyPress	Space		
+43707	ImageEnd	fixation.png		
+43813	ImageStart	wheel_window.BMP		
+45181			old	
+45240			new	
+45423			new	
+45473			new	
+45740			new	
+46106			new	
+47338	KeyPress	Left		
+47338	ImageEnd	wheel_window.BMP		
+47342	ImageStart	fixation.png		
+47754	KeyPress	Space		
+47754	ImageEnd	fixation.png		
+47784	ImageStart	fish_bee.BMP		
+48139			new	
+48231			new	
+48331			new	
+48663			new	
+49488			new	
+49538			old	
+49588			old	
+50054			old	
+50170			old	
+50912			old	
+51278			old	
+51370			old	
+51953			new	
+52311			new	
+52627			Content	
+57032			new	
+57082			new	
+57182			new	
+57790			new	
+57906			new	
+58639			new	
+59738			new	
+61121			new	
+61612			old	
+61995			old	
+67866			Content	
+68016			Content	
+68570	KeyPress	Right		
+68570	ImageEnd	fish_bee.BMP		
+68574	ImageStart	fixation.png		
+70386	KeyPress	Space		
+70386	ImageEnd	fixation.png		
+70407	ImageStart	pig_elephant.BMP		
+73897	KeyPress	Right		
+73898	ImageEnd	pig_elephant.BMP		
+73902	ImageStart	fixation.png		
+74653			Content	
+74778			Content	
+74903			Content	
+75011			Content	
+75078			Content	
+75211			Content	
+75603			Content	
+76481	KeyPress	Space		
+76481	ImageEnd	fixation.png		
+76503	ImageStart	sheep_monkey.BMP		
+82907			old	
+83597			old	
+96690	KeyPress	Right		
+96690	ImageEnd	sheep_monkey.BMP		
+96694	ImageStart	fixation.png		
+98305	KeyPress	Space		
+98305	ImageEnd	fixation.png		
+98326	ImageStart	ostrich_fly.BMP		
+104825			old	
+115509			Content	
+115692			old	
+115834			old	
+116283			Content	
+117366			Content	
+117658			Content	
+117941			Content	
+120755			old	
+120914			Content	
+122329	KeyPress	Right		
+122329	ImageEnd	ostrich_fly.BMP		
+122333	ImageStart	fixation.png		
+123041	KeyPress	Space		
+123041	ImageEnd	fixation.png		
+123062	ImageStart	tiger_alligator.BMP		
+135630			old	
+135963			old	
+136179			old	
+137012			old	
+137712			new	
+137903			new	
+138353			Content	
+147200	KeyPress	Left		
+147200	ImageEnd	tiger_alligator.BMP		
+147205	ImageStart	fixation.png		
+148232	KeyPress	Space		
+148232	ImageEnd	fixation.png		
+148254	ImageStart	doorknob_bell.BMP		
+158144	KeyPress	Left		
+158144	ImageEnd	doorknob_bell.BMP		
+158148	ImageStart	fixation.png		
+160160	KeyPress	Space		
+160160	ImageEnd	fixation.png		
+160184	ImageStart	shoe_boot.BMP		
+162920	KeyPress	Left		
+162920	ImageEnd	shoe_boot.BMP		
+162924	ImageStart	fixation.png		
+164472	KeyPress	Space		
+164472	ImageEnd	fixation.png		
+164493	ImageStart	table_chair.BMP		
+170956			new	
+171439			old	
+171714			old	
+172722			old	
+172727	KeyPress	Right		
+172728	ImageEnd	table_chair.BMP		
+172732	ImageStart	fixation.png		
+172980			Content	
+173713			Content	
+173805			Content	
+173871	KeyPress	Space		
+173872	ImageEnd	fixation.png		
+173893	ImageStart	socks_pants.BMP		
+173929			Content	
+174054			old	
+174313			old	
+174388			old	
+174946			new	
+175112			Content	
+175179			Content	
+175262			Content	
+175554			new	
+176303			Content	
+176420			new	
+176761			Content	
+177070			Content	
+177428			new	
+177936			new	
+178552			new	
+179326			new	
+182107			old	
+182766			old	
+185697			Content	
+185971			new	
+186663			new	
+187321			new	
+187604			old	
+188528			new	
+189069			new	
+189353			new	
+190294			new	
+190443			new	
+192327	KeyPress	Right		
+192327	ImageEnd	socks_pants.BMP		
+192331	ImageStart	fixation.png		
+193183	KeyPress	Space		
+193183	ImageEnd	fixation.png		
+193205	ImageStart	dress_jacket.BMP		
+193858			old	
+194199			new	
+196714			old	
+196831			old	
+196923			old	
+198207	KeyPress	Right		
+198207	ImageEnd	dress_jacket.BMP		
+198211	ImageStart	fixation.png		
+199647	KeyPress	Space		
+199647	ImageEnd	fixation.png		
+199669	ImageStart	book_bottle.BMP		
+199979			Content	
+200162			new	
+200778			new	
+201161			new	
+201353			Content	
+201411			new	
+203191	KeyPress	Right		
+203191	ImageEnd	book_bottle.BMP		
+203195	ImageStart	fixation.png		
+204719	KeyPress	Space		
+204719	ImageEnd	fixation.png		
+204741	ImageStart	stove_refrigerator.BMP		
+208423			Content	
+208540			old	
+208623			old	
+208923			new	
+210543	KeyPress	Left		
+210543	ImageEnd	stove_refrigerator.BMP		
+210547	ImageStart	fixation.png		
+213558	KeyPress	Space		
+213559	ImageEnd	fixation.png		
+213580	ImageStart	swing_door.BMP		
+216277			new	
+216526			new	
+217051			old	
+217276			old	
+217392			old	
+225438	KeyPress	Left		
+225438	ImageEnd	swing_door.BMP		
+225443	ImageStart	fixation.png		
+226270	KeyPress	Space		
+226270	ImageEnd	fixation.png		
+226293	ImageStart	spoon_fork.BMP		
+229214	KeyPress	Left		
+229214	ImageEnd	spoon_fork.BMP		
+229219	ImageStart	fixation.png		
+231790	KeyPress	Space		
+231790	ImageEnd	fixation.png		
+231812	ImageStart	toe_finger.BMP		
+246345	KeyPress	Left		
+246345	ImageEnd	toe_finger.BMP		
+246349	ImageStart	fixation.png		
+248614	KeyPress	Space		
+248614	ImageEnd	fixation.png		
+248635	ImageStart	snowman_clown.BMP		
+260555			new	
+264765	KeyPress	Right		
+264765	ImageEnd	snowman_clown.BMP		
+264769	ImageStart	fixation.png		
+265837	KeyPress	Space		
+265838	ImageEnd	fixation.png		
+265859	ImageStart	truck_car.BMP		
+266227			Content	
+270197	KeyPress	Right		
+270198	ImageEnd	truck_car.BMP		
+270203	ImageStart	fixation.png		
+271709	KeyPress	Space		
+271710	ImageEnd	fixation.png		
+271730	ImageStart	train_bus.BMP		
+283133	KeyPress	Right		
+283133	ImageEnd	train_bus.BMP		
+283139	ImageStart	whiteborder.bmp		
+284021	KeyPress	Space		
+284021	ImageEnd	whiteborder.bmp		
+284776	MovieStart	congratulations.wmv		
+285356			Content	
+285889			Content	
+286014			Content	
+286064			Content	
+286188			Content	
+287729			Content	
+287904			Content	
+288120			Content	
+288370			Content	
+288645			Content	
+289012			Content	
+289509	KeyPress	Escape		
+289509	MovieEnd	congratulations.wmv		

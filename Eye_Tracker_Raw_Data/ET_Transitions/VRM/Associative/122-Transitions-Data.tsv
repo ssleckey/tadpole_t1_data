@@ -10,65 +10,65 @@ Timestamp	Event	Descriptor	AoiNames
 1716	ImageStart	fixation.png		
 2714	ImageEnd	fixation.png		
 2748	ImageStart	AB_AB.jpg		
-3164			encode_distractor_left	
-3264			encode_distractor_left	
-3514			encode_distractor_right	
-3713			encode_distractor_right	
-3980			encode_distractor_right	
-4546			encode_distractor_right	
-4913			encode_distractor_left	
-5262			encode_distractor_left	
-6062			encode_distractor_right	
-6245			encode_distractor_right	
-6378			encode_distractor_right	
+3164			encode_distractor_left_right	
+3264			encode_distractor_left_right	
+3514			encode_distractor_right_left	
+3713			encode_distractor_right_right	
+3980			encode_distractor_right_left	
+4546			encode_distractor_right_left	
+4913			encode_distractor_left_right	
+5262			encode_distractor_left_right	
+6062			encode_distractor_right_right	
+6245			encode_distractor_right_right	
+6378			encode_distractor_right_right	
 7720	ImageEnd	AB_AB.jpg		
 7731	ImageStart	fixation.png		
 8734	ImageEnd	fixation.png		
 8766	ImageStart	CD_CD.jpg		
-10642			encode2_target_right	
-11641			encode2_target_right	
-12274			encode2_target_right	
-13556			encode2_target_right	
+10642			encode2_target_right_left	
+11641			encode2_target_right_left	
+12274			encode2_target_right_right	
+13556			encode2_target_right_right	
 13744	ImageEnd	CD_CD.jpg		
 13754	ImageStart	fixation.png		
 14755	ImageEnd	fixation.png		
 15748	ImageStart	AB_AB.jpg		
-17570			encode_distractor_right	
-17686			encode_distractor_right	
+17570			encode_distractor_right_right	
+17686			encode_distractor_right_right	
 20716	ImageEnd	AB_AB.jpg		
 20727	ImageStart	fixation.png		
 21728	ImageEnd	fixation.png		
 21765	ImageStart	CD_CD.jpg		
-22333			encode2_target_left	
-22782			encode2_target_right	
-23165			encode2_target_right	
+22333			encode2_target_left_right	
+22782			encode2_target_right_left	
+23165			encode2_target_right_right	
 26737	ImageEnd	CD_CD.jpg		
 26748	ImageStart	fixation.png		
 27749	ImageEnd	fixation.png		
 27781	ImageStart	CD_CB.jpg		
-28495			retrieval_new_pair_1	
-28844			retrieval_new_pair_1	
-29444			retrieval_new_pair_1	
-30027			retrieval_new_pair_1	
-30277			retrieval_old_pair	
-30377			retrieval_old_pair	
-31126			retrieval_old_pair	
+28495			retrieval_new_pair_incorrect	
+28844			retrieval_new_pair_incorrect	
+29444			retrieval_new_pair_incorrect	
+30027			retrieval_new_pair_incorrect	
+30277			retrieval_old_pair_left	
+30377			retrieval_old_pair_left	
+31126			retrieval_old_pair_right	
 37751	ImageEnd	CD_CB.jpg		
 37761	ImageStart	fixation.png		
 38764	ImageEnd	fixation.png		
 38795	ImageStart	CD_AD.jpg		
-39703			retrieval_new_pair	
-40103			retrieval_new_pair	
-40419			retrieval_old_pair	
-40786			retrieval_old_pair	
-41036			retrieval_old_pair	
-41452			retrieval_new_pair	
-41935			retrieval_new_pair	
+39703			retrieval_new_pair_correct	
+40103			retrieval_new_pair_correct	
+40419			retrieval_old_pair_right	
+40786			retrieval_old_pair_left	
+41036			retrieval_old_pair_left	
+41452			retrieval_new_pair_incorrect	
+41935			retrieval_new_pair_incorrect	
 43067			Content	
-43284			retrieval_new_pair	
-43634			retrieval_new_pair	
+43284			retrieval_new_pair_incorrect	
+43634			retrieval_new_pair_incorrect	
 46798			Content	
-46998			retrieval_new_pair	
+46998			retrieval_new_pair_incorrect	
 48778	ImageEnd	CD_AD.jpg		
 48788	ImageStart	fixation.png		
 49793	ImageEnd	fixation.png		

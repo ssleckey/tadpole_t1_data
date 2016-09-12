@@ -26,7 +26,7 @@ Data analysis of toddler uncertainty monitoring study.
 
 Preliminaries.
 
-```{r echo=FALSE}
+```{r, echo=FALSE}
 setwd("~/Desktop/tadpole_t1_data/analysis/26-30-mos/")
 rm(list=ls())
 knitr::opts_chunk$set(fig.width=8, fig.height=5, 
@@ -48,13 +48,30 @@ library(psych)
 theme_set(theme_bw())
 ```
 
-Read in RT data file.
+Read in trial info, demographics, and word familiarity.
+
+```{r}
+demo <- read.csv("demographics.csv") 
+trial_info <- read.csv("conditions.csv", header = TRUE)
+trial_info$trial <- as.character(trial_info$trial)
+
+word_fam_key <- read.csv("word_fam_key.csv")
+word_fam_key$trial <- as.character(word_fam_key$trial)
+
+word_fam <- read.csv("word_familiarity.csv") %>%
+  gather("target", "familiarity", 2:41 )
+
+response_key <- read.csv("response_key.csv")
+response_key$trial <- as.character(response_key$trial)
+```
+
+Read in TS data file.
 
 ```{r}
 d.raw_ts <- read.table("AllSubs_TS.txt", header = TRUE) 
 ```
 
-Make data tidy.
+Make TS data tidy.
 
 ```{r}
 d_acc_ts<- d.raw_ts %>%
@@ -76,24 +93,7 @@ d_ts <- d_acc_ts %>%
 d_ts$acc[d_ts$acc==999] <- NA
 ```
 
-Read in trial info, demographics, and word familiarity.
-
-```{r}
-demo <- read.csv("demographics.csv") 
-trial_info <- read.csv("conditions.csv", header = TRUE)
-trial_info$trial <- as.character(trial_info$trial)
-
-word_fam_key <- read.csv("word_fam_key.csv")
-word_fam_key$trial <- as.character(word_fam_key$trial)
-
-word_fam <- read.csv("word_familiarity.csv") %>%
-  gather("target", "familiarity", 2:41 )
-
-response_key <- read.csv("response_key.csv")
-response_key$trial <- as.character(response_key$trial)
-```
-
-Join trial info and demographics with raw data.
+Join trial info and demographics with raw TS data.
 
 ```{r}
 d_ts <- left_join(d_ts, trial_info) %>%
@@ -114,6 +114,7 @@ d_ts$ID <- as.factor(as.character(d_ts$ID))
 length(levels(d_ts$ID))
 ```
 
+Read in ET data. 
 
 ```{r}
 d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) 
@@ -121,8 +122,7 @@ d.raw_sw <- read.csv("perceptual_transitions.csv", header = TRUE)
 d.raw_sw$ID <- d.raw_sw$Subject
 ```
 
-Make data tidy.
-
+Make data ET tidy and join trial info and demographics with raw data.
 ```{r}
 d.raw_sw <- d.raw_sw %>%
   gather(trial, trans, Trial1:Trial20) %>%
@@ -180,7 +180,7 @@ d <- d_ts %>%
 # length(levels(d$ID))
 ```
 
-Demographics.
+Get demographics for full sample.
 
 ```{r}
 demo_drop <- demo %>%
@@ -191,8 +191,11 @@ table(demo_drop$age_months)
 table(demo_drop$race)
 ```
 
+#Eyetracker data.
 
-Descriptives.
+Filter missing data and unfamiliar trials. 
+
+How many participants are in the full filtered ET file?
 
 ```{r}
 d_et_filt <- d_et %>% 
@@ -205,9 +208,9 @@ d_et_filt$ID <- as.factor(d_et_filt$ID)
 length(levels(d_et_filt$ID))
 ```
 
-Plot correct and incorrect trans distributions
+Plot distribution (density) of transitions (switches) by accuracy and similarity.
 
-```{r}
+```{r, echo=FALSE}
 d_et_filt$acc <- as.factor(d_et_filt$acc)
 
 ggplot(aes(x = trans, fill = acc), 
@@ -216,7 +219,9 @@ ggplot(aes(x = trans, fill = acc),
   facet_grid(.~similar) 
 ```
 
-```{r}
+Plot proportion accurate by similarity.
+
+```{r, echo=FALSE}
 d_et_filt$acc <- as.numeric(d_et_filt$acc)
 
 ms <- d_et_filt %>%
@@ -228,7 +233,11 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
   ylab("Proportion Accurate ET")
+```
 
+Plot the mean number of transitions (switches) by accuracy and similarity.
+
+```{r, echo=FALSE}
 ms <- d_et_filt %>%
   group_by(acc_et, similar)%>%
   multi_boot_standard(col = "trans", na.rm = TRUE)
@@ -239,40 +248,61 @@ ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") +
   xlab("Accuracy") + 
   ylab("Number of switches") + 
   facet_wrap(~similar)
-
-d_et_filt <- d_et_filt %>%
-  mutate(stim_pair = paste(condition, trial))
-
-ms
 ```
+
+Linear mixed-effects models predicting switch count based on similarity and accuracy.
+
+Question: is collinearity of similarity and accuracy a problem? 
 
 ```{r}
-glm_maximal_mod_trans <- lmer(trans ~ acc_et * similar +
-                           (1 | ID), 
-                         data = d_et_filt)
+glm_trans_full <- lmer(trans ~ similar + acc +
+                          (1 | ID) + (1 | target), 
+                         data = d_et_filt, REML = FALSE)
 
-coefs <- data.frame(coef(summary(glm_maximal_mod_trans)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
+glm_trans_interaction <- lmer(trans ~ similar * acc +
+                          (1 | ID) + (1 | target), 
+                         data = d_et_filt, REML = FALSE)
 
-describeBy(d_et_filt$trans, d_et_filt$similar)
-describeBy(d_et_filt$trans, d_et_filt$acc_et)
+glm_trans_sim <- lmer(trans ~ similar +
+                          (1 | ID) + (1 | target), 
+                         data = d_et_filt, REML = FALSE)
 
-# d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
-# d_et_filt$trial <- as.factor(d_et_filt$trial)
-# 
-# d_et_filt <- d_et_filt %>%
-#   select(ID, trial, similar, acc_et) %>%
-#   spread(similar, acc_et)
-# 
-# d_et_filt$dissimilar <- as.numeric(d_et_filt$dissimilar)
-# d_et_filt$similar <- as.numeric(d_et_filt$similar)
-# 
-# write.table(d_et_filt,paste('for_ttest.csv',sep=""), sep=",",row.names=FALSE)
+glm_trans_acc <- lmer(trans ~ acc +
+                          (1 | ID) + (1 | target), 
+                         data = d_et_filt, REML = FALSE)
+
+summary(glm_trans_full)
 ```
 
-Now the TS data.
+Test for effect of accuracy.
+```{r, echo=FALSE}
+kable(anova(glm_trans_full, glm_trans_sim))
+```
+
+Test for effect of similarity.
+```{r, echo=FALSE}
+kable(anova(glm_trans_full, glm_trans_acc))
+```
+
+Test for effect of interaction between accuracy and similarity.
+
+```{r, echo=FALSE}
+kable(anova(glm_trans_full, glm_trans_interaction))
+```
+
+Get means.
+```{r}
+describeBy(d_et_filt$trans, d_et_filt$similar)
+describeBy(d_et_filt$trans, d_et_filt$acc_et)
+```
+
+Summary of ET data:
+
+Accuracy was higher for dissimilar items.
+
+Similarity affected switch count (χ2(1)=5.52, p=0.02),such that similarity (compared to dissimilarity) added .16 (SE = .06) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
+
+#Touchscreen data.
 
 Filter fast and slow RTs, missing data, unfamiliar trials.
 
@@ -291,9 +321,9 @@ d_filt_rt_log$RT <- log(d_filt_rt_log$RT)
 
 ```
 
-Plot correct and incorrect RT distributions
+Plot RT distribution (density) by accuracy and similarity.
 
-```{r}
+```{r, echo=FALSE}
 d_filt_rt$acc <- as.factor(d_filt_rt$acc)
 
 ggplot(aes(x = log(RT), fill = acc), 
@@ -302,7 +332,9 @@ ggplot(aes(x = log(RT), fill = acc),
   facet_grid(.~similar) 
 ```
 
-```{r}
+Plot accuracy by similarity. 
+
+```{r, echo=FALSE}
 d_filt_rt$acc <- as.numeric(as.character(d_filt_rt$acc))
 
 ms <- d_filt_rt %>%
@@ -315,7 +347,11 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
              position = position_dodge(width = .9)) +
   xlab("Difficulty") + 
   ylab("Proportion Accurate TS")
+```
 
+Plot mean RT by accuracy and similarity.
+
+```{r, echo=FALSE}
 ms <- d_filt_rt %>%
   filter(!is.na(acc))%>%
   group_by(acc, similar)%>%
@@ -329,38 +365,73 @@ ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") +
   facet_wrap(~similar, labeller = label_both)
 ```
 
+Linear mixed-effects models predicting RT based on similarity and accuracy.
+
+Question: is colinearity of similarity and accuracy a problem? 
 
 ```{r}
-glm_maximal_mod_RT <- lmer(RT ~ acc * similar +
-                           (1 | ID), 
-                         data = d_filt_rt)
+glm_RT_full <- lmer(RT ~ similar + acc +
+                          (1 | ID) + (1 | target), 
+                         data = d_filt_rt, REML = FALSE)
 
-coefs <- data.frame(coef(summary(glm_maximal_mod_RT)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
+glm_RT_interaction <- lmer(RT ~ similar * acc +
+                          (1 | ID) + (1 | target), 
+                         data = d_filt_rt, REML = FALSE)
 
-describeBy(d_filt_rt$RT,d_filt_rt$acc)
+glm_RT_sim <- lmer(RT ~ similar +
+                          (1 | ID) + (1 | target), 
+                         data = d_filt_rt, REML = FALSE)
+
+glm_RT_acc <- lmer(RT ~ acc +
+                          (1 | ID) + (1 | target), 
+                         data = d_filt_rt, REML = FALSE)
+
+summary(glm_RT_full)
 ```
 
+Test for effect of accuracy.
+```{r, echo=FALSE}
+kable(anova(glm_RT_full, glm_RT_sim))
+```
 
-Compare accuracy across tasks.
+Test for effect of similarity.
+```{r, echo=FALSE}
+kable(anova(glm_RT_full, glm_RT_acc))
+```
 
+Test for effect of interaction between accuracy and similarity.
+```{r, echo=FALSE}
+kable(anova(glm_RT_full, glm_RT_interaction))
+```
+
+Get means.
 ```{r}
+describeBy(d_filt_rt$RT, d_filt_rt$similar)
+describeBy(d_filt_rt$RT, d_filt_rt$acc)
+```
+
+Summary of TS data:
+
+Accuracy was higher for dissimilar items.
+
+Accuracy affected RT (χ2(1)=30.20, p<.001), such that accuracy (compared to inaccuracy) decreased RTs by 926.53 ms (SE = 166.55). Similarity was not a significant predictor, and accuracy and similarity did not interact.
+
+#Plot accuracy across tasks.
+
+Will not include comparison in paper because ET/TS order was not counterbalanced, but for visualization purposes:
+
+```{r, echo=FALSE}
 d_compare <- d %>%
   select(ID, trial, similar, acc, acc_et, familiarity, age_months, target) %>%
   filter(familiarity != 0) %>%
   gather(task, acc, acc:acc_et) 
 
 levels(d_compare$task) <- list(touchscreen="acc", eyetracker="acc_et")
-
 d_compare$acc <- as.numeric(d_compare$acc)
 
 ms <- d_compare %>%
   group_by(similar, task)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
-
-ms
 
 ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
@@ -368,28 +439,7 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
   xlab("Similarity") + 
   ylab("Proportion Accurate") + 
   facet_wrap(~task, labeller = label_both)
-
-ms <- d_compare %>%
-  group_by(similar)%>%
-  multi_boot_standard(col = "acc", na.rm = TRUE)
-
-describeBy(d_compare$acc, d_compare$similar)
-
 ```
-
-```{r}
-d_compare$acc <- as.numeric(d_compare$acc)
-
-glm_maximal_mod_acc <- lmer(acc ~ task * similar + age_months +
-                           (1 |ID), 
-                         data = d_compare)
-
-coefs <- data.frame(coef(summary(glm_maximal_mod_acc)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
-```
-
 
 # Drift Diffusion Analysis
 
@@ -401,6 +451,8 @@ The parameters of the drift drift diffusion model are:
 * $\beta$ = initial bias
 * $\delta$ = drift rate: speed of information processing (close to zero means ambiguous information)
 * $\tau$ = nondecision time: motor response time
+
+Note: need to change input such that Bias is not measuring precognition! 
 
 ## Estimating parameters
 
@@ -432,7 +484,7 @@ sub.pars <- data.frame(Separation = numeric(),
 d_ddm$resp <- as.character(d_ddm$resp)
 ```
 
-```{r estpars}
+```{r estpars, echo=FALSE}
 conditions <- unique(as.character(d_ddm$similar))
 subs <- unique(as.character(d_ddm$ID)) 
 sub.pars.final <- data.frame()
@@ -460,7 +512,7 @@ for (j in 1:length(subs)) {
 
 This plot shows the mean parameter values & 95% C.I.s for each stimuli type
 
-```{r plotpars, fig.width=8, fig.height=6}
+```{r plotpars, fig.width=8, fig.height=6, echo=FALSE}
 sub.pars.final$Separation <- as.numeric(sub.pars.final$Separation)
 sub.pars.final$Non.Decision <- as.numeric(sub.pars.final$Non.Decision)
 sub.pars.final$Bias <- as.numeric(sub.pars.final$Bias)
@@ -484,7 +536,7 @@ sub.pars.final <- sub.pars.final %>%  gather(Param, Value, Separation:Drift)
 
 Plot distributions of parameters across conditions
 
-```{r}
+```{r, echo=FALSE}
 ggplot(aes(x = Value, fill = Similar), 
        data = filter(sub.pars.final, Param %in% c("Drift", "Separation"))) +
   geom_density(alpha = 0.7, adjust = 1.5) + 
@@ -494,7 +546,7 @@ ggplot(aes(x = Value, fill = Similar),
 
 Get means and CIs for parameter values and plot
 
-```{r}
+```{r, echo=FALSE}
 sub.pars.ms <- sub.pars.final %>%
   group_by(Similar, Param) %>%
   multi_boot_standard(column = "Value", empirical_function = "mean")
@@ -508,5 +560,3 @@ ggplot(aes(x = Similar, y = mean),
   ylab("Mean Param Value") +
   guides(fill = F) 
 ```
-
-

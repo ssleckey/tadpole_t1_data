@@ -26,7 +26,7 @@ Data analysis of toddler uncertainty monitoring study.
 
 Preliminaries.
 
-```{r, echo=FALSE}
+```{r, include = FALSE}
 setwd("~/Desktop/tadpole_t1_data/analysis/26-30-mos/")
 rm(list=ls())
 knitr::opts_chunk$set(fig.width=8, fig.height=5, 
@@ -108,11 +108,14 @@ d_ts <- d_ts %>%
   mutate(similar = ifelse(similarity == 1, "similar",
                                        "dissimilar")) %>%
   select(-similarity)
+```
 
-#how many touchscreen participants?
+
+```{r}
 d_ts$ID <- as.factor(as.character(d_ts$ID))
 length(levels(d_ts$ID))
 ```
+There are `r length(levels(d_ts$ID))` touchscreen participants.
 
 Read in ET data. 
 
@@ -128,15 +131,23 @@ Make data ET tidy and join trial info and demographics with raw data.
 d.raw_sw <- d.raw_sw %>%
   gather(trial, trans, Trial1:Trial20) %>%
   select(-Subject) 
+```
 
-#how many ET participants with transitions data?
+```{r}
 d.raw_sw$ID <- as.factor(as.character(d.raw_sw$ID))
 length(levels(d.raw_sw$ID))
+```
+There are `r length(levels(d.raw_sw$ID))` eyetracker participants with transitions data.
 
-#how many ET participants with accuracy data?
+```{r}
 d.raw_et$ID <- as.factor(as.character(d.raw_et$ID))
 length(levels(d.raw_et$ID))
-  
+```
+There are `r length(levels(d.raw_et$ID))` eyetracker participants with accuracy data.
+
+Join ET transitions and accuracy data and drop excluded participants (including pilots).
+
+```{r}
 d.raw_sw$trial <- str_replace(d.raw_sw$trial, "Trial","")
 d.raw_et$trial <- as.character(d.raw_et$trial)
 
@@ -164,22 +175,29 @@ d_et <- d_et %>%
   mutate(similar = ifelse(similarity == 1, "similar",
                                        "dissimilar")) %>%
   select(-similarity)
+```
 
-#how many total ET participants with both transitions and accuracy data?
+```{r}
 d_et$ID <- as.factor(as.character(d_et$ID))
 length(levels(d_et$ID))
 ```
 
-Merge TS and ET data.
+There are `r length(levels(d_et$ID))` participants with both transitions and accuracy data.
+
+Merge TS and ET data and drop excluded participants (including pilots).
 
 ```{r}
 d <- d_ts %>%
   full_join(d_et) %>%
   filter(drop != 1)
-#how many with either TS OR ET data?
-# d$ID <- as.factor(as.character(d$ID))
-# length(levels(d$ID))
 ```
+
+```{r}
+d$ID <- as.factor(as.character(d$ID))
+length(levels(d$ID))
+```
+
+There are `r length(levels(d$ID))` participants with either eyetracker or touchscreen data.
 
 Get demographics for full sample.
 
@@ -196,17 +214,11 @@ table(demo_drop$race)
 
 Filter missing data and unfamiliar trials. 
 
-How many participants are in the full filtered ET file?
-
 ```{r}
 d_et_filt <- d_et %>% 
   filter(!is.na(trans),
          !is.na(acc_et),
          familiarity != 0)
-
-#how many participants in full filtered ET file?
-d_et_filt$ID <- as.factor(d_et_filt$ID)
-length(levels(d_et_filt$ID))
 ```
 
 Plot distribution (density) of transitions (switches) by accuracy and similarity.
@@ -229,7 +241,7 @@ ms <- d_et_filt %>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc_et", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
@@ -239,11 +251,13 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
 Plot the mean number of transitions (switches) by accuracy and similarity.
 
 ```{r, echo=FALSE}
+d_et_filt$acc_et <- as.factor(as.character(d_et_filt$acc_et))
+
 ms <- d_et_filt %>%
   group_by(acc_et, similar)%>%
   multi_boot_standard(col = "trans", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(acc_et), y = mean, fill = acc_et)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
@@ -277,7 +291,7 @@ glm_trans_acc <- lmer(trans ~ acc +
 summary(glm_trans_full)
 
 #Random effects slopes
-coef(glm_trans_full)
+#coef(glm_trans_full)
 ```
 
 Fixed effects coeffiencients for full model.
@@ -293,6 +307,9 @@ kable(anova(glm_trans_full, glm_trans_sim))
 Test for effect of similarity.
 ```{r, echo=FALSE}
 kable(anova(glm_trans_full, glm_trans_acc))
+
+sim_effect <- anova(glm_trans_full, glm_trans_acc)
+sim_effect$p <- as.numeric(sim_effect$`Pr(>Chisq)`[2])
 ```
 
 Test for effect of interaction between accuracy and similarity.
@@ -311,7 +328,8 @@ Summary of ET data:
 
 Accuracy was higher for dissimilar items.
 
-Similarity affected switch count (χ2(1)=5.52, p=0.02),such that similarity (compared to dissimilarity) added .16 (SE = .06) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
+Similarity affected switch count (χ2(1)=`r round(sim_effect$Chisq[2], digits = 2)`, p=`r round(sim_effect$p[1], digits = 2)`)
+, such that similarity (compared to dissimilarity) added `r round(summary(glm_trans_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_trans_full)$coefficients[5], digits = 2)`) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
 
 #Touchscreen data.
 
@@ -353,7 +371,7 @@ ms <- d_filt_rt %>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Difficulty") + 
@@ -363,12 +381,14 @@ ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") +
 Plot mean RT by accuracy and similarity.
 
 ```{r, echo=FALSE}
+d_filt_rt$acc <- as.factor(as.character(d_filt_rt$acc))
+
 ms <- d_filt_rt %>%
   filter(!is.na(acc))%>%
   group_by(acc, similar)%>%
   multi_boot_standard(col = "RT", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
@@ -403,7 +423,7 @@ glm_RT_acc <- lmer(RT ~ acc +
 summary(glm_RT_full)
 
 #Random effects slopes
-coef(glm_RT_full)
+#coef(glm_RT_full)
 ```
 
 Fixed effects coeffiencients for full model.
@@ -414,6 +434,9 @@ kable(summary(glm_RT_full)$coefficients, digits = 2)
 Test for effect of accuracy.
 ```{r, echo=FALSE}
 kable(anova(glm_RT_full, glm_RT_sim))
+
+acc_effect <- anova(glm_RT_full, glm_RT_sim)
+acc_effect$p <- as.numeric(acc_effect$`Pr(>Chisq)`[2])
 ```
 
 Test for effect of similarity.
@@ -436,7 +459,9 @@ Summary of TS data:
 
 Accuracy was higher for dissimilar items.
 
-Accuracy affected RT (χ2(1)=30.20, p<.001), such that accuracy (compared to inaccuracy) decreased RTs by 926.53 ms (SE = 166.55). Similarity was not a significant predictor, and accuracy and similarity did not interact.
+Accuracy affected switch count (χ2(1)=`r round(acc_effect$Chisq[2], digits = 2)`, p=`r round(acc_effect$p[1], digits = 2)`)
+, such that similarity (compared to dissimilarity) added `r round(summary(glm_RT_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_RT_full)$coefficients[5], digits = 2)`) switches. Similarity was not a significant predictor, and accuracy and similarity did not interact.
+
 
 #Plot accuracy across tasks.
 
@@ -455,7 +480,7 @@ ms <- d_compare %>%
   group_by(similar, task)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
@@ -506,7 +531,7 @@ sub.pars <- data.frame(Separation = numeric(),
 d_ddm$resp <- as.character(d_ddm$resp)
 ```
 
-```{r estpars, echo=FALSE}
+```{r estpars, include=FALSE}
 conditions <- unique(as.character(d_ddm$similar))
 subs <- unique(as.character(d_ddm$ID)) 
 sub.pars.final <- data.frame()
@@ -568,12 +593,12 @@ ggplot(aes(x = Value, fill = Similar),
 
 Get means and CIs for parameter values and plot
 
-```{r, echo=FALSE}
+```{r}
 sub.pars.ms <- sub.pars.final %>%
   group_by(Similar, Param) %>%
   multi_boot_standard(column = "Value", empirical_function = "mean")
 
-ggplot(aes(x = Similar, y = mean), 
+ggplot(aes(x = Similar, y = mean, fill = Similar), 
        data = filter(sub.pars.ms)) +
   geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper)) +

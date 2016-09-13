@@ -123,6 +123,7 @@ d.raw_sw$ID <- d.raw_sw$Subject
 ```
 
 Make data ET tidy and join trial info and demographics with raw data.
+
 ```{r}
 d.raw_sw <- d.raw_sw %>%
   gather(trial, trans, Trial1:Trial20) %>%
@@ -250,28 +251,38 @@ ggplot(ms, aes(x = factor(acc_et), y = mean)) + geom_bar(stat = "identity") +
   facet_wrap(~similar)
 ```
 
+##Analyses
 Linear mixed-effects models predicting switch count based on similarity and accuracy.
 
-Question: is collinearity of similarity and accuracy a problem? 
-
 ```{r}
+#more complex random effects structures fail to converge.
+#expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
+
 glm_trans_full <- lmer(trans ~ similar + acc +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_interaction <- lmer(trans ~ similar * acc +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_sim <- lmer(trans ~ similar +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_acc <- lmer(trans ~ acc +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_et_filt, REML = FALSE)
 
 summary(glm_trans_full)
+
+#Random effects slopes
+coef(glm_trans_full)
+```
+
+Fixed effects coeffiencients for full model.
+```{r, echo = FALSE}
+kable(summary(glm_trans_full)$coefficients, digits = 2)
 ```
 
 Test for effect of accuracy.
@@ -365,28 +376,39 @@ ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") +
   facet_wrap(~similar, labeller = label_both)
 ```
 
+##Analyses
+
 Linear mixed-effects models predicting RT based on similarity and accuracy.
 
-Question: is colinearity of similarity and accuracy a problem? 
-
 ```{r}
+#more complex random effects structures fail to converge.
+#expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
+
 glm_RT_full <- lmer(RT ~ similar + acc +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_filt_rt, REML = FALSE)
 
 glm_RT_interaction <- lmer(RT ~ similar * acc +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_filt_rt, REML = FALSE)
 
 glm_RT_sim <- lmer(RT ~ similar +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_filt_rt, REML = FALSE)
 
 glm_RT_acc <- lmer(RT ~ acc +
-                          (1 | ID) + (1 | target), 
+                          (similar + acc | ID) + (1 | target), 
                          data = d_filt_rt, REML = FALSE)
 
 summary(glm_RT_full)
+
+#Random effects slopes
+coef(glm_RT_full)
+```
+
+Fixed effects coeffiencients for full model.
+```{r, echo = FALSE}
+kable(summary(glm_RT_full)$coefficients, digits = 2)
 ```
 
 Test for effect of accuracy.

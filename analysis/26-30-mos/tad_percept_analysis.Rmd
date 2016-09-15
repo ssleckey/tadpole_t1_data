@@ -45,6 +45,9 @@ library(xtable)
 library(knitr)
 library(markdown)
 library(psych)
+library(Hmisc)
+library(magrittr)
+
 theme_set(theme_bw())
 ```
 
@@ -137,13 +140,13 @@ d.raw_sw <- d.raw_sw %>%
 d.raw_sw$ID <- as.factor(as.character(d.raw_sw$ID))
 length(levels(d.raw_sw$ID))
 ```
-There are `r length(levels(d.raw_sw$ID))` eyetracker participants with transitions data.
+There are `r length(levels(d.raw_sw$ID))` eyetracker participants with transitions data including pilots and others to-be-excluded.
 
 ```{r}
 d.raw_et$ID <- as.factor(as.character(d.raw_et$ID))
 length(levels(d.raw_et$ID))
 ```
-There are `r length(levels(d.raw_et$ID))` eyetracker participants with accuracy data.
+There are `r length(levels(d.raw_et$ID))` eyetracker participants with accuracy data including pilots and others to-be-excluded.
 
 Join ET transitions and accuracy data and drop excluded participants (including pilots).
 
@@ -182,7 +185,7 @@ d_et$ID <- as.factor(as.character(d_et$ID))
 length(levels(d_et$ID))
 ```
 
-There are `r length(levels(d_et$ID))` participants with both transitions and accuracy data.
+There are `r length(levels(d_et$ID))` eyetracker participants with both transitions and accuracy data.
 
 Merge TS and ET data and drop excluded participants (including pilots).
 
@@ -197,20 +200,76 @@ d$ID <- as.factor(as.character(d$ID))
 length(levels(d$ID))
 ```
 
-There are `r length(levels(d$ID))` participants with either eyetracker or touchscreen data.
+There are `r length(levels(d$ID))` participants with *either* eyetracker or touchscreen data.
 
-Get demographics for full sample.
+#Demographics
 
-```{r}
+```{r, include = FALSE}
 demo_drop <- demo %>%
   filter(drop != 1)
 
-table(demo_drop$income)
-table(demo_drop$age_months)
-table(demo_drop$race)
+demo_drop$income <- str_replace(demo_drop$income,"f ","f")
+
+demo_drop$income <- str_replace(demo_drop$income,"a","<15,000")
+demo_drop$income <- str_replace(demo_drop$income,"b","15,000-25,000")
+demo_drop$income <- str_replace(demo_drop$income,"c","25,000-40,000")
+demo_drop$income <- str_replace(demo_drop$income,"d","40,000-60,000")
+demo_drop$income <- str_replace(demo_drop$income,"e","60,000-90,000")
+demo_drop$income <- str_replace(demo_drop$income,"f",">90,000")
+
+demo_drop$income <- factor(demo_drop$income, levels = c("","<15,000","15,000-25,000","25,000-40,000","40,000-60,000","60,000-90,000",">90,000"))
 ```
 
-#Eyetracker data.
+```{r}
+summary(demo_drop$income)
+summary(demo_drop$race)
+summary(demo_drop$gender)
+psych::describe(demo_drop$age_months)
+
+```
+
+#Accuracy
+
+```{r, echo=FALSE}
+d_compare <- d %>%
+  select(ID, trial, similar, acc, acc_et, familiarity, age_months, target) %>%
+  filter(familiarity != 0) %>%
+  gather(task, acc, acc:acc_et) 
+
+levels(d_compare$task) <- list(touchscreen="acc", eyetracker="acc_et")
+d_compare$acc <- as.numeric(d_compare$acc)
+
+ms <- d_compare %>%
+  group_by(similar, task)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate") + 
+  facet_wrap(~task, labeller = label_both)
+```
+
+Get mean accuracy by task and similarity.
+```{r}
+d_acc_et <- d_compare %>%
+  filter(task == "eyetracker")
+d_acc_ts <- d_compare %>%
+  filter(task == "touchscreen")
+```
+
+Accuracy for eyetracker
+```{r}
+psych::describeBy(d_acc_et$acc, d_acc_et$similar)
+```
+
+Accuracy for touchscreen
+```{r}
+psych::describeBy(d_acc_ts$acc, d_acc_ts$similar)
+```
+
+#Eyetracker data
 
 Filter missing data and unfamiliar trials. 
 
@@ -266,6 +325,7 @@ ggplot(ms, aes(x = factor(acc_et), y = mean, fill = acc_et)) + geom_bar(stat = "
 ```
 
 ##Analyses
+
 Linear mixed-effects models predicting switch count based on similarity and accuracy.
 
 ```{r}
@@ -287,17 +347,19 @@ glm_trans_sim <- lmer(trans ~ similar +
 glm_trans_acc <- lmer(trans ~ acc +
                           (similar + acc | ID) + (1 | target), 
                          data = d_et_filt, REML = FALSE)
+```
 
+Summary of maximal model (without interaction term).
+```{r}
 summary(glm_trans_full)
-
-#Random effects slopes
-#coef(glm_trans_full)
 ```
 
 Fixed effects coeffiencients for full model.
 ```{r, echo = FALSE}
 kable(summary(glm_trans_full)$coefficients, digits = 2)
 ```
+
+Compare model fits as significance test.
 
 Test for effect of accuracy.
 ```{r, echo=FALSE}
@@ -318,18 +380,128 @@ Test for effect of interaction between accuracy and similarity.
 kable(anova(glm_trans_full, glm_trans_interaction))
 ```
 
-Get means.
+Similarity affected switch count (*χ2(1)*=`r round(sim_effect$Chisq[2], digits = 2)`, *p*=`r round(sim_effect$p[1], digits = 2)`)
+, such that similarity (compared to dissimilarity) added `r round(summary(glm_trans_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_trans_full)$coefficients[5], digits = 2)`) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
+
+Get mean transitions by similarity and accuracy.
 ```{r}
 describeBy(d_et_filt$trans, d_et_filt$similar)
 describeBy(d_et_filt$trans, d_et_filt$acc_et)
 ```
 
-Summary of ET data:
+Accuracy and similarity are correlated. Let's look at the similarity effect separately for accurate and inaccurate trials. To do this we will conduct a paired-samples t-test on the average number of transitions for similar vs. dissimilar trials, first for the accurate trials, and then for the inaccurate trials.
+
+```{r}
+#accurate trials
+d_et_filt_t <- filter(d_et_filt, acc_et == "1") %>%
+  select(ID, trial, trans, similar) %>%
+  group_by(ID, similar) %>%
+  summarise(trans = mean(trans)) %>%
+  spread(similar, trans)
+  
+# paired t-test
+test_acc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE) 
+test_acc
+
+#inaccurate trials
+d_et_filt_t <- filter(d_et_filt, acc_et == "0") %>%
+  select(ID, trial, trans, similar) %>%
+  group_by(ID, similar) %>%
+  summarise(trans = mean(trans)) %>%
+  spread(similar, trans)
+  
+# paired t-test
+test_inacc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE) 
+test_inacc
+```
+
+The effect of similarity was significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, but not inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
+
+Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
+
+```{r}
+d_et_filt$acc_et <- as.numeric(as.character(d_et_filt$acc_et))
+
+d_et_filt_id <- d_et_filt %>%
+  group_by(ID) %>%
+  mutate(trans_acc = mean(trans[acc_et == 1])) %>%
+  mutate(trans_inacc = mean(trans[acc_et == 0])) %>%
+  mutate(trans_sim = mean(trans[similar == "similar"])) %>%
+  mutate(trans_dissim = mean(trans[similar == "dissimilar"])) %>%
+  mutate(trans_acc_diff = trans_inacc - trans_acc) %>%
+  mutate(trans_sim_diff = trans_sim - trans_dissim) %>%
+  mutate(avg_acc = mean(acc_et))
+```
+
+```{r, echo=FALSE}
+ggplot(aes(x = trans_acc_diff), 
+       data = d_et_filt_id) +
+  geom_density(alpha = 0.7, adjust = 1.5)
+
+ggplot(aes(x = trans_sim_diff), 
+       data = d_et_filt_id) +
+  geom_density(alpha = 0.7, adjust = 1.5)
+```
+
+Correlate differentials with accuracy.
+
+```{r}
+d_et_filt_id <- d_et_filt_id %>%
+  select(ID, trans_acc_diff, trans_sim_diff, avg_acc) %>%
+  distinct %>%
+  ungroup %>%
+  select(-ID)
+
+rcorr(as.matrix(d_et_filt_id))
+```
+
+```{r, include = FALSE}
+corstarsl <- function(x){ 
+  require(Hmisc) 
+  x <- as.matrix(x) 
+  R <- rcorr(x)$r 
+  p <- rcorr(x)$P 
+  
+  ## define notions for significance levels; spacing is important.
+  mystars <- ifelse(p < .001, "***", ifelse(p < .01, "** ", ifelse(p < .05, "* ", " ")))
+  
+  ## trunctuate the matrix that holds the correlations to two decimal
+  R <- format(round(cbind(rep(-1.11, ncol(x)), R), 2))[,-1] 
+  
+  ## build a new matrix that includes the correlations with their apropriate stars 
+  Rnew <- matrix(paste(R, mystars, sep=""), ncol=ncol(x)) 
+  diag(Rnew) <- paste(diag(R), " ", sep="") 
+  rownames(Rnew) <- colnames(x) 
+  colnames(Rnew) <- paste(colnames(x), "", sep="") 
+  
+  ## remove upper triangle
+  Rnew <- as.matrix(Rnew)
+  Rnew[upper.tri(Rnew, diag = TRUE)] <- ""
+  Rnew <- as.data.frame(Rnew) 
+  
+  ## remove last column and return the matrix (which is now a data frame)
+  Rnew <- cbind(Rnew[1:length(Rnew)-1])
+  return(Rnew) 
+}
+```
+
+Correlation matrix for individual differences in transitions differentials and accuracy.
+```{r}
+corstarsl(d_et_filt_id)
+```
+
+Individual differences in transitions differentials (i.e., transitions for similar - similar; trans for inacc - acc) were correlated with each other but not with accuracy. 
+
+##Summary of Eyetracker Results
 
 Accuracy was higher for dissimilar items.
 
 Similarity affected switch count (χ2(1)=`r round(sim_effect$Chisq[2], digits = 2)`, p=`r round(sim_effect$p[1], digits = 2)`)
 , such that similarity (compared to dissimilarity) added `r round(summary(glm_trans_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_trans_full)$coefficients[5], digits = 2)`) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
+
+T-tests showed that the effect of similarity was significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, but not inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
+
+Individual differences in transitions differentials (i.e., transitions for similar - similar; trans for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
 
 #Touchscreen data.
 
@@ -419,17 +591,19 @@ glm_RT_sim <- lmer(RT ~ similar +
 glm_RT_acc <- lmer(RT ~ acc +
                           (similar + acc | ID) + (1 | target), 
                          data = d_filt_rt, REML = FALSE)
+```
 
+Summary of maximal model (without interaction term)
+```{r}
 summary(glm_RT_full)
-
-#Random effects slopes
-#coef(glm_RT_full)
 ```
 
 Fixed effects coeffiencients for full model.
 ```{r, echo = FALSE}
 kable(summary(glm_RT_full)$coefficients, digits = 2)
 ```
+
+Compare model fits as significance test.
 
 Test for effect of accuracy.
 ```{r, echo=FALSE}
@@ -449,44 +623,128 @@ Test for effect of interaction between accuracy and similarity.
 kable(anova(glm_RT_full, glm_RT_interaction))
 ```
 
-Get means.
+Accuracy affected switch count (χ2(1)=`r round(acc_effect$Chisq[2], digits = 2)`, p=`r round(acc_effect$p[1], digits = 2)`)
+, such that similarity (compared to dissimilarity) added `r round(summary(glm_RT_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_RT_full)$coefficients[5], digits = 2)`) switches. Similarity was not a significant predictor, and accuracy and similarity did not interact.
+
+Get mean RT by similarity and accuracy.
 ```{r}
 describeBy(d_filt_rt$RT, d_filt_rt$similar)
 describeBy(d_filt_rt$RT, d_filt_rt$acc)
 ```
 
-Summary of TS data:
+Accuracy and similarity are correlated. Let's look at the similarity effect separately for accurate and inaccurate trials. To do this we will conduct a paired-samples t-test on the average number of transitions for similar vs. dissimilar trials, first for the accurate trials, and then for the inaccurate trials.
+
+```{r}
+#accurate trials
+d_filt_rt_t <- filter(d_filt_rt, acc == "1") %>%
+  select(ID, trial, RT, similar) %>%
+  group_by(ID, similar) %>%
+  summarise(RT = mean(RT)) %>%
+  spread(similar, RT)
+  
+# paired t-test
+test_acc <- t.test(d_filt_rt_t$similar, d_filt_rt_t$dissimilar,paired=TRUE) 
+test_acc
+
+#inaccurate trials
+d_filt_rt_t <- filter(d_filt_rt, acc == "0") %>%
+  select(ID, trial, RT, similar) %>%
+  group_by(ID, similar) %>%
+  summarise(RT = mean(RT)) %>%
+  spread(similar, RT)
+  
+# paired t-test
+test_inacc <- t.test(d_filt_rt_t$similar, d_filt_rt_t$dissimilar,paired=TRUE) 
+test_inacc
+```
+
+The effect of similarity was not significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, nor was it significant for inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
+
+Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
+
+```{r}
+d_filt_rt$acc <- as.numeric(as.character(d_filt_rt$acc))
+
+d_filt_rt_id <- d_filt_rt %>%
+  group_by(ID) %>%
+  mutate(rt_acc = mean(RT[acc == 1])) %>%
+  mutate(rt_inacc = mean(RT[acc == 0])) %>%
+  mutate(rt_sim = mean(RT[similar == "similar"])) %>%
+  mutate(rt_dissim = mean(RT[similar == "dissimilar"])) %>%
+  mutate(rt_acc_diff = rt_inacc - rt_acc) %>%
+  mutate(rt_sim_diff = rt_sim - rt_dissim) %>%
+  mutate(avg_acc = mean(acc))
+```
+
+```{r, echo=FALSE}
+ggplot(aes(x = rt_acc_diff), 
+       data = d_filt_rt_id) +
+  geom_density(alpha = 0.7, adjust = 1.5)
+
+ggplot(aes(x = rt_sim_diff), 
+       data = d_filt_rt_id) +
+  geom_density(alpha = 0.7, adjust = 1.5)
+```
+
+Correlate differentials with accuracy.
+
+```{r}
+d_filt_rt_id <- d_filt_rt_id %>%
+  select(ID, rt_acc_diff, rt_sim_diff, avg_acc) %>%
+  distinct %>%
+  ungroup %>%
+  select(-ID)
+
+rcorr(as.matrix(d_filt_rt_id))
+```
+
+```{r, include = FALSE}
+corstarsl <- function(x){ 
+  require(Hmisc) 
+  x <- as.matrix(x) 
+  R <- rcorr(x)$r 
+  p <- rcorr(x)$P 
+  
+  ## define notions for significance levels; spacing is important.
+  mystars <- ifelse(p < .001, "***", ifelse(p < .01, "** ", ifelse(p < .05, "* ", " ")))
+  
+  ## trunctuate the matrix that holds the correlations to two decimal
+  R <- format(round(cbind(rep(-1.11, ncol(x)), R), 2))[,-1] 
+  
+  ## build a new matrix that includes the correlations with their apropriate stars 
+  Rnew <- matrix(paste(R, mystars, sep=""), ncol=ncol(x)) 
+  diag(Rnew) <- paste(diag(R), " ", sep="") 
+  rownames(Rnew) <- colnames(x) 
+  colnames(Rnew) <- paste(colnames(x), "", sep="") 
+  
+  ## remove upper triangle
+  Rnew <- as.matrix(Rnew)
+  Rnew[upper.tri(Rnew, diag = TRUE)] <- ""
+  Rnew <- as.data.frame(Rnew) 
+  
+  ## remove last column and return the matrix (which is now a data frame)
+  Rnew <- cbind(Rnew[1:length(Rnew)-1])
+  return(Rnew) 
+}
+```
+
+Correlation matrix for individual differences in transitions differentials and accuracy.
+```{r}
+corstarsl(d_filt_rt_id)
+```
+
+Individual differences in RT differentials (i.e., RT for similar - similar; RT for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
+
+##Summary of Touchscreen Results
 
 Accuracy was higher for dissimilar items.
 
 Accuracy affected switch count (χ2(1)=`r round(acc_effect$Chisq[2], digits = 2)`, p=`r round(acc_effect$p[1], digits = 2)`)
 , such that similarity (compared to dissimilarity) added `r round(summary(glm_RT_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_RT_full)$coefficients[5], digits = 2)`) switches. Similarity was not a significant predictor, and accuracy and similarity did not interact.
 
+T-tests showed that the effect of similarity was not significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, nor was it significant for inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
 
-#Plot accuracy across tasks.
-
-Will not include comparison in paper because ET/TS order was not counterbalanced, but for visualization purposes:
-
-```{r, echo=FALSE}
-d_compare <- d %>%
-  select(ID, trial, similar, acc, acc_et, familiarity, age_months, target) %>%
-  filter(familiarity != 0) %>%
-  gather(task, acc, acc:acc_et) 
-
-levels(d_compare$task) <- list(touchscreen="acc", eyetracker="acc_et")
-d_compare$acc <- as.numeric(d_compare$acc)
-
-ms <- d_compare %>%
-  group_by(similar, task)%>%
-  multi_boot_standard(col = "acc", na.rm = TRUE)
-
-ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
-             position = position_dodge(width = .9)) +
-  xlab("Similarity") + 
-  ylab("Proportion Accurate") + 
-  facet_wrap(~task, labeller = label_both)
-```
+Individual differences in RT differentials (i.e., RT for similar - similar; RT for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
 
 # Drift Diffusion Analysis
 

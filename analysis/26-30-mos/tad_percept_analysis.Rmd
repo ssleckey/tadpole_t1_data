@@ -517,8 +517,13 @@ d_filt_rt <- d_ts %>%
          !is.na(acc),
          familiarity != 0)
 
-d_filt_rt_log <- d_filt_rt
-d_filt_rt_log$RT <- log(d_filt_rt_log$RT)
+d_filt_rt_log <- d_ts %>%
+  group_by(ID)%>%
+  mutate(RT = log(RT))%>%
+  filter(log(RT) < top_bound, 
+         log(RT) > bottom_bound,
+         !is.na(acc),
+         familiarity != 0)
 
 ```
 

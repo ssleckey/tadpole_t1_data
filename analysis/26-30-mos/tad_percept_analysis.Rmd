@@ -275,8 +275,10 @@ Filter missing data and unfamiliar trials.
 
 ```{r}
 d_et_filt <- d_et %>% 
+  mutate(acc = acc_et)%>%
+  select(-acc_et)%>%
   filter(!is.na(trans),
-         !is.na(acc_et),
+         !is.na(acc),
          familiarity != 0)
 ```
 
@@ -294,11 +296,11 @@ ggplot(aes(x = trans, fill = acc),
 Plot proportion accurate by similarity.
 
 ```{r, echo=FALSE}
-d_et_filt$acc <- as.numeric(d_et_filt$acc)
+d_et_filt$acc <- as.numeric(as.character(d_et_filt$acc))
 
 ms <- d_et_filt %>%
   group_by(similar)%>%
-  multi_boot_standard(col = "acc_et", na.rm = TRUE)
+  multi_boot_standard(col = "acc", na.rm = TRUE)
 
 ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
@@ -310,13 +312,13 @@ ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat =
 Plot the mean number of transitions (switches) by accuracy and similarity.
 
 ```{r, echo=FALSE}
-d_et_filt$acc_et <- as.factor(as.character(d_et_filt$acc_et))
+d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
 
 ms <- d_et_filt %>%
-  group_by(acc_et, similar)%>%
+  group_by(acc, similar)%>%
   multi_boot_standard(col = "trans", na.rm = TRUE)
 
-ggplot(ms, aes(x = factor(acc_et), y = mean, fill = acc_et)) + geom_bar(stat = "identity") + 
+ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Accuracy") + 
@@ -332,31 +334,45 @@ Linear mixed-effects models predicting switch count based on similarity and accu
 #more complex random effects structures fail to converge.
 #expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
 
+d_et_filt$acc <- as.numeric(d_et_filt$acc)
+
 glm_trans_full <- lmer(trans ~ similar + acc +
-                          (similar + acc | ID) + (1 | target), 
+                          (similar + acc | ID), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_interaction <- lmer(trans ~ similar * acc +
-                          (similar + acc | ID) + (1 | target), 
+                          (similar + acc | ID), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_sim <- lmer(trans ~ similar +
-                          (similar + acc | ID) + (1 | target), 
+                          (similar + acc | ID), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_acc <- lmer(trans ~ acc +
-                          (similar + acc | ID) + (1 | target), 
+                          (similar + acc | ID), 
+                         data = d_et_filt, REML = FALSE)
+
+glm_trans_age <- lmer(trans ~ similar + acc + age_months +
+                          (similar + acc | ID), 
+                         data = d_et_filt, REML = FALSE)
+
+glm_trans_age_sim <- lmer(trans ~  acc + similar * age_months +
+                          (similar + acc | ID), 
+                         data = d_et_filt, REML = FALSE)
+
+glm_trans_age_acc <- lmer(trans ~ similar + acc * age_months +
+                          (similar + acc | ID), 
                          data = d_et_filt, REML = FALSE)
 ```
 
-Summary of maximal model (without interaction term).
+Summary of maximal model (withinteraction term).
 ```{r}
-summary(glm_trans_full)
+summary(glm_trans_interaction)
 ```
 
 Fixed effects coeffiencients for full model.
 ```{r, echo = FALSE}
-kable(summary(glm_trans_full)$coefficients, digits = 2)
+kable(summary(glm_trans_interaction)$coefficients, digits = 2)
 ```
 
 Compare model fits as significance test.
@@ -380,20 +396,40 @@ Test for effect of interaction between accuracy and similarity.
 kable(anova(glm_trans_full, glm_trans_interaction))
 ```
 
+Test for effect of age
+
+```{r, echo=FALSE}
+kable(anova(glm_trans_full, glm_trans_age))
+```
+
+Test for effect interaction of age and sim
+
+```{r, echo=FALSE}
+kable(anova(glm_trans_age_sim, glm_trans_age))
+```
+
+Test for effect interaction of age and acc
+
+```{r, echo=FALSE}
+kable(anova(glm_trans_age_acc, glm_trans_age))
+```
+
 Similarity affected switch count (*χ2(1)*=`r round(sim_effect$Chisq[2], digits = 2)`, *p*=`r round(sim_effect$p[1], digits = 2)`)
 , such that similarity (compared to dissimilarity) added `r round(summary(glm_trans_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_trans_full)$coefficients[5], digits = 2)`) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
 
 Get mean transitions by similarity and accuracy.
 ```{r}
 describeBy(d_et_filt$trans, d_et_filt$similar)
-describeBy(d_et_filt$trans, d_et_filt$acc_et)
+describeBy(d_et_filt$trans, d_et_filt$acc)
 ```
 
 Accuracy and similarity are correlated. Let's look at the similarity effect separately for accurate and inaccurate trials. To do this we will conduct a paired-samples t-test on the average number of transitions for similar vs. dissimilar trials, first for the accurate trials, and then for the inaccurate trials.
 
 ```{r}
+d_et_filt$acc <- as.character(d_et_filt$acc)
+
 #accurate trials
-d_et_filt_t <- filter(d_et_filt, acc_et == "1") %>%
+d_et_filt_t <- filter(d_et_filt, acc == "2") %>%
   select(ID, trial, trans, similar) %>%
   group_by(ID, similar) %>%
   summarise(trans = mean(trans)) %>%
@@ -404,11 +440,13 @@ test_acc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE)
 test_acc
 
 #inaccurate trials
-d_et_filt_t <- filter(d_et_filt, acc_et == "0") %>%
+d_et_filt_t <- filter(d_et_filt, acc == "1") %>%
   select(ID, trial, trans, similar) %>%
   group_by(ID, similar) %>%
   summarise(trans = mean(trans)) %>%
-  spread(similar, trans)
+  spread(similar, trans)%>%
+  filter(!is.na(similar))%>%
+  filter(!is.na(dissimilar))
   
 # paired t-test
 test_inacc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE) 
@@ -420,17 +458,17 @@ The effect of similarity was significant among accurate trials, *t* = `r round(t
 Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
 
 ```{r}
-d_et_filt$acc_et <- as.numeric(as.character(d_et_filt$acc_et))
+d_et_filt$acc <- as.numeric(as.character(d_et_filt$acc))
 
 d_et_filt_id <- d_et_filt %>%
   group_by(ID) %>%
-  mutate(trans_acc = mean(trans[acc_et == 1])) %>%
-  mutate(trans_inacc = mean(trans[acc_et == 0])) %>%
+  mutate(trans_acc = mean(trans[acc == 1])) %>%
+  mutate(trans_inacc = mean(trans[acc == 0])) %>%
   mutate(trans_sim = mean(trans[similar == "similar"])) %>%
   mutate(trans_dissim = mean(trans[similar == "dissimilar"])) %>%
   mutate(trans_acc_diff = trans_inacc - trans_acc) %>%
   mutate(trans_sim_diff = trans_sim - trans_dissim) %>%
-  mutate(avg_acc = mean(acc_et))
+  mutate(avg_acc = mean(acc))
 ```
 
 ```{r, echo=FALSE}
@@ -517,14 +555,8 @@ d_filt_rt <- d_ts %>%
          !is.na(acc),
          familiarity != 0)
 
-d_filt_rt_log <- d_ts %>%
-  group_by(ID)%>%
-  mutate(RT = log(RT))%>%
-  filter(log(RT) < top_bound, 
-         log(RT) > bottom_bound,
-         !is.na(acc),
-         familiarity != 0)
-
+d_filt_rt_log <- d_filt_rt %>%
+  mutate(RT = log(RT))
 ```
 
 Plot RT distribution (density) by accuracy and similarity.
@@ -532,7 +564,7 @@ Plot RT distribution (density) by accuracy and similarity.
 ```{r, echo=FALSE}
 d_filt_rt$acc <- as.factor(d_filt_rt$acc)
 
-ggplot(aes(x = log(RT), fill = acc), 
+ggplot(aes(x = RT, fill = acc), 
        data = d_filt_rt) +
   geom_density(alpha = 0.7, adjust = 1.5) + 
   facet_grid(.~similar) 
@@ -582,25 +614,37 @@ Linear mixed-effects models predicting RT based on similarity and accuracy.
 #expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
 
 glm_RT_full <- lmer(RT ~ similar + acc +
-                          (similar + acc | ID) + (1 | target), 
-                         data = d_filt_rt, REML = FALSE)
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
 
 glm_RT_interaction <- lmer(RT ~ similar * acc +
-                          (similar + acc | ID) + (1 | target), 
-                         data = d_filt_rt, REML = FALSE)
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
 
 glm_RT_sim <- lmer(RT ~ similar +
-                          (similar + acc | ID) + (1 | target), 
-                         data = d_filt_rt, REML = FALSE)
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
 
 glm_RT_acc <- lmer(RT ~ acc +
-                          (similar + acc | ID) + (1 | target), 
-                         data = d_filt_rt, REML = FALSE)
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
+
+glm_RT_age <- lmer(RT ~ similar + acc + age_months +
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
+
+glm_RT_age_sim <- lmer(RT ~  acc + similar * age_months +
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
+
+glm_RT_age_acc <- lmer(RT ~ similar + acc * age_months +
+                          (similar + acc | ID), 
+                         data = d_filt_rt_log, REML = FALSE)
 ```
 
-Summary of maximal model (without interaction term)
+Summary of maximal model (with interaction term)
 ```{r}
-summary(glm_RT_full)
+summary(glm_RT_interaction)
 ```
 
 Fixed effects coeffiencients for full model.
@@ -621,6 +665,21 @@ acc_effect$p <- as.numeric(acc_effect$`Pr(>Chisq)`[2])
 Test for effect of similarity.
 ```{r, echo=FALSE}
 kable(anova(glm_RT_full, glm_RT_acc))
+```
+
+Test for effect of age.
+```{r, echo=FALSE}
+kable(anova(glm_RT_full, glm_RT_age))
+```
+
+Test for interaction effect of age and acc.
+```{r, echo=FALSE}
+kable(anova(glm_RT_age_acc, glm_RT_age))
+```
+
+Test for interaction effect of age and sim.
+```{r, echo=FALSE}
+kable(anova(glm_RT_age_sim, glm_RT_age))
 ```
 
 Test for effect of interaction between accuracy and similarity.
@@ -750,123 +809,3 @@ Accuracy affected switch count (χ2(1)=`r round(acc_effect$Chisq[2], digits = 2)
 T-tests showed that the effect of similarity was not significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, nor was it significant for inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
 
 Individual differences in RT differentials (i.e., RT for similar - similar; RT for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
-
-# Drift Diffusion Analysis
-
-Workflow taken from Nordmeyer et al. (2016). The goal is to estimate parameters separately for each participant and then we aggregate across participants to get means & confidence intervals on the parameters.
-
-The parameters of the drift drift diffusion model are: 
-
-* $\alpha$ = boundary separation: speed-accuracy tradeoff (higher values mean higher accuracy)
-* $\beta$ = initial bias
-* $\delta$ = drift rate: speed of information processing (close to zero means ambiguous information)
-* $\tau$ = nondecision time: motor response time
-
-Note: need to change input such that Bias is not measuring precognition! 
-
-## Estimating parameters
-
-```{r setuppars}
-# get the data we care about and format for Rwiener functions
-# columns need to be named "q" for RT and "resp" for response
-d_ddm <- d_filt_rt %>% 
-  filter(RT <= 6000, RT >= 600) %>% 
-  mutate(RT_sec = RT / 1000) %>% 
-  select(ID, similar, RT_sec, acc, response) %>% 
-  dplyr::rename(q = RT_sec)
-
-d_ddm$acc <- as.factor(d_ddm$acc)
-levels(d_ddm$acc) <- list(lower="0", upper="1")
-
-d_ddm <- d_ddm %>% mutate(resp = acc)
-```
-
-```{r}
-sub.pars <- data.frame(Separation = numeric(),
-                       Non.Decision = numeric(),
-                       Bias = numeric(),
-                       Drift = numeric(),
-                       Similar = character(),
-                       Sub.Num = character(),
-                       stringsAsFactors = F)
-
-#because RWiener is finicky:
-d_ddm$resp <- as.character(d_ddm$resp)
-```
-
-```{r estpars, include=FALSE}
-conditions <- unique(as.character(d_ddm$similar))
-subs <- unique(as.character(d_ddm$ID)) 
-sub.pars.final <- data.frame()
-
-for (j in 1:length(subs)) {
-  sid <- as.character(subs[j]) 
-  print(sid)
-  dat <- as.data.frame(filter(d_ddm, ID == sid))
-    # fit ddm for each participant
-    # and for each condition run
-  for (cond in 1:length(conditions)) {
-    dat_cond <- filter(dat, similar == conditions[cond])
-    condition_type <- conditions[cond]
-    print(condition_type)
-    opt <- optim(c(1, .1, .1, 1), wiener_deviance, 
-              dat=select(dat_cond, c(q, resp)), method="Nelder-Mead")
-    pars <- c(opt$par, condition_type, sid)
-    sub.pars[cond,] <- pars
-  }
-  sub.pars.final <- rbind(sub.pars.final, sub.pars)  
-} 
-```
-
-### Plot Parameters
-
-This plot shows the mean parameter values & 95% C.I.s for each stimuli type
-
-```{r plotpars, fig.width=8, fig.height=6, echo=FALSE}
-sub.pars.final$Separation <- as.numeric(sub.pars.final$Separation)
-sub.pars.final$Non.Decision <- as.numeric(sub.pars.final$Non.Decision)
-sub.pars.final$Bias <- as.numeric(sub.pars.final$Bias)
-sub.pars.final$Drift <- as.numeric(sub.pars.final$Drift)
-
-sub.pars.final <- sub.pars.final %>% 
-  group_by(Similar) %>%
-  filter(Separation < mean(Separation) + 3 * sd(Separation), 
-         Separation > mean(Separation) - 3 * sd(Separation)) %>%
-  filter(Non.Decision < mean(Non.Decision) + 3 * sd(Non.Decision), 
-         Non.Decision > mean(Non.Decision) - 3 * sd(Non.Decision)) %>%
-  filter(Bias < mean(Bias) + 3 * sd(Bias), 
-         Bias > mean(Bias) - 3 * sd(Bias)) %>%
-  filter(Drift < mean(Drift) + 3 * sd(Drift), 
-         Drift > mean(Drift) - 3 * sd(Drift)) %>%
-  ungroup() %>%
-  na.omit()
-
-sub.pars.final <- sub.pars.final %>%  gather(Param, Value, Separation:Drift)
-```
-
-Plot distributions of parameters across conditions
-
-```{r, echo=FALSE}
-ggplot(aes(x = Value, fill = Similar), 
-       data = filter(sub.pars.final, Param %in% c("Drift", "Separation"))) +
-  geom_density(alpha = 0.7, adjust = 1.5) + 
-  facet_grid(.~Param, scales = "free") +
-  scale_fill_solarized()
-```
-
-Get means and CIs for parameter values and plot
-
-```{r}
-sub.pars.ms <- sub.pars.final %>%
-  group_by(Similar, Param) %>%
-  multi_boot_standard(column = "Value", empirical_function = "mean")
-
-ggplot(aes(x = Similar, y = mean, fill = Similar), 
-       data = filter(sub.pars.ms)) +
-  geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper)) +
-  facet_wrap(~Param, scales = "free") +
-  scale_fill_solarized() + 
-  ylab("Mean Param Value") +
-  guides(fill = F) 
-```

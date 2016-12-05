@@ -130,18 +130,18 @@ d.raw_sw$ID <- d.raw_sw$Subject
 
 Make data ET tidy and join trial info and demographics with raw data.
 
+ET transitions/switch data first.
 ```{r}
 d.raw_sw <- d.raw_sw %>%
   gather(trial, trans, Trial1:Trial20) %>%
   select(-Subject) 
-```
 
-```{r}
 d.raw_sw$ID <- as.factor(as.character(d.raw_sw$ID))
 length(levels(d.raw_sw$ID))
 ```
 There are `r length(levels(d.raw_sw$ID))` eyetracker participants with transitions data including pilots and others to-be-excluded.
 
+ET accuracy data.
 ```{r}
 d.raw_et$ID <- as.factor(as.character(d.raw_et$ID))
 length(levels(d.raw_et$ID))
@@ -162,6 +162,7 @@ d.raw_et$ID <- as.character(d.raw_et$ID)
 demo$ID <- as.character(demo$ID)
 word_fam$ID <- as.character(word_fam$ID)
 
+#join accuracy and switch data using inner join, include participants that exist in BOTH files. Add demographic and trial info, etc.
 d_et <- d.raw_et %>%
   inner_join(d.raw_sw) %>%
   mutate(acc_et = acc) %>%
@@ -174,6 +175,7 @@ d_et <- d.raw_et %>%
   filter(drop != 1) %>%
   select(-acc)
 
+#recode similarity from 1s and 0s to string.
 d_et <- d_et %>% 
   mutate(similar = ifelse(similarity == 1, "similar",
                                        "dissimilar")) %>%
@@ -205,11 +207,12 @@ There are `r length(levels(d$ID))` participants with *either* eyetracker or touc
 #Demographics
 
 ```{r, include = FALSE}
+#remove dropped participants
 demo_drop <- demo %>%
   filter(drop != 1)
 
 demo_drop$income <- str_replace(demo_drop$income,"f ","f")
-
+#meaningful income labels.
 demo_drop$income <- str_replace(demo_drop$income,"a","<15,000")
 demo_drop$income <- str_replace(demo_drop$income,"b","15,000-25,000")
 demo_drop$income <- str_replace(demo_drop$income,"c","25,000-40,000")
@@ -220,53 +223,13 @@ demo_drop$income <- str_replace(demo_drop$income,"f",">90,000")
 demo_drop$income <- factor(demo_drop$income, levels = c("","<15,000","15,000-25,000","25,000-40,000","40,000-60,000","60,000-90,000",">90,000"))
 ```
 
+Summaries of income, race, gender, and age in months.
 ```{r}
 summary(demo_drop$income)
 summary(demo_drop$race)
 summary(demo_drop$gender)
 psych::describe(demo_drop$age_months)
 
-```
-
-#Accuracy
-
-```{r, echo=FALSE}
-d_compare <- d %>%
-  select(ID, trial, similar, acc, acc_et, familiarity, age_months, target) %>%
-  filter(familiarity != 0) %>%
-  gather(task, acc, acc:acc_et) 
-
-levels(d_compare$task) <- list(touchscreen="acc", eyetracker="acc_et")
-d_compare$acc <- as.numeric(d_compare$acc)
-
-ms <- d_compare %>%
-  group_by(similar, task)%>%
-  multi_boot_standard(col = "acc", na.rm = TRUE)
-
-ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
-  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
-             position = position_dodge(width = .9)) +
-  xlab("Similarity") + 
-  ylab("Proportion Accurate") + 
-  facet_wrap(~task, labeller = label_both)
-```
-
-Get mean accuracy by task and similarity.
-```{r}
-d_acc_et <- d_compare %>%
-  filter(task == "eyetracker")
-d_acc_ts <- d_compare %>%
-  filter(task == "touchscreen")
-```
-
-Accuracy for eyetracker
-```{r}
-psych::describeBy(d_acc_et$acc, d_acc_et$similar)
-```
-
-Accuracy for touchscreen
-```{r}
-psych::describeBy(d_acc_ts$acc, d_acc_ts$similar)
 ```
 
 #Eyetracker data
@@ -280,23 +243,8 @@ d_et_filt <- d_et %>%
   filter(!is.na(trans),
          !is.na(acc),
          familiarity != 0)
-```
 
-Plot distribution (density) of transitions (switches) by accuracy and similarity.
-
-```{r, echo=FALSE}
-d_et_filt$acc <- as.factor(d_et_filt$acc)
-
-ggplot(aes(x = trans, fill = acc), 
-       data = d_et_filt) +
-  geom_density(alpha = 0.7, adjust = 1.5) + 
-  facet_grid(.~similar) 
-```
-
-Plot proportion accurate by similarity.
-
-```{r, echo=FALSE}
-d_et_filt$acc <- as.numeric(as.character(d_et_filt$acc))
+psych::describeBy(d_et_filt$acc, d_et_filt$similar)
 
 ms <- d_et_filt %>%
   group_by(similar)%>%
@@ -306,7 +254,18 @@ ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat =
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
-  ylab("Proportion Accurate ET")
+  ylab("Proportion Accurate") + ggtitle("Eyetracker Accuracy")
+```
+
+Plot distribution (density) of switches by accuracy and similarity.
+
+```{r, echo=FALSE}
+d_et_filt$acc <- as.factor(d_et_filt$acc)
+
+ggplot(aes(x = trans, fill = acc), 
+       data = d_et_filt) +
+  geom_density(alpha = 0.7, adjust = 1.5) + 
+  facet_grid(.~similar) 
 ```
 
 Plot the mean number of transitions (switches) by accuracy and similarity.
@@ -334,14 +293,24 @@ Linear mixed-effects models predicting switch count based on similarity and accu
 #more complex random effects structures fail to converge.
 #expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
 
-d_et_filt$acc <- as.numeric(d_et_filt$acc)
+d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
+d_et_filt$similar <- as.factor(as.character(d_et_filt$similar))
 
-glm_trans_full <- lmer(trans ~ similar + acc +
-                          (similar + acc | ID), 
+glm_trans_full <- lmer(trans ~ similar + acc + 
+                          (1|ID), 
                          data = d_et_filt, REML = FALSE)
 
+tab <- kable(coef(summary(glm_trans_full)), caption = "Mixed effects linear regression model predicting social referencing")
+print(tab, type="html")
+
+coefs <- data.frame(coef(summary(glm_trans_full)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+
+
 glm_trans_interaction <- lmer(trans ~ similar * acc +
-                          (similar + acc | ID), 
+                          (1| ID), 
                          data = d_et_filt, REML = FALSE)
 
 glm_trans_sim <- lmer(trans ~ similar +
@@ -451,6 +420,36 @@ d_et_filt_t <- filter(d_et_filt, acc == "1") %>%
 # paired t-test
 test_inacc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE) 
 test_inacc
+
+d_et_filt <- d_et_filt %>% 
+  mutate(acc = ifelse(acc == 1, "acc",
+                                       "inacc")) %>%
+
+#similar trials
+d_et_filt_t <- filter(d_et_filt, similar == "similar") %>%
+  select(ID, trial, trans, acc) %>%
+  group_by(ID, acc) %>%
+  summarise(trans = mean(trans)) %>%
+  spread(acc, trans)%>%
+  filter(!is.na(acc))%>%
+  filter(!is.na(inacc))
+  
+# paired t-test
+test_sim <- t.test(d_et_filt_t$acc, d_et_filt_t$inacc,paired=TRUE) 
+test_sim
+
+#similar trials
+d_et_filt_t <- filter(d_et_filt, similar == "dissimilar") %>%
+  select(ID, trial, trans, acc) %>%
+  group_by(ID, acc) %>%
+  summarise(trans = mean(trans)) %>%
+  spread(acc, trans)%>%
+  filter(!is.na(acc))%>%
+  filter(!is.na(inacc))
+  
+# paired t-test
+test_dissim <- t.test(d_et_filt_t$acc, d_et_filt_t$inacc,paired=TRUE) 
+test_dissim
 ```
 
 The effect of similarity was significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, but not inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
@@ -557,6 +556,18 @@ d_filt_rt <- d_ts %>%
 
 d_filt_rt_log <- d_filt_rt %>%
   mutate(RT = log(RT))
+
+psych::describeBy(d_et_filt$acc, d_et_filt$similar)
+
+ms <- d_filt_rt %>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate") + ggtitle("Touchscreen Accuracy")
 ```
 
 Plot RT distribution (density) by accuracy and similarity.

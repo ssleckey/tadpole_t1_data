@@ -113,7 +113,7 @@ d_ts <- d_ts %>%
   select(-similarity)
 ```
 
-
+Get number of touchscreen participants.
 ```{r}
 d_ts$ID <- as.factor(as.character(d_ts$ID))
 length(levels(d_ts$ID))
@@ -232,7 +232,7 @@ psych::describe(demo_drop$age_months)
 
 ```
 
-#Eyetracker data
+#Eyetracker task
 
 Filter missing data and unfamiliar trials. 
 
@@ -243,9 +243,17 @@ d_et_filt <- d_et %>%
   filter(!is.na(trans),
          !is.na(acc),
          familiarity != 0)
+```
 
+##Descriptives
+```{r}
+psych::describeBy(d_et_filt$trans, d_et_filt$acc)
+psych::describeBy(d_et_filt$trans, d_et_filt$similar)
 psych::describeBy(d_et_filt$acc, d_et_filt$similar)
+```
 
+Plot accuracy. 
+```{r}
 ms <- d_et_filt %>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
@@ -258,7 +266,6 @@ ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat =
 ```
 
 Plot distribution (density) of switches by accuracy and similarity.
-
 ```{r, echo=FALSE}
 d_et_filt$acc <- as.factor(d_et_filt$acc)
 
@@ -287,172 +294,103 @@ ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identi
 
 ##Analyses
 
+T-tests
+```{r, echo= FALSE}
+#t.tests
+
+#effect of similarity on switches among accurate trials.
+t.test(subset(d_et_filt, acc==1 & similar=="similar")$trans, 
+       subset(d_et_filt, acc==1 & similar=="dissimilar")$trans)
+
+#effect of similarity on switches among inaccurate trials.
+t.test(subset(d_et_filt, acc==0 & similar=="similar")$trans, 
+       subset(d_et_filt, acc==0 & similar=="dissimilar")$trans)
+
+#effect of accuracy on switches among similar trials.
+t.test(subset(d_et_filt, acc==1 & similar=="similar")$trans, 
+       subset(d_et_filt, acc==0 & similar=="similar")$trans)
+
+#effect of accuracy on switches among dissimlar trials.
+t.test(subset(d_et_filt, acc==1 & similar=="dissimilar")$trans, 
+       subset(d_et_filt, acc==0 & similar=="dissimilar")$trans)
+
+#effect of accuracy on switches overall
+t.test(subset(d_et_filt, acc==1)$trans, 
+       subset(d_et_filt, acc==0)$trans)
+
+#effect of similarity on switches overall
+t.test(subset(d_et_filt, similar=="dissimilar")$trans, 
+       subset(d_et_filt, similar=="similar")$trans)
+```
+
 Linear mixed-effects models predicting switch count based on similarity and accuracy.
+
+PROBLEM- collinearity (accuracy and similarity correlated). Best to stick with t-tests?
 
 ```{r}
 #more complex random effects structures fail to converge.
 #expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
 
-d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
-d_et_filt$similar <- as.factor(as.character(d_et_filt$similar))
-
-glm_trans_full <- lmer(trans ~ similar + acc + 
-                          (1|ID), 
-                         data = d_et_filt, REML = FALSE)
-
-tab <- kable(coef(summary(glm_trans_full)), caption = "Mixed effects linear regression model predicting social referencing")
-print(tab, type="html")
-
-coefs <- data.frame(coef(summary(glm_trans_full)))
-# use normal distribution to approximate p-value
-coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
-coefs
-
-
-glm_trans_interaction <- lmer(trans ~ similar * acc +
-                          (1| ID), 
-                         data = d_et_filt, REML = FALSE)
-
-glm_trans_sim <- lmer(trans ~ similar +
-                          (similar + acc | ID), 
-                         data = d_et_filt, REML = FALSE)
-
-glm_trans_acc <- lmer(trans ~ acc +
-                          (similar + acc | ID), 
-                         data = d_et_filt, REML = FALSE)
-
-glm_trans_age <- lmer(trans ~ similar + acc + age_months +
-                          (similar + acc | ID), 
-                         data = d_et_filt, REML = FALSE)
-
-glm_trans_age_sim <- lmer(trans ~  acc + similar * age_months +
-                          (similar + acc | ID), 
-                         data = d_et_filt, REML = FALSE)
-
-glm_trans_age_acc <- lmer(trans ~ similar + acc * age_months +
-                          (similar + acc | ID), 
-                         data = d_et_filt, REML = FALSE)
+# d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
+# d_et_filt$similar <- as.factor(as.character(d_et_filt$similar))
+# 
+# glm_trans_full <- lmer(trans ~ similar + acc + 
+#                           (1|ID), 
+#                          data = d_et_filt, REML = FALSE)
+# 
+# tab <- kable(coef(summary(glm_trans_full)), caption = "Mixed effects linear regression model predicting social referencing")
+# print(tab, type="html")
+# 
+# coefs <- data.frame(coef(summary(glm_trans_full)))
+# # use normal distribution to approximate p-value
+# coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+# coefs
+# 
+# 
+# glm_trans_interaction <- lmer(trans ~ similar * acc +
+#                           (1| ID), 
+#                          data = d_et_filt, REML = FALSE)
+# 
+# glm_trans_sim <- lmer(trans ~ similar +
+#                           (similar + acc | ID), 
+#                          data = d_et_filt, REML = FALSE)
+# 
+# glm_trans_acc <- lmer(trans ~ acc +
+#                           (similar + acc | ID), 
+#                          data = d_et_filt, REML = FALSE)
+# 
+# glm_trans_age <- lmer(trans ~ similar + acc + age_months +
+#                           (similar + acc | ID), 
+#                          data = d_et_filt, REML = FALSE)
+# 
+# glm_trans_age_sim <- lmer(trans ~  acc + similar * age_months +
+#                           (similar + acc | ID), 
+#                          data = d_et_filt, REML = FALSE)
+# 
+# glm_trans_age_acc <- lmer(trans ~ similar + acc * age_months +
+#                           (similar + acc | ID), 
+#                          data = d_et_filt, REML = FALSE)
 ```
 
 Summary of maximal model (withinteraction term).
 ```{r}
-summary(glm_trans_interaction)
+# summary(glm_trans_interaction)
 ```
 
 Fixed effects coeffiencients for full model.
 ```{r, echo = FALSE}
-kable(summary(glm_trans_interaction)$coefficients, digits = 2)
+# kable(summary(glm_trans_interaction)$coefficients, digits = 2)
 ```
 
 Compare model fits as significance test.
 
-Test for effect of accuracy.
+Test for effect of similarity. Got rid of the rest of them, duplicate if needed.
 ```{r, echo=FALSE}
-kable(anova(glm_trans_full, glm_trans_sim))
+# kable(anova(glm_trans_full, glm_trans_acc))
+# 
+# sim_effect <- anova(glm_trans_full, glm_trans_acc)
+# sim_effect$p <- as.numeric(sim_effect$`Pr(>Chisq)`[2])
 ```
-
-Test for effect of similarity.
-```{r, echo=FALSE}
-kable(anova(glm_trans_full, glm_trans_acc))
-
-sim_effect <- anova(glm_trans_full, glm_trans_acc)
-sim_effect$p <- as.numeric(sim_effect$`Pr(>Chisq)`[2])
-```
-
-Test for effect of interaction between accuracy and similarity.
-
-```{r, echo=FALSE}
-kable(anova(glm_trans_full, glm_trans_interaction))
-```
-
-Test for effect of age
-
-```{r, echo=FALSE}
-kable(anova(glm_trans_full, glm_trans_age))
-```
-
-Test for effect interaction of age and sim
-
-```{r, echo=FALSE}
-kable(anova(glm_trans_age_sim, glm_trans_age))
-```
-
-Test for effect interaction of age and acc
-
-```{r, echo=FALSE}
-kable(anova(glm_trans_age_acc, glm_trans_age))
-```
-
-Similarity affected switch count (*χ2(1)*=`r round(sim_effect$Chisq[2], digits = 2)`, *p*=`r round(sim_effect$p[1], digits = 2)`)
-, such that similarity (compared to dissimilarity) added `r round(summary(glm_trans_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_trans_full)$coefficients[5], digits = 2)`) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
-
-Get mean transitions by similarity and accuracy.
-```{r}
-describeBy(d_et_filt$trans, d_et_filt$similar)
-describeBy(d_et_filt$trans, d_et_filt$acc)
-```
-
-Accuracy and similarity are correlated. Let's look at the similarity effect separately for accurate and inaccurate trials. To do this we will conduct a paired-samples t-test on the average number of transitions for similar vs. dissimilar trials, first for the accurate trials, and then for the inaccurate trials.
-
-```{r}
-d_et_filt$acc <- as.character(d_et_filt$acc)
-
-#accurate trials
-d_et_filt_t <- filter(d_et_filt, acc == "2") %>%
-  select(ID, trial, trans, similar) %>%
-  group_by(ID, similar) %>%
-  summarise(trans = mean(trans)) %>%
-  spread(similar, trans)
-  
-# paired t-test
-test_acc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE) 
-test_acc
-
-#inaccurate trials
-d_et_filt_t <- filter(d_et_filt, acc == "1") %>%
-  select(ID, trial, trans, similar) %>%
-  group_by(ID, similar) %>%
-  summarise(trans = mean(trans)) %>%
-  spread(similar, trans)%>%
-  filter(!is.na(similar))%>%
-  filter(!is.na(dissimilar))
-  
-# paired t-test
-test_inacc <- t.test(d_et_filt_t$similar, d_et_filt_t$dissimilar,paired=TRUE) 
-test_inacc
-
-d_et_filt <- d_et_filt %>% 
-  mutate(acc = ifelse(acc == 1, "acc",
-                                       "inacc")) %>%
-
-#similar trials
-d_et_filt_t <- filter(d_et_filt, similar == "similar") %>%
-  select(ID, trial, trans, acc) %>%
-  group_by(ID, acc) %>%
-  summarise(trans = mean(trans)) %>%
-  spread(acc, trans)%>%
-  filter(!is.na(acc))%>%
-  filter(!is.na(inacc))
-  
-# paired t-test
-test_sim <- t.test(d_et_filt_t$acc, d_et_filt_t$inacc,paired=TRUE) 
-test_sim
-
-#similar trials
-d_et_filt_t <- filter(d_et_filt, similar == "dissimilar") %>%
-  select(ID, trial, trans, acc) %>%
-  group_by(ID, acc) %>%
-  summarise(trans = mean(trans)) %>%
-  spread(acc, trans)%>%
-  filter(!is.na(acc))%>%
-  filter(!is.na(inacc))
-  
-# paired t-test
-test_dissim <- t.test(d_et_filt_t$acc, d_et_filt_t$inacc,paired=TRUE) 
-test_dissim
-```
-
-The effect of similarity was significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, but not inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
 
 Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
 
@@ -470,19 +408,9 @@ d_et_filt_id <- d_et_filt %>%
   mutate(avg_acc = mean(acc))
 ```
 
-```{r, echo=FALSE}
-ggplot(aes(x = trans_acc_diff), 
-       data = d_et_filt_id) +
-  geom_density(alpha = 0.7, adjust = 1.5)
-
-ggplot(aes(x = trans_sim_diff), 
-       data = d_et_filt_id) +
-  geom_density(alpha = 0.7, adjust = 1.5)
-```
-
 Correlate differentials with accuracy.
 
-```{r}
+```{r, include = FALSE}
 d_et_filt_id <- d_et_filt_id %>%
   select(ID, trans_acc_diff, trans_sim_diff, avg_acc) %>%
   distinct %>%
@@ -522,21 +450,16 @@ corstarsl <- function(x){
 }
 ```
 
-Correlation matrix for individual differences in transitions differentials and accuracy.
+Correlation matrix for individual differences in transitions differentials and accuracy. Do kids who judiciously hesitate perform better?
 ```{r}
 corstarsl(d_et_filt_id)
 ```
-
-Individual differences in transitions differentials (i.e., transitions for similar - similar; trans for inacc - acc) were correlated with each other but not with accuracy. 
 
 ##Summary of Eyetracker Results
 
 Accuracy was higher for dissimilar items.
 
-Similarity affected switch count (χ2(1)=`r round(sim_effect$Chisq[2], digits = 2)`, p=`r round(sim_effect$p[1], digits = 2)`)
-, such that similarity (compared to dissimilarity) added `r round(summary(glm_trans_full)$coefficients[2], digits = 2)` (SE = `r round(summary(glm_trans_full)$coefficients[5], digits = 2)`) switches. Accuracy was not a significant predictor, and accuracy and similarity did not interact.
-
-T-tests showed that the effect of similarity was significant among accurate trials, *t* = `r round(test_acc$statistic, digits = 2)`, *p* = `r round(test_acc$p.value, digits = 2)`, but not inaccurate trials, *t* = `r round(test_inacc$statistic, digits = 2)`, *p* = `r round(test_inacc$p.value, digits = 2)`.
+T-tests revealed a significant effect of similarity and a marginal effect of accuracy on switches.
 
 Individual differences in transitions differentials (i.e., transitions for similar - similar; trans for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
 

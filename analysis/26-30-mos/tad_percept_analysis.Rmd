@@ -482,61 +482,6 @@ t.test(subset(d_filt_rt_log, similar=="dissimilar")$RT,
        subset(d_filt_rt_log, similar=="similar")$RT)
 ```
 
-Linear mixed-effects models predicting RT based on similarity and accuracy.
-
-```{r}
-#more complex random effects structures fail to converge.
-#expect random effects slopes to vary more for ID than target- effects of similarity and accuracy should vary more by participant than target.
-
-# glm_RT_full <- lmer(RT ~ similar + acc +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-# 
-# glm_RT_interaction <- lmer(RT ~ similar * acc +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-# 
-# glm_RT_sim <- lmer(RT ~ similar +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-# 
-# glm_RT_acc <- lmer(RT ~ acc +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-# 
-# glm_RT_age <- lmer(RT ~ similar + acc + age_months +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-# 
-# glm_RT_age_sim <- lmer(RT ~  acc + similar * age_months +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-# 
-# glm_RT_age_acc <- lmer(RT ~ similar + acc * age_months +
-#                           (similar + acc | ID), 
-#                          data = d_filt_rt_log, REML = FALSE)
-```
-
-Summary of maximal model (with interaction term)
-```{r}
-# summary(glm_RT_interaction)
-```
-
-Fixed effects coeffiencients for full model.
-```{r, echo = FALSE}
-# kable(summary(glm_RT_full)$coefficients, digits = 2)
-```
-
-Compare model fits as significance test.
-
-Test for effect of accuracy.
-```{r, echo=FALSE}
-# kable(anova(glm_RT_full, glm_RT_sim))
-# 
-# acc_effect <- anova(glm_RT_full, glm_RT_sim)
-# acc_effect$p <- as.numeric(acc_effect$`Pr(>Chisq)`[2])
-```
-
 Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
 
 ```{r}

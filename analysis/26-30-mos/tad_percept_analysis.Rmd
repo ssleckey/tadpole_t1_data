@@ -229,13 +229,16 @@ demo_drop$income <- str_replace(demo_drop$income,"f",">90,000")
 demo_drop$income <- factor(demo_drop$income, levels = c("","<15,000","15,000-25,000","25,000-40,000","40,000-60,000","60,000-90,000",">90,000"))
 ```
 
-Summaries of income, race, gender, and age in months.
-```{r}
+Summaries of income, race, and gender
+```{r, echo = FALSE}
 summary(demo_drop$income)
 summary(demo_drop$race)
 summary(demo_drop$gender)
-psych::describe(demo_drop$age_months)
+```
 
+Age in months
+```{r, echo = FALSE}
+psych::describe(demo_drop$age_months)
 ```
 
 #Eyetracker task
@@ -254,22 +257,24 @@ d_et_filt <- d_et %>%
 ##Descriptives
 
 Transitions for accurate and inaccurate
-```{r}
+```{r, echo = FALSE}
 psych::describeBy(d_et_filt$trans, d_et_filt$acc)
 ```
 
 Transitions for similar and dissimilar
-```{r}
+```{r, echo = FALSE}
 psych::describeBy(d_et_filt$trans, d_et_filt$similar)
 ```
 
 Accuracy for similar and dissimilar
-```{r}
+```{r, echo = FALSE}
 psych::describeBy(d_et_filt$acc, d_et_filt$similar)
 ```
 
 Plot accuracy. 
-```{r}
+
+
+```{r, echo = FALSE}
 ms <- d_et_filt %>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
@@ -310,7 +315,7 @@ ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identi
 
 ##Analyses
 
-T-tests
+###T-tests
 
 Effect of similarity on switches among accurate trials.
 ```{r, echo= FALSE}
@@ -347,6 +352,8 @@ Effect of similarity on switches overall
 t.test(subset(d_et_filt, similar=="dissimilar")$trans, 
        subset(d_et_filt, similar=="similar")$trans)
 ```
+
+###Individual differences
 
 Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
 
@@ -404,13 +411,23 @@ d_filt_rt_log <- d_filt_rt %>%
 
 ##Descriptives
 
-```{r}
-psych::describeBy(d_filt_rt_log$RT, d_filt_rt_log$acc)
-psych::describeBy(d_filt_rt_log$RT, d_filt_rt_log$similar)
-psych::describeBy(d_filt_rt_log$acc, d_filt_rt_log$similar)
+RTs for accurate and inaccurate
+```{r, echo = FALSE}
+psych::describeBy(d_filt_rt$RT, d_filt_rt$acc)
 ```
 
-```{r}
+RTs for similar and dissimilar
+```{r, echo = FALSE}
+psych::describeBy(d_filt_rt$RT, d_filt_rt$similar)
+```
+
+Accuracy for similar and dissimilar
+```{r, echo = FALSE}
+psych::describeBy(d_filt_rt$acc, d_filt_rt$similar)
+```
+
+Plot accuracy for touchscreen.
+```{r, echo = FALSE}
 ms <- d_filt_rt %>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)
@@ -453,34 +470,45 @@ ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identi
 
 ##Analyses
 
-T-tests
-```{r, echo= FALSE}
-#t.tests
+###T-tests
 
-#effect of similarity on RT among accurate trials.
+Effect of similarity on RT among accurate trials.
+```{r, echo= FALSE}
 t.test(subset(d_filt_rt_log, acc==1 & similar=="similar")$RT, 
        subset(d_filt_rt_log, acc==1 & similar=="dissimilar")$RT)
+```
 
-#effect of similarity on RT among inaccurate trials.
+Effect of similarity on RT among inaccurate trials.
+```{r, echo= FALSE}
 t.test(subset(d_filt_rt_log, acc==0 & similar=="similar")$RT, 
        subset(d_filt_rt_log, acc==0 & similar=="dissimilar")$RT)
+```
 
-#effect of accuracy on RT among similar trials.
+Effect of accuracy on RT among similar trials.
+```{r, echo= FALSE}
 t.test(subset(d_filt_rt_log, acc==1 & similar=="similar")$RT, 
        subset(d_filt_rt_log, acc==0 & similar=="similar")$RT)
+```
 
-#effect of accuracy on RT among dissimlar trials.
+Effect of accuracy on RT among dissimlar trials.
+```{r, echo= FALSE}
 t.test(subset(d_filt_rt_log, acc==1 & similar=="dissimilar")$RT, 
        subset(d_filt_rt_log, acc==0 & similar=="dissimilar")$RT)
+```
 
-#effect of accuracy on RT overall
+Effect of accuracy on RT overall
+```{r, echo= FALSE}
 t.test(subset(d_filt_rt_log, acc==1)$RT, 
        subset(d_filt_rt_log, acc==0)$RT)
+```
 
-#effect of similarity on RT overall
+Effect of similarity on RT overall
+```{r, echo= FALSE}
 t.test(subset(d_filt_rt_log, similar=="dissimilar")$RT, 
        subset(d_filt_rt_log, similar=="similar")$RT)
 ```
+
+###Individual differences
 
 Do individual differences in RT differential (for similar vs. dissimilar) correlate with accuracy? 
 

@@ -362,6 +362,26 @@ ET.aov <- with(mss_et_aov,
 summary(ET.aov)
 ```
 
+
+```{r, echo=FALSE}
+d_et_filt$acc <- as.factor(as.character(d_et_filt$acc))
+
+ms <- d_et_filt %>%
+  group_by(acc, similar)%>%
+  multi_boot_standard(col = "trans", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Number of switches") + 
+  facet_wrap(~similar)
+
+mss_et <-  d_et_filt %>%
+  group_by(ID, acc, similar)%>%
+  summarise(trans = mean(trans))
+```
+
 ###T-tests
 
 ```{r}
@@ -373,6 +393,18 @@ t.test(subset(mss_et_aov, trial_type=="inacc")$trans,
 
 t.test(subset(mss_et_aov, trial_type=="similar_acc")$trans, 
        subset(mss_et_aov, trial_type=="dissimilar_acc")$trans)
+```
+
+```{r, echo=FALSE}
+mss_et_aov <- mss_et_aov %>%
+  group_by(trial_type)%>%
+  multi_boot_standard(col = "trans", na.rm = TRUE)
+
+ggplot(mss_et_aov, aes(x = factor(trial_type), y = mean, fill = trial_type)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Trial Type") + 
+  ylab("Mean Switch Count") 
 ```
 
 ###Individual differences
@@ -415,10 +447,9 @@ T-test summary:
 
   inaccurate - similar-accurate
   
-  inaccurate - dissimilar-accurate
+  inaccurate - dissimilar-accurate*
   
   similar-accurate - dissimilar-accurate*
-
 
 Individual differences in transitions differentials (i.e., transitions for similar - similar; trans for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
 
@@ -550,8 +581,6 @@ summary(TS.aov)
 
 ###T-tests
 
-###T-tests
-
 ```{r}
 t.test(subset(mss_ts_aov, trial_type=="inacc")$RT, 
        subset(mss_ts_aov, trial_type=="similar_acc")$RT)
@@ -561,6 +590,18 @@ t.test(subset(mss_ts_aov, trial_type=="inacc")$RT,
 
 t.test(subset(mss_ts_aov, trial_type=="similar_acc")$RT, 
        subset(mss_ts_aov, trial_type=="dissimilar_acc")$RT)
+```
+
+```{r, echo=FALSE}
+mss_ts_aov <- mss_ts_aov %>%
+  group_by(trial_type)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+ggplot(mss_ts_aov, aes(x = factor(trial_type), y = mean, fill = trial_type)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Trial Type") + 
+  ylab("Mean Reaction Time (ms)") 
 ```
 
 ###Individual differences

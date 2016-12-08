@@ -311,46 +311,68 @@ ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identi
   xlab("Accuracy") + 
   ylab("Number of switches") + 
   facet_wrap(~similar)
+
+mss_et <-  d_et_filt %>%
+  group_by(ID, acc, similar)%>%
+  summarise(trans = mean(trans))
 ```
 
 ##Analyses
 
+###Repeated measures ANOVA
+
+repeated-measures ANOVA with trial type (similar and accurate, dissimilar and accurate, and inaccurate) as the independent variable.
+
+```{r}
+mss_et_acc <-  d_et_filt
+
+mss_et_acc$acc <- str_replace(mss_et_acc$acc, "0", "inacc")
+mss_et_acc$acc <- str_replace(mss_et_acc$acc, "1", "acc")
+
+mss_et_inacc <-  mss_et_acc%>%
+  group_by(ID, acc)%>%
+  summarise(trans = mean(trans))%>%
+  spread(acc, trans)%>%
+  select(-acc)
+
+mss_et_acc <-  mss_et_acc%>%
+  group_by(ID, acc)%>%
+  summarise(trans = mean(trans))%>%
+  spread(acc, trans)
+
+mss_et_sim <-  d_et_filt %>%
+  group_by(ID, acc, similar)%>%
+  summarise(trans = mean(trans))%>%
+  filter(acc == 1)%>%
+  spread(similar, trans)%>%
+  mutate(similar_acc = similar)%>%
+  mutate(dissimilar_acc = dissimilar)%>%
+  select(-similar, -dissimilar, -acc)
+
+mss_et_aov <- mss_et_inacc %>%
+  left_join(mss_et_sim)%>%
+  filter(!is.na(similar_acc),
+         !is.na(dissimilar_acc),
+         !is.na(inacc))%>%
+  gather("trial_type", "trans", inacc:dissimilar_acc)
+
+ET.aov <- with(mss_et_aov,
+                   aov(trans ~ trial_type +
+                       Error(ID /trial_type)))
+summary(ET.aov)
+```
+
 ###T-tests
 
-Effect of similarity on switches among accurate trials.
-```{r, echo= FALSE}
-t.test(subset(d_et_filt, acc==1 & similar=="similar")$trans, 
-       subset(d_et_filt, acc==1 & similar=="dissimilar")$trans)
-```
+```{r}
+t.test(subset(mss_et_aov, trial_type=="inacc")$trans, 
+       subset(mss_et_aov, trial_type=="similar_acc")$trans)
 
-Effect of similarity on switches among inaccurate trials.
-```{r, echo= FALSE}
-t.test(subset(d_et_filt, acc==0 & similar=="similar")$trans, 
-       subset(d_et_filt, acc==0 & similar=="dissimilar")$trans)
-```
+t.test(subset(mss_et_aov, trial_type=="inacc")$trans, 
+       subset(mss_et_aov, trial_type=="dissimilar_acc")$trans)
 
-Effect of accuracy on switches among similar trials.
-```{r, echo= FALSE}
-t.test(subset(d_et_filt, acc==1 & similar=="similar")$trans, 
-       subset(d_et_filt, acc==0 & similar=="similar")$trans)
-```
-
-Effect of accuracy on switches among dissimlar trials.
-```{r, echo= FALSE}
-t.test(subset(d_et_filt, acc==1 & similar=="dissimilar")$trans, 
-       subset(d_et_filt, acc==0 & similar=="dissimilar")$trans)
-```
-
-Effect of accuracy on switches overall
-```{r, echo= FALSE}
-t.test(subset(d_et_filt, acc==1)$trans, 
-       subset(d_et_filt, acc==0)$trans)
-```
-
-Effect of similarity on switches overall
-```{r, echo= FALSE}
-t.test(subset(d_et_filt, similar=="dissimilar")$trans, 
-       subset(d_et_filt, similar=="similar")$trans)
+t.test(subset(mss_et_aov, trial_type=="similar_acc")$trans, 
+       subset(mss_et_aov, trial_type=="dissimilar_acc")$trans)
 ```
 
 ###Individual differences
@@ -387,7 +409,16 @@ corstarsl(d_et_filt_id)
 
 Accuracy was higher for dissimilar items.
 
-T-tests revealed a significant effect of similarity and a marginal effect of accuracy on switches.
+Repeated-measures ANOVA shows that there is a difference between means for similar-accurate, dissimilar-accurate, and inaccurate. 
+
+T-test summary: 
+
+  inaccurate - similar-accurate
+  
+  inaccurate - dissimilar-accurate
+  
+  similar-accurate - dissimilar-accurate*
+
 
 Individual differences in transitions differentials (i.e., transitions for similar - similar; trans for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 
 
@@ -466,46 +497,70 @@ ggplot(ms, aes(x = factor(acc), y = mean, fill = acc)) + geom_bar(stat = "identi
   xlab("Accuracy") + 
   ylab("Mean Reaction Time (ms)") + 
   facet_wrap(~similar)
+
+mss_ts <-  d_filt_rt %>%
+  group_by(ID, acc, similar)%>%
+  summarise(RT = mean(RT))
 ```
 
 ##Analyses
 
+###Repeated-measures ANOVA
+
+repeated-measures ANOVA with trial type (similar and accurate, dissimilar and accurate, and inaccurate) as the independent variable.
+
+```{r}
+mss_ts_acc <-  d_filt_rt
+
+mss_ts_acc$acc <- str_replace(mss_ts_acc$acc, "0", "inacc")
+mss_ts_acc$acc <- str_replace(mss_ts_acc$acc, "1", "acc")
+
+mss_ts_inacc <-  mss_ts_acc%>%
+  group_by(ID, acc)%>%
+  summarise(RT = mean(RT))%>%
+  spread(acc, RT)%>%
+  select(-acc)
+
+mss_ts_acc <-  mss_ts_acc%>%
+  group_by(ID, acc)%>%
+  summarise(RT = mean(RT))%>%
+  spread(acc, RT)
+
+mss_ts_sim <-  d_filt_rt %>%
+  group_by(ID, acc, similar)%>%
+  summarise(RT = mean(RT))%>%
+  filter(acc == 1)%>%
+  spread(similar, RT)%>%
+  mutate(similar_acc = similar)%>%
+  mutate(dissimilar_acc = dissimilar)%>%
+  select(-similar, -dissimilar, -acc)
+
+mss_ts_aov <- mss_ts_inacc %>%
+  left_join(mss_ts_sim)%>%
+  filter(!is.na(similar_acc),
+         !is.na(dissimilar_acc),
+         !is.na(inacc))%>%
+  gather("trial_type", "RT", inacc:dissimilar_acc)
+
+TS.aov <- with(mss_ts_aov,
+                   aov(RT ~ trial_type +
+                       Error(ID /trial_type)))
+summary(TS.aov)
+```
+
 ###T-tests
 
-Effect of similarity on RT among accurate trials.
-```{r, echo= FALSE}
-t.test(subset(d_filt_rt_log, acc==1 & similar=="similar")$RT, 
-       subset(d_filt_rt_log, acc==1 & similar=="dissimilar")$RT)
-```
+###T-tests
 
-Effect of similarity on RT among inaccurate trials.
-```{r, echo= FALSE}
-t.test(subset(d_filt_rt_log, acc==0 & similar=="similar")$RT, 
-       subset(d_filt_rt_log, acc==0 & similar=="dissimilar")$RT)
-```
+```{r}
+t.test(subset(mss_ts_aov, trial_type=="inacc")$RT, 
+       subset(mss_ts_aov, trial_type=="similar_acc")$RT)
 
-Effect of accuracy on RT among similar trials.
-```{r, echo= FALSE}
-t.test(subset(d_filt_rt_log, acc==1 & similar=="similar")$RT, 
-       subset(d_filt_rt_log, acc==0 & similar=="similar")$RT)
-```
+t.test(subset(mss_ts_aov, trial_type=="inacc")$RT, 
+       subset(mss_ts_aov, trial_type=="dissimilar_acc")$RT)
 
-Effect of accuracy on RT among dissimlar trials.
-```{r, echo= FALSE}
-t.test(subset(d_filt_rt_log, acc==1 & similar=="dissimilar")$RT, 
-       subset(d_filt_rt_log, acc==0 & similar=="dissimilar")$RT)
-```
-
-Effect of accuracy on RT overall
-```{r, echo= FALSE}
-t.test(subset(d_filt_rt_log, acc==1)$RT, 
-       subset(d_filt_rt_log, acc==0)$RT)
-```
-
-Effect of similarity on RT overall
-```{r, echo= FALSE}
-t.test(subset(d_filt_rt_log, similar=="dissimilar")$RT, 
-       subset(d_filt_rt_log, similar=="similar")$RT)
+t.test(subset(mss_ts_aov, trial_type=="similar_acc")$RT, 
+       subset(mss_ts_aov, trial_type=="dissimilar_acc")$RT)
 ```
 
 ###Individual differences
@@ -544,6 +599,14 @@ Individual differences in RT differentials (i.e., RT for similar - similar; RT f
 
 Accuracy was higher for dissimilar items.
 
-T-tests showed significant effect of accuracy on RT and marginal effect of similarity on RT.
+Repeated-measures ANOVA shows that there is a difference between means for similar-accurate, dissimilar-accurate, and inaccurate. 
+
+T-test summary: 
+
+  inaccurate - similar-accurate**
+  
+  inaccurate - dissimilar-accurate** 
+  
+  similar-accurate - dissimilar-accurate
 
 Individual differences in RT differentials (i.e., RT for similar - similar; RT for inacc - acc) were correlated with each other but not with accuracy. This is expected as accuracy and similarity are correlated. 

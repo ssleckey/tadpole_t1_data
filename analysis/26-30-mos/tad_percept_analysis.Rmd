@@ -68,7 +68,7 @@ word_fam_key <- read.csv("word_fam_key.csv")
 word_fam_key$trial <- as.character(word_fam_key$trial)
 
 word_fam <- read.csv("word_familiarity.csv") %>%
-  tidyr::gather("target", "familiarity", 2:41 )
+  tidyr::gather("target", "familiarity", 2:41)
 
 response_key <- read.csv("response_key.csv")
 response_key$trial <- as.character(response_key$trial)
@@ -118,7 +118,6 @@ d_ts <- d_ts %>%
                                        "dissimilar")) %>%
   select(-similarity)
 d_ts$ID <- as.factor(as.character(d_ts$ID))
-
 
 d_ts_missing <- d_ts %>%
   filter(is.na(response))
@@ -268,8 +267,11 @@ T-test for effect of similarity on accuracy.
 t.test(mss_et_acc_t$similar, 
        mss_et_acc_t$dissimilar, paired = TRUE)
 
-psych::describe(mss_et_acc_t$similar)
-psych::describe(mss_et_acc_t$dissimilar)
+similar <- psych::describe(mss_et_acc_t$similar)
+dissimilar <- psych::describe(mss_et_acc_t$dissimilar)
+
+cohensd_acc <- abs((similar$mean - dissimilar$mean)/((similar$sd + dissimilar$sd)/2))
+cohensd_acc
 ```
 
 Plot accuracy. 
@@ -284,7 +286,9 @@ ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat =
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
-  ylab("Proportion Accurate") + ggtitle("Eyetracker Accuracy")
+  ylab("Proportion Accurate") + ggtitle("Eyetracker Accuracy") +  
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
 ```
 
 ##Switches
@@ -336,7 +340,6 @@ ET.aov <- with(mss_et_aov,
                        Error(ID /trial_type))) #add error term for ID for repeated measures
 summary(ET.aov)
 
-
 ezANOVA(
 mss_et_aov
 , trans
@@ -368,7 +371,9 @@ ggplot(mss_et_aov_p, aes(x = factor(trial_type), y = mean, fill = trial_type)) +
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Trial Type") + 
-  ylab("Mean Switch Count") 
+  ylab("Mean Switch Count")  +  
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
 ```
 
 ###T-tests
@@ -383,18 +388,18 @@ t.test(subset(mss_et_aov, trial_type=="inacc")$trans,
 t.test(subset(mss_et_aov, trial_type=="similar_acc")$trans, 
        subset(mss_et_aov, trial_type=="dissimilar_acc")$trans, paired = TRUE)
 
-inacc <- psych::describe(subset(mss_et_aov, trial_type=="inacc")$trans) 
-sim_acc <- psych::describe(subset(mss_et_aov, trial_type=="similar_acc")$trans)
-dissim_acc <- psych::describe(subset(mss_et_aov, trial_type=="dissimilar_acc")$trans)
+inacc_et <- psych::describe(subset(mss_et_aov, trial_type=="inacc")$trans) 
+sim_acc_et <- psych::describe(subset(mss_et_aov, trial_type=="similar_acc")$trans)
+dissim_acc_et <- psych::describe(subset(mss_et_aov, trial_type=="dissimilar_acc")$trans)
 
-cohensd_inacc_sim_acc <- abs((inacc$mean - sim_acc$mean)/((inacc$sd + sim_acc$sd)/2))
-cohensd_inacc_sim_acc
+cohensd_inacc_sim_acc_et <- abs((inacc_et$mean - sim_acc_et$mean)/((inacc_et$sd + sim_acc_et$sd)/2))
+cohensd_inacc_sim_acc_et
 
-cohensd_inacc_dissim_acc <- abs((inacc$mean - dissim_acc$mean)/((inacc$sd + dissim_acc$sd)/2))
-cohensd_inacc_dissim_acc
+cohensd_inacc_dissim_acc_et <- abs((inacc_et$mean - dissim_acc_et$mean)/((inacc_et$sd + dissim_acc_et$sd)/2))
+cohensd_inacc_dissim_acc_et
 
-cohensd_sim_acc_dissim_acc <- abs((sim_acc$mean - dissim_acc$mean)/((sim_acc$sd + dissim_acc$sd)/2))
-cohensd_sim_acc_dissim_acc
+cohensd_sim_acc_dissim_acc_et <- abs((sim_acc_et$mean - dissim_acc_et$mean)/((sim_acc_et$sd + dissim_acc_et$sd)/2))
+cohensd_sim_acc_dissim_acc_et
 ```
 
 ##Summary of Eyetracker Results
@@ -434,9 +439,32 @@ mss_ts_acc <- mss_ts_acc %>%
   summarise(acc = mean(acc))%>%
   mutate(drop_acc = acc < .5)
 
-drop_acc <- mss_ts_acc$ID[mss_ts_acc$drop_acc == TRUE]
+drop_acc_ts <- mss_ts_acc$ID[mss_ts_acc$drop_acc == TRUE]
+
+d_filt_rt <- d_filt_rt %>% 
+  dplyr::filter(!ID %in% drop_acc_ts)
 
 d_filt_rt_log <- d_filt_rt %>%
+  mutate(RT = log(RT))%>% 
+  dplyr::filter(!ID %in% drop_acc_ts)
+```
+
+Create a dataset that does NOT drop based on extreme RTs.
+```{r}
+d_incl_rt <- d_ts %>%
+  dplyr::filter(!is.na(acc),
+         familiarity != 0)
+                                                
+mss_ts_acc_in <-  d_incl_rt
+mss_ts_acc_in$acc <- as.numeric(as.character(mss_ts_acc_in$acc))
+mss_ts_acc_in <- mss_ts_acc_in %>%
+  group_by(ID)%>%
+  summarise(acc = mean(acc))%>%
+  mutate(drop_acc = acc < .5)
+
+drop_acc <- mss_ts_acc_in$ID[mss_ts_acc_in$drop_acc == TRUE]
+
+d_incl_rt_log <- d_incl_rt %>%
   mutate(RT = log(RT))
 ```
 
@@ -454,14 +482,41 @@ mss_ts_acc_t <- mss_ts_acc_t %>%
   spread(similar, acc)
 ```
 
+Same without exclusions for extreme RTs.
+```{r}
+mss_ts_acc_t_i <-  d_incl_rt%>%
+  group_by(ID, similar)
+
+mss_ts_acc_t_i$acc <- as.numeric(as.character(mss_ts_acc_t_i$acc))
+
+mss_ts_acc_t_i <- mss_ts_acc_t_i %>%
+  summarise(acc = mean(acc))%>%
+  spread(similar, acc)
+```
+
 T-test for effect of similarity on accuracy. 
 
 ```{r}
 t.test(mss_ts_acc_t$similar, 
        mss_ts_acc_t$dissimilar, paired = TRUE)
 
-psych::describe(mss_ts_acc_t$similar)
-psych::describe(mss_ts_acc_t$dissimilar)
+similar <- psych::describe(mss_ts_acc_t$similar)
+dissimilar <- psych::describe(mss_ts_acc_t$dissimilar)
+
+cohensd_acc <- abs((similar$mean - dissimilar$mean)/((similar$sd + dissimilar$sd)/2))
+cohensd_acc
+```
+
+Same without exclusions.
+```{r}
+t.test(mss_ts_acc_t_i$similar, 
+       mss_ts_acc_t_i$dissimilar, paired = TRUE)
+
+similar <- psych::describe(mss_ts_acc_t_i$similar)
+dissimilar <- psych::describe(mss_ts_acc_t_i$dissimilar)
+
+cohensd_acc <- abs((similar$mean - dissimilar$mean)/((similar$sd + dissimilar$sd)/2))
+cohensd_acc
 ```
 
 Plot accuracy. 
@@ -476,7 +531,9 @@ ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat =
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
-  ylab("Proportion Accurate") + ggtitle("Eyetracker Accuracy")
+  ylab("Proportion Accurate") + ggtitle("Touchscreen Accuracy") +  
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
 ```
 
 ##RTs
@@ -519,6 +576,44 @@ mss_ts_aov <- mss_ts_inacc %>%
          trial_type != "dissimilar")
 ```
 
+Same without exclusions.
+```{r}
+mss_ts_acc_i <-  d_incl_rt
+
+mss_ts_acc_i$acc <- str_replace(mss_ts_acc_i$acc, "0", "inacc")
+mss_ts_acc_i$acc <- str_replace(mss_ts_acc_i$acc, "1", "acc")
+
+mss_ts_inacc_i <-  mss_ts_acc_i%>%
+  group_by(ID, acc)%>%
+  summarise(RT = mean(RT))%>%
+  spread(acc, RT)%>%
+  select(-acc)
+
+mss_ts_acc_i <-  mss_ts_acc_i%>%
+  group_by(ID, acc)%>%
+  summarise(RT = mean(RT))%>%
+  spread(acc, RT)
+
+mss_ts_sim_i <-  d_incl_rt %>%
+  dplyr::group_by(ID, acc, similar)%>%
+  dplyr::summarise(RT = mean(RT))%>%
+  dplyr::filter(acc == 1)%>%
+  tidyr::spread(similar, RT)%>%
+  dplyr::mutate(similar_acc = similar)%>%
+  dplyr::mutate(dissimilar_acc = dissimilar)
+
+mss_ts_aov_i <- mss_ts_inacc_i %>%
+  left_join(mss_ts_sim_i)%>%
+  dplyr::filter(!is.na(similar_acc),
+         !is.na(dissimilar_acc),
+         !is.na(inacc))%>%
+  gather("trial_type", "RT", inacc:dissimilar_acc) %>%
+  filter(trial_type != "acc",
+         trial_type != "similar",
+         trial_type != "dissimilar")
+```
+
+
 ###Repeated-measures ANOVA
 
 Repeated-measures ANOVA with trial type (similar and accurate, dissimilar and accurate, and inaccurate) as the independent variable.
@@ -560,7 +655,52 @@ ggplot(mss_ts_aov_p, aes(x = factor(trial_type), y = mean, fill = trial_type)) +
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Trial Type") + 
-  ylab("Mean Reaction Time (ms)") 
+  ylab("Mean Reaction Time (ms)")  +  
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
+```
+
+same without exclusions
+```{r}
+TS.aov_i <- with(mss_ts_aov_i,
+                   aov(RT ~ trial_type +
+                       Error(ID /trial_type))) #add error term for ID for repeated measures
+summary(TS.aov_i)
+
+ezANOVA(
+mss_ts_aov_i
+, RT
+, ID
+, within = trial_type
+, within_full = NULL
+, within_covariates = NULL
+, between = NULL
+, between_covariates = NULL
+, observed = NULL
+, diff = NULL
+, reverse_diff = FALSE
+, type = 2
+, white.adjust = FALSE
+, detailed = FALSE
+, return_aov = FALSE
+)
+```
+
+```{r, echo=FALSE}
+mss_ts_aov_p_i <- mss_ts_aov_i %>%
+  group_by(trial_type)%>%
+  multi_boot_standard(col = "RT", na.rm = TRUE)
+
+mss_ts_aov_p_i$trial_type <- factor(mss_ts_aov_p_i$trial_type, 
+                            levels = c("dissimilar_acc","similar_acc","inacc"))
+
+ggplot(mss_ts_aov_p_i, aes(x = factor(trial_type), y = mean, fill = trial_type)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Trial Type") + 
+  ylab("Mean Reaction Time (ms)")  +  
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
 ```
 
 ###T-tests
@@ -575,21 +715,31 @@ t.test(subset(mss_ts_aov, trial_type=="inacc")$RT,
 t.test(subset(mss_ts_aov, trial_type=="similar_acc")$RT, 
        subset(mss_ts_aov, trial_type=="dissimilar_acc")$RT, paired = TRUE)
 
-inacc <- psych::describe(subset(mss_ts_aov, trial_type=="inacc")$RT) 
-sim_acc <- psych::describe(subset(mss_ts_aov, trial_type=="similar_acc")$RT)
-dissim_acc <- psych::describe(subset(mss_ts_aov, trial_type=="dissimilar_acc")$RT)
+inacc_ts <- psych::describe(subset(mss_ts_aov, trial_type=="inacc")$RT) 
+sim_acc_ts <- psych::describe(subset(mss_ts_aov, trial_type=="similar_acc")$RT)
+dissim_acc_ts <- psych::describe(subset(mss_ts_aov, trial_type=="dissimilar_acc")$RT)
 
-cohensd_inacc_sim_acc <- abs((inacc$mean - sim_acc$mean)/((inacc$sd + sim_acc$sd)/2))
-cohensd_inacc_sim_acc
+cohensd_inacc_sim_acc_ts <- abs((inacc_ts$mean - sim_acc_ts$mean)/((inacc_ts$sd + sim_acc_ts$sd)/2))
+cohensd_inacc_sim_acc_ts
 
-cohensd_inacc_dissim_acc <- abs((inacc$mean - dissim_acc$mean)/((inacc$sd + dissim_acc$sd)/2))
-cohensd_inacc_dissim_acc
+cohensd_inacc_dissim_acc_ts <- abs((inacc_ts$mean - dissim_acc_ts$mean)/((inacc_ts$sd + dissim_acc_ts$sd)/2))
+cohensd_inacc_dissim_acc_ts
 
-cohensd_sim_acc_dissim_acc <- abs((sim_acc$mean - dissim_acc$mean)/((sim_acc$sd + dissim_acc$sd)/2))
-cohensd_sim_acc_dissim_acc
-
+cohensd_sim_acc_dissim_acc_ts <- abs((sim_acc_ts$mean - dissim_acc_ts$mean)/((sim_acc_ts$sd + dissim_acc_ts$sd)/2))
+cohensd_sim_acc_dissim_acc_ts
 ```
 
+Same without exclusions.
+```{r}
+t.test(subset(mss_ts_aov_i, trial_type=="inacc")$RT, 
+       subset(mss_ts_aov_i, trial_type=="similar_acc")$RT, paired = TRUE)
+
+t.test(subset(mss_ts_aov_i, trial_type=="inacc")$RT, 
+       subset(mss_ts_aov_i, trial_type=="dissimilar_acc")$RT, paired = TRUE)
+
+t.test(subset(mss_ts_aov_i, trial_type=="similar_acc")$RT, 
+       subset(mss_ts_aov_i, trial_type=="dissimilar_acc")$RT, paired = TRUE)
+```
 
 ##Summary of Touchscreen Results
 
@@ -604,4 +754,54 @@ T-test summary:
   inaccurate - dissimilar-accurate** 
   
   similar-accurate - dissimilar-accurate
+  
+#Accuracy across tasks for plot
 
+```{r, echo = FALSE}
+ms_et <- mss_et_acc_t %>%
+  gather("similar", "acc", similar:dissimilar)%>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)%>%
+  mutate(task = "ET")
+
+ms_ts <- mss_ts_acc_t %>%
+  gather("similar", "acc", similar:dissimilar)%>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)%>%
+  mutate(task = "TS")
+
+ms_acc <- full_join(ms_et, ms_ts)
+
+ggplot(ms_acc, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat = "identity") + 
+  facet_grid(~ task) + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate") + ggtitle("Accuracy") +  
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
+```
+
+#Any effect of age?
+
+```{r}
+et <- spread(mss_et_aov, trial_type, trans)%>%
+  mutate(dacc_inacc = dissimilar_acc - inacc,
+         sacc_inacc = similar_acc - inacc,
+         dacc_sacc = dissimilar_acc - similar_acc)%>%
+  left_join(demo)
+
+ts <- spread(mss_ts_aov, trial_type, RT)%>%
+  mutate(dacc_inacc = dissimilar_acc - inacc,
+         sacc_inacc = similar_acc - inacc,
+         dacc_sacc = dissimilar_acc - similar_acc)%>%
+  left_join(demo)
+
+rcorr(et$age_months, et$dacc_inacc)
+rcorr(et$age_months, et$sacc_inacc)
+rcorr(et$age_months, et$dacc_sacc)
+
+rcorr(ts$age_months, ts$dacc_inacc)
+rcorr(ts$age_months, ts$sacc_inacc)
+rcorr(ts$age_months, ts$dacc_sacc)
+```

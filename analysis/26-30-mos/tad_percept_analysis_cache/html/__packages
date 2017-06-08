@@ -1,6 +1,5 @@
 base
 langcog
-plyr
 dplyr
 RWiener
 ggplot2
@@ -9,12 +8,12 @@ stringr
 tidyr
 Matrix
 lme4
-xtable
 knitr
 markdown
 psych
+magrittr
+ez
 lattice
 survival
 Formula
 Hmisc
-magrittr

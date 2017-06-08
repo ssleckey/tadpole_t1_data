@@ -79,14 +79,14 @@ ID,participation_date,birthdate,gender,ethnicity,race,income,mother_edu,father_e
 78,5/14/15,12/8/12,Female,Not Hispanic,Caucasian,f,c,d,2.43,29.16,6,0
 79,5/29/15,12/2/12,Male,Hispanic,Caucasian,f,e,e,2.49,29.85,7,0
 80,6/15/15,4/25/13,Male,Not Hispanic,Caucasian,f,e,e,2.14,25.68,8,0
-81,7/9/15,3/1/13,Male ,Hispanic,Caucasian,d,c,d,2.36,28.27,1,0
+81,7/9/15,3/1/13,Male,Hispanic,Caucasian,d,c,d,2.36,28.27,1,0
 82,7/1/15,4/25/13,Male,Not Hispanic ,Caucasian,d,d,b,2.18,26.2,2,1
-83,7/7/15,2/8/13,Male ,Not hipanic ,Caucasian ,d,g,g,2.41,28.9,3,0
-84,7/13/15,2/14/13,Male ,Hispanic,Caucasian,d,g,c,2.41,28.9,4,0
+83,7/7/15,2/8/13,Male,Not hipanic ,Caucasian ,d,g,g,2.41,28.9,3,0
+84,7/13/15,2/14/13,Male,Hispanic,Caucasian,d,g,c,2.41,28.9,4,0
 85,7/17/15,2/23/13,Female,Hispanic,Asian,f,g,g,2.39,28.73,5,1
 86,7/23/15,5/7/13,Female,Not Hispanic,Caucasian,f,g,d,2.21,26.53,6,0
 87,7/24/15,3/21/13,Male,Hispanic ,Caucasian,e,g,e,2.34,28.11,7,0
-88,7/28/15,4/28/13,Male ,Not Hispanic ,Native Hawaiian & Caucasian,c,c,g,2.25,26.99,8,0
+88,7/28/15,4/28/13,Male,Not Hispanic ,Native Hawaiian & Caucasian,c,c,g,2.25,26.99,8,0
 89,7/30/15,5/16/13,Female,Not Hispanic,Caucasian ,d,b,b,2.21,26.47,1,0
 90,8/14/15,2/7/13,Male,Hispanic,Caucasian,d,g,e,2.52,30.18,2,0
 91,8/18/15,3/4/13,Male,Not Hispanic,African American,f,g,c,2.46,29.49,3,0
@@ -95,12 +95,12 @@ ID,participation_date,birthdate,gender,ethnicity,race,income,mother_edu,father_e
 94,11/17/15,7/20/13,Female,"Hispanic, american indian, asian-american",,f,f,e,2.33,27.95,6,0
 95,9/16/15,11/11/12,Female,Not Hispanic ,Caucasian,e,e,g,2.85,34.16,6,0
 96,9/16/15,4/21/13,Male,Hispanic,Caucasian ,b,d,a,2.41,28.87,7,1
-97,9/18/15,5/16/13, Female,Not Hispanic ,Caucasian,d,c,c,2.34,28.11,8,0
+97,9/18/15,5/16/13,Female,Not Hispanic ,Caucasian,d,c,c,2.34,28.11,8,0
 98,9/25/15,2/2/13,Male,Hispanic,American Indian or Alaskan / Caucasian,e,g,d,2.64,31.73,1,0
 99,9/29/15,3/26/13,Male,Hispanic,Caucasian,f,d,e,2.51,30.15,2,1
 100,9/29/15,3/26/13,Male,Hispanic,Caucasian,f,d,e,2.51,30.15,3,1
 101,10/8/15,4/2/13,Male,Caucasian,NA,,e,e,2.52,30.21,4,0
-102,10/21/15,6/4/13,Male ,Caucasian/ Asian-American,NA,e,g,e,2.38,28.57,5,0
+102,10/21/15,6/4/13,Male,Caucasian/ Asian-American,NA,e,g,e,2.38,28.57,5,0
 103,10/23/15,2/16/13,Female,Caucasian ,NA,e,c,b,2.68,32.19,6,0
 104,10/26/15,7/16/13,Male,Caucasian/Hispanic,NA,d,e,b,2.28,27.35,7,1
 105,10/30/15,7/2/13,Female,Asiam-American,NA,b,b,c,2.33,27.95,1,1

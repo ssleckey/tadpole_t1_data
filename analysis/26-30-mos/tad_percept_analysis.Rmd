@@ -270,6 +270,9 @@ t.test(mss_et_acc_t$similar,
 similar <- psych::describe(mss_et_acc_t$similar)
 dissimilar <- psych::describe(mss_et_acc_t$dissimilar)
 
+similar
+dissimilar
+
 cohensd_acc <- abs((similar$mean - dissimilar$mean)/((similar$sd + dissimilar$sd)/2))
 cohensd_acc
 ```
@@ -503,6 +506,9 @@ t.test(mss_ts_acc_t$similar,
 similar <- psych::describe(mss_ts_acc_t$similar)
 dissimilar <- psych::describe(mss_ts_acc_t$dissimilar)
 
+similar
+dissimilar
+
 cohensd_acc <- abs((similar$mean - dissimilar$mean)/((similar$sd + dissimilar$sd)/2))
 cohensd_acc
 ```
@@ -538,7 +544,7 @@ ggplot(ms, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(stat =
 
 ##RTs
 
-Set up a dataframe with switches averaged by accuracy and similiarity within participants.
+Set up a dataframe with RTs averaged by accuracy and similiarity within participants.
 
 ```{r}
 mss_ts_acc <-  d_filt_rt

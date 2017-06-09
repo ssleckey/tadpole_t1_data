@@ -6,7 +6,7 @@ pc <- "S:/Users/Sarah/Data/Tadpole/T1/tadpole_t1_data/Touchscreen Raw Data/retri
 
 subj=1
 
-for (subj in 1:124) {
+for (subj in 1:170) {
   if(subj==2) {next} #this is if need to skip some data
   if(subj==5) {next}
   if(subj==6) {next}
@@ -40,6 +40,20 @@ for (subj in 1:124) {
   if(subj==117) {next}
   if(subj==119) {next}
   if(subj==120) {next}
+  if(subj==125) {next}
+  if(subj==126) {next}
+  if(subj==128) {next}
+  if(subj==129) {next}
+  if(subj==132) {next}
+  if(subj==137) {next}
+  if(subj==140) {next}
+  if(subj==148) {next}
+  if(subj==152) {next}
+  if(subj==154) {next}
+  if(subj==159) {next}
+  if(subj==163) {next}
+  if(subj==166) {next}
+  if(subj==168) {next}
   
   #Read in data table
   memoryT1 <- read.csv(paste(pc,subj,"_log.csv",sep=""), header=T) 

@@ -1,0 +1,118 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+380	MovieStart	MutedBallie.avi		
+692			Content	
+775			Content	
+1025			Content	
+2039	KeyPress	Space		
+2039	MovieEnd	MutedBallie.avi		
+2686	ImageStart	fixation.png		
+3677	ImageEnd	fixation.png		
+3709	ImageStart	CD_CD.jpg		
+4056			Content	
+4189			encode_distractor_left_right	
+4523			encode_distractor_right_right	
+4789			encode_distractor_right_right	
+5105			encode_distractor_right_left	
+5755			encode_distractor_left_right	
+6005			encode_distractor_left_right	
+6438			encode_distractor_left_left	
+6888			encode_distractor_left_left	
+7404			encode_distractor_right_right	
+7654			encode_distractor_right_left	
+8353			encode_distractor_right_right	
+8687	ImageEnd	CD_CD.jpg		
+8696	ImageStart	fixation.png		
+9036			Content	
+9269			Content	
+9700	ImageEnd	fixation.png		
+9732	ImageStart	AB_AB.jpg		
+9736			Content	
+10019			Content	
+10269			encode1_target_right_left	
+10485			encode1_target_right_left	
+10952			encode1_target_right_right	
+11535			encode1_target_left_left	
+12385			encode1_target_right_left	
+12668			encode1_target_right_left	
+13051			encode1_target_left_right	
+13334			encode1_target_left_right	
+13900			encode1_target_right_right	
+14200			encode1_target_right_right	
+14683			encode1_target_right_left	
+14707	ImageEnd	AB_AB.jpg		
+14718	ImageStart	fixation.png		
+15000			Content	
+15449			Content	
+15720	ImageEnd	fixation.png		
+15754	ImageStart	CD_CD.jpg		
+15949			Content	
+16265			encode_distractor_left_right	
+16632			encode_distractor_right_right	
+16865			encode_distractor_right_right	
+17115			encode_distractor_right_left	
+17331			encode_distractor_right_left	
+17815			encode_distractor_left_left	
+18148			encode_distractor_left_left	
+20728	ImageEnd	CD_CD.jpg		
+20739	ImageStart	fixation.png		
+21741	ImageEnd	fixation.png		
+21778	ImageStart	AB_AB.jpg		
+24793			encode2_target_left_left	
+24976			encode2_target_right_left	
+25293			encode2_target_right_right	
+25692			encode2_target_right_right	
+26225			encode2_target_right_right	
+26442			encode2_target_right_left	
+26725			encode2_target_right_left	
+26750	ImageEnd	AB_AB.jpg		
+26760	ImageStart	fixation.png		
+27158			Content	
+29761	ImageEnd	fixation.png		
+29797	ImageStart	BR_BP.jpg		
+30722			retrieval_new_pair_correct_inside	
+30939			retrieval_new_pair_correct_inside	
+31322			retrieval_new_pair_incorrect_outside	
+31621			retrieval_old_pair_left	
+31955			retrieval_old_pair_right	
+33187			retrieval_new_pair_incorrect_outside	
+34653			retrieval_new_pair_incorrect_outside	
+35136			Content	
+35220			retrieval_old_pair_right	
+35553			retrieval_old_pair_right	
+35836			retrieval_old_pair_left	
+37168			Content	
+38634			retrieval_new_pair_correct_inside	
+38801			retrieval_new_pair_correct_inside	
+39217			retrieval_new_pair_incorrect_outside	
+39750			retrieval_old_pair_left	
+39776	ImageEnd	BR_BP.jpg		
+39786	ImageStart	fixation.png		
+40100			Content	
+41649			Content	
+41982			Content	
+42582			Content	
+42781			Content	
+42787	ImageEnd	fixation.png		
+42820	ImageStart	GR_BR.jpg		
+43231			retrieval_new_pair_correct_inside	
+43714			retrieval_old_pair_right	
+44080			retrieval_old_pair_left	
+44514			retrieval_new_pair_incorrect_outside	
+44780			retrieval_new_pair_incorrect_outside	
+45913			retrieval_old_pair_right	
+46163			retrieval_old_pair_left	
+46562			retrieval_old_pair_right	
+47195			retrieval_new_pair_correct_inside	
+47611			retrieval_new_pair_incorrect_outside	
+48044			retrieval_old_pair_left	
+48378			retrieval_old_pair_left	
+49227			Content	
+52786	ImageEnd	GR_BR.jpg		
+52796	ImageStart	fixation.png		
+55799	ImageEnd	fixation.png		
+56006			Content	
+56415	MovieStart	congratulations.wmv		
+56856			Content	
+58343	KeyPress	Escape		
+58343	MovieEnd	congratulations.wmv		

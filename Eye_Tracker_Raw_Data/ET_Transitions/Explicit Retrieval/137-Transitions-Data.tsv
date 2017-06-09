@@ -1,0 +1,253 @@
+Timestamp	Event	Descriptor	AoiNames	
+115	ImageStart	fixation.png		
+3021			Content	
+3487			Content	
+3721			Content	
+4307	KeyPress	Space		
+4308	ImageEnd	fixation.png		
+6488	MovieStart	MutedBallie.avi		
+6867	KeyPress	Space		
+6868	MovieEnd	MutedBallie.avi		
+7258	ImageStart	blacksquare.bmp		
+10779	KeyPress	Space		
+10780	ImageEnd	blacksquare.bmp		
+11420	MovieStart	Julia_3.AVI		
+14169	MovieEnd	Julia_3.AVI		
+14652	ImageStart	fixation.png		
+20179	KeyPress	Space		
+20179	ImageEnd	fixation.png		
+20201	ImageStart	arrow_crown.BMP		
+20792			Content	
+20876			Content	
+21209			Content	
+21559			Content	
+22441			Content	
+22691			Content	
+23074			Content	
+23757			Content	
+24803	KeyPress	Right		
+24803	ImageEnd	arrow_crown.BMP		
+24807	ImageStart	fixation.png		
+27888			Content	
+28627	KeyPress	Space		
+28627	ImageEnd	fixation.png		
+28648	ImageStart	heart_moon.BMP		
+29320			Content	
+29453			Content	
+29620			Content	
+30236			Content	
+30336			Content	
+30486			Content	
+30603			Content	
+30753			Content	
+31002			Content	
+31219			Content	
+31385			Content	
+31485			Content	
+31869			Content	
+32119			Content	
+32601			Content	
+32885			Content	
+33934			Content	
+34400			Content	
+34567			Content	
+35923	KeyPress	Right		
+35923	ImageEnd	heart_moon.BMP		
+35927	ImageStart	fixation.png		
+39234	KeyPress	Space		
+39235	ImageEnd	fixation.png		
+39255	ImageStart	watermelon_orange.BMP		
+41026	KeyPress	Right		
+41026	ImageEnd	watermelon_orange.BMP		
+41030	ImageStart	fixation.png		
+42266	KeyPress	Space		
+42267	ImageEnd	fixation.png		
+42288	ImageStart	ring_watch.BMP		
+43858	KeyPress	Right		
+43859	ImageEnd	ring_watch.BMP		
+43862	ImageStart	fixation.png		
+45193			Content	
+45507	KeyPress	Space		
+45507	ImageEnd	fixation.png		
+45528	ImageStart	duck_frog.BMP		
+45643			old	
+45909			old	
+46192			old	
+47186	KeyPress	Right		
+47186	ImageEnd	duck_frog.BMP		
+47190	ImageStart	fixation.png		
+48374			Content	
+48557			Content	
+48762	KeyPress	Space		
+48763	ImageEnd	fixation.png		
+48785	ImageStart	ball_drum.BMP		
+49040			Content	
+49190			old	
+49457			new	
+49723			new	
+50530	KeyPress	Left		
+50530	ImageEnd	ball_drum.BMP		
+50534	ImageStart	fixation.png		
+51938	KeyPress	Space		
+51938	ImageEnd	fixation.png		
+51959	ImageStart	knife_key.BMP		
+52705			old	
+53658	KeyPress	Right		
+53658	ImageEnd	knife_key.BMP		
+53662	ImageStart	fixation.png		
+55218	KeyPress	Space		
+55218	ImageEnd	fixation.png		
+55240	ImageStart	sun_tree.BMP		
+55636			Content	
+55736			old	
+57498	KeyPress	Left		
+57498	ImageEnd	sun_tree.BMP		
+57502	ImageStart	fixation.png		
+59138	KeyPress	Space		
+59138	ImageEnd	fixation.png		
+59159	ImageStart	lettuce_corn.BMP		
+59200			old	
+59300			old	
+59950			old	
+60542	KeyPress	Left		
+60542	ImageEnd	lettuce_corn.BMP		
+60546	ImageStart	fixation.png		
+61565			Content	
+61999			Content	
+62170	KeyPress	Space		
+62170	ImageEnd	fixation.png		
+62191	ImageStart	hair_hat.BMP		
+62265			Content	
+63562	KeyPress	Left		
+63562	ImageEnd	hair_hat.BMP		
+63567	ImageStart	fixation.png		
+64463			Content	
+64747			Content	
+64880			Content	
+65213			Content	
+65322	KeyPress	Space		
+65322	ImageEnd	fixation.png		
+65344	ImageStart	flower_leaf.BMP		
+65513			Content	
+66698	KeyPress	Left		
+66698	ImageEnd	flower_leaf.BMP		
+66702	ImageStart	fixation.png		
+68410	KeyPress	Space		
+68410	ImageEnd	fixation.png		
+68431	ImageStart	leg_arm.BMP		
+68544			Content	
+68996			old	
+70110			new	
+70293			new	
+70476			new	
+71178	KeyPress	Left		
+71178	ImageEnd	leg_arm.BMP		
+71182	ImageStart	fixation.png		
+72810	KeyPress	Space		
+72810	ImageEnd	fixation.png		
+72831	ImageStart	lips_ear.BMP		
+73225			Content	
+73325			new	
+73924			old	
+74124			Content	
+74307			old	
+74440			old	
+74573			old	
+75361	KeyPress	Right		
+75362	ImageEnd	lips_ear.BMP		
+75366	ImageStart	fixation.png		
+77042	KeyPress	Space		
+77042	ImageEnd	fixation.png		
+77062	ImageStart	scissors_brush.BMP		
+78546	KeyPress	Left		
+78546	ImageEnd	scissors_brush.BMP		
+78550	ImageStart	fixation.png		
+79853			Content	
+80273	KeyPress	Space		
+80274	ImageEnd	fixation.png		
+80295	ImageStart	star_cloud.BMP		
+81473	KeyPress	Left		
+81474	ImageEnd	star_cloud.BMP		
+81478	ImageStart	fixation.png		
+81702			Content	
+81869			Content	
+81985			Content	
+82102			Content	
+82218			Content	
+84289	KeyPress	Space		
+84290	ImageEnd	fixation.png		
+84311	ImageStart	glass_bowl.BMP		
+85066			new	
+85216			new	
+86057	KeyPress	Left		
+86057	ImageEnd	glass_bowl.BMP		
+86061	ImageStart	fixation.png		
+86615			Content	
+87300			Content	
+87383			Content	
+87533			Content	
+87782			Content	
+87929	KeyPress	Space		
+87929	ImageEnd	fixation.png		
+87950	ImageStart	hand_foot.BMP		
+89857	KeyPress	Left		
+89857	ImageEnd	hand_foot.BMP		
+89862	ImageStart	fixation.png		
+90379			Content	
+91153	KeyPress	Space		
+91153	ImageEnd	fixation.png		
+91175	ImageStart	garbage can_box.BMP		
+91295			Content	
+91495			new	
+92697	KeyPress	Left		
+92697	ImageEnd	garbage can_box.BMP		
+92701	ImageStart	fixation.png		
+93078			Content	
+93394			Content	
+95313	KeyPress	Space		
+95313	ImageEnd	fixation.png		
+95335	ImageStart	lion_bear.BMP		
+95376			Content	
+96259			old	
+96426			old	
+97986	KeyPress	Left		
+97986	ImageEnd	lion_bear.BMP		
+97990	ImageStart	fixation.png		
+99353	KeyPress	Space		
+99353	ImageEnd	fixation.png		
+99375	ImageStart	shirt_cap.BMP		
+99857			new	
+99990			new	
+100106			new	
+101449	KeyPress	Left		
+101449	ImageEnd	shirt_cap.BMP		
+101453	ImageStart	fixation.png		
+102488			Content	
+102801	KeyPress	Space		
+102801	ImageEnd	fixation.png		
+102822	ImageStart	nail_pencil.BMP		
+103188			old	
+103487			new	
+103837			new	
+104633	KeyPress	Left		
+104633	ImageEnd	nail_pencil.BMP		
+104637	ImageStart	fixation.png		
+105519			Content	
+105769			Content	
+105852			Content	
+105969	KeyPress	Space		
+105969	ImageEnd	fixation.png		
+105990	ImageStart	mouse_squirrel.BMP		
+107801	KeyPress	Right		
+107801	ImageEnd	mouse_squirrel.BMP		
+107807	ImageStart	whiteborder.bmp		
+108513	KeyPress	Space		
+108513	ImageEnd	whiteborder.bmp		
+109184			Content	
+109282	MovieStart	congratulations.wmv		
+109667			Content	
+109977	KeyPress	Space		
+110833			Content	
+110933			Content	
+111177	KeyPress	Escape		
+111177	MovieEnd	congratulations.wmv		

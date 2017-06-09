@@ -1,0 +1,521 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+125	ImageStart	fixation.png		
+415			Content	
+1116	KeyPress	Space		
+1116	ImageEnd	fixation.png		
+1860	MovieStart	Julia_FindDrawings.wmv		
+1898			Content	
+4734	MovieEnd	Julia_FindDrawings.wmv		
+5143	ImageStart	fixation.png		
+5211			Content	
+6143	ImageEnd	fixation.png		
+6729	MovieStart	Julia_WhichOne.wmv		
+7876			Content	
+9208	MovieEnd	Julia_WhichOne.wmv		
+9489	ImageStart	fixation.png		
+9609			Content	
+9958			Content	
+10175			Content	
+10497	ImageEnd	fixation.png		
+10527	ImageStart	arrow_crown.jpg		
+10874			Content	
+11857			Content	
+12340			Content	
+13956			Content	
+14322			Content	
+14922			Content	
+15172			Content	
+17070			Content	
+17553			Content	
+18053			Content	
+18803			Content	
+19219	KeyPress	Right		
+19220	ImageEnd	arrow_crown.jpg		
+19223	ImageStart	fixation.png		
+19635			Content	
+19869			Content	
+20229	ImageEnd	fixation.png		
+20268			Content	
+21591	MovieStart	Julia_WhichOne.wmv		
+24083	MovieEnd	Julia_WhichOne.wmv		
+24369	ImageStart	fixation.png		
+25363	ImageEnd	fixation.png		
+25392	ImageStart	heart_moon.jpg		
+25948			Content	
+27630			Content	
+27847			Content	
+28097			Content	
+28796			Content	
+29096			Content	
+30045			Content	
+30512			Content	
+31311			Content	
+31761			Content	
+31844			Content	
+32161			Content	
+32660			Content	
+34659			Content	
+34809			Content	
+35347	KeyPress	Right		
+35347	ImageEnd	heart_moon.jpg		
+35351	ImageStart	fixation.png		
+35658			Content	
+35891			Content	
+36224			Content	
+36360	ImageEnd	fixation.png		
+36905	MovieStart	Julia_WhichOne.wmv		
+38357			Content	
+39406	MovieEnd	Julia_WhichOne.wmv		
+39647	ImageStart	fixation.png		
+39722			Content	
+40372			Content	
+40650	ImageEnd	fixation.png		
+40680	ImageStart	1_grapes_peach.jpg		
+43070			old	
+43170			new	
+43536			new	
+43903			old	
+44467	KeyPress	Right		
+44467	ImageEnd	1_grapes_peach.jpg		
+44471	ImageStart	fixation.png		
+45119			Content	
+45469			Content	
+45470	ImageEnd	fixation.png		
+45852			Content	
+46022	MovieStart	Julia_WhichOne.wmv		
+46135			Content	
+46385			Content	
+46601			Content	
+48233			Content	
+48501	MovieEnd	Julia_WhichOne.wmv		
+48847	ImageStart	fixation.png		
+48883			Content	
+49433			Content	
+49855	ImageEnd	fixation.png		
+49888	ImageStart	2_cow_horse.jpg		
+50165			new	
+50415			new	
+50981			old	
+51481			old	
+51698			new	
+52381			old	
+53113			new	
+53396			new	
+53863			old	
+54279			old	
+54962			Content	
+57083	KeyPress	Right		
+57084	ImageEnd	2_cow_horse.jpg		
+57087	ImageStart	fixation.png		
+57161			Content	
+57311			Content	
+57544			Content	
+58091	ImageEnd	fixation.png		
+58624	MovieStart	Julia_WhichOne.wmv		
+59526			Content	
+60875			Content	
+61110	MovieEnd	Julia_WhichOne.wmv		
+61225			Content	
+61357	ImageStart	fixation.png		
+61725			Content	
+61941			Content	
+62158			Content	
+62365	ImageEnd	fixation.png		
+62397	ImageStart	3_tomato_carrot.jpg		
+63424			old	
+63657			new	
+63840			Content	
+65739			Content	
+65822			Content	
+66055			Content	
+66172			old	
+66538			old	
+67038			new	
+67254			old	
+67521			new	
+67904			new	
+69136			old	
+69353			old	
+69587	KeyPress	Right		
+69587	ImageEnd	3_tomato_carrot.jpg		
+69591	ImageStart	fixation.png		
+70069			Content	
+70319			Content	
+70569			Content	
+70602	ImageEnd	fixation.png		
+71120	MovieStart	Julia_WhichOne.wmv		
+71368			Content	
+73117			Content	
+73550			Content	
+73595	MovieEnd	Julia_WhichOne.wmv		
+73884	ImageStart	fixation.png		
+74892	ImageEnd	fixation.png		
+74920	ImageStart	4_lamp_tv.jpg		
+75649			Content	
+76049			old	
+76165			old	
+76831			old	
+77281			old	
+77647			old	
+78280			old	
+79063			new	
+79380			new	
+79630			old	
+80196			old	
+80323	KeyPress	Right		
+80323	ImageEnd	4_lamp_tv.jpg		
+80327	ImageStart	fixation.png		
+80679			Content	
+80979			Content	
+81337	ImageEnd	fixation.png		
+81562			Content	
+81695			Content	
+81966	MovieStart	Julia_WhichOne.wmv		
+83277			Content	
+83410			Content	
+84464	MovieEnd	Julia_WhichOne.wmv		
+84593			Content	
+84753	ImageStart	fixation.png		
+85750	ImageEnd	fixation.png		
+85783	ImageStart	5_ladder_dresser.jpg		
+91472			new	
+92688			Content	
+95286			Content	
+95586			new	
+96102			Content	
+96202			old	
+96485			old	
+99500			old	
+100200			Content	
+100832			Content	
+101032			Content	
+104464			Content	
+104613			Content	
+104830			Content	
+104996			Content	
+106429			old	
+106712			old	
+109527			Content	
+109610			Content	
+109843			new	
+110443			old	
+111492			old	
+112507	KeyPress	Left		
+112507	ImageEnd	5_ladder_dresser.jpg		
+112511	ImageStart	fixation.png		
+112958			Content	
+113518	ImageEnd	fixation.png		
+114036	MovieStart	Julia_WhichOne.wmv		
+114374			Content	
+116520	MovieEnd	Julia_WhichOne.wmv		
+116833	ImageStart	fixation.png		
+117122			Content	
+117839	ImageEnd	fixation.png		
+117876	ImageStart	6_bird_turtle.jpg		
+118221			old	
+118971			new	
+119270			Content	
+123101			old	
+123967			new	
+124284			new	
+125250	KeyPress	Left		
+125251	ImageEnd	6_bird_turtle.jpg		
+125254	ImageStart	fixation.png		
+125883			Content	
+126262	ImageEnd	fixation.png		
+126920	MovieStart	Julia_WhichOne.wmv		
+127198			Content	
+129392	MovieEnd	Julia_WhichOne.wmv		
+129665	ImageStart	fixation.png		
+129897			Content	
+130661	ImageEnd	fixation.png		
+130691	ImageStart	7_cat_dog.jpg		
+131029			new	
+131246			new	
+132178			Content	
+133498	KeyPress	Left		
+133498	ImageEnd	7_cat_dog.jpg		
+133502	ImageStart	fixation.png		
+134277			Content	
+134499	ImageEnd	fixation.png		
+134989	MovieStart	Julia_WhichOne.wmv		
+135360			Content	
+137480	MovieEnd	Julia_WhichOne.wmv		
+137746	ImageStart	fixation.png		
+137941			Content	
+138108			Content	
+138394	KeyPress	Space		
+138743	ImageEnd	fixation.png		
+138779	ImageStart	8_strawberry_banana.jpg		
+139157			new	
+139407			new	
+140540			new	
+141139			new	
+141356			new	
+142005			new	
+142638			new	
+143188			new	
+143987			old	
+144074	KeyPress	Left		
+144074	ImageEnd	8_strawberry_banana.jpg		
+144078	ImageStart	fixation.png		
+144570			Content	
+144803			Content	
+145077	ImageEnd	fixation.png		
+145186			Content	
+145535	MovieStart	Julia_WhichOne.wmv		
+145653			Content	
+145853			Content	
+146119			Content	
+148014	MovieEnd	Julia_WhichOne.wmv		
+148332	ImageStart	fixation.png		
+148434			Content	
+148551			Content	
+148734			Content	
+149335	ImageEnd	fixation.png		
+149366	ImageStart	9_plane_helicopter.jpg		
+150533			Content	
+150683			new	
+151849			Content	
+152098			old	
+152748			old	
+152848			old	
+153614			new	
+153831			new	
+154362	KeyPress	Left		
+154362	ImageEnd	9_plane_helicopter.jpg		
+154366	ImageStart	fixation.png		
+154480			Content	
+154747			Content	
+155371	ImageEnd	fixation.png		
+156013	MovieStart	Julia_WhichOne.wmv		
+156329			Content	
+158328			Content	
+158500	MovieEnd	Julia_WhichOne.wmv		
+158750	ImageStart	fixation.png		
+159210			Content	
+159755	ImageEnd	fixation.png		
+159791	ImageStart	10_bread_potato.jpg		
+160260			old	
+160809			new	
+161326			new	
+162042	KeyPress	Right		
+162042	ImageEnd	10_bread_potato.jpg		
+162045	ImageStart	fixation.png		
+162408			Content	
+162675			Content	
+163047	ImageEnd	fixation.png		
+163691			Content	
+163707	MovieStart	Julia_WhichOne.wmv		
+164024			Content	
+166185	MovieEnd	Julia_WhichOne.wmv		
+166458	ImageStart	fixation.png		
+166772			Content	
+167463	ImageEnd	fixation.png		
+167493	ImageStart	11_mitten_glasses.jpg		
+167855			new	
+168138			new	
+168238			new	
+168737			new	
+169071			new	
+169587			new	
+170020			new	
+170450	KeyPress	Left		
+170450	ImageEnd	11_mitten_glasses.jpg		
+170454	ImageStart	fixation.png		
+170969			Content	
+171456	ImageEnd	fixation.png		
+171969			Content	
+172033	MovieStart	Julia_WhichOne.wmv		
+172268			Content	
+172468			Content	
+173168			Content	
+174514	MovieEnd	Julia_WhichOne.wmv		
+174806	ImageStart	fixation.png		
+175808	ImageEnd	fixation.png		
+175842	ImageStart	12_belt_tie.jpg		
+176865			new	
+177065			old	
+177182			old	
+177665			old	
+178981			old	
+179209	KeyPress	Left		
+179210	ImageEnd	12_belt_tie.jpg		
+179214	ImageStart	fixation.png		
+179447			Content	
+180047			Content	
+180180			Content	
+180224	ImageEnd	fixation.png		
+180513			Content	
+180723	MovieStart	Julia_WhichOne.wmv		
+180979			Content	
+181229			Content	
+181529			Content	
+182279			Content	
+183205	MovieEnd	Julia_WhichOne.wmv		
+183514	ImageStart	fixation.png		
+184514	ImageEnd	fixation.png		
+184544	ImageStart	13_butterfly_ant.jpg		
+187375			Content	
+187459			new	
+187675			new	
+188008			new	
+188175			new	
+188985	KeyPress	Left		
+188986	ImageEnd	13_butterfly_ant.jpg		
+188990	ImageStart	fixation.png		
+189524			Content	
+189989	ImageEnd	fixation.png		
+190534	MovieStart	Julia_WhichOne.wmv		
+191390			Content	
+191906			Content	
+193022	MovieEnd	Julia_WhichOne.wmv		
+193547	ImageStart	fixation.png		
+194544	ImageEnd	fixation.png		
+194574	ImageStart	14_balloon_kite.jpg		
+194671			Content	
+194971			old	
+195321			new	
+195470			new	
+195770			old	
+196103			old	
+197633	KeyPress	Left		
+197633	ImageEnd	14_balloon_kite.jpg		
+197635			Content	
+197637	ImageStart	fixation.png		
+198118			Content	
+198646	ImageEnd	fixation.png		
+199412	MovieStart	Julia_WhichOne.wmv		
+199552			Content	
+199701			Content	
+200684			Content	
+200967			Content	
+201250			Content	
+201884	MovieEnd	Julia_WhichOne.wmv		
+202198	ImageStart	fixation.png		
+202266			Content	
+202865			Content	
+203201	ImageEnd	fixation.png		
+203231	ImageStart	15_barn_house.jpg		
+203265			Content	
+203548			Content	
+203981			new	
+204281			old	
+204964			old	
+205430			old	
+206196			old	
+206505	KeyPress	Left		
+206505	ImageEnd	15_barn_house.jpg		
+206509	ImageStart	fixation.png		
+207112			Content	
+207507	ImageEnd	fixation.png		
+207596			Content	
+208037	MovieStart	Julia_WhichOne.wmv		
+208362			Content	
+209328			Content	
+209895			Content	
+210520	MovieEnd	Julia_WhichOne.wmv		
+210793	ImageStart	fixation.png		
+211797	ImageEnd	fixation.png		
+211826	ImageStart	16_apple_pear.jpg		
+212742			old	
+212825			old	
+214308			old	
+214825	KeyPress	Left		
+214825	ImageEnd	16_apple_pear.jpg		
+214829	ImageStart	fixation.png		
+215839	ImageEnd	fixation.png		
+216307			Content	
+216433	MovieStart	Julia_WhichOne.wmv		
+216706			Content	
+218022			Content	
+218905	MovieEnd	Julia_WhichOne.wmv		
+219038			Content	
+219231	ImageStart	fixation.png		
+219505			Content	
+220237	ImageEnd	fixation.png		
+220269	ImageStart	17_chicken_rabbit.jpg		
+220754			old	
+221087			new	
+222236			new	
+222402			new	
+222719			new	
+223402			old	
+223818			old	
+223921	KeyPress	Left		
+223921	ImageEnd	17_chicken_rabbit.jpg		
+223925	ImageStart	fixation.png		
+224235			Content	
+224534			Content	
+224932	ImageEnd	fixation.png		
+225815	MovieStart	Julia_WhichOne.wmv		
+226267			Content	
+228298	MovieEnd	Julia_WhichOne.wmv		
+228630	ImageStart	fixation.png		
+228765			Content	
+229148			Content	
+229564			Content	
+229628	ImageEnd	fixation.png		
+229658	ImageStart	18_eye_nose.jpg		
+230247			new	
+230464			new	
+231047			old	
+231630			old	
+231721	KeyPress	Right		
+231721	ImageEnd	18_eye_nose.jpg		
+231725	ImageStart	fixation.png		
+232346			Content	
+232732	ImageEnd	fixation.png		
+232962			Content	
+233297	MovieStart	Julia_WhichOne.wmv		
+234528			Content	
+235775	MovieEnd	Julia_WhichOne.wmv		
+236423	ImageStart	fixation.png		
+236693			Content	
+237428	ImageEnd	fixation.png		
+237460	ImageStart	19_couch_bed.jpg		
+237926			new	
+238376			old	
+239025			Content	
+240774			old	
+241040			new	
+241873			old	
+242456			old	
+242905	KeyPress	Right		
+242905	ImageEnd	19_couch_bed.jpg		
+242909	ImageStart	fixation.png		
+243239			Content	
+243917	ImageEnd	fixation.png		
+244405			Content	
+244501	MovieStart	Julia_WhichOne.wmv		
+244888			Content	
+245121			Content	
+245504			Content	
+246990	MovieEnd	Julia_WhichOne.wmv		
+247274	ImageStart	fixation.png		
+248269	ImageEnd	fixation.png		
+248299	ImageStart	20_clock_phone.jpg		
+248669			new	
+251384			Content	
+251850			old	
+252316			old	
+252733			Content	
+253032			Content	
+255798			old	
+256281			old	
+257213			new	
+257216	KeyPress	Right		
+257217	ImageEnd	20_clock_phone.jpg		
+257220	ImageStart	fixation.png		
+257713			Content	
+257846			Content	
+257946			Content	
+258079			Content	
+258222	ImageEnd	fixation.png		
+258396			Content	
+258793	MovieStart	congratulations.wmv		
+259345			Content	
+262077			Content	
+262384	KeyPress	Escape		
+262385	MovieEnd	congratulations.wmv		

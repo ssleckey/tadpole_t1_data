@@ -1,0 +1,194 @@
+Timestamp	Event	Descriptor	AoiNames	
+384	MovieStart	MutedBallie.avi		
+1934			Content	
+1984			Content	
+2629	KeyPress	Space		
+2629	MovieEnd	MutedBallie.avi		
+3285	ImageStart	blacksquare.bmp		
+3483			Content	
+3924			Content	
+4166			Content	
+4866			Content	
+4991			Content	
+5365			Content	
+5857			Content	
+7264			Content	
+7639			Content	
+7839			Content	
+7877	KeyPress	Space		
+7877	ImageEnd	blacksquare.bmp		
+7880	ImageStart	fixation.png		
+8047			Content	
+8238			Content	
+8447			Content	
+8890	ImageEnd	fixation.png		
+8917	ImageStart	Slide1.JPG		
+9213			AOI_1	
+10804			AOI_1	
+11053			AOI_1	
+13402			AOI_1	
+14376			AOI_1	
+14783			AOI_1	
+15525			AOI_1	
+16037	KeyPress	Space		
+16037	ImageEnd	Slide1.JPG		
+16041	ImageStart	fixation.png		
+16050			Content	
+16424			Content	
+17050	ImageEnd	fixation.png		
+17082	ImageStart	Slide2.JPG		
+17266			Content	
+17607			AOI_1	
+19573			AOI_1	
+19756			AOI_1	
+21436			AOI_1	
+21561			AOI_1	
+21919			Content	
+22011			AOI_1	
+22302			AOI_1	
+22352			AOI_1	
+22594			Content	
+22644			AOI_1	
+22694			AOI_1	
+23226			AOI_1	
+23376			Content	
+23426			Content	
+23580	KeyPress	Space		
+23581	ImageEnd	Slide2.JPG		
+23584	ImageStart	fixation.png		
+23651			Content	
+23834			Content	
+24251			Content	
+24551			Content	
+24584	ImageEnd	fixation.png		
+24613	ImageStart	Slide3.JPG		
+24659			Content	
+24784			correct	
+24875			correct	
+24950			correct	
+25125			correct	
+25292			incorrect	
+25716			Content	
+26066			incorrect	
+26291			incorrect	
+27032			correct	
+27224			correct	
+27282			correct	
+27665			correct	
+28007			correct	
+28481			incorrect	
+28864			incorrect	
+29197			correct	
+29547			correct	
+30288			incorrect	
+30347			correct	
+30888			correct	
+31071			correct	
+31121			correct	
+31230			correct	
+31445	KeyPress	Space		
+31445	ImageEnd	Slide3.JPG		
+31449	ImageStart	fixation.png		
+31629			Content	
+31713			Content	
+32104			Content	
+32154			Content	
+32446	ImageEnd	fixation.png		
+32473	ImageStart	Slide4.JPG		
+32837			incorrect	
+32937			incorrect	
+33170			incorrect	
+33370			correct	
+33595			correct	
+33761			Content	
+34028			correct	
+34294			correct	
+34344			correct	
+34394			correct	
+34561			correct	
+35568			correct	
+35976			correct	
+36310			correct	
+38092			incorrect	
+38150			incorrect	
+38541			correct	
+38600			incorrect	
+38866			incorrect	
+38916			correct	
+39199			correct	
+39266			correct	
+39324			correct	
+39966			incorrect	
+40028	KeyPress	Space		
+40028	ImageEnd	Slide4.JPG		
+40032	ImageStart	fixation.png		
+40332			Content	
+41042	ImageEnd	fixation.png		
+41069	ImageStart	Slide5.JPG		
+41381			incorrect	
+41464			incorrect	
+41523			correct	
+41581			correct	
+41856			correct	
+41964			correct	
+42064			Content	
+42314			correct	
+42397			correct	
+42680			incorrect	
+43946			Content	
+43988			Content	
+44179			Content	
+44729			correct	
+44837			Content	
+45129			correct	
+45179			correct	
+45512			correct	
+45570			correct	
+45653			correct	
+49226			incorrect	
+49309			incorrect	
+49626			incorrect	
+49867			Content	
+50417			correct	
+50550			correct	
+50883			correct	
+51325			correct	
+51441			correct	
+51549			correct	
+51649			correct	
+51676	KeyPress	Space		
+51676	ImageEnd	Slide5.JPG		
+51680	ImageStart	fixation.png		
+51708			Content	
+51758			Content	
+51816			Content	
+52678	ImageEnd	fixation.png		
+52705	ImageStart	Slide6.JPG		
+60163	KeyPress	Space		
+60164	ImageEnd	Slide6.JPG		
+60167	ImageStart	fixation.png		
+61164	ImageEnd	fixation.png		
+62813	ImageStart	Slide7.JPG		
+69621			correct	
+70571	KeyPress	Space		
+70571	ImageEnd	Slide7.JPG		
+70575	ImageStart	fixation.png		
+71587	ImageEnd	fixation.png		
+71615	ImageStart	Slide8.JPG		
+76358			Content	
+76600			correct	
+76658			Content	
+77016			Content	
+77316			incorrect	
+77949			Content	
+77999			Content	
+78107			Content	
+78899	KeyPress	Space		
+78899	ImageEnd	Slide8.JPG		
+78929	InstructionStart	Instruction Element		
+79439			Content	
+79764			Content	
+80480			Content	
+81413			Content	
+81515	KeyPress	Space		
+81515	InstructionEnd	Instruction Element		

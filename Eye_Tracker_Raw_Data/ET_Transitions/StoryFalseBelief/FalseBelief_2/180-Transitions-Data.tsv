@@ -1,0 +1,193 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+238			Content	
+554			Content	
+971			Content	
+1170	MovieStart	MutedBallie.avi		
+1221			Content	
+1421			Content	
+1854			Content	
+4818			Content	
+5035			Content	
+5368			Content	
+5868			Content	
+7448	KeyPress	Space		
+7452	MovieEnd	MutedBallie.avi		
+8249			Content	
+8549			Content	
+8765	ImageStart	blacksquare.bmp		
+9016			Content	
+9449			Content	
+9732			Content	
+10455	KeyPress	Space		
+10456	ImageEnd	blacksquare.bmp		
+10461	ImageStart	fixation.png		
+10648			Content	
+11461	ImageEnd	fixation.png		
+12081	ImageStart	Slide1.JPG		
+12297			AOI_1	
+12447			AOI_1	
+15528			AOI_1	
+15811			Content	
+16394			AOI_1	
+17776			AOI_1	
+18026			AOI_1	
+18543			AOI_1	
+19070	KeyPress	Space		
+19071	ImageEnd	Slide1.JPG		
+19075	ImageStart	fixation.png		
+19392			Content	
+19542			Content	
+20073	ImageEnd	fixation.png		
+20101	ImageStart	Slide2.JPG		
+20325			AOI_1	
+21990			AOI_1	
+22223			AOI_1	
+23073			AOI_1	
+24189			AOI_1	
+24555			AOI_1	
+26271			AOI_1	
+26704			AOI_1	
+27078	KeyPress	Space		
+27078	ImageEnd	Slide2.JPG		
+27082	ImageStart	fixation.png		
+27370			Content	
+27836			Content	
+28090	ImageEnd	fixation.png		
+28117	ImageStart	Slide3.JPG		
+28369			incorrect	
+28519			incorrect	
+28852			correct	
+29319			correct	
+29702			correct	
+30668			incorrect	
+30851			incorrect	
+31018			incorrect	
+31434			incorrect	
+32434			incorrect	
+33033			correct	
+33566			correct	
+33883			correct	
+34814	KeyPress	Space		
+34814	ImageEnd	Slide3.JPG		
+34818	ImageStart	fixation.png		
+34898			Content	
+35115			Content	
+35829	ImageEnd	fixation.png		
+35857	ImageStart	Slide4.JPG		
+36148			correct	
+36814			correct	
+37214			correct	
+37547			correct	
+37863			incorrect	
+38080			incorrect	
+38979			incorrect	
+40128			correct	
+40362			correct	
+41261			correct	
+41677			correct	
+42077			Content	
+42993			Content	
+43143			correct	
+43876			incorrect	
+44576			correct	
+44775			correct	
+45492			correct	
+45725			correct	
+46291			incorrect	
+46646	KeyPress	Space		
+46646	ImageEnd	Slide4.JPG		
+46650	ImageStart	fixation.png		
+46707			Content	
+46957			Content	
+47653	ImageEnd	fixation.png		
+47680	ImageStart	Slide5.JPG		
+47973			correct	
+48173			correct	
+48473			correct	
+50139			correct	
+50705			Content	
+50855			incorrect	
+51071			incorrect	
+52071			correct	
+54552			correct	
+55169			incorrect	
+55918			incorrect	
+56135			incorrect	
+56534			correct	
+57267			correct	
+57567			correct	
+59285	KeyPress	Space		
+59285	ImageEnd	Slide5.JPG		
+59290	ImageStart	fixation.png		
+59382			Content	
+59566			Content	
+60287	ImageEnd	fixation.png		
+60318	ImageStart	Slide6.JPG		
+60548			correct	
+60832			correct	
+61215			incorrect	
+62097			correct	
+62314			correct	
+62747			correct	
+65645			correct	
+66278			incorrect	
+66994			correct	
+67194			correct	
+68443			correct	
+69069	KeyPress	Space		
+69070	ImageEnd	Slide6.JPG		
+69073	ImageStart	fixation.png		
+69359			Content	
+70068	ImageEnd	fixation.png		
+70098	ImageStart	Slide7.JPG		
+70342			incorrect	
+70875			correct	
+71091			correct	
+71558			correct	
+72107			correct	
+73040			correct	
+73306			correct	
+73839			correct	
+75072			Content	
+75838			incorrect	
+76055			incorrect	
+76438			incorrect	
+76704			incorrect	
+76937			correct	
+77137			correct	
+77620			incorrect	
+77837			incorrect	
+78020			incorrect	
+79053			incorrect	
+79053	KeyPress	Space		
+79053	ImageEnd	Slide7.JPG		
+79057	ImageStart	fixation.png		
+79352			Content	
+80069	ImageEnd	fixation.png		
+80097	ImageStart	Slide8.JPG		
+80385			correct	
+80901			correct	
+81401			incorrect	
+81634			incorrect	
+82484			incorrect	
+83483			correct	
+84066			correct	
+84699			Content	
+85198			correct	
+85915			Content	
+86664			correct	
+87414			incorrect	
+87614			incorrect	
+88213			incorrect	
+88879			incorrect	
+89562			incorrect	
+89795			incorrect	
+91229	KeyPress	Space		
+91229	ImageEnd	Slide8.JPG		
+91311			Content	
+92045	InstructionStart	Instruction Element		
+92061			Content	
+92410			Content	
+93453	KeyPress	Space		
+93454	InstructionEnd	Instruction Element		

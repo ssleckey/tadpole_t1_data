@@ -1,0 +1,199 @@
+Timestamp	Event	Descriptor	AoiNames	
+10			Content	
+176			Content	
+460			Content	
+609			Content	
+634	MovieStart	MutedBallie.avi		
+993			Content	
+1159			Content	
+1259			Content	
+1676			Content	
+1925			Content	
+2384	KeyPress	Space		
+2385	MovieEnd	MutedBallie.avi		
+2858			Content	
+3175			Content	
+3275			Content	
+3374			Content	
+3558			Content	
+3658			Content	
+4440			Content	
+4524			Content	
+4890			Content	
+6323	ImageStart	blacksquare.bmp		
+7344	KeyPress	Space		
+7344	ImageEnd	blacksquare.bmp		
+7348	ImageStart	fixation.png		
+8347	ImageEnd	fixation.png		
+8379	ImageStart	Slide1.JPG		
+8987			AOI_1	
+9087			AOI_1	
+11252			Content	
+13667			Content	
+13817			Content	
+14100			Content	
+14250			Content	
+15799			AOI_1	
+16288	KeyPress	Space		
+16288	ImageEnd	Slide1.JPG		
+16293	ImageStart	fixation.png		
+16615			Content	
+17301	ImageEnd	fixation.png		
+17332	ImageStart	Slide2.JPG		
+17581			AOI_1	
+17815			AOI_1	
+19330			AOI_1	
+24616	KeyPress	Space		
+24616	ImageEnd	Slide2.JPG		
+24620	ImageStart	fixation.png		
+25126			Content	
+25260			Content	
+25631	ImageEnd	fixation.png		
+25658	ImageStart	Slide3.JPG		
+25942			correct	
+26392			correct	
+26642			correct	
+27192			incorrect	
+27891			incorrect	
+28274			correct	
+28524			correct	
+29557			correct	
+30373			correct	
+30822			incorrect	
+32288			incorrect	
+32405			correct	
+32705			correct	
+33005			correct	
+33338			incorrect	
+33704	KeyPress	Space		
+33704	ImageEnd	Slide3.JPG		
+33708	ImageStart	fixation.png		
+34020			Content	
+34712	ImageEnd	fixation.png		
+34738	ImageStart	Slide4.JPG		
+35120			incorrect	
+35520			incorrect	
+36152			correct	
+36402			correct	
+37335			correct	
+38301			correct	
+38984			Content	
+40816			Content	
+40916			correct	
+41182			correct	
+42065			correct	
+42365			correct	
+42881			incorrect	
+43298			incorrect	
+43581			incorrect	
+44047			correct	
+44447			correct	
+45196			correct	
+45423	KeyPress	Space		
+45424	ImageEnd	Slide4.JPG		
+45428	ImageStart	fixation.png		
+45696			Content	
+46426	ImageEnd	fixation.png		
+46454	ImageStart	Slide5.JPG		
+46712			correct	
+47495			incorrect	
+47745			incorrect	
+48244			correct	
+49127			correct	
+49493			correct	
+50043			correct	
+50576			correct	
+51542			correct	
+52575			incorrect	
+53108			correct	
+53824			correct	
+55157			correct	
+55373			incorrect	
+55690			incorrect	
+56622			incorrect	
+57605			correct	
+57971			correct	
+58247	KeyPress	Space		
+58247	ImageEnd	Slide5.JPG		
+58251	ImageStart	fixation.png		
+58538			Content	
+59249	ImageEnd	fixation.png		
+59340	ImageStart	Slide6.JPG		
+59821			correct	
+60503			incorrect	
+60786			incorrect	
+61119			correct	
+61403			correct	
+63651			correct	
+63851			correct	
+64501			correct	
+64817			Content	
+66150			correct	
+66516			incorrect	
+66849			incorrect	
+67415			correct	
+68148			correct	
+68511	KeyPress	Space		
+68511	ImageEnd	Slide6.JPG		
+68515	ImageStart	fixation.png		
+68781			Content	
+69514	ImageEnd	fixation.png		
+70114			Content	
+70763			Content	
+71180			incorrect	
+71811	ImageStart	Slide7.JPG		
+72046			incorrect	
+72612			correct	
+73944			correct	
+74294			correct	
+74577			correct	
+75327			incorrect	
+75627			incorrect	
+76443			correct	
+77225			correct	
+77542			correct	
+78092			incorrect	
+78358			incorrect	
+78641			incorrect	
+78874			incorrect	
+79790			correct	
+80773			Content	
+81073			Content	
+81823	KeyPress	Space		
+81823	ImageEnd	Slide7.JPG		
+81827	ImageStart	fixation.png		
+81989			Content	
+82322			Content	
+82405			Content	
+82835	ImageEnd	fixation.png		
+82863	ImageStart	Slide8.JPG		
+83205			correct	
+83521			correct	
+84187			incorrect	
+84471			incorrect	
+84654			correct	
+84904			correct	
+85537			correct	
+86070			correct	
+86519			correct	
+86819			incorrect	
+87119			incorrect	
+87519			incorrect	
+88318			correct	
+88402			correct	
+88968			correct	
+89484			Content	
+92849			correct	
+93198			correct	
+93934	KeyPress	Space		
+93935	ImageEnd	Slide8.JPG		
+94264			Content	
+94857	InstructionStart	Instruction Element		
+95064			Content	
+95447			Content	
+95697			Content	
+96097			Content	
+96463			Content	
+96779			Content	
+96886	KeyPress	Escape		
+96887	InstructionEnd	Instruction Element		

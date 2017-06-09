@@ -1,0 +1,192 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+481			Content	
+622	MovieStart	MutedBallie.avi		
+897			Content	
+1714			Content	
+4720	KeyPress	Space		
+4724	MovieEnd	MutedBallie.avi		
+5295			Content	
+5819	ImageStart	blacksquare.bmp		
+6294			Content	
+6477			Content	
+7647	KeyPress	Space		
+7648	ImageEnd	blacksquare.bmp		
+7652	ImageStart	fixation.png		
+8376			Content	
+8609			Content	
+8662	ImageEnd	fixation.png		
+8695	ImageStart	Slide1.JPG		
+8942			AOI_1	
+11923			AOI_1	
+12373			AOI_1	
+13522			AOI_1	
+13939			AOI_1	
+14422			AOI_1	
+14638			AOI_1	
+15166	KeyPress	Space		
+15167	ImageEnd	Slide1.JPG		
+15171	ImageStart	fixation.png		
+15554			Content	
+16181	ImageEnd	fixation.png		
+16209	ImageStart	Slide2.JPG		
+16654			AOI_1	
+16737			AOI_1	
+17503			AOI_1	
+17786			AOI_1	
+18336			Content	
+18869			AOI_1	
+19868			AOI_1	
+20668			AOI_1	
+21686	KeyPress	Space		
+21686	ImageEnd	Slide2.JPG		
+21690	ImageStart	fixation.png		
+22017			Content	
+22683			Content	
+22686	ImageEnd	fixation.png		
+22713	ImageStart	Slide3.JPG		
+22816			Content	
+23000			correct	
+23233			correct	
+23766			incorrect	
+24049			incorrect	
+24332			correct	
+24532			correct	
+24732			correct	
+25948			incorrect	
+26114			incorrect	
+26680			incorrect	
+27397			correct	
+27597			correct	
+27846			correct	
+28496			correct	
+28782	KeyPress	Space		
+28782	ImageEnd	Slide3.JPG		
+28982	ImageStart	fixation.png		
+29296			Content	
+29712			Content	
+29845			Content	
+29987	ImageEnd	fixation.png		
+32118	ImageStart	Slide4.JPG		
+32443			correct	
+32610			correct	
+32926			correct	
+33376			correct	
+34692			correct	
+35192			correct	
+36324			correct	
+36507			correct	
+36907			incorrect	
+37307			incorrect	
+38140			correct	
+38222	KeyPress	Space		
+38222	ImageEnd	Slide4.JPG		
+38374	ImageStart	fixation.png		
+38389			Content	
+38839			Content	
+39379	ImageEnd	fixation.png		
+39408	ImageStart	Slide5.JPG		
+39439			Content	
+39772			correct	
+40072			correct	
+40988			incorrect	
+41671			incorrect	
+41887			correct	
+42170			correct	
+42570			incorrect	
+42803			incorrect	
+43319			incorrect	
+43503			correct	
+43769			correct	
+43986			incorrect	
+44485			incorrect	
+44719			correct	
+44985			correct	
+45268			correct	
+46651			correct	
+47284			incorrect	
+48150			correct	
+48966			correct	
+49066			correct	
+49974	KeyPress	Space		
+49974	ImageEnd	Slide5.JPG		
+50465			Content	
+50981			Content	
+51414			Content	
+51564			Content	
+52064			Content	
+52372	ImageStart	fixation.png		
+53355	ImageEnd	fixation.png		
+53481	ImageStart	Slide6.JPG		
+54063			Content	
+54629			incorrect	
+54845			incorrect	
+55012			correct	
+55612			correct	
+57927			Content	
+58160			correct	
+58310			correct	
+58660			correct	
+59193			correct	
+59576			correct	
+60059			correct	
+60775			incorrect	
+60908			incorrect	
+61191			correct	
+61558			correct	
+61950	KeyPress	Space		
+61950	ImageEnd	Slide6.JPG		
+61953	ImageStart	fixation.png		
+61991			Content	
+62674			Content	
+62840			Content	
+62950	ImageEnd	fixation.png		
+62984	ImageStart	Slide7.JPG		
+63190			Content	
+63306			incorrect	
+63823			incorrect	
+64139			correct	
+64639			correct	
+64872			correct	
+65388			correct	
+66071			correct	
+66637			correct	
+67587			correct	
+68103			correct	
+68853			Content	
+69019			incorrect	
+69352			incorrect	
+70102			incorrect	
+70535			incorrect	
+70652			incorrect	
+70885			incorrect	
+71725	KeyPress	Space		
+71726	ImageEnd	Slide7.JPG		
+71729	ImageStart	fixation.png		
+71984			Content	
+72634			Content	
+72732	ImageEnd	fixation.png		
+72760	ImageStart	Slide8.JPG		
+73000			incorrect	
+73450			incorrect	
+74499			incorrect	
+75365			incorrect	
+75582			incorrect	
+77014			incorrect	
+78613			incorrect	
+78963			incorrect	
+80162			correct	
+80429			correct	
+80745			correct	
+81309	KeyPress	Space		
+81310	ImageEnd	Slide8.JPG		
+81611			Content	
+82494			Content	
+82710			Content	
+83004	InstructionStart	Instruction Element		
+83360			Content	
+83893			Content	
+84126			Content	
+84343			Content	
+84429	KeyPress	Space		
+84431	InstructionEnd	Instruction Element		

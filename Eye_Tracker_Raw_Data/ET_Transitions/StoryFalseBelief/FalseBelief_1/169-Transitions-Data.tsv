@@ -1,0 +1,193 @@
+Timestamp	Event	Descriptor	AoiNames	
+16			Content	
+199			Content	
+384	MovieStart	MutedBallie.avi		
+666			Content	
+6129			Content	
+11094	MovieEnd	MutedBallie.avi		
+12439	ImageStart	blacksquare.bmp		
+12458			Content	
+12924			Content	
+13232	KeyPress	Space		
+13233	ImageEnd	blacksquare.bmp		
+13236	ImageStart	fixation.png		
+13341			Content	
+13591			Content	
+14246	ImageEnd	fixation.png		
+14573			Content	
+16566	ImageStart	Slide1.JPG		
+17471			Content	
+17721			AOI_1	
+18737			AOI_1	
+19470			Content	
+19571			Content	
+20403			AOI_1	
+20586			AOI_1	
+20919			Content	
+21435			Content	
+21819			Content	
+22168			Content	
+25544	KeyPress	Space		
+25544	ImageEnd	Slide1.JPG		
+25549	ImageStart	fixation.png		
+26554	ImageEnd	fixation.png		
+26581	ImageStart	Slide2.JPG		
+27781			AOI_1	
+29147			AOI_1	
+29414			AOI_1	
+29797			AOI_1	
+33208	KeyPress	Space		
+33209	ImageEnd	Slide2.JPG		
+33212	ImageStart	fixation.png		
+34128			Content	
+34214	ImageEnd	fixation.png		
+34261	ImageStart	Slide3.JPG		
+34361			correct	
+34660			Content	
+34894			Content	
+35843			correct	
+36043			Content	
+36209			Content	
+36476			incorrect	
+36659			incorrect	
+37042			Content	
+37409			Content	
+37542			incorrect	
+37891			incorrect	
+38025			incorrect	
+38408			correct	
+38591			correct	
+39107			correct	
+39324			Content	
+40190			Content	
+40540			incorrect	
+40723			incorrect	
+40823			incorrect	
+40939			correct	
+41552	KeyPress	Space		
+41552	ImageEnd	Slide3.JPG		
+41556	ImageStart	fixation.png		
+41806			Content	
+41956			Content	
+42155			Content	
+42559	ImageEnd	fixation.png		
+42689	ImageStart	Slide4.JPG		
+43105			incorrect	
+43371			incorrect	
+43605			incorrect	
+43988			incorrect	
+44471			Content	
+45454			correct	
+45720			correct	
+47436			correct	
+48169			correct	
+48585			correct	
+49168			correct	
+49651			correct	
+50501			Content	
+50717			Content	
+50934			correct	
+51350			incorrect	
+51567			incorrect	
+51833			incorrect	
+52450			incorrect	
+53066			incorrect	
+53304	KeyPress	Space		
+53304	ImageEnd	Slide4.JPG		
+53308	ImageStart	fixation.png		
+53616			Content	
+54307	ImageEnd	fixation.png		
+54348			Content	
+54451	ImageStart	Slide5.JPG		
+54781			incorrect	
+54998			incorrect	
+55348			correct	
+56514			incorrect	
+56713			incorrect	
+56980			incorrect	
+57313			incorrect	
+57730			correct	
+58113			incorrect	
+58363			incorrect	
+58679			incorrect	
+58912			correct	
+59295			incorrect	
+59761			Content	
+60161			incorrect	
+60644			correct	
+62210			correct	
+62793			incorrect	
+63375			correct	
+64891			correct	
+65136	KeyPress	Space		
+65136	ImageEnd	Slide5.JPG		
+65140	ImageStart	fixation.png		
+65574			Content	
+66146	ImageEnd	fixation.png		
+66175	ImageStart	Slide6.JPG		
+66257			Content	
+66357			Content	
+66540			incorrect	
+66973			incorrect	
+67306			correct	
+67656			correct	
+70171			correct	
+71720			correct	
+72003			correct	
+72969			correct	
+73302			correct	
+74368			correct	
+74600	KeyPress	Space		
+74600	ImageEnd	Slide6.JPG		
+74603	ImageStart	fixation.png		
+74668			Content	
+74934			Content	
+75368			Content	
+75484			Content	
+75600	ImageEnd	fixation.png		
+75648	ImageStart	Slide7.JPG		
+75817			Content	
+76034			incorrect	
+76150			incorrect	
+76583			correct	
+76833			correct	
+77466			correct	
+78665			correct	
+79348			correct	
+80664			correct	
+81463			incorrect	
+82296			correct	
+83879			correct	
+84695			incorrect	
+85071	KeyPress	Space		
+85072	ImageEnd	Slide7.JPG		
+85075	ImageStart	fixation.png		
+85178			Content	
+85378			Content	
+85794			Content	
+85894			Content	
+86083	ImageEnd	fixation.png		
+86124	ImageStart	Slide8.JPG		
+86560			correct	
+87110			correct	
+87593			correct	
+87943			Content	
+88992			incorrect	
+89392			Content	
+89742			incorrect	
+90558			correct	
+91041			correct	
+91524			correct	
+93306			correct	
+93671	KeyPress	Space		
+93672	ImageEnd	Slide8.JPG		
+94089			Content	
+94222			Content	
+95241	InstructionStart	Instruction Element		
+95621			Content	
+96154			Content	
+97453			Content	
+97653			Content	
+98236			Content	
+102263	KeyPress	Escape		
+102264	InstructionEnd	Instruction Element		

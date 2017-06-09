@@ -1,0 +1,87 @@
+Timestamp	Event	Descriptor	AoiNames	
+389	MovieStart	MutedBallie.avi		
+3046	KeyPress	Space		
+3047	MovieEnd	MutedBallie.avi		
+3672	ImageStart	fixation.png		
+4667	ImageEnd	fixation.png		
+4696	ImageStart	encode 1 blue.JPG		
+7114			Familiarization 1L	
+7331			Familiarization 1L	
+7514			Familiarization 1R	
+8697			Familiarization 1L	
+9280			Familiarization 1L	
+10046			Familiarization 1R	
+10646			Familiarization 1L	
+10979			Familiarization 1L	
+13277			Familiarization 1L	
+13577			Familiarization 1L	
+14226			Familiarization 1R	
+14576			Familiarization 1R	
+14683	ImageEnd	encode 1 blue.JPG		
+14693	ImageStart	fixation.png		
+15043			Content	
+15243			Content	
+15698	ImageEnd	fixation.png		
+15759			Familiarization 2L	
+15874	ImageStart	encode 1 pink.JPG		
+16192			Familiarization 2L	
+17075			Familiarization 2R	
+17425			Familiarization 2R	
+19273			Content	
+19373			Familiarization 2L	
+19723			Familiarization 2L	
+20573			Familiarization 2R	
+20863	ImageEnd	encode 1 pink.JPG		
+20873	ImageStart	fixation.png		
+20889			Content	
+21222			Content	
+21722			Content	
+21874	ImageEnd	fixation.png		
+21903	ImageStart	1a blue.JPG		
+21972			Content	
+22321			old	
+22638			old	
+23354			old	
+24303			old	
+24587			new	
+24936			new	
+25653			old	
+26069			new	
+26435			new	
+26685			new	
+26902			new	
+28284			Content	
+28835			Content	
+28934			new	
+29917			Content	
+30083			Content	
+30300			Content	
+31874	ImageEnd	1a blue.JPG		
+31885	ImageStart	fixation.png		
+32049			Content	
+32199			Content	
+32632			Content	
+32849			Content	
+32889	ImageEnd	fixation.png		
+32916	ImageStart	1b pink.JPG		
+33298			new	
+34048			old	
+34364			old	
+34997			new	
+35830			old	
+36196			old	
+36446			old	
+41776			Content	
+41959			new	
+42325			Content	
+42890	ImageEnd	1b pink.JPG		
+42900	ImageStart	fixation.png		
+43902	ImageEnd	fixation.png		
+44685	MovieStart	congratulations.wmv		
+45556			Content	
+45756			Content	
+49420			Content	
+49786			Content	
+49970			Content	
+50109	KeyPress	Escape		
+50110	MovieEnd	congratulations.wmv		

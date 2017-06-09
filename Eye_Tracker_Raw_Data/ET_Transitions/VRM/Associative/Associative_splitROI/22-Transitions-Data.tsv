@@ -1,0 +1,118 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+344	MovieStart	MutedBallie.avi		
+514			Content	
+597			Content	
+1084	KeyPress	Space		
+1084	MovieEnd	MutedBallie.avi		
+1377	ImageStart	slide1.jpg		
+1547			Content	
+1730			encoding 2	
+1930			encoding 2	
+2279			encoding 1	
+2479			encoding 3	
+2762			encoding 4	
+3129			Content	
+3345			encoding 2	
+3712			encoding 2	
+4095			encoding 2	
+4644			Content	
+4744			Content	
+4860			encoding 1	
+6076			encoding 1	
+6259			encoding 2	
+6609			encoding 2	
+6826			encoding 3	
+7126			encoding 3	
+7492			Content	
+11349	ImageEnd	slide1.jpg		
+11359	ImageStart	blacksquare.bmp		
+11839			Content	
+12360	ImageEnd	blacksquare.bmp		
+12392	ImageStart	slide2.jpg		
+12588			encoding 2	
+12755			encoding 2	
+13238			encoding 3	
+15603			Content	
+15736			encoding 3	
+16352			encoding 4	
+16785			encoding 4	
+17251			encoding 4	
+17434			encoding 4	
+17734			encoding 2	
+17984			encoding 1	
+18334			encoding 2	
+18917			encoding 3	
+19384			encoding 4	
+19884			Content	
+22360	ImageEnd	slide2.jpg		
+22371	ImageStart	blacksquare.bmp		
+23231			Content	
+23374	ImageEnd	blacksquare.bmp		
+23405	ImageStart	slide3.jpg		
+23764			encoding 2	
+23947			encoding 2	
+24513			encoding 1	
+24896			encoding 1	
+28144			encoding 2	
+28693			encoding 3	
+29010			encoding 2	
+29293			encoding 2	
+29743			encoding 2	
+30142			encoding 4	
+30459			encoding 3	
+30858			encoding 1	
+31108			encoding 1	
+31308			Content	
+32640			encoding 1	
+32840			encoding 1	
+33090			encoding 2	
+33388	ImageEnd	slide3.jpg		
+33399	ImageStart	blacksquare.bmp		
+33973			Content	
+34404	ImageEnd	blacksquare.bmp		
+34406			Content	
+34436	ImageStart	slide6.jpg		
+34739			old_double	
+34988			old_double	
+35305			old_single	
+35588			new_double	
+35954			new_single	
+36104			new_double	
+36504			Content	
+39135			old_double	
+39252			old_double	
+39502			old_double	
+39818			Content	
+40068			Content	
+40401			Content	
+42633			Content	
+44402	ImageEnd	slide6.jpg		
+44418	ImageStart	blacksquare.bmp		
+45416	ImageEnd	blacksquare.bmp		
+45448	ImageStart	slide7.jpg		
+46746			Content	
+48345			old_double	
+48628			old_double	
+53690			old_double	
+53941			old_double	
+54240			new_double	
+54490			new_single	
+54940			Content	
+55290			Content	
+55431	ImageEnd	slide7.jpg		
+55441	ImageStart	blacksquare.bmp		
+55523			Content	
+55922			Content	
+56222			Content	
+56355			Content	
+56446	ImageEnd	blacksquare.bmp		
+56472			Content	
+56889			Content	
+57015	MovieStart	congratulations.wmv		
+57222			Content	
+57472			Content	
+57988			Content	
+58338			Content	
+59426	KeyPress	Escape		
+59427	MovieEnd	congratulations.wmv		

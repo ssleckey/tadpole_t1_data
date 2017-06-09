@@ -1,0 +1,87 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+328	MovieStart	MutedBallie.avi		
+448			Content	
+664			Content	
+1022			Content	
+3046			Content	
+3571	KeyPress	Space		
+3573	MovieEnd	MutedBallie.avi		
+4178			Content	
+4395			Content	
+4856	ImageStart	fixation.png		
+5119			Content	
+5344			Content	
+5855	ImageEnd	fixation.png		
+5881	ImageStart	encode 1 blue.JPG		
+5969			Content	
+6194			Familiarization 1R	
+6344			Familiarization 1R	
+6635			Familiarization 1R	
+7076			Familiarization 1L	
+7301			Familiarization 1L	
+7493			Familiarization 1L	
+8317			Familiarization 1L	
+9442			Familiarization 1R	
+9708			Familiarization 1R	
+10508			Familiarization 1R	
+12290			Familiarization 1R	
+12623			Familiarization 1L	
+12906			Familiarization 1L	
+13622			Familiarization 1R	
+13914			Familiarization 1R	
+14938			Familiarization 1L	
+15296			Familiarization 1L	
+15812			Familiarization 1L	
+15857	ImageEnd	encode 1 blue.JPG		
+15867	ImageStart	fixation.png		
+16195			Content	
+16537			Content	
+16795			Content	
+16868	ImageEnd	fixation.png		
+16898	ImageStart	encode 1 pink.JPG		
+17378			Familiarization 2R	
+17470			Familiarization 2R	
+17994			Familiarization 2L	
+18402			Familiarization 2L	
+18977			Familiarization 2L	
+19460			Content	
+20176			Content	
+20351			Familiarization 2R	
+20717			Familiarization 2R	
+21392			Familiarization 2L	
+21876	ImageEnd	encode 1 pink.JPG		
+21886	ImageStart	fixation.png		
+22889	ImageEnd	fixation.png		
+22916	ImageStart	1a blue.JPG		
+32302			old	
+32891	ImageEnd	1a blue.JPG		
+32901	ImageStart	fixation.png		
+33251			Content	
+33904	ImageEnd	fixation.png		
+33931	ImageStart	1b pink.JPG		
+34425			Content	
+34583			new	
+35100			old	
+36008			new	
+36683			new	
+40455			old	
+40496			old	
+43904	ImageEnd	1b pink.JPG		
+43914	ImageStart	fixation.png		
+44077			Content	
+44344			Content	
+44485			Content	
+44917	ImageEnd	fixation.png		
+45526			Content	
+45593			Content	
+46148	MovieStart	congratulations.wmv		
+46775			Content	
+46834			Content	
+47367			Content	
+47900			Content	
+48458			Content	
+49857			Content	
+50059	LeftMouseClick			
+50874	KeyPress	Escape		
+50874	MovieEnd	congratulations.wmv		

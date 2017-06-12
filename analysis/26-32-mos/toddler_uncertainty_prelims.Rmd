@@ -1,0 +1,186 @@
+---
+title: "Toddler Uncertainty Signals"
+author: "Emily"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+---
+
+<style type="text/css">
+body, td {
+   font-size: 14px;
+}
+code {
+  font-size: 11px;
+}
+pre {
+  font-size: 11px;
+}
+</style>
+
+Data analysis of toddler uncertainty signals study.
+
+# Data preprocessing
+
+Preliminaries.
+
+```{r, include = FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(fig.width=8, fig.height=5, 
+                      echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
+suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
+
+library(langcog)
+library(dplyr)
+library(RWiener)
+library(ggplot2)
+library(rjson)
+library(stringr)
+library(tidyr)
+library(lme4)
+library(knitr)
+library(markdown)
+library(psych)
+library(magrittr)
+library(ez)
+library(Hmisc)
+
+select <- dplyr::select 
+filter <- dplyr::filter 
+summarise <- dplyr::summarise
+distinct <- dplyr::distinct
+mutate <- dplyr::mutate
+gather <- tidyr::gather
+
+theme_set(theme_bw())
+```
+
+Read in trial info, demographics, and word familiarity.
+
+```{r}
+demo <- read.csv("demographics.csv") 
+trial_info <- read.csv("conditions.csv", header = TRUE)
+trial_info$trial <- as.character(trial_info$trial)
+
+word_fam_key <- read.csv("word_fam_key.csv")
+word_fam_key$trial <- as.character(word_fam_key$trial)
+
+word_fam <- read.csv("word_familiarity.csv") %>%
+  gather("target", "familiarity", 2:41)
+
+response_key <- read.csv("response_key.csv")
+response_key$trial <- as.character(response_key$trial)
+```
+
+Read in raw TS data file and make tidy.
+
+```{r}
+#read in raw data.
+d.raw_ts <- read.table("AllSubs_TS.txt", header = TRUE) 
+
+#make accuracy data tidy.
+d_acc_ts<- d.raw_ts %>%
+  select(Subject_ID, acc1, acc2, acc3, acc4, acc5, acc6, acc7, acc8, acc9, acc10, acc11, acc12, acc13, acc14, acc15, acc16, acc17, acc18, acc19, acc20)%>%
+  gather(trial, acc, acc1:acc20) 
+
+#make rt data tidy.
+d_rt <- d.raw_ts %>%
+  select(Subject_ID, RT1, RT2, RT3, RT4, RT5, RT6, RT7, RT8, RT9, RT10, RT11, RT12, RT13, RT14, RT15, RT16, RT17, RT18, RT19, RT20) %>%
+  gather(trial, RT, RT1:RT20) 
+
+#join accuracy and rt data into one file.
+d_acc_ts$trial <-str_replace(d_acc_ts$trial, "acc","")
+d_rt$trial <- str_replace(d_rt$trial, "RT","")
+
+d_ts <- d_acc_ts %>%
+  left_join(d_rt) %>%
+  mutate(ID = Subject_ID) %>%
+  select(ID, RT, acc, trial)
+
+#recode missing values to NA
+d_ts$acc[d_ts$acc==999] <- NA
+```
+
+Join trial info and demographics with TS data.
+
+```{r}
+#join trial info and demo with TS data; remove missing trials and dropped participants
+d_ts <- left_join(d_ts, trial_info) %>%
+  left_join(demo) %>%
+  left_join(word_fam_key) %>%
+  left_join(word_fam) %>%
+  left_join(response_key) %>%
+  dplyr::filter(drop != 1, 
+                !is.na(RT),
+                !is.na(acc)) 
+
+#recode similarity from 1s and 0s to string.
+d_ts <- d_ts %>% 
+  mutate(similar = ifelse(similarity == 1, "similar",
+                                       "dissimilar")) %>%
+  select(-similarity)
+d_ts$ID <- as.factor(as.character(d_ts$ID))
+
+d_ts <- d_ts %>%
+  select(ID, RT, acc, trial, age_months, condition, drop, familiarity, response, similar)
+
+#save to R data file.
+save(d_ts, file = "data_ts.RData")
+```
+
+Read in ET data and make tidy.
+
+```{r}
+#read in raw data.
+d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) #acc data
+load("et_trans.RData") #trans data
+
+#make tidy.
+d.raw_sw <- transitions %>%
+  mutate(ID = as.factor(SID), trans = transitions)%>%
+  select(-SID, - transitions) 
+
+#all joining variables are character factors.
+d.raw_sw$ID <- as.factor(as.character(d.raw_sw$ID))
+d.raw_et$ID <- as.factor(as.character(d.raw_et$ID))
+d.raw_sw$trial <- str_replace(d.raw_sw$trial, "Trial","")
+d.raw_et$trial <- as.character(d.raw_et$trial)
+d.raw_sw$ID <- as.character(d.raw_sw$ID)
+d.raw_et$ID <- as.character(d.raw_et$ID)
+demo$ID <- as.character(demo$ID)
+word_fam$ID <- as.character(word_fam$ID)
+```
+
+Join ET switches and accuracy data and drop excluded participants (including pilots).
+
+```{r}
+d.raw_et <- d.raw_et %>%
+  select(ID, trial, acc)
+
+d_et <- d.raw_et %>%
+  inner_join(d.raw_sw) %>%
+  left_join(demo) %>%
+  left_join(trial_info)%>%
+  select(-participation_date, -birthdate) %>%
+  left_join(word_fam_key) %>%
+  left_join(word_fam) %>%
+  left_join(response_key) %>%
+  dplyr::filter(drop != 1, 
+                !is.na(trans),
+                !is.na(acc))
+
+#recode similarity from 1s and 0s to string.
+d_et <- d_et %>% 
+  mutate(similar = ifelse(similarity == 1, "similar",
+                                       "dissimilar")) %>%
+  select(-similarity)
+d_et$ID <- as.factor(as.character(d_et$ID))
+
+d_et <-d_et %>%
+  select(ID, trans, first_fix, acc, trial, age_months, condition, drop, familiarity, response, similar)
+
+#save to R data file.
+save(d_et, file = "data_et.RData")
+```

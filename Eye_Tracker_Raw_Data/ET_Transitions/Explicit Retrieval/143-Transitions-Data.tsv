@@ -1,0 +1,101 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+104	ImageStart	fixation.png		
+155			Content	
+372			Content	
+1405			Content	
+4369			Content	
+5685			Content	
+5868			Content	
+6218			Content	
+14669	KeyPress	Space		
+14669	ImageEnd	fixation.png		
+16885	MovieStart	MutedBallie.avi		
+18976			Content	
+19210			Content	
+20759			Content	
+21517	KeyPress	Space		
+21518	MovieEnd	MutedBallie.avi		
+21916	ImageStart	blacksquare.bmp		
+25429	KeyPress	Space		
+25429	ImageEnd	blacksquare.bmp		
+26236	MovieStart	Julia_3.AVI		
+26754			Content	
+26904			Content	
+27754			Content	
+28994	MovieEnd	Julia_3.AVI		
+29286			Content	
+29353	ImageStart	fixation.png		
+29586			Content	
+32381	KeyPress	Space		
+32381	ImageEnd	fixation.png		
+32402	ImageStart	arrow_crown.BMP		
+33284			Content	
+33367			Content	
+33684			Content	
+40329			Content	
+40613			Content	
+40829			Content	
+41362			Content	
+41779			Content	
+42095			Content	
+43486	KeyPress	Right		
+43486	ImageEnd	arrow_crown.BMP		
+43491	ImageStart	fixation.png		
+45645	KeyPress	Space		
+45645	ImageEnd	fixation.png		
+45666	ImageStart	heart_moon.BMP		
+46292			Content	
+46375			Content	
+46825			Content	
+46959			Content	
+48424			Content	
+48891			Content	
+49024			Content	
+49241			Content	
+50390			Content	
+50724			Content	
+51007			Content	
+51273			Content	
+56969			Content	
+57369			Content	
+57619			Content	
+57918			Content	
+58435			Content	
+58568			Content	
+58851			Content	
+59633			Content	
+59866			Content	
+63280			Content	
+63333	KeyPress	Left		
+63333	ImageEnd	heart_moon.BMP		
+63337	ImageStart	fixation.png		
+65446			Content	
+65579			Content	
+66045			Content	
+69300	KeyPress	Space		
+69301	ImageEnd	fixation.png		
+69322	ImageStart	sailboat_bicycle.BMP		
+71208			old	
+71476	KeyPress	Left		
+71476	ImageEnd	sailboat_bicycle.BMP		
+71481	ImageStart	fixation.png		
+74356			Content	
+74490			Content	
+76140	KeyPress	Space		
+76140	ImageEnd	fixation.png		
+76162	ImageStart	wheel_window.BMP		
+76622			new	
+76789			new	
+76972			Content	
+77222			old	
+77388			old	
+77937			old	
+78137			Content	
+78740	KeyPress	Right		
+78741	ImageEnd	wheel_window.BMP		
+78744	ImageStart	fixation.png		
+80920			Content	
+82384			Content	
+84740	KeyPress	Escape		
+84740	ImageEnd	fixation.png		

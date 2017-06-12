@@ -115,9 +115,9 @@ Timestamp	Event	Descriptor
 116143	ImageStart	fixation.png	
 116915	KeyPress	Space	
 116915	ImageEnd	fixation.png	
-116936	ImageStart	garbage can_box.BMP	
+116936	ImageStart	garbagecan_box.BMP	
 121131	KeyPress	Left	
-121131	ImageEnd	garbage can_box.BMP	
+121131	ImageEnd	garbagecan_box.BMP	
 121135	ImageStart	fixation.png	
 122643	KeyPress	Space	
 122643	ImageEnd	fixation.png	

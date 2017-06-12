@@ -1,0 +1,192 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+74			Content	
+397	MovieStart	MutedBallie.avi		
+623			Content	
+1023			Content	
+2964	KeyPress	Space		
+2964	MovieEnd	MutedBallie.avi		
+3938			Content	
+4921			Content	
+5505	ImageStart	blacksquare.bmp		
+5969			Content	
+6536			Content	
+6736			Content	
+7036	KeyPress	Space		
+7036	ImageEnd	blacksquare.bmp		
+7041	ImageStart	fixation.png		
+7069			Content	
+7202			Content	
+7502			Content	
+8046	ImageEnd	fixation.png		
+8656	ImageStart	Slide1.JPG		
+8868			AOI_1	
+13149			AOI_1	
+13632			AOI_1	
+15080			AOI_1	
+15430			AOI_1	
+16420	KeyPress	Space		
+16420	ImageEnd	Slide1.JPG		
+16424	ImageStart	fixation.png		
+16796			Content	
+17262			Content	
+17422	ImageEnd	fixation.png		
+17449	ImageStart	Slide2.JPG		
+18778			AOI_1	
+18928			AOI_1	
+19161			AOI_1	
+21543			AOI_1	
+21776			AOI_1	
+23125			AOI_1	
+23342			AOI_1	
+23925			AOI_1	
+24691			AOI_1	
+25148	KeyPress	Space		
+25148	ImageEnd	Slide2.JPG		
+25152	ImageStart	fixation.png		
+25424			Content	
+26158	ImageEnd	fixation.png		
+26185	ImageStart	Slide3.JPG		
+26722			Content	
+26822			incorrect	
+27206			incorrect	
+27539			correct	
+27722			correct	
+28155			correct	
+29171			correct	
+29404			incorrect	
+29670			incorrect	
+29987			incorrect	
+30953			correct	
+31236			correct	
+31453			correct	
+32319			correct	
+32569			correct	
+33035			correct	
+33635			correct	
+34044	KeyPress	Space		
+34044	ImageEnd	Slide3.JPG		
+34048	ImageStart	fixation.png		
+34418			Content	
+34717			Content	
+34868			Content	
+35050	ImageEnd	fixation.png		
+35078	ImageStart	Slide4.JPG		
+35433			Content	
+35517			incorrect	
+35717			incorrect	
+36682			correct	
+36899			correct	
+37349			correct	
+37599			incorrect	
+39631			correct	
+39897			correct	
+40147			correct	
+40681			incorrect	
+40881			correct	
+41014			correct	
+41131			correct	
+42247			correct	
+44495			incorrect	
+44845			incorrect	
+45611			correct	
+46067	KeyPress	Space		
+46068	ImageEnd	Slide4.JPG		
+46071	ImageStart	fixation.png		
+46177			Content	
+46444			Content	
+46777			Content	
+47077	ImageEnd	fixation.png		
+47103	ImageStart	Slide5.JPG		
+47227			correct	
+47593			correct	
+47943			incorrect	
+48159			incorrect	
+48392			correct	
+49858			incorrect	
+50091			incorrect	
+50774			incorrect	
+51374			incorrect	
+51690			correct	
+52473			Content	
+53722			correct	
+54022			correct	
+54305			correct	
+54705			correct	
+54888			correct	
+55704			correct	
+55971			correct	
+56687			correct	
+57153			Content	
+57303			incorrect	
+57753			correct	
+58286			correct	
+58755	KeyPress	Space		
+58755	ImageEnd	Slide5.JPG		
+58759	ImageStart	fixation.png		
+59759	ImageEnd	fixation.png		
+59786	ImageStart	Slide6.JPG		
+61300			correct	
+61500			correct	
+62483			correct	
+63450			correct	
+63600			correct	
+63699			correct	
+64099			correct	
+64366			correct	
+64565			correct	
+64699			correct	
+65398			incorrect	
+65648			incorrect	
+66248			Content	
+66448			incorrect	
+66980			incorrect	
+67147			incorrect	
+67713			incorrect	
+68030			incorrect	
+68067	KeyPress	Space		
+68067	ImageEnd	Slide6.JPG		
+68071	ImageStart	fixation.png		
+68363			Content	
+68696			Content	
+69072	ImageEnd	fixation.png		
+69104	ImageStart	Slide7.JPG		
+71977			correct	
+72493			correct	
+72593			correct	
+72760			correct	
+73293			Content	
+74309			correct	
+75375			Content	
+75608			Content	
+75758			Content	
+75991			correct	
+76174			correct	
+76274			correct	
+76424			incorrect	
+76707			incorrect	
+77007			incorrect	
+77407			incorrect	
+78856			incorrect	
+78972			incorrect	
+79339	KeyPress	Space		
+79339	ImageEnd	Slide7.JPG		
+79343	ImageStart	fixation.png		
+79372			Content	
+79588			Content	
+79739			Content	
+80305			Content	
+80351	ImageEnd	fixation.png		
+80721			Content	
+81537			Content	
+82291	ImageStart	Slide8.JPG		
+84202			correct	
+84452			correct	
+84785			correct	
+85202			correct	
+85385			correct	
+92858	KeyPress	Space		
+92859	ImageEnd	Slide8.JPG		
+92880	InstructionStart	Instruction Element		
+94458	KeyPress	Space		
+94459	InstructionEnd	Instruction Element		

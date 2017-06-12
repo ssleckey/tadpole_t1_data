@@ -1,0 +1,76 @@
+Timestamp	Event	Descriptor	AoiNames	
+362	MovieStart	MutedBallie.avi		
+2068	KeyPress	Space		
+2069	MovieEnd	MutedBallie.avi		
+2798	ImageStart	fixation.png		
+3795	ImageEnd	fixation.png		
+3826	ImageStart	Slide1.JPG		
+8803	ImageEnd	Slide1.JPG		
+8814	ImageStart	fixation.png		
+9016			Content	
+9632			Content	
+9799			Content	
+9818	ImageEnd	fixation.png		
+9847	ImageStart	Slide5.JPG		
+13614			Content	
+14824	ImageEnd	Slide5.JPG		
+14834	ImageStart	fixation.png		
+15838	ImageEnd	fixation.png		
+15862	ImageStart	Slide9.JPG		
+20846	ImageEnd	Slide9.JPG		
+20859	ImageStart	fixation.png		
+21859	ImageEnd	fixation.png		
+21882	ImageStart	Slide1.JPG		
+23306			encode_1_left	
+23606			encode_1_left	
+25140			encode_1_right	
+25439			encode_1_right	
+25822			encode_1_right	
+26868	ImageEnd	Slide1.JPG		
+26877	ImageStart	fixation.png		
+27555			Content	
+27883	ImageEnd	fixation.png		
+27904	ImageStart	Slide5.JPG		
+28288			encode_2_left	
+29087			encode_2_left	
+29337			encode_2_left	
+29737			encode_2_left	
+32002			Content	
+32892	ImageEnd	Slide5.JPG		
+32896	ImageStart	fixation.png		
+33903	ImageEnd	fixation.png		
+33924	ImageStart	Slide9.JPG		
+34403	RightMouseClick			
+38911	ImageEnd	Slide9.JPG		
+38924	ImageStart	fixation.png		
+39924	ImageEnd	fixation.png		
+39956	ImageStart	Slide10.JPG		
+42844			Content	
+43010			Content	
+43161			retrieve_1_target	
+43778			retrieve_1_distractor	
+44128			Content	
+44328			retrieve_1_target	
+44933	ImageEnd	Slide10.JPG		
+44943	ImageStart	fixation.png		
+45945	ImageEnd	fixation.png		
+45976	ImageStart	Slide13.jpg		
+48175			retrieve_2_distractor	
+48475			Content	
+48708			retrieve_2_target	
+49308			retrieve_2_target	
+49691			retrieve_2_target	
+50391			retrieve_2_distractor	
+50840			retrieve_2_distractor	
+50956	ImageEnd	Slide13.jpg		
+50970	ImageStart	fixation.png		
+51323			Content	
+51657			Content	
+51983	ImageEnd	fixation.png		
+52429	ImageStart	Slide12.JPG		
+57398	ImageEnd	Slide12.JPG		
+58528	MovieStart	congratulations.wmv		
+59899			Content	
+60183			Content	
+60483	KeyPress	Escape		
+60484	MovieEnd	congratulations.wmv		

@@ -1,0 +1,116 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+62			Content	
+333	MovieStart	MutedBallie.avi		
+495			Content	
+2043	KeyPress	Space		
+2043	MovieEnd	MutedBallie.avi		
+2594			Content	
+2776	ImageStart	fixation.png		
+3010			Content	
+3777	ImageEnd	fixation.png		
+3805	ImageStart	Slide1.JPG		
+4059			encode_1_left	
+4276			encode_1_left	
+5842			encode_1_left	
+6591			encode_1_left	
+6774			encode_1_left	
+7341			encode_1_left	
+7491			encode_1_right	
+8785	ImageEnd	Slide1.JPG		
+8789	ImageStart	fixation.png		
+9056			Content	
+9799	ImageEnd	fixation.png		
+9827	ImageStart	Slide5.JPG		
+10055			encode_2_left	
+11904			encode_2_right	
+13003			encode_2_right	
+13586			encode_2_right	
+13853			encode_2_right	
+14186			encode_2_left	
+14386			encode_2_left	
+14809	ImageEnd	Slide5.JPG		
+14818	ImageStart	fixation.png		
+15102			Content	
+15820	ImageEnd	fixation.png		
+15848	ImageStart	Slide9.JPG		
+16185			encode_3_left	
+17667			encode_3_right	
+19599			encode_3_right	
+20831	ImageEnd	Slide9.JPG		
+20841	ImageStart	fixation.png		
+21841	ImageEnd	fixation.png		
+21869	ImageStart	Slide1.JPG		
+22614			encode_1_left	
+22914			encode_1_left	
+23563			encode_1_left	
+24163			encode_1_right	
+24346			encode_1_right	
+26161			encode_1_left	
+26428			encode_1_left	
+26849	ImageEnd	Slide1.JPG		
+26861	ImageStart	fixation.png		
+27211			Content	
+27864	ImageEnd	fixation.png		
+27899	ImageStart	Slide5.JPG		
+29310			encode_2_left	
+32357			encode_2_left	
+32871	ImageEnd	Slide5.JPG		
+32881	ImageStart	fixation.png		
+33140			Content	
+33357			Content	
+33884	ImageEnd	fixation.png		
+33911	ImageStart	Slide9.JPG		
+34123			encode_3_left	
+34323			encode_3_left	
+36405			encode_3_right	
+36671			encode_3_right	
+37554			encode_3_right	
+38894	ImageEnd	Slide9.JPG		
+38904	ImageStart	fixation.png		
+39906	ImageEnd	fixation.png		
+39934	ImageStart	Slide10.JPG		
+40402			retrieve_1_target	
+40502			retrieve_1_target	
+40985			retrieve_1_distractor	
+41301			retrieve_1_distractor	
+41801			retrieve_1_target	
+42017			retrieve_1_distractor	
+42267			retrieve_1_distractor	
+43233			retrieve_1_target	
+43966			retrieve_1_target	
+44216			retrieve_1_target	
+44913	ImageEnd	Slide10.JPG		
+44923	ImageStart	fixation.png		
+45927	ImageEnd	fixation.png		
+45956	ImageStart	Slide13.jpg		
+46831			retrieve_2_distractor	
+47014			retrieve_2_distractor	
+47380			retrieve_2_target	
+49113			retrieve_2_distractor	
+49512			retrieve_2_distractor	
+50595			retrieve_2_distractor	
+50812			Content	
+50936	ImageEnd	Slide13.jpg		
+50949	ImageStart	fixation.png		
+51927			Content	
+51949	ImageEnd	fixation.png		
+51977	ImageStart	Slide12.JPG		
+52061			Content	
+52277			retrieve_3_target	
+52610			retrieve_3_target	
+52977			retrieve_3_target	
+53243			retrieve_3_target	
+53410			retrieve_3_distractor	
+54342			retrieve_3_distractor	
+54542			retrieve_3_distractor	
+54759			retrieve_3_distractor	
+56225			retrieve_3_target	
+56408			retrieve_3_target	
+56957	ImageEnd	Slide12.JPG		
+57657			Content	
+57976	MovieStart	congratulations.wmv		
+57990			Content	
+58240			Content	
+60256	KeyPress	Escape		
+60257	MovieEnd	congratulations.wmv		

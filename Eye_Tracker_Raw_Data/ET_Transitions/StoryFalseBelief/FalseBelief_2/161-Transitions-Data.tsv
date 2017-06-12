@@ -1,0 +1,190 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+25			Content	
+350	MovieStart	MutedBallie.avi		
+558			Content	
+2234	KeyPress	Space		
+2234	MovieEnd	MutedBallie.avi		
+4089			Content	
+4926	ImageStart	blacksquare.bmp		
+6266	KeyPress	Space		
+6266	ImageEnd	blacksquare.bmp		
+6271	ImageStart	fixation.png		
+6937			Content	
+7020			Content	
+7270	ImageEnd	fixation.png		
+8719			Content	
+9436			Content	
+9551	ImageStart	Slide1.JPG		
+9785			AOI_1	
+11718			AOI_1	
+12634			AOI_1	
+13267			AOI_1	
+13833			AOI_1	
+14199			AOI_1	
+16449	KeyPress	Space		
+16450	ImageEnd	Slide1.JPG		
+16454	ImageStart	fixation.png		
+16981			Content	
+17130			Content	
+17314			Content	
+17456	ImageEnd	fixation.png		
+17486	ImageStart	Slide2.JPG		
+17730			AOI_1	
+17947			AOI_1	
+21877			AOI_1	
+22160			AOI_1	
+22727			Content	
+24761	KeyPress	Space		
+24762	ImageEnd	Slide2.JPG		
+24765	ImageStart	fixation.png		
+25192			Content	
+25325			Content	
+25770	ImageEnd	fixation.png		
+25798	ImageStart	Slide3.JPG		
+26141			correct	
+26824			correct	
+27090			incorrect	
+27390			incorrect	
+27573			incorrect	
+28689			correct	
+30022			correct	
+30255			correct	
+30821			incorrect	
+31054			incorrect	
+31721			correct	
+31954			correct	
+32320			correct	
+32803			correct	
+33505	KeyPress	Space		
+33505	ImageEnd	Slide3.JPG		
+33509	ImageStart	fixation.png		
+33786			Content	
+34507	ImageEnd	fixation.png		
+34538	ImageStart	Slide4.JPG		
+34835			incorrect	
+35185			incorrect	
+36034			correct	
+36368			correct	
+36734			correct	
+37017			correct	
+37317			correct	
+38166			incorrect	
+38983			incorrect	
+39765			incorrect	
+39998			incorrect	
+40831			correct	
+41181			correct	
+41414			correct	
+41897			incorrect	
+42597			correct	
+42780			correct	
+43529			incorrect	
+44162			incorrect	
+45062			incorrect	
+45145	KeyPress	Space		
+45145	ImageEnd	Slide4.JPG		
+45150	ImageStart	fixation.png		
+45412			Content	
+46160	ImageEnd	fixation.png		
+46187	ImageStart	Slide5.JPG		
+46461			correct	
+46744			correct	
+46977			correct	
+47577			correct	
+47893			correct	
+48393			incorrect	
+48676			incorrect	
+49059			correct	
+49259			correct	
+49492			correct	
+50092			correct	
+50625			correct	
+51358			correct	
+51558			correct	
+52457			incorrect	
+52673			incorrect	
+53223			correct	
+53440			correct	
+54056			correct	
+54222			Content	
+56471			correct	
+56721			correct	
+56804			correct	
+57171			incorrect	
+57504			incorrect	
+58281	KeyPress	Space		
+58281	ImageEnd	Slide5.JPG		
+58285	ImageStart	fixation.png		
+58586			Content	
+59295	ImageEnd	fixation.png		
+59329	ImageStart	Slide6.JPG		
+59586			correct	
+60269			correct	
+60752			correct	
+61284			incorrect	
+61601			incorrect	
+62234			correct	
+62500			correct	
+62700			correct	
+63550			incorrect	
+63883			incorrect	
+64999			correct	
+65198			correct	
+65531			correct	
+65848			correct	
+67147			correct	
+67364			correct	
+67813			correct	
+68280	KeyPress	Space		
+68280	ImageEnd	Slide6.JPG		
+68284	ImageStart	fixation.png		
+68563			Content	
+69295	ImageEnd	fixation.png		
+69324	ImageStart	Slide7.JPG		
+69729			correct	
+70911			correct	
+71294			correct	
+71777			correct	
+72693			correct	
+73126			correct	
+73543			correct	
+73909			correct	
+74126			correct	
+74942			incorrect	
+75258			incorrect	
+75825			incorrect	
+76957			correct	
+77557			incorrect	
+77823			incorrect	
+78140			incorrect	
+78864	KeyPress	Space		
+78864	ImageEnd	Slide7.JPG		
+78868	ImageStart	fixation.png		
+79106			Content	
+79855			Content	
+79871	ImageEnd	fixation.png		
+79899	ImageStart	Slide8.JPG		
+80138			incorrect	
+80721			correct	
+81154			correct	
+81471			correct	
+81737			incorrect	
+81971			incorrect	
+83103			incorrect	
+83819			correct	
+84003			correct	
+84935			incorrect	
+85801			incorrect	
+89266			incorrect	
+89632			incorrect	
+89832			incorrect	
+90952	KeyPress	Space		
+90952	ImageEnd	Slide8.JPG		
+91081			Content	
+91531			Content	
+91770	InstructionStart	Instruction Element		
+92214			Content	
+93196			Content	
+93615	KeyPress	Escape		
+93616	InstructionEnd	Instruction Element		

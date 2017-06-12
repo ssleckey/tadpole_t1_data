@@ -1,0 +1,28 @@
+Timestamp	Event	Descriptor	AoiNames	
+368	MovieStart	MutedBallie.avi		
+11064	MovieEnd	MutedBallie.avi		
+11417	ImageStart	slide1.jpg		
+16973			Content	
+20537			Content	
+21374	ImageEnd	slide1.jpg		
+21385	ImageStart	blacksquare.bmp		
+22388	ImageEnd	blacksquare.bmp		
+22428	ImageStart	slide2.jpg		
+32389	ImageEnd	slide2.jpg		
+32400	ImageStart	blacksquare.bmp		
+33400	ImageEnd	blacksquare.bmp		
+33432	ImageStart	slide3.jpg		
+43416	ImageEnd	slide3.jpg		
+43426	ImageStart	blacksquare.bmp		
+44431	ImageEnd	blacksquare.bmp		
+44463	ImageStart	slide6.jpg		
+54430	ImageEnd	slide6.jpg		
+54441	ImageStart	blacksquare.bmp		
+55443	ImageEnd	blacksquare.bmp		
+55475	ImageStart	slide7.jpg		
+65458	ImageEnd	slide7.jpg		
+65467	ImageStart	blacksquare.bmp		
+66473	ImageEnd	blacksquare.bmp		
+67063	MovieStart	congratulations.wmv		
+68042	KeyPress	Escape		
+68042	MovieEnd	congratulations.wmv		

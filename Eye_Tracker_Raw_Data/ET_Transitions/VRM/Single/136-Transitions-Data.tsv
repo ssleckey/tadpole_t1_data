@@ -1,0 +1,100 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+84			Content	
+358	MovieStart	MutedBallie.avi		
+476			Content	
+692			Content	
+2133			Content	
+2249			Content	
+2651	KeyPress	Space		
+2651	MovieEnd	MutedBallie.avi		
+3774			Content	
+4360	ImageStart	fixation.png		
+5089			Content	
+5337	ImageEnd	fixation.png		
+5365	ImageStart	encode 1 pink.JPG		
+5839			Familiarization 1L	
+6313			Familiarization 1L	
+6530			Familiarization 1R	
+7488			Familiarization 1L	
+7738			Familiarization 1L	
+8146			Familiarization 1L	
+8587			Familiarization 1L	
+9496			Familiarization 1L	
+10344	ImageEnd	encode 1 pink.JPG		
+10355	ImageStart	fixation.png		
+10378			Content	
+10669			Content	
+11358	ImageEnd	fixation.png		
+11619	ImageStart	encode 1 blue.JPG		
+12001			Familiarization 2L	
+12734			Familiarization 2R	
+12959			Familiarization 2R	
+13192			Familiarization 2R	
+13675			Familiarization 2R	
+13934			Familiarization 2R	
+14616			Familiarization 2L	
+14883			Familiarization 2L	
+16632			Familiarization 2L	
+16824			Content	
+17248			Familiarization 2R	
+17298			Familiarization 2R	
+19797			Content	
+19922			Familiarization 2L	
+20621			Content	
+20813			Content	
+21188			Content	
+21462			Content	
+21606	ImageEnd	encode 1 blue.JPG		
+21616	ImageStart	fixation.png		
+21662			Content	
+22621	ImageEnd	fixation.png		
+22661			Content	
+23474	ImageStart	1b pink.JPG		
+23702			Content	
+23844			new	
+24335			old	
+24677			old	
+26200			new	
+26484			new	
+33431	ImageEnd	1b pink.JPG		
+33441	ImageStart	fixation.png		
+34445	ImageEnd	fixation.png		
+36023	ImageStart	1a blue.JPG		
+37092			new	
+37251			old	
+37467			old	
+38725			new	
+40366			new	
+40541			new	
+41182			old	
+41424			old	
+41732			old	
+42215			old	
+45513			old	
+45904			new	
+45989	ImageEnd	1a blue.JPG		
+46000	ImageStart	fixation.png		
+46379			Content	
+47004	ImageEnd	fixation.png		
+48344			Content	
+48635	MovieStart	congratulations.wmv		
+50343			Content	
+50576			Content	
+50910			Content	
+51501			Content	
+52092			Content	
+52114	KeyPress	Space		
+52717			Content	
+52783			Content	
+53400			Content	
+53758			Content	
+55407			Content	
+55582			Content	
+56389			Content	
+57703			Content	
+57745			Content	
+58011			Content	
+58494			Content	
+58617	KeyPress	Escape		
+58617	MovieEnd	congratulations.wmv		

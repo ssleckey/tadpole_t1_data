@@ -1,0 +1,94 @@
+Timestamp	Event	Descriptor	AoiNames	
+325	MovieStart	MutedBallie.avi		
+476			Content	
+610			Content	
+1201	KeyPress	Space		
+1201	MovieEnd	MutedBallie.avi		
+1581	ImageStart	fixation.png		
+2581	ImageEnd	fixation.png		
+2618	ImageStart	AB_AB.jpg		
+2858			encode_distractor_right_left	
+3325			encode_distractor_left_right	
+3575			encode_distractor_left_right	
+4008			encode_distractor_right_left	
+4274			encode_distractor_right_right	
+4591			encode_distractor_right_left	
+4873			encode_distractor_left_right	
+5157			encode_distractor_left_left	
+5506			encode_distractor_left_right	
+6306			encode_distractor_left_right	
+6772			encode_distractor_right_left	
+7039			encode_distractor_right_left	
+7591	ImageEnd	AB_AB.jpg		
+7601	ImageStart	fixation.png		
+7872			Content	
+8601	ImageEnd	fixation.png		
+8635	ImageStart	CD_CD.jpg		
+8938			encode_target_right_left	
+9521			encode_target_left_right	
+9804			encode_target_left_right	
+12186			encode_target_right_left	
+12553			encode_target_right_left	
+13119			encode_target_left_right	
+13611	ImageEnd	CD_CD.jpg		
+13622	ImageStart	fixation.png		
+13935			Content	
+14622	ImageEnd	fixation.png		
+14657	ImageStart	AB_AB.jpg		
+15018			encode_distractor_left_right	
+15268			encode_distractor_left_right	
+15917			encode_distractor_right_left	
+17533			encode_distractor_left_left	
+18149			encode_distractor_left_right	
+18465			encode_distractor_left_right	
+19634	ImageEnd	AB_AB.jpg		
+19644	ImageStart	fixation.png		
+19698			Content	
+19981			Content	
+20645	ImageEnd	fixation.png		
+20683	ImageStart	CD_CD.jpg		
+21013			encode_target_left_right	
+23478			encode_target_left_right	
+23712			encode_target_left_right	
+24711			encode_target_right_right	
+24961			encode_target_right_right	
+25560			encode_target_right_left	
+25653	ImageEnd	CD_CD.jpg		
+25663	ImageStart	fixation.png		
+25960			Content	
+26666	ImageEnd	fixation.png		
+26700	ImageStart	GP GR.jpg		
+27126			retrieval_old_pair_right	
+29724			retrieval_old_pair_left	
+30024			Content	
+32123			Content	
+32356			retrieval_new_pair_correct_inside	
+33838			retrieval_new_pair_correct_inside	
+34371			retrieval_old_pair_right	
+34705			retrieval_old_pair_right	
+36037			Content	
+36665	ImageEnd	GP GR.jpg		
+36675	ImageStart	fixation.png		
+37502			Content	
+37679	ImageEnd	fixation.png		
+37712	ImageStart	BP GP.jpg		
+38036			retrieval_old_pair_left	
+39451			retrieval_old_pair_left	
+41283			retrieval_old_pair_left	
+42050			retrieval_new_pair_correct_inside	
+42449			retrieval_new_pair_incorrect_outside	
+42732			retrieval_new_pair_incorrect_outside	
+43898			Content	
+44098			Content	
+44431			Content	
+44515			Content	
+45064			Content	
+47680	ImageEnd	BP GP.jpg		
+47690	ImageStart	fixation.png		
+48693	ImageEnd	fixation.png		
+49417	MovieStart	congratulations.wmv		
+49545			Content	
+50211			Content	
+50561			Content	
+52480	KeyPress	Escape		
+52480	MovieEnd	congratulations.wmv		

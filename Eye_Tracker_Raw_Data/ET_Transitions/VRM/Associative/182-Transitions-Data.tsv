@@ -1,0 +1,141 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+39			Content	
+319	MovieStart	MutedBallie.avi		
+539			Content	
+1435	KeyPress	Space		
+1435	MovieEnd	MutedBallie.avi		
+1866	ImageStart	fixation.png		
+2687			Content	
+2804			Content	
+2859	ImageEnd	fixation.png		
+2894	ImageStart	AB_AB.jpg		
+3353			encode_distractor_right_left	
+3686			encode_distractor_left_right	
+4170			encode_distractor_left_right	
+4536			encode_distractor_right_left	
+4852			encode_distractor_right_left	
+5435			encode_distractor_left_left	
+5702			encode_distractor_left_left	
+5918			encode_distractor_left_right	
+6601			encode_distractor_right_left	
+6818			encode_distractor_right_right	
+7867	ImageEnd	AB_AB.jpg		
+7867			Content	
+7877	ImageStart	fixation.png		
+8650			Content	
+8882	ImageEnd	fixation.png		
+8914	ImageStart	CD_CD.jpg		
+9250			encode_target_left_right	
+10299			encode_target_left_left	
+10815			encode_target_left_left	
+11132			encode_target_left_right	
+11432			encode_target_left_right	
+11865			encode_target_right_left	
+12281			encode_target_right_right	
+12631			encode_target_right_right	
+12831			encode_target_right_right	
+13747			encode_target_right_right	
+13889	ImageEnd	CD_CD.jpg		
+13899	ImageStart	fixation.png		
+14413			Content	
+14630			Content	
+14903	ImageEnd	fixation.png		
+14974	ImageStart	AB_AB.jpg		
+15346			encode_distractor_left_right	
+15629			encode_distractor_left_left	
+15945			encode_distractor_left_right	
+16262			Content	
+16812			Content	
+16895			Content	
+17245			encode_distractor_left_right	
+17711			encode_distractor_right_left	
+18694			encode_distractor_left_right	
+19110			Content	
+19526			Content	
+19693			Content	
+19942	ImageEnd	AB_AB.jpg		
+19953	ImageStart	fixation.png		
+19993			Content	
+20409			Content	
+20676			Content	
+20955	ImageEnd	fixation.png		
+20988	ImageStart	CD_CD.jpg		
+21442			encode_target_right_left	
+21758			encode_target_right_left	
+22191			encode_target_right_left	
+22841			encode_target_right_left	
+23440			encode_target_right_left	
+23774			encode_target_left_right	
+24390			Content	
+24673			encode_target_left_left	
+25073			Content	
+25373			Content	
+25673			Content	
+25962	ImageEnd	CD_CD.jpg		
+25973	ImageStart	fixation.png		
+26339			Content	
+26622			Content	
+26977	ImageEnd	fixation.png		
+27014	ImageStart	GP GR.jpg		
+27371			retrieval_old_pair_left	
+27988			retrieval_old_pair_left	
+28621			retrieval_old_pair_right	
+29087			retrieval_new_pair_correct_inside	
+29353			retrieval_new_pair_incorrect_outside	
+29836			retrieval_new_pair_incorrect_outside	
+30186			retrieval_new_pair_incorrect_outside	
+30386			retrieval_old_pair_right	
+30669			retrieval_old_pair_right	
+30902			retrieval_new_pair_correct_inside	
+31152			retrieval_new_pair_incorrect_outside	
+31752			retrieval_old_pair_right	
+32085			Content	
+32418			Content	
+32868			Content	
+33217			retrieval_old_pair_right	
+33500			retrieval_old_pair_left	
+34067			Content	
+34333			Content	
+34433			Content	
+34667			Content	
+34867			Content	
+36332			Content	
+36648			Content	
+36732			retrieval_old_pair_right	
+36978	ImageEnd	GP GR.jpg		
+36982	ImageStart	fixation.png		
+37365			Content	
+37631			Content	
+37990	ImageEnd	fixation.png		
+38021	ImageStart	BP GP.jpg		
+38614			retrieval_new_pair_correct_inside	
+39280			Content	
+39614			Content	
+40563			Content	
+40863			Content	
+41512			Content	
+42678			Content	
+43278			Content	
+44344			retrieval_new_pair_correct_inside	
+44610			retrieval_new_pair_correct_inside	
+45143			retrieval_old_pair_right	
+45443			retrieval_old_pair_right	
+45676			retrieval_new_pair_correct_inside	
+45959			retrieval_new_pair_correct_inside	
+46475			retrieval_new_pair_incorrect_outside	
+47075			Content	
+47225			Content	
+47658			Content	
+48005	ImageEnd	BP GP.jpg		
+48015	ImageStart	fixation.png		
+48025			Content	
+48824			Content	
+49020	ImageEnd	fixation.png		
+49140			Content	
+49473			Content	
+49577	MovieStart	congratulations.wmv		
+50390			Content	
+51050	KeyPress	Space		
+52210	KeyPress	Escape		
+52210	MovieEnd	congratulations.wmv		

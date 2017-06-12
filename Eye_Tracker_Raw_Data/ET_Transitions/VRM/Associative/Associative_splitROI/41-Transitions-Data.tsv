@@ -1,0 +1,113 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+370	MovieStart	MutedBallie.avi		
+431			Content	
+486	KeyPress	Space		
+486	MovieEnd	MutedBallie.avi		
+697			encode2_distractor_left_right	
+902	ImageStart	CD_CD.jpg		
+1314			encode2_distractor_right_left	
+1680			encode2_distractor_right_right	
+2080			encode2_distractor_left_left	
+2496			encode2_distractor_left_right	
+2996			encode2_distractor_right_left	
+3728			encode2_distractor_left_right	
+4161			encode2_distractor_left_right	
+5194			encode2_distractor_right_left	
+5310			encode2_distractor_right_right	
+6027			encode2_distractor_left_right	
+7559			encode2_distractor_right_left	
+8074			encode2_distractor_left_left	
+8274			encode2_distractor_left_left	
+8707			encode2_distractor_left_right	
+9291			encode2_distractor_right_left	
+9457			Content	
+9789			Content	
+10738			encode2_distractor_right_left	
+10884	ImageEnd	CD_CD.jpg		
+10895	ImageStart	blacksquare.bmp		
+10921			Content	
+11021			Content	
+11221			Content	
+11899	ImageEnd	blacksquare.bmp		
+11930	ImageStart	AB_AB.jpg		
+12537			encode2_target_left_right	
+12687			encode2_target_right_left	
+13053			encode2_target_right_left	
+13236			encode2_target_left_left	
+13969			encode2_target_right_left	
+14335			encode2_target_right_right	
+14935			encode2_target_left_right	
+15268			encode2_target_left_right	
+15701			encode2_target_right_left	
+16034			encode2_target_right_left	
+16384			encode2_target_left_left	
+16650			encode2_target_left_left	
+17017			Content	
+17217			encode2_target_right_left	
+17616			encode2_target_left_right	
+18349			encode2_target_right_left	
+18715			Content	
+18982			encode2_target_right_left	
+19815			encode2_target_left_left	
+20064			encode2_target_left_left	
+20364			Content	
+20914			encode2_target_left_left	
+21180			Content	
+21463			encode2_target_left_right	
+21780			encode2_target_left_left	
+21914	ImageEnd	AB_AB.jpg		
+21924	ImageStart	blacksquare.bmp		
+22013			Content	
+22396			Content	
+22929	ImageEnd	blacksquare.bmp		
+22966	ImageStart	AB_AD.jpg		
+23379			retrieval_new_pair_incorrect	
+23678			retrieval_new_pair_incorrect	
+24012			retrieval_new_pair_correct	
+24411			Content	
+24728			retrieval_new_pair_incorrect	
+25194			retrieve_old_pair_left	
+25860			retrieve_old_pair_right	
+26443			retrieval_new_pair_correct	
+26676			retrieval_new_pair_incorrect	
+26959			retrieve_old_pair_left	
+27609			retrieve_old_pair_right	
+28009			retrieve_old_pair_left	
+28458			retrieve_old_pair_left	
+28908			retrieval_new_pair_correct	
+29124			retrieval_new_pair_incorrect	
+29674			retrieval_new_pair_correct	
+30340			Content	
+30757			retrieve_old_pair_left	
+31006			retrieve_old_pair_right	
+31239			Content	
+31772			retrieval_new_pair_incorrect	
+31972			Content	
+32455			retrieval_new_pair_incorrect	
+32933	ImageEnd	AB_AD.jpg		
+32943	ImageStart	blacksquare.bmp		
+33554			Content	
+33721			Content	
+33941	ImageEnd	blacksquare.bmp		
+33978	ImageStart	AB_CB.jpg		
+34254			retrieval_old_pair_right	
+34637			retrieval_old_pair_left	
+35087			retrieval_new_incorrect	
+35403			retrieval_new_incorrect	
+35952			Content	
+36202			retrieval_new_incorrect	
+43956	ImageEnd	AB_CB.jpg		
+43966	ImageStart	blacksquare.bmp		
+44163			Content	
+44297			Content	
+44971	ImageEnd	blacksquare.bmp		
+45329			Content	
+45646			Content	
+45665	MovieStart	congratulations.wmv		
+45928			Content	
+46145			Content	
+47661			Content	
+47811			Content	
+48005	KeyPress	Escape		
+48005	MovieEnd	congratulations.wmv		

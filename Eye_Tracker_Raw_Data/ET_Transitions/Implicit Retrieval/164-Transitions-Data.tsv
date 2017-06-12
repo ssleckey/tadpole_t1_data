@@ -1,0 +1,409 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+45			Content	
+113	ImageStart	fixation.png		
+328			Content	
+3163	KeyPress	Space		
+3164	ImageEnd	fixation.png		
+3543			Content	
+3795	MovieStart	Navjot_3_a.wmv		
+5968	MovieEnd	Navjot_3_a.wmv		
+6254	ImageStart	fixation.png		
+7256	ImageEnd	fixation.png		
+7289	ImageStart	1_butterfly_ant.jpg		
+7723			new	
+7940			old	
+8190			new	
+8473			new	
+9155			old	
+9455			old	
+10288			new	
+10538			new	
+11454			old	
+11720			old	
+12053			Content	
+12266	ImageEnd	1_butterfly_ant.jpg		
+12276	ImageStart	fixation.png		
+13279	ImageEnd	fixation.png		
+13875	MovieStart	Navjot_3_a.wmv		
+16052	MovieEnd	Navjot_3_a.wmv		
+16359	ImageStart	fixation.png		
+17366	ImageEnd	fixation.png		
+17398	ImageStart	2_balloon_kite.jpg		
+17767			old	
+18250			new	
+18832			new	
+20463			new	
+20613			new	
+21180			old	
+21463			old	
+21946			new	
+22212			new	
+22377	ImageEnd	2_balloon_kite.jpg		
+22390	ImageStart	fixation.png		
+22645			Content	
+23278			Content	
+23387	ImageEnd	fixation.png		
+23896	MovieStart	Navjot_3_a.wmv		
+26080	MovieEnd	Navjot_3_a.wmv		
+26308	ImageStart	fixation.png		
+27303	ImageEnd	fixation.png		
+27332	ImageStart	3_grapes_peach.jpg		
+27575			old	
+28025			new	
+28825			new	
+29208			new	
+29558			new	
+29891			new	
+30124			new	
+30340			new	
+30723			new	
+31306			new	
+31639			new	
+31906			new	
+32311	ImageEnd	3_grapes_peach.jpg		
+32321	ImageStart	fixation.png		
+33324	ImageEnd	fixation.png		
+33815	MovieStart	Navjot_3_a.wmv		
+34854			Content	
+35986	MovieEnd	Navjot_3_a.wmv		
+36276	ImageStart	fixation.png		
+37270	ImageEnd	fixation.png		
+37306	ImageStart	4_lamp_tv.jpg		
+37703			old	
+37986			new	
+38352			new	
+38602			new	
+39018			old	
+39218			old	
+39518			old	
+39967			Content	
+40167			new	
+40250			new	
+40583			new	
+41250			new	
+42016			Content	
+42133			Content	
+42278	ImageEnd	4_lamp_tv.jpg		
+42295	ImageStart	fixation.png		
+42366			Content	
+42682			Content	
+43291	ImageEnd	fixation.png		
+43800	MovieStart	Navjot_3_a.wmv		
+44098			Content	
+45974	MovieEnd	Navjot_3_a.wmv		
+46187	ImageStart	fixation.png		
+46463			Content	
+47193	ImageEnd	fixation.png		
+47223	ImageStart	5_tomato_carrot.jpg		
+47663			new	
+48412			new	
+48828			new	
+49644			new	
+49894			new	
+50893			old	
+52202	ImageEnd	5_tomato_carrot.jpg		
+52209			Content	
+52212	ImageStart	fixation.png		
+53214	ImageEnd	fixation.png		
+53508			Content	
+53725	MovieStart	Navjot_3_a.wmv		
+54024			Content	
+55740			Content	
+55897	MovieEnd	Navjot_3_a.wmv		
+56112	ImageStart	fixation.png		
+57113	ImageEnd	fixation.png		
+57148	ImageStart	6_bird_turtle.jpg		
+58856			old	
+59355			old	
+59887			old	
+60087			new	
+60887			new	
+61553			new	
+61786			new	
+62086			new	
+62122	ImageEnd	6_bird_turtle.jpg		
+62136	ImageStart	fixation.png		
+62487			Content	
+63135	ImageEnd	fixation.png		
+63717	MovieStart	Navjot_3_a.wmv		
+65900	MovieEnd	Navjot_3_a.wmv		
+66133	ImageStart	fixation.png		
+66734			Content	
+67129	ImageEnd	fixation.png		
+67164	ImageStart	7_cow_horse.jpg		
+67267			Content	
+67567			Content	
+67866			Content	
+68066			old	
+68350			old	
+68599			Content	
+68849			new	
+69749			old	
+70481			old	
+70681			Content	
+71014			Content	
+72138	ImageEnd	7_cow_horse.jpg		
+72153	ImageStart	fixation.png		
+73149	ImageEnd	fixation.png		
+73619	MovieStart	Navjot_3_a.wmv		
+74313			Content	
+75791	MovieEnd	Navjot_3_a.wmv		
+76106	ImageStart	fixation.png		
+77114	ImageEnd	fixation.png		
+77142	ImageStart	8_strawberry_banana.jpg		
+77393			new	
+77892			new	
+79658			new	
+80607			Content	
+80991			Content	
+81291			Content	
+81640			new	
+81890			new	
+82120	ImageEnd	8_strawberry_banana.jpg		
+82130	ImageStart	fixation.png		
+83056			Content	
+83134	ImageEnd	fixation.png		
+83987	MovieStart	Navjot_3_a.wmv		
+86167	MovieEnd	Navjot_3_a.wmv		
+86422	ImageStart	fixation.png		
+87424	ImageEnd	fixation.png		
+87460	ImageStart	9_barn_house.jpg		
+87853			old	
+88153			old	
+88419			new	
+89336			new	
+90168			old	
+90485			old	
+90735			old	
+91117			old	
+91700			new	
+91800			new	
+92350			new	
+92434	ImageEnd	9_barn_house.jpg		
+92444	ImageStart	fixation.png		
+92750			Content	
+93447	ImageEnd	fixation.png		
+94671	MovieStart	Navjot_3_a.wmv		
+95115			Content	
+96114			Content	
+96381			Content	
+96747			Content	
+96845	MovieEnd	Navjot_3_a.wmv		
+97087	ImageStart	fixation.png		
+98095	ImageEnd	fixation.png		
+98123	ImageStart	10_clock_telephone.jpg		
+98396			Content	
+98546			old	
+99262			new	
+102193			Content	
+103101	ImageEnd	10_clock_telephone.jpg		
+103111	ImageStart	fixation.png		
+103874			Content	
+104117	ImageEnd	fixation.png		
+104592			Content	
+105312	MovieStart	Navjot_3_a.wmv		
+105591			Content	
+106824			Content	
+106957			Content	
+107207			Content	
+107357			Content	
+107485	MovieEnd	Navjot_3_a.wmv		
+107816	ImageStart	fixation.png		
+108810	ImageEnd	fixation.png		
+108841	ImageStart	11_apple_pear.jpg		
+109239			new	
+109788			old	
+110005			old	
+111352			Content	
+113203			new	
+113552			Content	
+113786			new	
+113819	ImageEnd	11_apple_pear.jpg		
+113834	ImageStart	fixation.png		
+114169			Content	
+114832	ImageEnd	fixation.png		
+116236	MovieStart	Navjot_3_a.wmv		
+118412	MovieEnd	Navjot_3_a.wmv		
+118650	ImageStart	fixation.png		
+119653	ImageEnd	fixation.png		
+119683	ImageStart	12_mitten_glasses.jpg		
+120081			new	
+120498			new	
+120848			old	
+121148			old	
+121364			old	
+122113			Content	
+124661	ImageEnd	12_mitten_glasses.jpg		
+124672	ImageStart	fixation.png		
+125675	ImageEnd	fixation.png		
+126028			Content	
+126544			Content	
+126842	MovieStart	Navjot_3_a.wmv		
+127077			Content	
+127260			Content	
+128276			Content	
+128693			Content	
+129024	MovieEnd	Navjot_3_a.wmv		
+129459			Content	
+129757	ImageStart	fixation.png		
+130075			Content	
+130158			Content	
+130308			Content	
+130424			Content	
+130759	ImageEnd	fixation.png		
+130792	ImageStart	13_chicken_rabbit.jpg		
+130857			Content	
+132074			new	
+132274			old	
+133390			Content	
+133771			new	
+134039			new	
+135768	ImageEnd	13_chicken_rabbit.jpg		
+135782	ImageStart	fixation.png		
+135838			Content	
+136781	ImageEnd	fixation.png		
+137187			Content	
+137337			Content	
+137420			Content	
+137755	MovieStart	Navjot_3_a.wmv		
+137953			Content	
+139930	MovieEnd	Navjot_3_a.wmv		
+140194	ImageStart	fixation.png		
+140902			Content	
+141118			Content	
+141195	ImageEnd	fixation.png		
+141246	ImageStart	14_eye_nose.jpg		
+141534			Content	
+141817			old	
+142267			new	
+142517			new	
+142800			Content	
+143066			new	
+143516			old	
+144316			old	
+146222	ImageEnd	14_eye_nose.jpg		
+146232	ImageStart	fixation.png		
+147233	ImageEnd	fixation.png		
+147564			Content	
+148013			Content	
+148147			Content	
+148463			Content	
+148496	MovieStart	Navjot_3_a.wmv		
+148646			Content	
+149029			Content	
+149646			Content	
+150545			Content	
+150668	MovieEnd	Navjot_3_a.wmv		
+150944	ImageStart	fixation.png		
+151728			Content	
+151928			Content	
+151944	ImageEnd	fixation.png		
+151972	ImageStart	15_cat_dog.jpg		
+153477			old	
+153643			old	
+154609			new	
+154809			new	
+154942			new	
+155542			new	
+155841			old	
+156025			Content	
+156953	ImageEnd	15_cat_dog.jpg		
+156966	ImageStart	fixation.png		
+157291			Content	
+157774			Content	
+157965	ImageEnd	fixation.png		
+158890			Content	
+159128	MovieStart	Navjot_3_a.wmv		
+159139			Content	
+159339			Content	
+159738			Content	
+160654			Content	
+160954			Content	
+161300	MovieEnd	Navjot_3_a.wmv		
+161534	ImageStart	fixation.png		
+161588			Content	
+162537	ImageEnd	fixation.png		
+162560	ImageStart	16_bread_potato.jpg		
+163370			new	
+163453			old	
+163736			old	
+163985			old	
+165069			old	
+166234			new	
+166451			new	
+167217			new	
+167547	ImageEnd	16_bread_potato.jpg		
+167558	ImageStart	fixation.png		
+168558	ImageEnd	fixation.png		
+169903	MovieStart	Navjot_3_a.wmv		
+171481			Content	
+172097	MovieEnd	Navjot_3_a.wmv		
+172320	ImageStart	fixation.png		
+173315	ImageEnd	fixation.png		
+173344	ImageStart	17_plane_helecopter.jpg		
+173913			old	
+174096			old	
+174496			new	
+175229			new	
+175612			new	
+177194			new	
+177593			new	
+177960			new	
+178326			new	
+178327	ImageEnd	17_plane_helecopter.jpg		
+178336	ImageStart	fixation.png		
+178743			Content	
+179337	ImageEnd	fixation.png		
+180648	MovieStart	Navjot_3_a.wmv		
+182822	MovieEnd	Navjot_3_a.wmv		
+183096	ImageStart	fixation.png		
+184095	ImageEnd	fixation.png		
+184130	ImageStart	18_couch_bed.jpg		
+184704			old	
+184904			Content	
+189104	ImageEnd	18_couch_bed.jpg		
+189115	ImageStart	fixation.png		
+189202			Content	
+189402			Content	
+189636			Content	
+190117	ImageEnd	fixation.png		
+191234			Content	
+191389	MovieStart	Navjot_3_a.wmv		
+191834			Content	
+192500			Content	
+193579	MovieEnd	Navjot_3_a.wmv		
+193822	ImageStart	fixation.png		
+194399			Content	
+194816			Content	
+194827	ImageEnd	fixation.png		
+194857	ImageStart	19_belt_tie.jpg		
+194982			Content	
+196365			old	
+196681			old	
+196898			new	
+199837	ImageEnd	19_belt_tie.jpg		
+199847	ImageStart	fixation.png		
+200848	ImageEnd	fixation.png		
+202127	MovieStart	Navjot_3_a.wmv		
+204304	MovieEnd	Navjot_3_a.wmv		
+204570	ImageStart	fixation.png		
+205576	ImageEnd	fixation.png		
+205612	ImageStart	20_ladder_dresser.jpg		
+208740			Content	
+208823			Content	
+209056			Content	
+209256			Content	
+210600	ImageEnd	20_ladder_dresser.jpg		
+210611	ImageStart	fixation.png		
+210988			Content	
+211138			Content	
+211614	ImageEnd	fixation.png		
+212304			Content	
+212774	MovieStart	congratulations.wmv		
+214686			Content	
+214854	KeyPress	Space		
+214869			Content	
+215619			Content	
+216134	KeyPress	Escape		
+216134	MovieEnd	congratulations.wmv		

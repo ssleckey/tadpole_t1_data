@@ -1,0 +1,69 @@
+Timestamp	Event	Descriptor	AoiNames	
+382	MovieStart	MutedBallie.avi		
+2156	KeyPress	Space		
+2156	MovieEnd	MutedBallie.avi		
+2546	ImageStart	fixation.png		
+3552	ImageEnd	fixation.png		
+3587	ImageStart	CD_CD.jpg		
+8562	ImageEnd	CD_CD.jpg		
+8572	ImageStart	fixation.png		
+9573	ImageEnd	fixation.png		
+9605	ImageStart	AB_AB.jpg		
+14582	ImageEnd	AB_AB.jpg		
+14591	ImageStart	fixation.png		
+15595	ImageEnd	fixation.png		
+15627	ImageStart	CD_CD.jpg		
+20604	ImageEnd	CD_CD.jpg		
+20614	ImageStart	fixation.png		
+21617	ImageEnd	fixation.png		
+21650	ImageStart	AB_AB.jpg		
+26626	ImageEnd	AB_AB.jpg		
+26637	ImageStart	fixation.png		
+29635	ImageEnd	fixation.png		
+29668	ImageStart	BR_BP.jpg		
+39637	ImageEnd	BR_BP.jpg		
+39647	ImageStart	fixation.png		
+41283			Content	
+41399			Content	
+41566			Content	
+42648	ImageEnd	fixation.png		
+42686	ImageStart	GR_BR.jpg		
+42998			retrieval_old_pair_left	
+43631			retrieval_new_pair_correct_inside	
+43864			retrieval_new_pair_correct_inside	
+44247			retrieval_old_pair_right	
+44530			retrieval_old_pair_right	
+44830			retrieval_old_pair_right	
+45130			retrieval_old_pair_left	
+45480			retrieval_old_pair_left	
+46363			retrieval_new_pair_correct_inside	
+46862			retrieval_old_pair_left	
+47045			retrieval_old_pair_left	
+47279			retrieval_old_pair_left	
+47578			Content	
+48494			retrieval_old_pair_left	
+48711			retrieval_old_pair_left	
+49277			Content	
+51793			retrieval_new_pair_correct_inside	
+52026			retrieval_new_pair_correct_inside	
+52459			retrieval_new_pair_correct_inside	
+52659	ImageEnd	GR_BR.jpg		
+52669	ImageStart	fixation.png		
+52892			Content	
+53125			Content	
+54091			Content	
+54341			Content	
+54541			Content	
+54790			Content	
+55090			Content	
+55673	ImageEnd	fixation.png		
+56006			Content	
+56181	MovieStart	congratulations.wmv		
+56340			Content	
+56506			Content	
+57339			Content	
+58055			Content	
+58238			Content	
+58471			Content	
+59275	KeyPress	Escape		
+59276	MovieEnd	congratulations.wmv		

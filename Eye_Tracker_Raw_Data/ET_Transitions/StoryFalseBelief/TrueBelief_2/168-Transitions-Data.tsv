@@ -1,0 +1,142 @@
+Timestamp	Event	Descriptor	AoiNames	
+0			Content	
+93			Content	
+324	MovieStart	MutedBallie.avi		
+493			Content	
+976			Content	
+2475			Content	
+2579	KeyPress	Space		
+2579	MovieEnd	MutedBallie.avi		
+3291			Content	
+3474	ImageStart	blacksquare.bmp		
+3991			Content	
+5731	KeyPress	Space		
+5731	ImageEnd	blacksquare.bmp		
+5735	ImageStart	fixation.png		
+6745	ImageEnd	fixation.png		
+6773	ImageStart	Slide1.JPG		
+7739			AOI_1	
+8638			AOI_1	
+10154			AOI_1	
+13635	KeyPress	Space		
+13635	ImageEnd	Slide1.JPG		
+13639	ImageStart	fixation.png		
+14640	ImageEnd	fixation.png		
+14672	ImageStart	Slide2.JPG		
+17348			AOI_1	
+18231			AOI_1	
+18497			AOI_1	
+18780			AOI_1	
+19496			AOI_1	
+22426	KeyPress	Space		
+22427	ImageEnd	Slide2.JPG		
+22430	ImageStart	fixation.png		
+23438	ImageEnd	fixation.png		
+23466	ImageStart	Slide3.JPG		
+24793			correct	
+24877			correct	
+25675			correct	
+26975			correct	
+27642			incorrect	
+27858			incorrect	
+28324			correct	
+28591			correct	
+29457			correct	
+29602	KeyPress	Space		
+29603	ImageEnd	Slide3.JPG		
+29607	ImageStart	fixation.png		
+29940			Content	
+30613	ImageEnd	fixation.png		
+30642	ImageStart	Slide4.JPG		
+30822			Content	
+31089			incorrect	
+31589			incorrect	
+32222			correct	
+32521			correct	
+32788			correct	
+33337			correct	
+33621			correct	
+35553			correct	
+35669			correct	
+35869			incorrect	
+36152			incorrect	
+36552			correct	
+37618			correct	
+38618			correct	
+38970	KeyPress	Space		
+38970	ImageEnd	Slide4.JPG		
+38975	ImageStart	fixation.png		
+39301			Content	
+39967			Content	
+39972	ImageEnd	fixation.png		
+40004	ImageStart	Slide5.JPG		
+40500			Content	
+40733			correct	
+41116			correct	
+41599			correct	
+42215			correct	
+42664			correct	
+43081			correct	
+43764			incorrect	
+44180			incorrect	
+44846			correct	
+45063			correct	
+45429			correct	
+45896			correct	
+46246			correct	
+46462			incorrect	
+46845			incorrect	
+47496			correct	
+48562			incorrect	
+48745			incorrect	
+48861			incorrect	
+50178	KeyPress	Space		
+50178	ImageEnd	Slide5.JPG		
+50182	ImageStart	fixation.png		
+50859			Content	
+51189	ImageEnd	fixation.png		
+51218	ImageStart	Slide6.JPG		
+51243			Content	
+52325			correct	
+52441			correct	
+54107			correct	
+54907			incorrect	
+55257			incorrect	
+57290	KeyPress	Space		
+57290	ImageEnd	Slide6.JPG		
+57294	ImageStart	fixation.png		
+57306			Content	
+57389			Content	
+57622			Content	
+58302	ImageEnd	fixation.png		
+58337	ImageStart	Slide7.JPG		
+58688			correct	
+59455			correct	
+59971			incorrect	
+60554			correct	
+61486			correct	
+61987			correct	
+62253			correct	
+62619			correct	
+63452			correct	
+64085			correct	
+65084			correct	
+65290	KeyPress	Space		
+65290	ImageEnd	Slide7.JPG		
+65294	ImageStart	fixation.png		
+65651			Content	
+66290	ImageEnd	fixation.png		
+66318	ImageStart	Slide8.JPG		
+68916			incorrect	
+69082			incorrect	
+69882			incorrect	
+70365			incorrect	
+70642	KeyPress	Space		
+70642	ImageEnd	Slide8.JPG		
+70665			Content	
+70781			Content	
+71114			Content	
+71537	InstructionStart	Instruction Element		
+72314			Content	
+72490	KeyPress	Space		
+72490	InstructionEnd	Instruction Element		

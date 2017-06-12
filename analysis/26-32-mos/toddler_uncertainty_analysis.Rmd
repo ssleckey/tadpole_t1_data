@@ -86,16 +86,24 @@ d_et_filt <- d_et_filt %>%
 
 Get a dataframe for looking at accuracy by similarity.
 ```{r}
-mss_et_acc_t <-  d_et_filt 
-mss_et_acc_t$acc <- as.numeric(as.character(mss_et_acc_t$acc))
-
-describeBy(mss_et_acc$acc)
+mss_et_acc_tt <-  d_et_filt 
+mss_et_acc_tt$acc <- as.numeric(as.character(mss_et_acc_tt$acc))
 
 #get mean accuracy by similarity condition.
-mss_et_acc_t <- mss_et_acc_t %>%
+mss_et_acc_t <- mss_et_acc_tt %>%
   group_by(ID, similar)%>%
   summarise(acc = mean(acc))%>%
   spread(similar, acc)
+
+mss_et_acc_r <- mss_et_acc_tt %>%
+  group_by(ID)%>%
+  summarise(acc = mean(acc))
+
+accet <- describeBy(mss_et_acc_r$acc)
+accet$mean
+accet$sd
+accet$min
+accet$max
 ```
 
 T-test for effect of similarity on accuracy. 
@@ -261,14 +269,24 @@ d_filt_rt <- d_filt_rt %>%
 
 Get a dataframe for looking at accuracy by similarity.
 ```{r}
-mss_ts_acc_t <-  d_filt_rt%>%
+mss_ts_acc_tt <-  d_filt_rt%>%
   group_by(ID, similar)
 
-mss_ts_acc_t$acc <- as.numeric(as.character(mss_ts_acc_t$acc))
+mss_ts_acc_tt$acc <- as.numeric(as.character(mss_ts_acc_tt$acc))
 
-mss_ts_acc_t <- mss_ts_acc_t %>%
+mss_ts_acc_t <- mss_ts_acc_tt %>%
   summarise(acc = mean(acc))%>%
   spread(similar, acc)
+
+mss_ts_acc_r <- mss_ts_acc_tt %>%
+  group_by(ID)%>%
+  summarise(acc = mean(acc))
+
+accts <- describeBy(mss_ts_acc_r$acc)
+accts$mean
+accts$sd
+accts$min
+accts$max
 ```
 
 T-test for effect of similarity on accuracy. 

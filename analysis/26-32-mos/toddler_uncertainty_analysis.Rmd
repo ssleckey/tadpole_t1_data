@@ -235,6 +235,90 @@ cohensd_sim_acc_dissim_acc_et <- abs((sim_acc_et$mean - dissim_acc_et$mean)/((si
 cohensd_sim_acc_dissim_acc_et
 ```
 
+Do the number of transitions differ based on whether the correct one was fixated first? No.
+
+```{r}
+mss_et_ff <-  filter(d_et_filt, !is.na(first_fix))%>%
+  group_by(ID, first_fix)%>%
+  summarise(trans = mean(trans))%>%
+  spread(first_fix, trans)%>%
+  filter(!is.na(correct) & !is.na(incorrect))
+
+t.test(mss_et_ff$correct, mss_et_ff$incorrect, paired = TRUE)
+
+mss_et_d <-  filter(d_et_filt, !is.na(first_fix))%>%
+  group_by(ID, first_fix)%>%
+  summarise(trans = mean(trans))
+
+describeBy(mss_et_d$trans, mss_et_d$first_fix)
+```
+
+Based on trial type?
+
+```{r}
+mss_trans_acc <-  d_et_filt %>%
+  mutate(acc = ifelse(acc == 1, "acc", "inacc"))%>%
+  filter(!is.na(first_fix))
+
+#get average gaze switches for three conditions: accurate-similar, accurate-dissimilar, and inaccurate.
+mss_trans_inacc <-  mss_trans_acc%>%
+  filter(!is.na(first_fix))%>%
+  group_by(ID, acc, first_fix)%>%
+  summarise(trans = mean(trans))%>%
+  spread(acc, trans)%>%
+  select(-acc)%>%
+  spread(first_fix, inacc)%>%
+  filter(!is.na(correct), !is.na(incorrect))%>%
+  gather("first_fix", "inacc", correct:incorrect)
+
+mss_trans_sim <-  d_et_filt %>%
+  group_by(ID, acc, similar, first_fix)%>%
+  summarise(trans = mean(trans))%>%
+  filter(acc == 1, !is.na(first_fix))%>%
+  spread(similar, trans)%>%
+  mutate(similar_acc = similar)%>%
+  mutate(dissimilar_acc = dissimilar)%>%
+  select(-similar, -dissimilar)
+
+mss_trans_sim_acc <- mss_trans_sim %>%
+  select(-dissimilar_acc)%>%
+  spread(first_fix, similar_acc)%>%
+  filter(!is.na(correct), !is.na(incorrect))%>%
+  gather("first_fix", "similar_acc", correct:incorrect)
+
+mss_trans_dissim_acc <- mss_trans_sim %>%
+  select(-similar_acc)%>%
+  spread(first_fix, dissimilar_acc)%>%
+  filter(!is.na(correct), !is.na(incorrect))%>%
+  gather("first_fix", "dissimilar_acc", correct:incorrect)
+
+mss_trans_aov <- mss_trans_inacc %>%
+  inner_join(mss_trans_sim_acc)%>%
+  select(-acc)%>%
+  inner_join(mss_trans_dissim_acc)%>%
+  select(-acc)%>%
+  gather("trial_type", "trans", inacc:dissimilar_acc)
+```
+
+
+```{r}
+mss_trans_aov_p <- mss_trans_aov %>%
+  group_by(first_fix, trial_type)%>%
+  multi_boot_standard(col = "trans", na.rm = TRUE)
+
+ggplot(mss_trans_aov_p, aes(x = factor(first_fix), y = mean, fill = first_fix)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("First Fixation") + 
+  ylab("Mean Switch Count")  +  
+  facet_grid(~trial_type) +
+  theme(panel.grid = element_blank()) + #no gridlines
+  scale_fill_grey() #grayscale
+
+library(car)
+Anova(lm(trans ~ first_fix * trial_type, data=mss_trans_aov), type=3)
+```
+
 #Touchscreen task
 
 filter fast and slow RTs, missing data, unfamiliar trials, and kids who performed below chance. Two participants dropped for chance performance (70 and 89). 
@@ -297,6 +381,8 @@ t.test(mss_ts_acc_t$similar,
 
 similar <- psych::describe(mss_ts_acc_t$similar)
 dissimilar <- psych::describe(mss_ts_acc_t$dissimilar)
+similar
+dissimilar
 
 #get effect size.
 cohensd_acc <- abs((similar$mean - dissimilar$mean)/((similar$sd + dissimilar$sd)/2))
@@ -443,6 +529,23 @@ ggplot(ms_acc, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(st
   theme(panel.grid = element_blank()) + #no gridlines
   scale_fill_grey() #grayscale
 ```
+
+#Correlation of trial-level accuracy across tasks.
+
+```{r}
+#get matrix with trial-level accuracy for both tasks
+accmat <- mss_et_acc_tt %>%
+  select(ID, acc, trial)%>%
+  mutate(acc_et = acc)%>%
+  select(ID, trial, acc_et)%>%
+  left_join(mss_ts_acc_tt)%>%
+  mutate(acc_ts = acc)%>%
+  select(ID, trial, acc_et, acc_ts)
+
+cor <- rcorr(accmat$acc_et, accmat$acc_ts)
+cor
+```
+
 
 #Correlations with age
 

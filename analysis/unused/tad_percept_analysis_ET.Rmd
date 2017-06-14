@@ -1,0 +1,166 @@
+---
+title: "Toddler Uncertainty Monitoring"
+author: "Emily"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    number_sections: true
+---
+
+<style type="text/css">
+body, td {
+   font-size: 14px;
+}
+code {
+  font-size: 11px;
+}
+pre {
+  font-size: 11px;
+}
+</style>
+
+Data analysis of toddler uncertainty monitoring study.
+
+# Data preprocessing
+
+Preliminaries.
+
+```{r echo=FALSE}
+setwd("~/Desktop/tadpole_t1_data/analysis")
+rm(list=ls())
+knitr::opts_chunk$set(fig.width=8, fig.height=5, 
+                      echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
+suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
+library(langcog)
+library(plyr)
+library(dplyr)
+library(RWiener)
+library(ggplot2)
+library(rjson)
+library(stringr)
+library(tidyr)
+library(lme4)
+library(xtable)
+library(knitr)
+library(markdown)
+theme_set(theme_bw())
+```
+
+Read in data file.
+
+```{r}
+d.raw_et <- read.csv("AllSubs_ET.csv", header = TRUE) 
+d.raw_et$ID <- d.raw_et$Subject_ID 
+
+d.raw_sw <- read.csv("perceptual_transitions.csv", header = TRUE)
+d.raw_sw$ID <- d.raw_sw$Subject
+```
+
+Make data tidy.
+
+```{r}
+d.raw_et <- d.raw_et %>%
+  gather(trial, acc, acc1:acc20) %>%
+  select(-Subject_ID) 
+
+d.raw_et$trial <-str_replace(d.raw_et$trial, "acc","")
+
+d.raw_sw <- d.raw_sw %>%
+  gather(trial, trans, Trial1:Trial20) %>%
+  select(-Subject) 
+  
+d.raw_sw$trial <- str_replace(d.raw_sw$trial, "Trial","")
+
+d_et <- d.raw_et %>%
+  left_join(d.raw_sw) 
+
+d_et$acc[d_et$acc==999] <- NA
+```
+
+Read in trial info, demographics, and word familiarity.
+
+```{r}
+demo <- read.csv("demographics.csv") 
+trial_info <- read.csv("conditions.csv", header = TRUE)
+trial_info$trial <- as.character(trial_info$trial)
+
+word_fam_key <- read.csv("word_fam_key.csv")
+word_fam_key$trial <- as.character(word_fam_key$trial)
+
+word_fam <- read.csv("word_familiarity.csv") %>%
+  gather("target", "familiarity", 2:41 )
+
+response_key <- read.csv("response_key.csv")
+response_key$trial <- as.character(response_key$trial)
+```
+
+Join trial info and demographics with raw data.
+
+```{r}
+d_et <- left_join(d_et, trial_info) %>%
+  left_join(demo) %>%
+  select(-participation_date, -birthdate) %>%
+  left_join(word_fam_key) %>%
+  left_join(word_fam) %>%
+  left_join(response_key)
+
+d_et <- d_et %>% 
+  mutate(similar = ifelse(similarity == 1, "high-similarity",
+                                       "low-similarity")) %>%
+  select(-similarity)
+```
+
+
+Descriptives.
+
+Filter fast and slow RTs, missing data, unfamiliar trials.
+
+```{r}
+d_et_filt <- d_et %>% 
+  filter(!is.na(acc), 
+         familiarity != 0)
+
+d_et_filt$acc <- as.character(d_et_filt$acc)
+```
+
+
+Descriptives.
+
+```{r}
+d_et_filt$acc <- as.numeric(d_et_filt$acc)
+
+ms <- d_et_filt %>%
+  group_by(similar)%>%
+  multi_boot_standard(col = "acc", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(similar), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Similarity") + 
+  ylab("Proportion Accurate")
+
+d$acc <- as.factor(d$acc)
+ms <- d_et_filt %>%
+  group_by(acc, similar)%>%
+  multi_boot_standard(col = "trans", na.rm = TRUE)
+
+ggplot(ms, aes(x = factor(acc), y = mean)) + geom_bar(stat = "identity") + 
+  geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
+             position = position_dodge(width = .9)) +
+  xlab("Accuracy") + 
+  ylab("Number of switches") + 
+  facet_wrap(~similar)
+```
+
+```{r}
+glm_maximal_mod <- lmer(trans ~ acc * similar +
+                           (acc * similar | ID), 
+                         data = d_et_filt)
+
+coefs <- data.frame(coef(summary(glm_maximal_mod)))
+# use normal distribution to approximate p-value
+coefs$p.z <- 2 * (1 - pnorm(abs(coefs$t.value)))
+coefs
+```
+

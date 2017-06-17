@@ -45,6 +45,7 @@ library(psych)
 library(magrittr)
 library(ez)
 library(Hmisc)
+library(lmerTest)
 
 select <- dplyr::select 
 filter <- dplyr::filter 
@@ -128,7 +129,7 @@ cohensd_acc
 Set up a dataframe with switches averaged by accuracy and similiarity within participants.
 
 ```{r}
-mss_et_acc <-  d_et_filt %>%
+mss_et_acc <-  d_et_filt %>%  #filter(d_et_filt, !is.na(first_fix)) to exclude trials with no fixations
   mutate(acc = ifelse(acc == 1, "acc", "inacc")) 
 
 #get average gaze switches for three conditions: accurate-similar, accurate-dissimilar, and inaccurate.
@@ -160,6 +161,16 @@ mss_et_aov <- mss_et_inacc %>%
   filter(trial_type != "acc",
          trial_type != "similar",
          trial_type != "dissimilar")
+
+
+#How often do children answer without fixating on an ROI?
+
+nofix <- d_et_filt %>%
+  filter(is.na(first_fix))
+
+length(nofix$ID)
+length(unique(nofix$ID))
+
 ```
 
 ###Repeated measures ANOVA
@@ -317,6 +328,8 @@ ggplot(mss_trans_aov_p, aes(x = factor(first_fix), y = mean, fill = first_fix)) 
 
 library(car)
 Anova(lm(trans ~ first_fix * trial_type, data=mss_trans_aov), type=3)
+
+summary(lm(trans ~ first_fix * trial_type, data=mss_trans_aov))
 ```
 
 #Touchscreen task
@@ -530,7 +543,7 @@ ggplot(ms_acc, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(st
   scale_fill_grey() #grayscale
 ```
 
-#Correlation of trial-level accuracy across tasks.
+#Does accuracy on a given trial in the TS task predict accuracy on the same trial in the ET task?
 
 ```{r}
 #get matrix with trial-level accuracy for both tasks
@@ -542,8 +555,11 @@ accmat <- mss_et_acc_tt %>%
   mutate(acc_ts = acc)%>%
   select(ID, trial, acc_et, acc_ts)
 
-cor <- rcorr(accmat$acc_et, accmat$acc_ts)
-cor
+summary(glmer(acc_et ~ acc_ts + 
+                (1|ID) + 
+                (1|trial), #behavior item
+              data = accmat, 
+              family = "binomial"))
 ```
 
 

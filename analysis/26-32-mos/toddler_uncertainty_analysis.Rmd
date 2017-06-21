@@ -562,16 +562,14 @@ summary(glmer(acc_et ~ acc_ts +
               family = "binomial"))
 ```
 
-
 #Correlations with age
 
 Are the differences between condition means correlated with age in months?
 ```{r}
 #Get age in months from raw data.
-age_et <- d_et%>%
+ids_et <- d_et%>%
   select(ID, age_months)
-
-age_ts <- d_ts%>%
+ids_ts <- d_ts%>%
   select(ID, age_months)
 
 #Get dataframes with difference scores for conditions.
@@ -579,13 +577,15 @@ et_diff <- spread(mss_et_aov, trial_type, trans)%>%
   mutate(dacc_inacc = dissimilar_acc - inacc,
          sacc_inacc = similar_acc - inacc,
          dacc_sacc = dissimilar_acc - similar_acc)%>%
-  left_join(age_et)
+  left_join(ids_et)%>%
+  unique
 
 ts_diff <- spread(mss_ts_aov, trial_type, RT)%>%
   mutate(dacc_inacc = dissimilar_acc - inacc,
          sacc_inacc = similar_acc - inacc,
          dacc_sacc = dissimilar_acc - similar_acc)%>%
-  left_join(age_ts)
+  left_join(ids_ts)%>%
+  unique
 
 #Get correlations of age in months with difference scores.
 rcorr(et_diff$age_months, et_diff$dacc_inacc)
@@ -595,5 +595,21 @@ rcorr(et_diff$age_months, et_diff$dacc_sacc)
 rcorr(ts_diff$age_months, ts_diff$dacc_inacc)
 rcorr(ts_diff$age_months, ts_diff$sacc_inacc)
 rcorr(ts_diff$age_months, ts_diff$dacc_sacc)
+```
+
+Are the average number of switches correlated with overall accuracy?
+
+```{r}
+acc_et_ms <- d_et_filt%>%
+  group_by(ID)%>%
+  summarise(acc = mean(acc))
+
+sw_et_ms <- d_et_filt%>%
+  group_by(ID)%>%
+  summarise(trans = mean(trans))
+
+ids <- left_join(acc_et_ms, sw_et_ms)
+
+rcorr(ids$acc, ids$trans)
 ```
 

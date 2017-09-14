@@ -27,7 +27,7 @@ Data analysis of toddler uncertainty monitoring study.
 Preliminaries.
 
 ```{r, include = FALSE}
-setwd("~/Desktop/tadpole_t1_data/analysis/26-30-mos/")
+setwd("~/Desktop/tadpole_t1_data/analysis/26-32-mos/")
 rm(list=ls())
 knitr::opts_chunk$set(fig.width=8, fig.height=5, 
                       echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
@@ -944,7 +944,7 @@ ggplot(aes(x = Value, fill = Similar),
   scale_fill_solarized()
 ```
 
-Get means and CIs for parameter values and plot
+Get means and CIs for parameter values and plot.
 
 ```{r}
 sub.pars.ms <- sub.pars.final %>%

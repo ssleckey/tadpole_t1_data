@@ -179,7 +179,7 @@ d_et <- d_et %>%
 d_et$ID <- as.factor(as.character(d_et$ID))
 
 d_et <-d_et %>%
-  select(ID, trans, first_fix, acc, trial, age_months, condition, drop, familiarity, response, similar)
+  select(ID, trans, first_fix, fixations, acc, trial, age_months, condition, drop, familiarity, response, similar)
 
 #save to R data file.
 save(d_et, file = "data_et.RData")

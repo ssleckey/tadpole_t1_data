@@ -28,7 +28,7 @@ Preliminaries.
 ```{r, include = FALSE}
 rm(list=ls())
 knitr::opts_chunk$set(fig.width=8, fig.height=5, 
-                      echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE)
+                      echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE, fig.ext = "tiff")
 suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
 
 library(langcog)
@@ -58,19 +58,14 @@ theme_set(theme_bw())
 
 #Eyetracker task
 
-Filter unfamiliar trials (parents reported that child did not know word), and kids who performed below chance. Two participants dropped for below-chance performance (109 and 70).
+Filter unfamiliar trials (parents reported that child did not know word), kids who performed below chance, and trials with zero fixations. Two participants dropped for below-chance performance (109 and 70).
 
 ```{r}
 rm(list=ls())
 load("data_et.RData")
 
-#remove unfamiliar trials.
-#"trans" = gaze switches
-d_et_filt <- d_et %>% 
-  dplyr::filter(familiarity != 0)
-
-#remove participants who performed at chance.
-mss_et_acc <-  d_et_filt
+#identify chance performers
+mss_et_acc <-  d_et
 mss_et_acc$acc <- as.numeric(as.character(mss_et_acc$acc))
 mss_et_acc <- mss_et_acc %>%
   group_by(ID)%>%
@@ -79,9 +74,35 @@ mss_et_acc <- mss_et_acc %>%
 
 drop_acc <- mss_et_acc$ID[mss_et_acc$drop_acc == TRUE]
 
-d_et_filt <- d_et_filt %>% 
-  dplyr::filter(!ID %in% drop_acc)
+#remove unfamiliar trials.
+#remove trials with zero fixations to AOIs.
+#remove participants who performed at chance.
+d_et_filt<- d_et%>% 
+  dplyr::filter(!ID %in% drop_acc,
+                familiarity != 0, 
+                fixations != 0)
+
+#compare trials with 0 and >0 fixations.
+d_et_filt_comp <- d_et%>% 
+  dplyr::filter(!ID %in% drop_acc,
+                familiarity != 0)%>%
+  mutate(looked = fixations != 0)
+
+#how many trials are missing due to 0 fixations?
+
+nofix <- filter(d_et_filt_comp, looked == FALSE)
+length(nofix$ID)
+length(unique(nofix$ID))
+
+#any difference in accuracy based on whether there were any fixations to AOIs?
+t.test(d_et_filt_comp$acc[d_et_filt_comp$fixations == 0], d_et_filt_comp$acc[d_et_filt_comp$fixations != 0])
+
+d_et_filt_comp <- d_et_filt_comp%>%
+  group_by(looked)%>%
+  multi_boot_standard(col="acc")
 ```
+
+No difference in accuracy based on whether any fixations were recorded.
 
 ##Accuracy
 
@@ -107,7 +128,7 @@ accet$min
 accet$max
 ```
 
-T-test for effect of similarity on accuracy. 
+T-test for effect of similarity on accuracy, plus descriptives.
 
 ```{r}
 t.test(mss_et_acc_t$similar, 
@@ -129,7 +150,7 @@ cohensd_acc
 Set up a dataframe with switches averaged by accuracy and similiarity within participants.
 
 ```{r}
-mss_et_acc <-  d_et_filt %>%  #filter(d_et_filt, !is.na(first_fix)) to exclude trials with no fixations
+mss_et_acc <-  d_et_filt %>%  
   mutate(acc = ifelse(acc == 1, "acc", "inacc")) 
 
 #get average gaze switches for three conditions: accurate-similar, accurate-dissimilar, and inaccurate.
@@ -161,16 +182,6 @@ mss_et_aov <- mss_et_inacc %>%
   filter(trial_type != "acc",
          trial_type != "similar",
          trial_type != "dissimilar")
-
-
-#How often do children answer without fixating on an ROI?
-
-nofix <- d_et_filt %>%
-  filter(is.na(first_fix))
-
-length(nofix$ID)
-length(unique(nofix$ID))
-
 ```
 
 ###Repeated measures ANOVA
@@ -210,13 +221,22 @@ mss_et_aov_p <- mss_et_aov %>%
 mss_et_aov_p$trial_type <- factor(mss_et_aov_p$trial_type, 
                             levels = c("dissimilar_acc","similar_acc","inacc"))
 
-ggplot(mss_et_aov_p, aes(x = factor(trial_type), y = mean, fill = trial_type)) + geom_bar(stat = "identity") + 
+mss_et_aov_p$trial_type <- factor(mss_et_aov_p$trial_type,
+levels = c("dissimilar_acc", "similar_acc", "inacc"),
+labels = c("dissimilar-accurate", "similar-accurate", "inaccurate"))
+
+ggplot(mss_et_aov_p, aes(trial_type, mean, fill = trial_type)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
-  xlab("Trial Type") + 
   ylab("Mean Switch Count")  +  
   theme(panel.grid = element_blank()) + #no gridlines
-  scale_fill_grey() #grayscale
+  scale_fill_grey() + #grayscale
+  ggthemes::theme_few() + 
+  theme(legend.position='none',
+        axis.text.x  = element_text(vjust=0.5, size=18),
+        axis.title.x = element_blank(), 
+        axis.text.y  = element_text(vjust=0.5, size=20),
+        axis.title.y = element_text(size=20))
 ```
 
 ###T-tests
@@ -407,9 +427,7 @@ cohensd_acc
 Set up a dataframe with RTs averaged by accuracy and similiarity within participants.
 
 ```{r}
-mss_ts_acc <-  d_filt_rt
-
-mss_ts_acc <- mss_ts_acc %>% 
+mss_ts_acc <-  d_filt_rt %>%
   mutate(acc = ifelse(acc == 1, "acc", "inacc")) 
 
 #get average RTs for three conditions: accurate-similar, accurate-dissimilar, and inaccurate.
@@ -480,13 +498,22 @@ mss_ts_aov_p <- mss_ts_aov %>%
 mss_ts_aov_p$trial_type <- factor(mss_ts_aov_p$trial_type, 
                             levels = c("dissimilar_acc","similar_acc","inacc"))
 
-ggplot(mss_ts_aov_p, aes(x = factor(trial_type), y = mean, fill = trial_type)) + geom_bar(stat = "identity") + 
+mss_ts_aov_p$trial_type <- factor(mss_ts_aov_p$trial_type,
+levels = c("dissimilar_acc", "similar_acc", "inacc"),
+labels = c("dissimilar-accurate", "similar-accurate", "inaccurate"))
+
+ggplot(mss_ts_aov_p, aes(trial_type, mean, fill = trial_type)) + geom_bar(stat = "identity") + 
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
-  xlab("Trial Type") + 
-  ylab("Mean Reaction Time (ms)")  +  
+  ylab("Mean Response Latency")  +  
   theme(panel.grid = element_blank()) + #no gridlines
-  scale_fill_grey() #grayscale
+  scale_fill_grey() + #grayscale
+  ggthemes::theme_few() + 
+  theme(legend.position='none',
+        axis.text.x  = element_text(vjust=0.5, size=18),
+        axis.title.x = element_blank(), 
+        axis.text.y  = element_text(vjust=0.5, size=20),
+        axis.title.y = element_text(size=20))
 ```
 
 ###T-tests
@@ -523,13 +550,13 @@ ms_et <- mss_et_acc_t %>%
   gather("similar", "acc", similar:dissimilar)%>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)%>%
-  mutate(task = "ET")
+  mutate(task = "Eye tracker")
 
 ms_ts <- mss_ts_acc_t %>%
   gather("similar", "acc", similar:dissimilar)%>%
   group_by(similar)%>%
   multi_boot_standard(col = "acc", na.rm = TRUE)%>%
-  mutate(task = "TS")
+  mutate(task = "Touchscreen")
 
 ms_acc <- full_join(ms_et, ms_ts)
 
@@ -538,9 +565,15 @@ ggplot(ms_acc, aes(x = factor(similar), y = mean, fill = similar)) + geom_bar(st
   geom_linerange(aes(ymin = ci_lower, ymax = ci_upper), 
              position = position_dodge(width = .9)) +
   xlab("Similarity") + 
-  ylab("Proportion Accurate") + ggtitle("Accuracy") +  
+  ylab("Proportion Accurate") +  
   theme(panel.grid = element_blank()) + #no gridlines
-  scale_fill_grey() #grayscale
+  scale_fill_grey()  + 
+  theme(legend.position='none',
+        axis.text.x  = element_text(vjust=0.5, size=18),
+        axis.title.x = element_blank(), 
+        axis.text.y  = element_text(vjust=0.5, size=20),
+        axis.title.y = element_text(size=20),
+        strip.text.x = element_text(vjust=0.5, size=20))
 ```
 
 #Does accuracy on a given trial in the TS task predict accuracy on the same trial in the ET task?
@@ -611,5 +644,24 @@ sw_et_ms <- d_et_filt%>%
 ids <- left_join(acc_et_ms, sw_et_ms)
 
 rcorr(ids$acc, ids$trans)
+```
+
+Exploratory: is RT predicted by switches for individual items? No.
+
+```{r}
+rt_ts_ms <- d_filt_rt%>%
+  group_by(ID, trial)%>%
+  summarise(rt = mean(RT))
+
+sw_et_ms <- d_et_filt%>%
+  group_by(ID, trial)%>%
+  summarise(trans = mean(trans))
+
+ids_rt_switch <- left_join(rt_ts_ms, sw_et_ms)
+
+summary(lmer(rt ~ trans + 
+                (1|ID) + 
+                (1|trial), 
+              data = ids_rt_switch))
 ```
 

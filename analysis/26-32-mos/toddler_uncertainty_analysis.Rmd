@@ -665,3 +665,21 @@ summary(lmer(rt ~ trans +
               data = ids_rt_switch))
 ```
 
+Exploratory: Is RT on ET task correlated with RT on TS task? No.
+
+```{r}
+rt_ts_ms <- d_filt_rt%>%
+  group_by(ID, trial)%>%
+  summarise(rt_ts = mean(RT))
+
+rt_et_ms <- d_et_filt%>%
+  group_by(ID, trial)%>%
+  summarise(rt_et = mean(RT))
+
+ids_rts <- left_join(rt_ts_ms, rt_et_ms)
+
+summary(lmer(rt_ts ~ rt_et + 
+                (1|ID) + 
+                (1|trial), 
+              data = ids_rts))
+```

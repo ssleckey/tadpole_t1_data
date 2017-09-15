@@ -180,6 +180,36 @@ d_et$ID <- as.factor(as.character(d_et$ID))
 
 d_et <-d_et %>%
   select(ID, trans, first_fix, fixations, acc, trial, age_months, condition, drop, familiarity, response, similar)
+```
+
+Get RTs for ET task.
+```{r}
+files <- dir('perceptual_et/')
+rt_data_et_task <- data_frame()
+
+for (f in files) {
+  sub_data <-read.table(paste('perceptual_et/', f, sep=""),header=TRUE)
+  subid <- str_replace(f, "-Event-Data.tsv","")
+  
+  order <- sub_data%>%
+    filter(Event == 'ImageStart')%>%
+    filter(Descriptor != "fixation.png" & Descriptor != "blacksquare.bmp")%>%
+    mutate(trial = 1:length(Event))%>%
+    select(Descriptor, trial)
+  
+  sub_data <- sub_data %>%
+    filter(Event == 'ImageStart' | Event == 'ImageEnd') %>%
+        filter(Descriptor != "fixation.png" & Descriptor != "blacksquare.bmp")%>%
+    spread(Event, Timestamp)%>%
+    mutate(RT = ImageEnd - ImageStart, 
+           ID = subid)%>%
+    left_join(order)%>%
+    select(ID, trial, RT)
+
+    rt_data_et_task<- bind_rows(rt_data_et_task, sub_data)}
+
+rt_data_et_task$trial <- as.character(rt_data_et_task$trial)
+d_et<- left_join(d_et, rt_data_et_task)
 
 #save to R data file.
 save(d_et, file = "data_et.RData")

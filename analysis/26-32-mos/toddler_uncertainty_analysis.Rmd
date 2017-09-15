@@ -31,6 +31,9 @@ knitr::opts_chunk$set(fig.width=8, fig.height=5,
                       echo=TRUE, warning=FALSE, message=FALSE, cache=TRUE, fig.ext = "tiff")
 suppressPackageStartupMessages(c("dplyr","langcog","tidyr","ggplot2","lme4"))
 
+#install.packages("devtools")
+#devtools::install_github("langcog/langcog")
+
 library(langcog)
 library(dplyr)
 library(RWiener)
